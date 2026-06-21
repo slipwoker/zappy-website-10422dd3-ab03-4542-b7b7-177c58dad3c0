@@ -1,0 +1,108 @@
+# בלי עין הרע — Generative Engine Optimization Map
+
+> An online jewelry store offering high-quality jewelry for both women and men at affordable prices. The brand positions itself around the concept of accessible luxury — premium craftsmanship without the premium price tag. The store caters to a broad audience seeking elegant, well-made pieces that don't break the bank.
+
+---
+
+## Pages
+
+### בית
+https://-10422dd3.zappy5.app
+חנות התכשיטים האונליין שמציעה לך עיצובים מרהיבים לנשים ולגברים במחירים שלא תאמיני. איכות גבוהה, ציפוי זהב וכסף אמיתי – כי מגיע לך להתקשט בלי לקרוע את הכיס. כנסי עכשיו לגלות את הקולקציה החדשה!
+
+### אומנות
+https://-10422dd3.zappy5.app/craftsmanship
+טבלו את עצמכן בעולם האומנות שמאחורי התכשיטים שלנו. גלו איך אנחנו משלבים חומרים משובחים כמו כסף, ציפוי זהב ועור אמיתי עם עבודת יד מדויקת כדי ליצור פריטים שנראים כמו מיליון דולר – אבל עולים הרבה פחות. היכנסו להכיר את הקסם מקרוב!
+
+### מדריך מתנות
+https://-10422dd3.zappy5.app/gift-guide
+אובדי עצות מול ים התכשיטים? מדריך המתנות החכם שלנו יעזור לכם לבחור את התכשיט האולטימטיבי לכל אישה או גבר שאתם אוהבים. מטיפים סטייל ועד רעיונות מפתיעים – תנו מתנה שתגנוב את ההצגה בלי להתאמץ. היכנסו עכשיו!
+
+### צור קשר
+https://-10422dd3.zappy5.app/contact
+רוצה להתייעץ על מידה, חומר או סתם לקבל המלצה אישית? צוות המומחים שלנו מחכה לשמוע ממך! צרי קשר עוד היום ונחזור אלייך במהירות עם חיוך ושירות שאין שני לו. כי מגיע לך יחס אישי כמו התכשיטים שלנו.
+
+### Products
+https://-10422dd3.zappy5.app/products
+המוצרים שלנו - בלי עין הרע
+
+### Cart
+https://-10422dd3.zappy5.app/cart
+עגלת הקניות שלך
+
+### Checkout
+https://-10422dd3.zappy5.app/checkout
+תשלום
+
+### Login
+https://-10422dd3.zappy5.app/login
+התחברות לקוחות
+
+### Account
+https://-10422dd3.zappy5.app/account
+החשבון שלי
+
+### Order Success
+https://-10422dd3.zappy5.app/order-success
+תודה על ההזמנה
+
+### Product Detail
+https://-10422dd3.zappy5.app/product/:slug
+פרטי המוצר - בלי עין הרע
+
+### Category
+https://-10422dd3.zappy5.app/category/:slug
+מוצרים - בלי עין הרע
+
+### תודה שפנית אלינו
+https://-10422dd3.zappy5.app/thank-you
+בלי עין הרע - תודה שפנית אלינו
+
+## Legal & Policy
+
+### Privacy Policy
+https://-10422dd3.zappy5.app/privacy
+Information about how user data is collected, stored, and protected.
+
+### Terms & Conditions
+https://-10422dd3.zappy5.app/terms
+Legal terms describing service usage, rights, and policies.
+
+### Accessibility Statement
+https://-10422dd3.zappy5.app/accessibility
+Information about WCAG compliance and accessibility features.
+
+---
+
+## Products
+
+_No products are currently configured._
+
+---
+
+# Business Context (for LLM understanding)
+
+## About בלי עין הרע
+An online jewelry store offering high-quality jewelry for both women and men at affordable prices. The brand positions itself around the concept of accessible luxury — premium craftsmanship without the premium price tag. The store caters to a broad audience seeking elegant, well-made pieces that don't break the bank.
+
+## Target Audience
+- נשים וגברים
+- נשים אופנתיות
+- גברים המחפשים מתנות
+- מקצוענים צעירים
+- נשים וגברים המחפשים תכשיטים איכותיים ולא יקרים
+- מתנות לנשים
+- נשים וגברים שמחפשים עבודות יד
+
+## Industry
+Jewelry E-commerce
+
+---
+
+# Machine-readable feeds
+
+- Sitemap (XML): https://-10422dd3.zappy5.app/sitemap.xml
+- Robots: https://-10422dd3.zappy5.app/robots.txt
+- Flattened page text (for LLMs): https://-10422dd3.zappy5.app/llms-full.txt
+- Products (JSON): https://-10422dd3.zappy5.app/products.json
+- Products (Google Merchant RSS): https://-10422dd3.zappy5.app/product-feed.xml
