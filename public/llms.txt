@@ -7,69 +7,69 @@
 ## Pages
 
 ### בית
-https://example.com
+https://bliayinhara.zappy5.app
 חנות התכשיטים האונליין שמציעה לך עיצובים מרהיבים לנשים ולגברים במחירים שלא תאמיני. איכות גבוהה, ציפוי זהב וכסף אמיתי – כי מגיע לך להתקשט בלי לקרוע את הכיס. כנסי עכשיו לגלות את הקולקציה החדשה!
 
 ### אומנות
-https://example.com/craftsmanship
+https://bliayinhara.zappy5.app/craftsmanship
 טבלו את עצמכן בעולם האומנות שמאחורי התכשיטים שלנו. גלו איך אנחנו משלבים חומרים משובחים כמו כסף, ציפוי זהב ועור אמיתי עם עבודת יד מדויקת כדי ליצור פריטים שנראים כמו מיליון דולר – אבל עולים הרבה פחות. היכנסו להכיר את הקסם מקרוב!
 
 ### מדריך מתנות
-https://example.com/gift-guide
+https://bliayinhara.zappy5.app/gift-guide
 אובדי עצות מול ים התכשיטים? מדריך המתנות החכם שלנו יעזור לכם לבחור את התכשיט האולטימטיבי לכל אישה או גבר שאתם אוהבים. מטיפים סטייל ועד רעיונות מפתיעים – תנו מתנה שתגנוב את ההצגה בלי להתאמץ. היכנסו עכשיו!
 
 ### צור קשר
-https://example.com/contact
+https://bliayinhara.zappy5.app/contact
 רוצה להתייעץ על מידה, חומר או סתם לקבל המלצה אישית? צוות המומחים שלנו מחכה לשמוע ממך! צרי קשר עוד היום ונחזור אלייך במהירות עם חיוך ושירות שאין שני לו. כי מגיע לך יחס אישי כמו התכשיטים שלנו.
 
 ### Products
-https://example.com/products
+https://bliayinhara.zappy5.app/products
 המוצרים שלנו - בלי עין הרע
 
 ### Cart
-https://example.com/cart
+https://bliayinhara.zappy5.app/cart
 עגלת הקניות שלך
 
 ### Checkout
-https://example.com/checkout
+https://bliayinhara.zappy5.app/checkout
 תשלום
 
 ### Login
-https://example.com/login
+https://bliayinhara.zappy5.app/login
 התחברות לקוחות
 
 ### Account
-https://example.com/account
+https://bliayinhara.zappy5.app/account
 החשבון שלי
 
 ### Order Success
-https://example.com/order-success
+https://bliayinhara.zappy5.app/order-success
 תודה על ההזמנה
 
 ### Product Detail
-https://example.com/product/:slug
+https://bliayinhara.zappy5.app/product/:slug
 פרטי המוצר - בלי עין הרע
 
 ### Category
-https://example.com/category/:slug
+https://bliayinhara.zappy5.app/category/:slug
 מוצרים - בלי עין הרע
 
 ### תודה שפנית אלינו
-https://example.com/thank-you
+https://bliayinhara.zappy5.app/thank-you
 בלי עין הרע - תודה שפנית אלינו
 
 ## Legal & Policy
 
 ### Privacy Policy
-https://example.com/privacy
+https://bliayinhara.zappy5.app/privacy
 Information about how user data is collected, stored, and protected.
 
 ### Terms & Conditions
-https://example.com/terms
+https://bliayinhara.zappy5.app/terms
 Legal terms describing service usage, rights, and policies.
 
 ### Accessibility Statement
-https://example.com/accessibility
+https://bliayinhara.zappy5.app/accessibility
 Information about WCAG compliance and accessibility features.
 
 ---
@@ -101,8 +101,8 @@ Jewelry E-commerce
 
 # Machine-readable feeds
 
-- Sitemap (XML): https://example.com/sitemap.xml
-- Robots: https://example.com/robots.txt
-- Flattened page text (for LLMs): https://example.com/llms-full.txt
-- Products (JSON): https://example.com/products.json
-- Products (Google Merchant RSS): https://example.com/product-feed.xml
+- Sitemap (XML): https://bliayinhara.zappy5.app/sitemap.xml
+- Robots: https://bliayinhara.zappy5.app/robots.txt
+- Flattened page text (for LLMs): https://bliayinhara.zappy5.app/llms-full.txt
+- Products (JSON): https://bliayinhara.zappy5.app/products.json
+- Products (Google Merchant RSS): https://bliayinhara.zappy5.app/product-feed.xml
