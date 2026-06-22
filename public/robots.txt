@@ -50,4 +50,4 @@ Allow: /
 User-agent: MistralAI-User
 Allow: /
 
-Sitemap: https://bliayinhara.zappy5.app/sitemap.xml
+Sitemap: https://www.bliainara.co.il/sitemap.xml
