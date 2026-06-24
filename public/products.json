@@ -1,8 +1,32 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-24T07:41:07.305Z",
+  "generated_at": "2026-06-24T10:45:17.753Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 0,
-  "products": []
+  "count": 1,
+  "products": [
+    {
+      "id": "c57fffe5-a730-481c-9b35-cf12834b2514",
+      "slug": "tsmyd-avr-shchvr-aykvty-lgbr-sgyrh-mgntyt-btvchh-49cvq7",
+      "name": "צמיד עור שחור איכותי לגבר סגירה מגנטית בטוחה",
+      "name_translations": {},
+      "description": "<p>צמיד שחור מעור איכותי סגירת מגנט אבזם שחור איכותי לגבר, קוטר כ-21 ס\"מ</p>",
+      "short_description": "צמיד משולב עור קלוע איכותי ואופנתי לגבר סגירה מגנטית איכותית-קוטר כ-21 ס\"מ",
+      "sku": null,
+      "brand": "בלי עין הרע",
+      "price": 69,
+      "base_price": 75,
+      "sale_price": 69,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-enhanced-1782297121873-8gg93c.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1782297083996-29ywbp.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tsmyd-avr-shchvr-aykvty-lgbr-sgyrh-mgntyt-btvchh-49cvq7",
+      "categories": [],
+      "updated_at": "2026-06-24T10:44:46.493Z"
+    }
+  ]
 }
