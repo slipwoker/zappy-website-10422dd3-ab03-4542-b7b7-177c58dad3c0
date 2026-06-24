@@ -1,13 +1,13 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-24T10:45:17.753Z",
+  "generated_at": "2026-06-24T10:46:22.830Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 1,
   "products": [
     {
       "id": "c57fffe5-a730-481c-9b35-cf12834b2514",
-      "slug": "tsmyd-avr-shchvr-aykvty-lgbr-sgyrh-mgntyt-btvchh-49cvq7",
+      "slug": "tsmyd-avr-shchvr-aykvty-lgbr-sgyrh-mgntyt-btvchh-vod00n",
       "name": "צמיד עור שחור איכותי לגבר סגירה מגנטית בטוחה",
       "name_translations": {},
       "description": "<p>צמיד שחור מעור איכותי סגירת מגנט אבזם שחור איכותי לגבר, קוטר כ-21 ס\"מ</p>",
@@ -24,9 +24,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/tsmyd-avr-shchvr-aykvty-lgbr-sgyrh-mgntyt-btvchh-49cvq7",
-      "categories": [],
-      "updated_at": "2026-06-24T10:44:46.493Z"
+      "url": "https://www.bliainara.co.il/product/tsmyd-avr-shchvr-aykvty-lgbr-sgyrh-mgntyt-btvchh-vod00n",
+      "categories": [
+        "בלי עין הרע לגברים"
+      ],
+      "updated_at": "2026-06-24T10:46:20.154Z"
     }
   ]
 }
