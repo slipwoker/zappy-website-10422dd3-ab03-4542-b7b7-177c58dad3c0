@@ -1,22 +1,22 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-24T10:48:16.605Z",
+  "generated_at": "2026-06-24T16:36:02.839Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 1,
   "products": [
     {
       "id": "c57fffe5-a730-481c-9b35-cf12834b2514",
-      "slug": "tsmyd-avr-shchvr-aykvty-lgbr-sgyrh-mgntyt-btvchh-vod00n",
-      "name": "צמיד עור שחור איכותי לגבר סגירה מגנטית בטוחה",
+      "slug": "tsmyd-avr-shchvr-mshvlb-klvy-aykvty-lgbr-sgyrh-mgntyt-btvchh-bkc60e",
+      "name": "צמיד עור שחור משולב קלוי איכותי לגבר סגירה מגנטית בטוחה",
       "name_translations": {},
-      "description": "<p>צמיד שחור מעור איכותי סגירת מגנט אבזם שחור איכותי לגבר, קוטר כ-21 ס\"מ</p>",
-      "short_description": "צמיד משולב עור קלוע איכותי ואופנתי לגבר סגירה מגנטית איכותית-קוטר כ-21 ס\"מ",
+      "description": "<p>צמיד שחור מעור משולב קלוע ואיכותי, סגירת מגנט אבזם שחור איכותי לגבר, קוטר כ-21 ס\"מ</p>",
+      "short_description": "צמיד מעור משולב עור קלוע איכותי ואופנתי לגבר סגירה מגנטית איכותית-קוטר כ-21 ס\"מ",
       "sku": null,
       "brand": "בלי עין הרע",
-      "price": 69,
-      "base_price": 75,
-      "sale_price": 69,
+      "price": 70,
+      "base_price": 79,
+      "sale_price": 70,
       "currency": "ILS",
       "images": [
         "https://www.bliainara.co.il/assets/product-enhanced-1782297121873-8gg93c.webp",
@@ -24,11 +24,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/tsmyd-avr-shchvr-aykvty-lgbr-sgyrh-mgntyt-btvchh-vod00n",
+      "url": "https://www.bliainara.co.il/product/tsmyd-avr-shchvr-mshvlb-klvy-aykvty-lgbr-sgyrh-mgntyt-btvchh-bkc60e",
       "categories": [
         "בלי עין הרע לגברים"
       ],
-      "updated_at": "2026-06-24T10:46:55.377Z"
+      "updated_at": "2026-06-24T16:35:31.697Z"
     }
   ]
 }
