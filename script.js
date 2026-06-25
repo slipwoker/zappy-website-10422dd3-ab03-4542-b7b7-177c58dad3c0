@@ -1387,6 +1387,10 @@ window.onload = function() {
 ;
 
 ;
+
+;
+
+;
 /* ==ZAPPY E-COMMERCE JS START== */
 // E-commerce functionality
 (function() {
@@ -3152,6 +3156,15 @@ function stripHtmlToText(html) {
       + '</button>';
   };
 
+  window.zappyBuildInquiryHref = function(p) {
+    var bizEmail = (t && t.businessEmail) ? String(t.businessEmail).trim() : '';
+    if (bizEmail) {
+      var subj = getEcomText('inquiryAbout', (t && t.inquiryAbout) || 'Inquiry about') + ' ' + ((p && p.name) || '');
+      return 'mailto:' + encodeURIComponent(bizEmail) + '?subject=' + encodeURIComponent(subj);
+    }
+    return buildStorefrontPath('/contact');
+  };
+
   // Assemble the full card inner HTML (shared by both renderers).
   // parts: { imageHtml, tagsHtml, favBtnHtml, productHref, priceHtml, shortDesc, isCatalogMode, localizedViewDetails }
   window.zappyBuildCardInnerHtml = function(p, layout, parts) {
@@ -3166,21 +3179,13 @@ function stripHtmlToText(html) {
     var bodyLink = '<a href="' + parts.productHref + '" class="product-card-body-link"><div class="card-content"><h3>' + p.name + '</h3>' + desc + '</div></a>';
     var cartBtn;
     if (parts.isCatalogMode) {
-      cartBtn = '<a href="' + parts.productHref + '" class="card-cart-btn view-details-btn" aria-label="' + zappyCardEscAttr(parts.localizedViewDetails || '') + '">'
-        + '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg></a>';
+      cartBtn = '';
     } else if (window.zappyProductPriceHidden(p)) {
       // Contact-for-price product: swap the cart affordance for an inquiry
       // button (envelope). Prefer a mailto to the store email; fall back to the
       // contact page when no business email is configured.
       var inqLbl = getEcomText('sendInquiry', (t && t.sendInquiry) || 'Send Inquiry');
-      var bizEmail = (t && t.businessEmail) ? String(t.businessEmail).trim() : '';
-      var inqHref;
-      if (bizEmail) {
-        var subj = getEcomText('inquiryAbout', (t && t.inquiryAbout) || 'Inquiry about') + ' ' + (p.name || '');
-        inqHref = 'mailto:' + encodeURIComponent(bizEmail) + '?subject=' + encodeURIComponent(subj);
-      } else {
-        inqHref = buildStorefrontPath('/contact');
-      }
+      var inqHref = window.zappyBuildInquiryHref(p);
       cartBtn = '<a href="' + zappyCardEscAttr(inqHref) + '" class="card-cart-btn card-inquiry-btn" title="' + zappyCardEscAttr(inqLbl) + '" aria-label="' + zappyCardEscAttr(inqLbl) + '">'
         + '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>';
     } else {
@@ -3459,7 +3464,7 @@ function stripHtmlToText(html) {
     var priceBox = content.querySelector('.zappy-qv-price');
     if (priceBox) priceBox.innerHTML = qvPriceHtml(product, variant);
     var cartBtn = content.querySelector('.zappy-qv-addcart');
-    if (cartBtn) {
+    if (cartBtn && cartBtn.tagName === 'BUTTON') {
       var keys = (cv && cv.options || []).map(function(o) { return o.key; });
       var allSelected = !cv || keys.length === 0 || keys.every(function(k) { return !!qvState.selections[k]; });
       var available = !cv || (variant && variant.available);
@@ -3559,7 +3564,9 @@ function stripHtmlToText(html) {
     if (isCatalog || window.zappyProductPriceHidden(product)) {
       // Catalog sites AND contact-for-price products (showPrice === false) are
       // inquiry-only: never offer an Add to Cart in the Quick View.
-      cartArea = '<a href="' + href + '" class="zappy-qv-addcart zappy-qv-viewbtn">' + getEcomText('viewDetails', t.viewDetails || 'View product') + '</a>';
+      var inqLbl = getEcomText('sendInquiry', (t && t.sendInquiry) || 'Send Inquiry');
+      var inqHref = window.zappyBuildInquiryHref ? window.zappyBuildInquiryHref(product) : buildStorefrontPath('/contact');
+      cartArea = '<a href="' + zappyCardEscAttr(inqHref) + '" class="zappy-qv-addcart zappy-qv-viewbtn">' + inqLbl + '</a>';
     } else {
       var step = qvState.step || 1;
       cartArea = '<div class="zappy-qv-qty"><button type="button" class="zappy-qv-qty-btn" data-qv-qty="-1">-</button>'
@@ -10444,6 +10451,23 @@ function renderProductDetail(container, product, t) {
   breadcrumbHtml += '<span class="breadcrumb-separator">›</span>';
   breadcrumbHtml += '<span class="breadcrumb-current">' + product.name + '</span>';
   breadcrumbHtml += '</nav>';
+
+  const inquiryHref = window.zappyBuildInquiryHref
+    ? window.zappyBuildInquiryHref(product)
+    : (t.businessEmail
+      ? 'mailto:' + encodeURIComponent(t.businessEmail) + '?subject=' + encodeURIComponent(t.inquiryAbout + ' ' + product.name)
+      : buildStorefrontPath('/contact'));
+  const inquiryLabel = getEcomText('sendInquiry', t.sendInquiry || 'Send Inquiry');
+  const inquiryActionHtml = '<a href="' + _eA(inquiryHref) + '" class="btn btn-primary inquiry-btn">'
+    + '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>'
+    + inquiryLabel
+    + '</a>';
+  const callActionHtml = t.businessPhone
+    ? '<a href="tel:' + _eA(t.businessPhone.replace(/[\s\-()]/g, '')) + '" class="btn btn-secondary call-btn">'
+      + '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>'
+      + t.callNow
+      + '</a>'
+    : '';
   
   // Build video thumbnails HTML
   var videoThumbsHtml = videos.map(function(v, i) {
@@ -10665,16 +10689,7 @@ function renderProductDetail(container, product, t) {
           '</div>';
         })()}
           <div class="product-actions ${(isCatalogMode || !showPrice) ? 'catalog-mode' : ''}">
-            ${(isCatalogMode || !showPrice) ? `
-              ${t.businessEmail ? `<a href="mailto:${encodeURIComponent(t.businessEmail)}?subject=${encodeURIComponent(t.inquiryAbout + ' ' + product.name)}" class="btn btn-primary inquiry-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                ${t.sendInquiry}
-              </a>` : ''}
-              ${t.businessPhone ? `<a href="tel:${t.businessPhone.replace(/[\s\-()]/g, '')}" class="btn btn-secondary call-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                ${t.callNow}
-              </a>` : ''}
-            ` : `
+            ${(isCatalogMode || !showPrice) ? inquiryActionHtml + callActionHtml : `
             <button class="add-to-cart" id="add-to-cart-btn" onclick="addProductToCart()" ${!baseInStock ? 'disabled style="opacity:0.5;cursor:not-allowed;"' : ''}>
               ${getEcomText('addToCart', t.addToCart || 'Add to Cart')}
             </button>
