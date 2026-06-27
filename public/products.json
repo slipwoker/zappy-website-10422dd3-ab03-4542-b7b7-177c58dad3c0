@@ -1,13 +1,13 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-27T16:13:01.466Z",
+  "generated_at": "2026-06-27T16:13:40.753Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 1,
   "products": [
     {
       "id": "1d66e94b-33f5-4d84-8700-51bfa1b0acf5",
-      "slug": "tsmyd-shchvr-mshvlb-klva-aykvty-babvdt-yd-lgbr-sgyrh-mgntyt-mpldt-al-chld-btvchh-copy-x5ehzl",
+      "slug": "tsmyd-shchvr-mshvlb-klva-aykvty-babvdt-yd-lgbr-sgyrh-mgntyt-mpldt-al-chld-btvchh-copy-zazrem",
       "name": "צמיד שחור משולב קלוע איכותי בעבודת יד לגבר סגירה מגנטית מפלדת אל חלד בטוחה (Copy)",
       "name_translations": {},
       "description": "<p>צמיד שחור משולב קלוע ואיכותי בעבודת יד, סגירת מגנט אבזם שחור פלדת אל חלד איכותי לגבר, קוטר כ-21 ס\"מ</p>",
@@ -24,11 +24,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/tsmyd-shchvr-mshvlb-klva-aykvty-babvdt-yd-lgbr-sgyrh-mgntyt-mpldt-al-chld-btvchh-copy-x5ehzl",
+      "url": "https://www.bliainara.co.il/product/tsmyd-shchvr-mshvlb-klva-aykvty-babvdt-yd-lgbr-sgyrh-mgntyt-mpldt-al-chld-btvchh-copy-zazrem",
       "categories": [
         "בלי עין הרע לגברים"
       ],
-      "updated_at": "2026-06-27T16:12:29.596Z"
+      "updated_at": "2026-06-27T16:13:09.005Z"
     }
   ]
 }
