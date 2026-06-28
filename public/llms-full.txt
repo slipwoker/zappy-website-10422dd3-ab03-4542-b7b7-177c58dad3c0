@@ -6025,9 +6025,10 @@ Description: בלי עין הרע - תודה שפנית אלינו
 ## Product Catalog
 
 ### צמיד שחור קלוע בעבודת יד בשילוב אבני עין הנמר
-URL: https://www.bliainara.co.il/product/tsmyd-shchvr-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-34ingi
+URL: https://www.bliainara.co.il/product/tsmyd-shchvr-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-9dwp08
 Price: 119.00 ILS (sale, was 139.00 ILS)
 Availability: In stock
+SKU: 3021409310010120060b
 Brand: בלי עין הרע
 
 צמיד מהמם ומיוחד שחור קלוע בשילוב אבני עין הנמר המיוחדות, אבזם שחור מפלדת אל חלד לסגירה בטוחה, קוטר כ-21 ס"מ
