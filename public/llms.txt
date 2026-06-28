@@ -79,12 +79,13 @@ Information about WCAG compliance and accessibility features.
 **Total active products: 4**
 
 ### צמיד מהמם לבן קלוע בעבודת יד בשילוב אבני עין הנמר המיוחדות
-https://www.bliainara.co.il/product/tsmyd-mhmm-lbn-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-n3gmrj
+https://www.bliainara.co.il/product/tsmyd-mhmm-lbn-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-zrrvmq
 - Price: 119.00 ILS (sale, was 139.00 ILS)
 - Availability: In stock
 - SKU: 3021409310010120060w
 - Brand: בלי עין הרע
 - Description: צמיד מהמם ומיוחד לבן קלוע בעבודת יד בשילוב אבני עין הנמר המיוחדות, אבזם סגירה בטוחה מפלדת אל חלד שחור, קוטר כ-21 ס"מ
+- Image: https://www.bliainara.co.il/assets/product-1782658701275-by6e4i.webp
 
 ### צמיד מהמם שחור קלוע בעבודת יד בשילוב אבני עין הנמר המיוחדות
 https://www.bliainara.co.il/product/tsmyd-mhmm-shchvr-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-v3o0yi
