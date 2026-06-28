@@ -1,13 +1,13 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-28T13:27:41.681Z",
+  "generated_at": "2026-06-28T13:34:28.558Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 2,
   "products": [
     {
       "id": "8252a47c-daef-4ae6-97b5-206faf63cca0",
-      "slug": "tsmyd-chvm-mshvlb-klva-aykvty-babvdt-yd-lgbrsgyrh-mgntyt-mpldt-al-chld-btvchh-ex5lug",
+      "slug": "tsmyd-chvm-mshvlb-klva-aykvty-babvdt-yd-lgbrsgyrh-mgntyt-mpldt-al-chld-btvchh-qmnly7",
       "name": "צמיד חום משולב קלוע איכותי בעבודת יד לגבר,סגירה מגנטית מפלדת אל חלד בטוחה",
       "name_translations": {},
       "description": "<p>צמיד חום אופנתי משולב קלוע בעבודת יד לגבר, סגירה ופתיחה בטוחה ,סגר מפלדת אל חלד שחור, קוטר כ-21 ס\"מ</p>",
@@ -19,15 +19,16 @@
       "sale_price": 69,
       "currency": "ILS",
       "images": [
-        "https://www.bliainara.co.il/assets/product-1782652602429-78vqk.webp"
+        "https://www.bliainara.co.il/assets/product-1782652602429-78vqk.webp",
+        "https://www.bliainara.co.il/assets/product-ai-fit-1782653604002-zs7efk.webp"
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/tsmyd-chvm-mshvlb-klva-aykvty-babvdt-yd-lgbrsgyrh-mgntyt-mpldt-al-chld-btvchh-ex5lug",
+      "url": "https://www.bliainara.co.il/product/tsmyd-chvm-mshvlb-klva-aykvty-babvdt-yd-lgbrsgyrh-mgntyt-mpldt-al-chld-btvchh-qmnly7",
       "categories": [
         "בלי עין הרע לגברים"
       ],
-      "updated_at": "2026-06-28T13:27:10.008Z"
+      "updated_at": "2026-06-28T13:33:57.122Z"
     },
     {
       "id": "1d66e94b-33f5-4d84-8700-51bfa1b0acf5",
