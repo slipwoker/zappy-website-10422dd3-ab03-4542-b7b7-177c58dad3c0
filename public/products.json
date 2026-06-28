@@ -1,10 +1,34 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-28T10:07:54.065Z",
+  "generated_at": "2026-06-28T13:19:06.231Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 1,
+  "count": 2,
   "products": [
+    {
+      "id": "8252a47c-daef-4ae6-97b5-206faf63cca0",
+      "slug": "tsmyd-chvm-mshvlb-klva-aykvty-babvdt-yd-lgbrsgyrh-mgntyt-mpldt-al-chld-btvchh-yupc47",
+      "name": "צמיד חום משולב קלוע איכותי בעבודת יד לגבר,סגירה מגנטית מפלדת אל חלד בטוחה",
+      "name_translations": {},
+      "description": "",
+      "short_description": "צמיד חום אופנתי משולב קלוע בעבודת יד לגבר, סגירה מגנטית מפלדת אל חלד בטוחה, קוטר כ-21 ס\"מ",
+      "sku": "3028878260007068br",
+      "brand": "בלי עין הרע",
+      "price": 69,
+      "base_price": 79,
+      "sale_price": 69,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1782652602429-78vqk.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tsmyd-chvm-mshvlb-klva-aykvty-babvdt-yd-lgbrsgyrh-mgntyt-mpldt-al-chld-btvchh-yupc47",
+      "categories": [
+        "בלי עין הרע לגברים"
+      ],
+      "updated_at": "2026-06-28T13:18:51.135Z"
+    },
     {
       "id": "1d66e94b-33f5-4d84-8700-51bfa1b0acf5",
       "slug": "tsmyd-shchvr-mshvlb-klva-aykvty-babvdt-yd-lgbr-sgyrh-mgntyt-mpldt-al-chld-btvchh-copy-zazrem",
