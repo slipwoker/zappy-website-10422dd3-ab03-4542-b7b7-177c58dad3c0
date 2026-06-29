@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-29T06:18:37.824Z",
+  "generated_at": "2026-06-29T06:20:15.716Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 4,
@@ -32,11 +32,11 @@
     },
     {
       "id": "cdbe64f2-5681-4ee0-9e3e-5469bb42a290",
-      "slug": "tsmyd-mhmm-shchvr-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-xo5c95",
+      "slug": "tsmyd-mhmm-shchvr-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-f74oxv",
       "name": "צמיד מהמם שחור קלוע בעבודת יד בשילוב אבני עין הנמר המיוחדות",
       "name_translations": {},
       "description": "<p>צמיד מהמם ומיוחד שחור קלוע בשילוב אבני עין הנמר המיוחדות, אבזם שחור מפלדת אל חלד לסגירה בטוחה, קוטר כ-21 ס\"מ</p>",
-      "short_description": "צמיד שחור קלוע בעבודת יד משולב אבני עין הנמר, אבזם שחור לסגירה מגנטית בטוחה מפלדת אל חלד שחור, קוטר כ-21 ס\"מ",
+      "short_description": "צמיד שחור קלוע בעבודת יד משולב אבני עין הנמר, אבזם שחור לסגירה מגנטית בטוחה מפלדת אל חלד שחור, קוטר כ-21 ס\"מ\nתוספת מהממת ללוק שלך...",
       "sku": "3021409310010120060b",
       "brand": "בלי עין הרע",
       "price": 109,
@@ -49,11 +49,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/tsmyd-mhmm-shchvr-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-xo5c95",
+      "url": "https://www.bliainara.co.il/product/tsmyd-mhmm-shchvr-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-f74oxv",
       "categories": [
         "בלי עין הרע לגברים"
       ],
-      "updated_at": "2026-06-29T06:18:06.331Z"
+      "updated_at": "2026-06-29T06:19:44.344Z"
     },
     {
       "id": "8252a47c-daef-4ae6-97b5-206faf63cca0",
