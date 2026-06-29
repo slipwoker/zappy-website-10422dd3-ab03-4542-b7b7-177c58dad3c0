@@ -1,10 +1,30 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-29T06:55:45.244Z",
+  "generated_at": "2026-06-29T10:42:06.517Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 5,
+  "count": 6,
   "products": [
+    {
+      "id": "a7447262-e794-493c-9994-7b1344bcc579",
+      "slug": "tst1-c84a33",
+      "name": "טסט1",
+      "name_translations": {},
+      "description": "<p>בדיקה</p>",
+      "short_description": "בדיקת אשראי",
+      "sku": null,
+      "brand": null,
+      "price": 1,
+      "base_price": 1,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tst1-c84a33",
+      "categories": [],
+      "updated_at": "2026-06-29T10:41:33.503Z"
+    },
     {
       "id": "46f0110b-d3d7-41b2-9125-4663ebf53d33",
       "slug": "tsmyd-mhmm-chvm-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-2myzgd",

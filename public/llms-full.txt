@@ -6024,6 +6024,15 @@ Description: בלי עין הרע - תודה שפנית אלינו
 
 ## Product Catalog
 
+### טסט1
+URL: https://www.bliainara.co.il/product/tst1-c84a33
+Price: 1.00 ILS
+Availability: In stock
+
+בדיקה
+
+---
+
 ### צמיד מהמם חום קלוע בעבודת יד בשילוב אבני עין הנמר המיוחדות
 URL: https://www.bliainara.co.il/product/tsmyd-mhmm-chvm-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-2myzgd
 Price: 109.00 ILS (sale, was 139.00 ILS)
