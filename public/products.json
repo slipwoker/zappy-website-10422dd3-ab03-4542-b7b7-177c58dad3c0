@@ -1,22 +1,22 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-28T15:08:11.329Z",
+  "generated_at": "2026-06-29T06:16:12.492Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 4,
   "products": [
     {
       "id": "71aa7027-9c85-4807-8cbc-a9045c7596b5",
-      "slug": "tsmyd-mhmm-lbn-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-zrrvmq",
+      "slug": "tsmyd-mhmm-lbn-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-rbkiem",
       "name": "צמיד מהמם לבן קלוע בעבודת יד בשילוב אבני עין הנמר המיוחדות",
       "name_translations": {},
-      "description": "<p>צמיד מהמם לבן בעבודת יד קלוע בשילוב אבני עין הנמר המיוחדות והאנרגטיות שלא נותנות להתעלם ומוסיפות ללוק המיוחד כמוך...</p><p>אבזם שחור לסגירה בטוחה מפלדת אל חלד, קוטר כ-21 ס\"מ</p>",
+      "description": "<p>צמיד מהמם לבן בעבודת יד קלוע בשילוב אבני עין הנמר המיוחדות והאנרגטיות שלא נותנות להתעלם ומוסיפות ללוק המיוחד שלך...</p><p>אבזם שחור לסגירה בטוחה מפלדת אל חלד, קוטר כ-21 ס\"מ</p>",
       "short_description": "צמיד מהמם ומיוחד לבן קלוע בעבודת יד בשילוב אבני עין הנמר המיוחדות, אבזם סגירה בטוחה מפלדת אל חלד שחור, קוטר כ-21 ס\"מ",
       "sku": "3021409310010120060w",
       "brand": "בלי עין הרע",
-      "price": 119,
+      "price": 109,
       "base_price": 139,
-      "sale_price": 119,
+      "sale_price": 109,
       "currency": "ILS",
       "images": [
         "https://www.bliainara.co.il/assets/product-1782658701275-by6e4i.webp",
@@ -24,9 +24,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/tsmyd-mhmm-lbn-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-zrrvmq",
-      "categories": [],
-      "updated_at": "2026-06-28T15:01:32.683Z"
+      "url": "https://www.bliainara.co.il/product/tsmyd-mhmm-lbn-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-rbkiem",
+      "categories": [
+        "בלי עין הרע לגברים"
+      ],
+      "updated_at": "2026-06-29T06:15:40.727Z"
     },
     {
       "id": "cdbe64f2-5681-4ee0-9e3e-5469bb42a290",
