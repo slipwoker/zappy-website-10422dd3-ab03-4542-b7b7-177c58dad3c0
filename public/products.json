@@ -1,10 +1,32 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-29T06:32:07.367Z",
+  "generated_at": "2026-06-29T06:39:01.736Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 4,
+  "count": 5,
   "products": [
+    {
+      "id": "46f0110b-d3d7-41b2-9125-4663ebf53d33",
+      "slug": "tsmyd-mhmm-chvm-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-g14h44",
+      "name": "צמיד מהמם חום קלוע בעבודת יד בשילוב אבני עין הנמר המיוחדות",
+      "name_translations": {},
+      "description": "<p>צמיד מהמם לגבר חום קלוע בעבודת יד בשילוב אבני עין הנמר, סגירה בטוחה מפלדת אל חלד, קוטר כ-21 ס\"מ</p><p>תוספת מרשימה ללוק שלך...</p>",
+      "short_description": "צמיד מהמם חום קלוע בעבודת יד בשילוב אבני עין הנמר המיוחדות והאנרגטיות, תוספת מרשימה ללוק שלך...\nאבזם לסגירה בטוחה שחור מפלדת אל חלד, קוטר כ-21 ס\"מ",
+      "sku": "3021409310010120060br",
+      "brand": "בלי עין הרע",
+      "price": 109,
+      "base_price": 139,
+      "sale_price": 109,
+      "currency": "ILS",
+      "images": [],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tsmyd-mhmm-chvm-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-g14h44",
+      "categories": [
+        "בלי עין הרע לגברים"
+      ],
+      "updated_at": "2026-06-29T06:38:30.039Z"
+    },
     {
       "id": "71aa7027-9c85-4807-8cbc-a9045c7596b5",
       "slug": "tsmyd-mhmm-lbn-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-rbkiem",
