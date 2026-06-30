@@ -1,10 +1,30 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-06-29T18:27:40.636Z",
+  "generated_at": "2026-06-30T07:24:45.171Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 6,
+  "count": 7,
   "products": [
+    {
+      "id": "6e26cc75-df17-4eeb-b733-0f1610227dd3",
+      "slug": "shrshrt-am-tlyvn-adyn-mgn-dvyd-agvl-mshvlb-shybvts-abny-zyrkvn-msbyb-9crl02",
+      "name": "שרשרת עם תליון עדין מגן דויד עגול משולב שיבוץ  אבני זירקון מסביב",
+      "name_translations": {},
+      "description": "",
+      "short_description": "מיוצר מפלדת אל חלד ,קוטר תליון 2.1 ס\"מ",
+      "sku": null,
+      "brand": null,
+      "price": 0,
+      "base_price": 0,
+      "sale_price": null,
+      "currency": "ILS",
+      "images": [],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/shrshrt-am-tlyvn-adyn-mgn-dvyd-agvl-mshvlb-shybvts-abny-zyrkvn-msbyb-9crl02",
+      "categories": [],
+      "updated_at": "2026-06-30T07:24:13.482Z"
+    },
     {
       "id": "a7447262-e794-493c-9994-7b1344bcc579",
       "slug": "tst1-c84a33",
