@@ -5991,10 +5991,10 @@ Description: בלי עין הרע - תודה שפנית אלינו
 ## Product Catalog
 
 ### שרשרת עם תליון מגן דויד עגול עדין מצופים זהב איכותי משובץ באבני זירקון מסביב
-URL: https://www.bliainara.co.il/product/shrshrt-am-tlyvn-mgn-dvyd-agvl-adyn-mtsvpym-zhb-aykvty-mshvbts-babny-zyrkvn-msbyb-qpqw5d
+URL: https://www.bliainara.co.il/product/shrshrt-am-tlyvn-mgn-dvyd-agvl-adyn-mtsvpym-zhb-aykvty-mshvbts-babny-zyrkvn-msbyb-gfwmol
 Price: 119.00 ILS (sale, was 159.00 ILS)
 Availability: In stock
-SKU: 298188219501008033
+SKU: 298188219501008033go
 Brand: בלי עין הרע
 
 שרשרת עם תליון מגן דויד מפלדת אל חלד מצופים בזהב איכותי בשיבוץ זירקונים מסביב, קוטר 2.1 ס"מ מתאים גם ליום יום וגם לארועים מנצנצים

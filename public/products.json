@@ -1,18 +1,18 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-01T16:19:26.472Z",
+  "generated_at": "2026-07-01T16:29:14.567Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 7,
   "products": [
     {
       "id": "271d1140-af01-4c89-9612-3ee98ff86ee5",
-      "slug": "shrshrt-am-tlyvn-mgn-dvyd-agvl-adyn-mtsvpym-zhb-aykvty-mshvbts-babny-zyrkvn-msbyb-qpqw5d",
+      "slug": "shrshrt-am-tlyvn-mgn-dvyd-agvl-adyn-mtsvpym-zhb-aykvty-mshvbts-babny-zyrkvn-msbyb-gfwmol",
       "name": "שרשרת עם תליון מגן דויד עגול עדין מצופים זהב איכותי משובץ באבני זירקון מסביב",
       "name_translations": {},
       "description": "<p>שרשרת עם תליון מגן דויד מפלדת אל חלד מצופים בזהב איכותי בשיבוץ זירקונים מסביב, קוטר 2.1 ס\"מ מתאים גם ליום יום וגם לארועים מנצנצים</p>",
       "short_description": "שרשרת עם תליון מגן דויד עגול עדין מצופים זהב איכותי משובץ באבני זירקון, קוטר 2.1 ס\"מ",
-      "sku": "298188219501008033",
+      "sku": "298188219501008033go",
       "brand": "בלי עין הרע",
       "price": 119,
       "base_price": 159,
@@ -24,11 +24,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/shrshrt-am-tlyvn-mgn-dvyd-agvl-adyn-mtsvpym-zhb-aykvty-mshvbts-babny-zyrkvn-msbyb-qpqw5d",
+      "url": "https://www.bliainara.co.il/product/shrshrt-am-tlyvn-mgn-dvyd-agvl-adyn-mtsvpym-zhb-aykvty-mshvbts-babny-zyrkvn-msbyb-gfwmol",
       "categories": [
         "בלי עין הרע לנשים"
       ],
-      "updated_at": "2026-07-01T16:17:53.187Z"
+      "updated_at": "2026-07-01T16:28:42.534Z"
     },
     {
       "id": "6e26cc75-df17-4eeb-b733-0f1610227dd3",
