@@ -76,19 +76,13 @@ Information about WCAG compliance and accessibility features.
 
 ## Products
 
-**Total active products: 7**
+**Total active products: 6**
 
 ### שרשרת עם תליון עדין מגן דויד עגול משולב שיבוץ  אבני זירקון מסביב
 https://www.bliainara.co.il/product/shrshrt-am-tlyvn-adyn-mgn-dvyd-agvl-mshvlb-shybvts-abny-zyrkvn-msbyb-9crl02
 - Price: 0.00 ILS
 - Availability: In stock
 - Description: מיוצר מפלדת אל חלד ,קוטר תליון 2.1 ס"מ
-
-### טסט1
-https://www.bliainara.co.il/product/tst1-c84a33
-- Price: 1.00 ILS
-- Availability: Out of stock
-- Description: בדיקת אשראי
 
 ### צמיד מהמם חום קלוע בעבודת יד בשילוב אבני עין הנמר המיוחדות
 https://www.bliainara.co.il/product/tsmyd-mhmm-chvm-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-2myzgd
