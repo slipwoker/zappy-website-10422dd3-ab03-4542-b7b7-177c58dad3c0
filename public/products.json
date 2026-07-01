@@ -1,29 +1,34 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-01T15:17:51.548Z",
+  "generated_at": "2026-07-01T15:34:38.562Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 6,
   "products": [
     {
       "id": "6e26cc75-df17-4eeb-b733-0f1610227dd3",
-      "slug": "shrshrt-am-tlyvn-adyn-mgn-dvyd-agvl-mshvlb-shybvts-abny-zyrkvn-msbyb-9crl02",
-      "name": "שרשרת עם תליון עדין מגן דויד עגול משולב שיבוץ  אבני זירקון מסביב",
+      "slug": "shrshrt-am-tlyvn-mgn-dvyd-agvl-adyn-mshvbts-babny-zyrkvn-msbyb-a82l1g",
+      "name": "שרשרת עם תליון מגן דויד עגול עדין משובץ באבני זירקון מסביב",
       "name_translations": {},
-      "description": "",
-      "short_description": "מיוצר מפלדת אל חלד ,קוטר תליון 2.1 ס\"מ",
-      "sku": null,
-      "brand": null,
+      "description": "<p>תליון מגן דויד עדין ומהמם המתאים ליום יום וגם לארועים בזכות השיבוץ בזירקונים מנצנצים</p>",
+      "short_description": "מיוצר מפלדת אל חלד ,קוטר תליון 2.1 ס\"מ משובץ אבני זירקון",
+      "sku": "29818821950108033sil",
+      "brand": "בלי עין הרע",
       "price": 0,
       "base_price": 0,
       "sale_price": null,
       "currency": "ILS",
-      "images": [],
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1782919798499-w41wro.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1782919964107-cfxnab.webp"
+      ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/shrshrt-am-tlyvn-adyn-mgn-dvyd-agvl-mshvlb-shybvts-abny-zyrkvn-msbyb-9crl02",
-      "categories": [],
-      "updated_at": "2026-06-30T07:24:13.482Z"
+      "url": "https://www.bliainara.co.il/product/shrshrt-am-tlyvn-mgn-dvyd-agvl-adyn-mshvbts-babny-zyrkvn-msbyb-a82l1g",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-07-01T15:34:27.030Z"
     },
     {
       "id": "46f0110b-d3d7-41b2-9125-4663ebf53d33",
