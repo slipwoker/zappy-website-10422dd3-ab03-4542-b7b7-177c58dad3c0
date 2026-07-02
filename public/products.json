@@ -1,13 +1,13 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-02T06:47:26.397Z",
+  "generated_at": "2026-07-02T07:00:26.909Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 8,
   "products": [
     {
       "id": "f27cee67-b28b-4665-8cab-3017901d26d0",
-      "slug": "shrshrt-tlyvn-brkt-hkhnym-mpldt-al-chld-wkjaso",
+      "slug": "shrshrt-tlyvn-brkt-hkhnym-mpldt-al-chld-z5ji80",
       "name": "שרשרת תליון ברכת הכהנים מפלדת אל חלד ",
       "name_translations": {
         "en": "Priestly Blessing Stainless Steel Pendant Necklace",
@@ -26,11 +26,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-brkt-hkhnym-mpldt-al-chld-wkjaso",
+      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-brkt-hkhnym-mpldt-al-chld-z5ji80",
       "categories": [
         "בלי עין הרע לגברים"
       ],
-      "updated_at": "2026-07-02T06:46:54.589Z"
+      "updated_at": "2026-07-02T06:59:55.447Z"
     },
     {
       "id": "271d1140-af01-4c89-9612-3ee98ff86ee5",
