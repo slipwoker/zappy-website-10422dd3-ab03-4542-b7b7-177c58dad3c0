@@ -1,17 +1,17 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-04T16:59:57.806Z",
+  "generated_at": "2026-07-04T17:38:56.866Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 12,
   "products": [
     {
       "id": "6bc392da-f6e3-4af7-b9d1-a37db1df07bc",
-      "slug": "shrshrt-tlyvn-agvl-shma-yshral-mpldt-al-chld-ksvpym-lbrkh-vhgnh-1r9hjb",
-      "name": "שרשרת תליון עגול שמע ישראל מפלדת אל חלד כסופים לברכה והגנה",
+      "slug": "shrshrt-tlyvn-agvl-shma-yshral-mpldt-al-chld-ksvpym-lbrkh-shmyrh-vhgnh-w1rv3y",
+      "name": "שרשרת תליון עגול שמע ישראל מפלדת אל חלד כסופים לברכה, שמירה והגנה",
       "name_translations": {
-        "en": "Round Shema Israel Pendant Necklace in Silver Stainless Steel for Blessing and Protection",
-        "he": "שרשרת תליון עגול שמע ישראל מפלדת אל חלד כסופים לברכה והגנה"
+        "en": "Round Shema Israel Pendant Necklace in Silver Stainless Steel for Blessing, Protection and Guardianship",
+        "he": "שרשרת תליון עגול שמע ישראל מפלדת אל חלד כסופים לברכה, שמירה והגנה"
       },
       "description": "<p>שרשרת תליון מדהים סטיליסטי ואופנתי עם ברכת שמע ישראל לברכה, שמירה והגנה, מתאים ליום יום ולארועים</p>",
       "short_description": "שרשרת תליון עגול סטייליסטי ואופנתי שמע ישראל מפלדת אל חלד כסוף, קוטר תליון:2.8 ס\"מ, אורך שרשרת:60 ס\"מ",
@@ -21,14 +21,16 @@
       "base_price": 149,
       "sale_price": 109,
       "currency": "ILS",
-      "images": [],
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1783186315352-a1327q.webp"
+      ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-agvl-shma-yshral-mpldt-al-chld-ksvpym-lbrkh-vhgnh-1r9hjb",
+      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-agvl-shma-yshral-mpldt-al-chld-ksvpym-lbrkh-shmyrh-vhgnh-w1rv3y",
       "categories": [
         "בלי עין הרע לגברים"
       ],
-      "updated_at": "2026-07-04T16:59:25.666Z"
+      "updated_at": "2026-07-04T17:38:54.958Z"
     },
     {
       "id": "d9091540-6cc7-4240-9d11-adf2c731b9af",
