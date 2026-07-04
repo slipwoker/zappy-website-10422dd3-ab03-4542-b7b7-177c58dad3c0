@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-04T15:29:00.576Z",
+  "generated_at": "2026-07-04T15:55:38.033Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 9,
+  "count": 10,
   "products": [
+    {
+      "id": "b377d917-705e-448a-b306-e311d69a3bd1",
+      "slug": "shrshrt-tlyvn-mgn-dvyd-mpldt-al-chld-ksvp-gdvl-rvchb26sm-gvbh29sm-maulu8",
+      "name": "שרשרת תליון מגן דויד מפלדת אל חלד כסוף גדול, רוחב:2.6ס\"מ, גובה:2.9ס\"מ",
+      "name_translations": {
+        "en": "Large Silver Stainless Steel Star of David Pendant Necklace, Width: 2.6cm, Height: 2.9cm",
+        "he": "שרשרת תליון מגן דויד מפלדת אל חלד כסוף גדול, רוחב:2.6ס\"מ, גובה:2.9ס\"מ"
+      },
+      "description": "<p>שרשרת תליון מגן דויד כסוף מפלדת אל חלד ללוק סטייל יומיומי</p>",
+      "short_description": "שרשרת תליון מגן דויד מפלדת אל חלד כסוף גדול, אורך שרשרת:45-50 ס\"מ",
+      "sku": "298188219501008033s",
+      "brand": "בלי עין הרע",
+      "price": 109,
+      "base_price": 149,
+      "sale_price": 109,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1783180113883-1k2x3c.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1783180169776-zulznt.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-mpldt-al-chld-ksvp-gdvl-rvchb26sm-gvbh29sm-maulu8",
+      "categories": [
+        "בלי עין הרע לגברים"
+      ],
+      "updated_at": "2026-07-04T15:55:04.264Z"
+    },
     {
       "id": "d45f1546-1da8-4158-b66a-22260d660a8c",
       "slug": "shrshrt-tlyvn-brkt-hkhnym-mpldt-al-chld-btsypvy-zhb-aykvty-v8sbz3",
