@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-04T15:11:12.990Z",
+  "generated_at": "2026-07-04T15:29:00.576Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 8,
+  "count": 9,
   "products": [
+    {
+      "id": "d45f1546-1da8-4158-b66a-22260d660a8c",
+      "slug": "shrshrt-tlyvn-brkt-hkhnym-mpldt-al-chld-btsypvy-zhb-aykvty-v8sbz3",
+      "name": "שרשרת תליון ברכת הכהנים מפלדת אל חלד בציפוי זהב איכותי",
+      "name_translations": {
+        "en": "Priestly Blessing Pendant Necklace in Stainless Steel with Quality Gold Plating",
+        "he": "שרשרת תליון ברכת הכהנים מפלדת אל חלד בציפוי זהב איכותי"
+      },
+      "description": "<p>שרשרת תליון ברכת הכהנים לברכה, שמירה והגנה בתוספת סטייל ללוק שלך ליום יום ולארועים</p>",
+      "short_description": "שרשרת תליון לברכה והגנה ברכת הכהנים, עשויים מפלדת אל חלד וציפוי זהב איכותי, אורך תליון:3.9 ס\"מ, עובי ורוחב:0.5 ס\"מ, אורך שרשרת: 45-50ס\"מ",
+      "sku": "298188219501008033g",
+      "brand": "בלי עין הרע",
+      "price": 119,
+      "base_price": 159,
+      "sale_price": 119,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1783178612265-6s5w2g.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1783178855565-s3u4dp.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-brkt-hkhnym-mpldt-al-chld-btsypvy-zhb-aykvty-v8sbz3",
+      "categories": [
+        "בלי עין הרע לגברים"
+      ],
+      "updated_at": "2026-07-04T15:28:33.589Z"
+    },
     {
       "id": "f27cee67-b28b-4665-8cab-3017901d26d0",
       "slug": "shrshrt-tlyvn-brkt-hkhnym-mpldt-al-chld-ieg84k",
