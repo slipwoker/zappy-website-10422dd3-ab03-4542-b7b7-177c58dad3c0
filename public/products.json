@@ -1,10 +1,35 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-04T18:49:32.780Z",
+  "generated_at": "2026-07-04T18:55:51.220Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 14,
+  "count": 15,
   "products": [
+    {
+      "id": "a0fc5a81-a842-4e30-88f1-aa53ec352d9c",
+      "slug": "shrshrt-tlyvn-chy-mpldt-al-chld-mtsvpym-zhb-aykvty-lbrkharykvt-ymymshpa-vhgnh-bdsi1b",
+      "name": "שרשרת תליון חי מפלדת אל חלד מצופים זהב איכותי לברכה,אריכות ימים,שפע והגנה",
+      "name_translations": {
+        "en": "Chai Pendant Necklace in Gold-Plated Stainless Steel for Blessing, Longevity, Abundance and Protection",
+        "he": "שרשרת תליון חי מפלדת אל חלד מצופים זהב איכותי לברכה,אריכות ימים,שפע והגנה"
+      },
+      "description": "<p>לברכה, הצלחה, שפע והגנה עוצמתיים מהקבלה</p>",
+      "short_description": "שרשרת תליון חי מפלדת אל חלד מצופים זהב איכותי, רוחב תליון:1.7ס\"מ, אורך תליון:1.6ס\"מ, אורך שרשרת: 45+5ס\"מ\nבשילוב אותיות קבלה עוצמתיות לשפע, ברכה, הגנה.\nמתאים ללוק וסטייל אופנתי יום יומי ולארועים",
+      "sku": "298188219501008033g",
+      "brand": "בלי עין הרע",
+      "price": 119,
+      "base_price": 159,
+      "sale_price": 119,
+      "currency": "ILS",
+      "images": [],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-chy-mpldt-al-chld-mtsvpym-zhb-aykvty-lbrkharykvt-ymymshpa-vhgnh-bdsi1b",
+      "categories": [
+        "בלי עין הרע לגברים"
+      ],
+      "updated_at": "2026-07-04T18:55:48.752Z"
+    },
     {
       "id": "908378ca-6b0b-4651-8646-0e1c1fcda0b1",
       "slug": "shrshrt-tlyvn-chy-mpldt-al-chld-ksvpym-lbrkharykvt-ymymshpa-vhgnh-hhxww0",
