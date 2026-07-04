@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-04T15:57:27.124Z",
+  "generated_at": "2026-07-04T16:21:59.446Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 10,
+  "count": 11,
   "products": [
+    {
+      "id": "d9091540-6cc7-4240-9d11-adf2c731b9af",
+      "slug": "shrshrt-tlyvn-mgn-dvyd-mpldt-al-chld-btsypvy-zhb-aykvty-rvchb26sm-avrk-29sm-lry7z1",
+      "name": "שרשרת תליון מגן דויד מפלדת אל חלד בציפוי זהב איכותי, רוחב:2.6ס\"מ, אורך: 2.9ס\"מ",
+      "name_translations": {
+        "en": "Star of David Pendant Necklace in Gold-Plated Stainless Steel, Width: 2.6cm, Length: 2.9cm",
+        "he": "שרשרת תליון מגן דויד מפלדת אל חלד בציפוי זהב איכותי, רוחב:2.6ס\"מ, אורך: 2.9ס\"מ"
+      },
+      "description": "<p>שרשרת תליון מגן דויד עשוי מפלדת אל חלד מצופים זהב איכותי, ללוק וסטייל יומיומי ולארועים</p>",
+      "short_description": "שרשרת תליון מגן דויד מפלדת אל חלד מצופים זהב איכותי, אורך שרשרת: 45-50ס\"מ",
+      "sku": "298188219501008033g",
+      "brand": "בלי עין הרע",
+      "price": 119,
+      "base_price": 159,
+      "sale_price": 119,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1783181161806-7ajm1z.webp",
+        "https://www.bliainara.co.il/assets/product-1783181709923-6trsbv.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-mpldt-al-chld-btsypvy-zhb-aykvty-rvchb26sm-avrk-29sm-lry7z1",
+      "categories": [
+        "בלי עין הרע לגברים"
+      ],
+      "updated_at": "2026-07-04T16:21:37.508Z"
+    },
     {
       "id": "b377d917-705e-448a-b306-e311d69a3bd1",
       "slug": "shrshrt-tlyvn-mgn-dvyd-mpldt-al-chld-ksvp-gdvl-rvchb26sm-gvbh29sm-904sal",
