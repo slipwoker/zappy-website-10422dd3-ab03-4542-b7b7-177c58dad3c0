@@ -1,13 +1,13 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-04T16:49:46.901Z",
+  "generated_at": "2026-07-04T16:51:35.737Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 11,
   "products": [
     {
       "id": "d9091540-6cc7-4240-9d11-adf2c731b9af",
-      "slug": "shrshrt-tlyvn-mgn-dvyd-mpldt-al-chld-btsypvy-zhb-aykvty-rvchb26sm-avrk-29sm-lry7z1",
+      "slug": "shrshrt-tlyvn-mgn-dvyd-mpldt-al-chld-btsypvy-zhb-aykvty-rvchb26sm-avrk-29sm-g8gd94",
       "name": "שרשרת תליון מגן דויד מפלדת אל חלד בציפוי זהב איכותי, רוחב:2.6ס\"מ, אורך: 2.9ס\"מ",
       "name_translations": {
         "en": "Star of David Pendant Necklace in Gold-Plated Stainless Steel, Width: 2.6cm, Length: 2.9cm",
@@ -27,11 +27,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-mpldt-al-chld-btsypvy-zhb-aykvty-rvchb26sm-avrk-29sm-lry7z1",
+      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-mpldt-al-chld-btsypvy-zhb-aykvty-rvchb26sm-avrk-29sm-g8gd94",
       "categories": [
         "בלי עין הרע לגברים"
       ],
-      "updated_at": "2026-07-04T16:49:15.129Z"
+      "updated_at": "2026-07-04T16:51:04.219Z"
     },
     {
       "id": "b377d917-705e-448a-b306-e311d69a3bd1",
