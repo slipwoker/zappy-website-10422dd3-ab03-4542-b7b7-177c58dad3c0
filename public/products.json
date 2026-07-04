@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-04T17:49:04.203Z",
+  "generated_at": "2026-07-04T18:26:25.550Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 12,
+  "count": 13,
   "products": [
+    {
+      "id": "659ee31e-e297-4486-9b25-5ebfac83b88e",
+      "slug": "shrshrt-tlyvn-agvl-shma-yshral-mpldt-al-chld-mtsvpym-zhb-aykvty-lbrkhshmyrh-vhgnh-wz5219",
+      "name": "שרשרת תליון עגול שמע ישראל מפלדת אל חלד מצופים זהב איכותי לברכה,שמירה והגנה",
+      "name_translations": {
+        "en": "Round Shema Israel Pendant Necklace in Gold-Plated Stainless Steel for Blessing, Protection and Guardianship",
+        "he": "שרשרת תליון עגול שמע ישראל מפלדת אל חלד מצופים זהב איכותי לברכה,שמירה והגנה"
+      },
+      "description": "<p>שרשרת תליון מהממת שמע ישראל עגול מפלדת אל חלד מצופה זהב איכותי לברכה,שמירה והגנה ללוק סטיליסטי ואופנתי ליום יום ולארועים</p>",
+      "short_description": "שרשרת תליון מהממים, תליון עגול קוטר:2.8ס\"מ, מפלדת אל חלד מצופים זהב איכותי, אורך השרשרת 60 ס\"מ.  לברכה, שמירה, הגנה ולוק סטיליסטי ואופנתי ליום יום וגם לארועים",
+      "sku": null,
+      "brand": "בלי עין הרע",
+      "price": 119,
+      "base_price": 159,
+      "sale_price": 119,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1783188025755-nwt81l.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1783189434835-q14ggh.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-agvl-shma-yshral-mpldt-al-chld-mtsvpym-zhb-aykvty-lbrkhshmyrh-vhgnh-wz5219",
+      "categories": [
+        "בלי עין הרע לגברים"
+      ],
+      "updated_at": "2026-07-04T18:25:58.640Z"
+    },
     {
       "id": "6bc392da-f6e3-4af7-b9d1-a37db1df07bc",
       "slug": "shrshrt-tlyvn-agvl-shma-yshral-mpldt-al-chld-ksvpym-lbrkh-shmyrh-vhgnh-dlqd5l",
