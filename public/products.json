@@ -1,10 +1,36 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-05T09:45:54.787Z",
+  "generated_at": "2026-07-05T17:04:35.531Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 22,
+  "count": 23,
   "products": [
+    {
+      "id": "0be8bc0a-5ed1-4396-9d50-5e36d5266e80",
+      "slug": "tsmyd-tbat-mavynym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-ksvpym-v48jpb",
+      "name": "צמיד טבעת מעוינים משובצים זירקונים מנצנצים מפלדת אל חלד כסופים ",
+      "name_translations": {
+        "en": "Silver Stainless Steel Zirconia Diamond-Shaped Ring Bracelet",
+        "he": "צמיד טבעת מעוינים משובצים זירקונים מפלדת אל חלד כסופים "
+      },
+      "description": "<p>צמיד טבעת מהמם ומנצנץ סטייל ואופנה על היד</p>",
+      "short_description": "צמיד טבעת מהמם ומנצנץ מפלדת אל חלד, מתאים גם ליום יום וגם לארועים",
+      "sku": "304226303001007012s",
+      "brand": "בלי עין הרע",
+      "price": 109,
+      "base_price": 149,
+      "sale_price": 109,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1783270829516-yk3cje.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1783270909437-y9iy.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tsmyd-tbat-mavynym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-ksvpym-v48jpb",
+      "categories": [],
+      "updated_at": "2026-07-05T17:04:29.744Z"
+    },
     {
       "id": "d2a342ca-796e-4b62-a7a1-efe15fd7109f",
       "slug": "shrshrt-tlyvn-agvl-ayn-hra-mpldt-al-chld-btsypvy-zhb-aykvty-lshmyrh-vhgnh-mayn-hra-gxe9jj",
