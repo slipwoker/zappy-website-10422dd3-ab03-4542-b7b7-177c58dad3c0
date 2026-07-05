@@ -1,13 +1,13 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-05T17:29:15.794Z",
+  "generated_at": "2026-07-05T17:35:07.861Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 24,
   "products": [
     {
       "id": "fdac2dad-6f23-456d-abe8-7a56109e9078",
-      "slug": "tsmyd-tbat-mavynym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-btsypvy-zhb-aykvty-yflhop",
+      "slug": "tsmyd-tbat-mavynym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-btsypvy-zhb-aykvty-qy3ds9",
       "name": "צמיד טבעת מעוינים משובצים זירקונים מנצנצים מפלדת אל חלד בציפוי זהב איכותי",
       "name_translations": {
         "en": "Diamond-Shaped Ring Bracelet with Sparkling Zirconia Stones in Quality Gold-Plated Stainless Steel",
@@ -27,11 +27,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/tsmyd-tbat-mavynym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-btsypvy-zhb-aykvty-yflhop",
+      "url": "https://www.bliainara.co.il/product/tsmyd-tbat-mavynym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-btsypvy-zhb-aykvty-qy3ds9",
       "categories": [
         "בלי עין הרע לנשים"
       ],
-      "updated_at": "2026-07-05T17:28:44.351Z"
+      "updated_at": "2026-07-05T17:34:36.596Z"
     },
     {
       "id": "0be8bc0a-5ed1-4396-9d50-5e36d5266e80",
