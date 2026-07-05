@@ -79,13 +79,14 @@ Information about WCAG compliance and accessibility features.
 **Total active products: 17**
 
 ### שרשרת תליון מעודנים מפת ישראל בשילוב מגן דויד מפלדת אל חלד בציפוי זהב איכותי
-https://www.bliainara.co.il/product/shrshrt-tlyvn-mavdnym-mpt-yshral-bshylvb-mgn-dvyd-mpldt-al-chld-btsypvy-zhb-aykvty-nu8217
+https://www.bliainara.co.il/product/shrshrt-tlyvn-mavdnym-mpt-yshral-bshylvb-mgn-dvyd-mpldt-al-chld-btsypvy-zhb-aykvty-fkfs08
 - Price: 119.00 ILS (sale, was 159.00 ILS)
 - Availability: In stock
 - Category: בלי עין הרע לנשים
 - SKU: 302785198501005060g
 - Brand: בלי עין הרע
 - Description: שרשרת תליון מעודנים מפת ישראל בשילוב מגן דויד מפלדת אל חלד בציפוי זהב איכותי, אורך שרשרת:כ-46 ס"מ
+- Image: https://www.bliainara.co.il/assets/product-1783231993924-39pgug.webp
 
 ### שרשרת תליון כסופים מפת ישראל משולבת מגן דויד מפלדת אל חלד
 https://www.bliainara.co.il/product/shrshrt-tlyvn-ksvpym-mpt-yshral-mshvlbt-mgn-dvyd-mpldt-al-chld-m253gg
