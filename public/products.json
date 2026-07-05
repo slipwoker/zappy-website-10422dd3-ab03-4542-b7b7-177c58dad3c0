@@ -1,16 +1,16 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-05T17:07:16.242Z",
+  "generated_at": "2026-07-05T17:08:01.794Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 23,
   "products": [
     {
       "id": "0be8bc0a-5ed1-4396-9d50-5e36d5266e80",
-      "slug": "tsmyd-tbat-mavynym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-ksvpym-1ctc76",
+      "slug": "tsmyd-tbat-mavynym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-ksvpym-4zla27",
       "name": "צמיד טבעת מעוינים משובצים זירקונים מנצנצים מפלדת אל חלד כסופים ",
       "name_translations": {
-        "en": "Diamond-Shape Bangle Bracelet with Sparkling Zirconia Stones in Silver Stainless Steel",
+        "en": "Diamond-Shaped Bangle Bracelet with Sparkling Zirconia Stones in Silver Stainless Steel ",
         "he": "צמיד טבעת מעוינים משובצים זירקונים מנצנצים מפלדת אל חלד כסופים "
       },
       "description": "<p>צמיד טבעת מהמם ומנצנץ סטייל ואופנה על היד בכל רגע</p>",
@@ -27,11 +27,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/tsmyd-tbat-mavynym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-ksvpym-1ctc76",
+      "url": "https://www.bliainara.co.il/product/tsmyd-tbat-mavynym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-ksvpym-4zla27",
       "categories": [
         "בלי עין הרע לנשים"
       ],
-      "updated_at": "2026-07-05T17:06:34.199Z"
+      "updated_at": "2026-07-05T17:07:29.825Z"
     },
     {
       "id": "d2a342ca-796e-4b62-a7a1-efe15fd7109f",
