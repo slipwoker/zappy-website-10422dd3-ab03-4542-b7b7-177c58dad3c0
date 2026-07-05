@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-05T17:35:07.861Z",
+  "generated_at": "2026-07-05T17:49:30.735Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 24,
+  "count": 25,
   "products": [
+    {
+      "id": "b02fc454-c917-4abf-882a-36dc5d2776cb",
+      "slug": "tsmyd-tbat-prchym-vbvddym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-btsypvy-zhb-aykvty-01yg5o",
+      "name": "צמיד טבעת פרחים ובודדים משובצים זירקונים מנצנצים מפלדת אל חלד בציפוי זהב איכותי",
+      "name_translations": {
+        "en": "Flower Ring Bracelet with Sparkling Zirconia Inlays in Quality Gold-Plated Stainless Steel",
+        "he": "צמיד טבעת פרחים ובודדים משובצים זירקונים מנצנצים מפלדת אל חלד בציפוי זהב איכותי"
+      },
+      "description": "<p>סטייל ואופנה ביד לכל רגע</p>",
+      "short_description": "צמיד טבעת פרחים ובודדים משובצים זירקונים מנצנצים בציפוי זהב איכותי על פלדת אל חלד",
+      "sku": "304226303001007012g",
+      "brand": "בלי עין הרע",
+      "price": 119,
+      "base_price": 159,
+      "sale_price": 119,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1783273208612-m59sk9j.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1783273666227-uo2d59.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tsmyd-tbat-prchym-vbvddym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-btsypvy-zhb-aykvty-01yg5o",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-07-05T17:49:06.369Z"
+    },
     {
       "id": "fdac2dad-6f23-456d-abe8-7a56109e9078",
       "slug": "tsmyd-tbat-mavynym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-btsypvy-zhb-aykvty-qy3ds9",
