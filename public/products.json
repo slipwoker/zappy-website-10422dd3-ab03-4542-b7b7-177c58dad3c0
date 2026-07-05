@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-04T19:41:58.444Z",
+  "generated_at": "2026-07-05T06:04:08.196Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 15,
+  "count": 16,
   "products": [
+    {
+      "id": "33a48049-20b9-4924-ae85-619184910682",
+      "slug": "shrshrt-tlyvn-ksvpym-mpt-yshral-mshvlbt-mgn-dvyd-mpldt-al-chld-cov29w",
+      "name": "שרשרת תליון כסופים מפת ישראל משולבת מגן דויד מפלדת אל חלד",
+      "name_translations": {
+        "en": "Silver Israel Map Combined with Star of David Pendant Necklace in Stainless Steel",
+        "he": "שרשרת תליון כסופים מפת ישראל משולבת מגן דויד מפלדת אל חלד"
+      },
+      "description": "<p>שרשרת תליון מעודנים מפלדת אל חלד כסופים ליום יום וגם לארועים</p>",
+      "short_description": "שרשרת תליון מפת ישראל מעודנת מפלדת אל חלד, אורך שרשרת:כ-46 ס\"מ",
+      "sku": "302785198501005060s",
+      "brand": "בלי עין הרע",
+      "price": 109,
+      "base_price": 149,
+      "sale_price": 109,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1783230940688-zn3t3.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1783231357753-ox7d1.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-ksvpym-mpt-yshral-mshvlbt-mgn-dvyd-mpldt-al-chld-cov29w",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-07-05T06:04:05.396Z"
+    },
     {
       "id": "a0fc5a81-a842-4e30-88f1-aa53ec352d9c",
       "slug": "shrshrt-tlyvn-chy-mpldt-al-chld-mtsvpym-zhb-aykvty-lbrkharykvt-ymymshpa-vhgnh-szhxc6",
