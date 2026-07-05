@@ -1,10 +1,35 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-05T06:05:44.354Z",
+  "generated_at": "2026-07-05T06:11:52.987Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 16,
+  "count": 17,
   "products": [
+    {
+      "id": "97373e0c-6c85-472d-a5e9-d62e0d869c8c",
+      "slug": "shrshrt-tlyvn-mavdnym-mpt-yshral-bshylvb-mgn-dvyd-mpldt-al-chld-btsypvy-zhb-aykvty-nu8217",
+      "name": "שרשרת תליון מעודנים מפת ישראל בשילוב מגן דויד מפלדת אל חלד בציפוי זהב איכותי",
+      "name_translations": {
+        "en": "Elegant Israel Map Pendant Necklace with Star of David in Quality Gold-Plated Stainless Steel",
+        "he": "שרשרת תליון מעודנים מפת ישראל בשילוב מגן דויד מפלדת אל חלד בציפוי זהב איכותי"
+      },
+      "description": "<p>שרשרת תליון מפת ישראל בשילוב מגן דויד בציפוי זהב, מתאים לסטייל יום יומי ולארועים</p>",
+      "short_description": "שרשרת תליון מעודנים מפת ישראל בשילוב מגן דויד מפלדת אל חלד בציפוי זהב איכותי, אורך שרשרת:כ-46 ס\"מ",
+      "sku": "302785198501005060g",
+      "brand": "בלי עין הרע",
+      "price": 119,
+      "base_price": 159,
+      "sale_price": 119,
+      "currency": "ILS",
+      "images": [],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-mavdnym-mpt-yshral-bshylvb-mgn-dvyd-mpldt-al-chld-btsypvy-zhb-aykvty-nu8217",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-07-05T06:11:21.484Z"
+    },
     {
       "id": "33a48049-20b9-4924-ae85-619184910682",
       "slug": "shrshrt-tlyvn-ksvpym-mpt-yshral-mshvlbt-mgn-dvyd-mpldt-al-chld-m253gg",
