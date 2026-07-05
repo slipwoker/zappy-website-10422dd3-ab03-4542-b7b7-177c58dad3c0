@@ -79,13 +79,14 @@ Information about WCAG compliance and accessibility features.
 **Total active products: 20**
 
 ### שרשרת לגבר בעבודת יד מקליפות קוקוס טבעיים חרוזי עץ ואבנים טבעיות בצבע כחול כהה
-https://www.bliainara.co.il/product/shrshrt-lgbr-babvdt-yd-mklypvt-kvkvs-tbayym-chrvzy-ats-vabnym-tbayvt-btsba-kchvl-khh-3z6f49
+https://www.bliainara.co.il/product/shrshrt-lgbr-babvdt-yd-mklypvt-kvkvs-tbayym-chrvzy-ats-vabnym-tbayvt-btsba-kchvl-khh-pvqaax
 - Price: 109.00 ILS (sale, was 149.00 ILS)
 - Availability: In stock
 - Category: בלי עין הרע לגברים
 - SKU: 302785198501005060n
 - Brand: בלי עין הרע
 - Description: שרשרת לגבר בעבודת יד משולבת קליפות קוקוס, חרוזי עץ ואבן טבעית כחולה כהה, אורך שרשרת:45+5ס"מ, עובי שרשרת:0.6ס"מ, סגר שרשרת מצופה זהב איכותי
+- Image: https://www.bliainara.co.il/assets/product-1783238830997-3u7d0o.webp
 
 ### שרשרת לגבר עבודת יד מקליפות קוקוס טבעיים חרוזי עץ ואבנים טבעיות בצבע כחול מנטה
 https://www.bliainara.co.il/product/shrshrt-lgbr-abvdt-yd-mklypvt-kvkvs-tbayym-chrvzy-ats-vabnym-tbayvt-btsba-kchvl-mnth-siq82c
