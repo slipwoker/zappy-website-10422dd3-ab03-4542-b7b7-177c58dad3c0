@@ -79,13 +79,14 @@ Information about WCAG compliance and accessibility features.
 **Total active products: 24**
 
 ### צמיד טבעת מעוינים משובצים זירקונים מנצנצים מפלדת אל חלד בציפוי זהב איכותי
-https://www.bliainara.co.il/product/tsmyd-tbat-mavynym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-btsypvy-zhb-aykvty-jkj630
+https://www.bliainara.co.il/product/tsmyd-tbat-mavynym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-btsypvy-zhb-aykvty-mf3j1c
 - Price: 119.00 ILS (sale, was 159.00 ILS)
 - Availability: In stock
 - Category: בלי עין הרע לנשים
 - SKU: 304226303001007012g
 - Brand: בלי עין הרע
 - Description: צמיד טבעת מעוינים משובצים זירקונים מפלדת אל חלד בציפוי זהב איכותי, מתאים ליום יום ולארועים
+- Image: https://www.bliainara.co.il/assets/product-1783272155273-x63l9l.webp
 
 ### צמיד טבעת מעוינים משובצים זירקונים מנצנצים מפלדת אל חלד כסופים 
 https://www.bliainara.co.il/product/tsmyd-tbat-mavynym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-ksvpym-4zla27
