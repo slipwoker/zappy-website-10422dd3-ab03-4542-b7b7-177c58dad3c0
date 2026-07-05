@@ -1,10 +1,35 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-05T07:43:15.686Z",
+  "generated_at": "2026-07-05T07:53:27.593Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 19,
+  "count": 20,
   "products": [
+    {
+      "id": "3ac36390-0147-4bba-85d5-c9d530e9223f",
+      "slug": "shrshrt-lgbr-babvdt-yd-mklypvt-kvkvs-tbayym-chrvzy-ats-vabnym-tbayvt-btsba-kchvl-khh-3z6f49",
+      "name": "שרשרת לגבר בעבודת יד מקליפות קוקוס טבעיים חרוזי עץ ואבנים טבעיות בצבע כחול כהה",
+      "name_translations": {
+        "en": "Handmade Men's Necklace with Natural Coconut Shells, Wood Beads and Natural Stones in Dark Blue",
+        "he": "שרשרת לגבר בעבודת יד מקליפות קוקוס טבעיים חרוזי עץ ואבנים טבעיות בצבע כחול כהה"
+      },
+      "description": "<p>שרשרת בעבודת יד לאוהבי הסטייל הטבעי ליום יום</p>",
+      "short_description": "שרשרת לגבר בעבודת יד משולבת קליפות קוקוס, חרוזי עץ ואבן טבעית כחולה כהה, אורך שרשרת:45+5ס\"מ, עובי שרשרת:0.6ס\"מ, סגר שרשרת מצופה זהב איכותי",
+      "sku": "302785198501005060n",
+      "brand": "בלי עין הרע",
+      "price": 109,
+      "base_price": 149,
+      "sale_price": 109,
+      "currency": "ILS",
+      "images": [],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/shrshrt-lgbr-babvdt-yd-mklypvt-kvkvs-tbayym-chrvzy-ats-vabnym-tbayvt-btsba-kchvl-khh-3z6f49",
+      "categories": [
+        "בלי עין הרע לגברים"
+      ],
+      "updated_at": "2026-07-05T07:53:00.256Z"
+    },
     {
       "id": "8de052c2-ada7-4f03-bcc7-c1c908aef8ec",
       "slug": "shrshrt-lgbr-abvdt-yd-mklypvt-kvkvs-tbayym-chrvzy-ats-vabnym-tbayvt-btsba-kchvl-mnth-siq82c",
