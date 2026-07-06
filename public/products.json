@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-06T17:43:53.553Z",
+  "generated_at": "2026-07-06T18:29:49.793Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 25,
+  "count": 26,
   "products": [
+    {
+      "id": "4461c02e-0bea-4538-b914-110425cf36ba",
+      "slug": "tsmyd-tbat-mshvlshym-mhmm-adyn-mshvlb-shybvtsy-zyrkvnym-mpldt-al-chld-23tyga",
+      "name": "צמיד טבעת משולשים מהמם, עדין משולב שיבוצי זירקונים מפלדת אל חלד",
+      "name_translations": {
+        "en": "Stunning Triangle Ring Bracelet, Delicate with Zircon Inlays in Stainless Steel",
+        "he": "צמיד טבעת משולשים מהמם, עדין משולב שיבוצי זירקונים מפלדת אל חלד"
+      },
+      "description": "<p>צמיד טבעת מהמם לכל רגע יפה ומנצנץ על ידך</p>",
+      "short_description": "צמיד טבעת משולשים מהמם ועדין משולב שיבוצי זירקונים עגולים מפלדת אל חלד, ליום יום ולארועים. אורך הצמיד טבעת:17+3ס\"מ",
+      "sku": "304589851001009071s",
+      "brand": "בלי עין הרע",
+      "price": 109,
+      "base_price": 149,
+      "sale_price": 109,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1783362271730-dc8ood.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1783362453870-lju8xh.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tsmyd-tbat-mshvlshym-mhmm-adyn-mshvlb-shybvtsy-zyrkvnym-mpldt-al-chld-23tyga",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-07-06T18:29:22.853Z"
+    },
     {
       "id": "b02fc454-c917-4abf-882a-36dc5d2776cb",
       "slug": "tsmyd-tbat-prchym-vbvddym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-btsypvy-zhb-aykvty-ittgu5",
