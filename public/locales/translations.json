@@ -1602,6 +1602,7 @@
       "thank_you_seo_twitter_description": "בלי עין הרע - Thank you for contacting us",
       "gift_guide_seo_twitter_description": "Lost in a sea of jewelry? Our smart gift guide will help you choose the ultimate piece for any woman or man you love. From style tips to surprising ideas – give a gift that steals the show effortlessly. Enter now!",
       "craftsmanship_seo_twitter_description": "Immerse yourself in the world of craftsmanship behind our jewelry. Discover how we combine premium materials like silver, gold plating, and genuine leather with precise handwork to create pieces that look like a million dollars – but cost much less. Come take a closer look at the magic!",
+      "new_text_183_1": "</a><span><span>&nbsp;can be found in the description of each piece of jewelry</span></span>",
       "new_text_115_0": "<strong><span><span>Email:</span></span></strong> <a href=\"mailto:"
     }
   },
@@ -1753,7 +1754,7 @@
       "home_alt_93": "צמיד עור קלוע לגבר עם חרוז זהב קטן",
       "home_alt_94": "תכשיטים על עור בתאורה רכה",
       "home_alt_95": "בלי עין הרע",
-      "home_div_77": "ברוכים הבאים לבלי עין הרע משלוח חינם בקניה מעל 300 ש''ח נשמח לעמוד לרשותך בווטסאפ בכל שאלה",
+      "home_div_77": "<span class=\"zappy-announcement-message active\">ברוכים הבאים לבלי עין הרע </span><span class=\"zappy-announcement-message\">משלוח חינם בקניה מעל 300 ש''ח </span><span class=\"zappy-announcement-message\">נשמח לעמוד לרשותך בווטסאפ בכל שאלה </span>",
       "home_div_78": "טוען...",
       "home_div_79": "טוען מוצרים...",
       "home_nav_80": "מוצרים",
@@ -3208,6 +3209,7 @@
       "thank_you_seo_twitter_description": "בלי עין הרע - תודה שפנית אלינו",
       "gift_guide_seo_twitter_description": "אובדי עצות מול ים התכשיטים? מדריך המתנות החכם שלנו יעזור לכם לבחור את התכשיט האולטימטיבי לכל אישה או גבר שאתם אוהבים. מטיפים סטייל ועד רעיונות מפתיעים – תנו מתנה שתגנוב את ההצגה בלי להתאמץ. היכנסו עכשיו!",
       "craftsmanship_seo_twitter_description": "טבלו את עצמכן בעולם האומנות שמאחורי התכשיטים שלנו. גלו איך אנחנו משלבים חומרים משובחים כמו כסף, ציפוי זהב ועור אמיתי עם עבודת יד מדויקת כדי ליצור פריטים שנראים כמו מיליון דולר – אבל עולים הרבה פחות. היכנסו להכיר את הקסם מקרוב!",
+      "new_text_183_1": "</a><span><span>&nbsp;תוכלו למצוא בתאור של כל תכשיט</span></span>",
       "new_text_115_0": "<strong><span><span>אימייל:</span></span></strong> <a href=\"mailto:"
     }
   }
