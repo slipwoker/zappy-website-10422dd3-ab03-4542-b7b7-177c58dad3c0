@@ -1,10 +1,35 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-06T18:33:44.545Z",
+  "generated_at": "2026-07-07T07:00:44.533Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 26,
+  "count": 27,
   "products": [
+    {
+      "id": "36a1b8c9-d482-4ef0-878c-ac3de58d4771",
+      "slug": "tsmyd-tbat-mpldt-al-chld-adyn-mshvbts-bzyrkvnym-agvlym-sulbio",
+      "name": "צמיד טבעת מפלדת אל חלד עדין משובץ בזירקונים עגולים",
+      "name_translations": {
+        "en": "Delicate Stainless Steel Ring Bracelet Set with Round Zirconia Stones",
+        "he": "צמיד טבעת מפלדת אל חלד עדין משובץ בזירקונים עגולים"
+      },
+      "description": "<p>צמיד טבעת עדין ומנצנץ על היד</p>",
+      "short_description": "צמיד טבעת עדין מפלדת אל חלד משולב שיבוצי זירקונים בקוטר 0.49ס\"מ, אורך צמיד:16+5 ס\"מ ומהצמיד עד הטבעת:13ס\"מ",
+      "sku": "304218271501008090",
+      "brand": "בלי עין הרע",
+      "price": 105,
+      "base_price": 145,
+      "sale_price": 105,
+      "currency": "ILS",
+      "images": [],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tsmyd-tbat-mpldt-al-chld-adyn-mshvbts-bzyrkvnym-agvlym-sulbio",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-07-07T07:00:12.568Z"
+    },
     {
       "id": "4461c02e-0bea-4538-b914-110425cf36ba",
       "slug": "tsmyd-tbat-mshvlshym-mhmm-adyn-mshvlb-shybvtsy-zyrkvnym-mpldt-al-chld-lish5v",
