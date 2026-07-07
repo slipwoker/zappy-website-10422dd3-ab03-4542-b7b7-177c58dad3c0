@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-07T07:18:48.106Z",
+  "generated_at": "2026-07-07T08:26:01.465Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 27,
+  "count": 28,
   "products": [
+    {
+      "id": "9b944635-9179-4aa6-a5f6-f7c052fcb342",
+      "slug": "tsmyd-tbat-tnys-yvkrtyym-mshvbts-zyrkvnym-mtsvpym-zhb-aykvty-mpldt-al-chld-46k1z1",
+      "name": "צמיד טבעת טניס יוקרתיים משובץ זירקונים מצופים זהב איכותי מפלדת אל חלד",
+      "name_translations": {
+        "en": "Luxury Tennis Bracelet Ring Set Encrusted with Zirconia Stones Gold Plated Quality Stainless Steel",
+        "he": "צמיד טבעת טניס יוקרתיים משובץ זירקונים מצופים זהב איכותי מפלדת אל חלד"
+      },
+      "description": "<p>לאוהבות לוק, נוכחות,סטייל והיוקרה במיוחד לארועים מנצנצים</p>",
+      "short_description": "לאוהבות היוקרה והסטייל צמיד טבעת טניס משובצים זירקונים, אורך הצמיד:18+5ס\"מ, אורך מהצמיד עד האצבע:12ס\"מ",
+      "sku": "304218271501008090g",
+      "brand": "בלי עין הרע",
+      "price": 119,
+      "base_price": 159,
+      "sale_price": 119,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1783412562266-jnkej8.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1783412624401-pqdg2.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tsmyd-tbat-tnys-yvkrtyym-mshvbts-zyrkvnym-mtsvpym-zhb-aykvty-mpldt-al-chld-46k1z1",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-07-07T08:25:29.580Z"
+    },
     {
       "id": "36a1b8c9-d482-4ef0-878c-ac3de58d4771",
       "slug": "tsmyd-tbat-mpldt-al-chld-adyn-mshvbts-bzyrkvnym-agvlym-sulbio",
