@@ -229,17 +229,7 @@
     <meta name="twitter:title" content="החשבון שלי">
     <meta name="twitter:description" content="החשבון שלי">
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://www.bliainara.co.il#organization","name":"בלי עין הרע","url":"https://www.bliainara.co.il","description":"An online jewelry store offering high-quality jewelry for both women and men at affordable prices. The brand positions itself around the concept of accessible luxury — premium craftsmanship without the premium price tag. The store caters to a broad audience seeking elegant, well-made pieces that don't break the bank.","address":{"@type":"PostalAddress","streetAddress":"החשמל 9, עפולה, צפון, 1827109, ישראל"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"bliainara.service@gmail.com","telephone":"0554609960","availableLanguage":["en","he"]}]},{"@type":"WebSite","@id":"https://www.bliainara.co.il#website","url":"https://www.bliainara.co.il","name":"בלי עין הרע","publisher":{"@id":"https://www.bliainara.co.il#organization"},"inLanguage":"he"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.bliainara.co.il"},{"@type":"ListItem","position":2,"name":"Account","item":"https://www.bliainara.co.il/account"}]}]}</script>
-    <title data-i18n="account_page_title">החשבון שלי - בלי עין הרע</title>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <meta property="og:type" content="website">
+    <meta property="og:type" content="website">
   <meta property="og:locale" content="he_IL">
   
   
@@ -269,8 +259,6 @@
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
 
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Iconify for cross-platform flag icons -->
     <script src="https://code.iconify.design/3/3.1.1/iconify.min.js"></script><style id="zappy-multilang-css">
@@ -1984,6 +1972,8 @@ html[dir="rtl"] body {
 
 </style>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <style id="zappy-announcement-bar-styles">
     /* Announcement Bar Styles */
     .zappy-announcement-bar {
@@ -2119,19 +2109,22 @@ html[dir="rtl"] body {
     </div>
   <script>
     window.ZAPPY_WEBSITE_ID = "10422dd3-ab03-4542-b7b7-177c58dad3c0";
-    // Preview pages are served by the Zappy server itself (localhost in dev), so use that base.
+    // Preview pages are served by the current Zappy origin, which may be a
+    // remote tunnel/QA host rather than this server's baked SERVER_URL.
     // Deployed sites are static and must call the public Zappy API (never localhost).
-    window.ZAPPY_API_BASE = "https://api.zappy5.com";
+    window.ZAPPY_API_BASE = (window.location.pathname.includes('/preview'))
+      ? window.location.origin
+      : "https://api.zappy5.com";
   </script>
   
     <div class="mobile-search-panel" id="mobile-search-panel">
       <div class="search-wrapper">
-        <input type="text" id="mobile-search-input" placeholder="חיפוש מוצרים..." autocomplete="off" data-i18n-placeholder="account_placeholder_84">
-        <button class="search-submit" id="mobile-search-submit" title="חיפוש" data-i18n-title="account_title_94">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+        <input type="text" id="mobile-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
+        <button class="search-submit" id="mobile-search-submit" title="חיפוש">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
         </button>
         <button class="close-search" id="close-mobile-search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
         </button>
       </div>
       <div class="search-results" id="mobile-search-results"></div>
@@ -2158,14 +2151,15 @@ html[dir="rtl"] body {
     </div><ul class="nav-menu" id="navMenu">
 
     <li class="menu-item-has-children zappy-products-dropdown">
-      <a href="/products" data-i18n="home_nav_80">
-        מוצרים
+      <a href="/products">
+        מדיניות אספקת מוצרים
+        
         <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M6 9l6 6 6-6"></path>
         </svg>
       </a>
       <ul class="sub-menu" id="zappy-nav-category-links">
-        <li><a href="/products" data-i18n="home_nav_81">מוצרים</a></li>
+        <li><a href="/products" data-i18n="ecom_products">מוצרים</a></li>
         <!-- Categories will be loaded dynamically -->
       </ul>
     </li>
@@ -2187,7 +2181,16 @@ html[dir="rtl"] body {
   
 
     
-  <li><a href="/" data-i18n="home_nav_82">בית</a></li><li><a href="/craftsmanship" data-i18n="home_nav_83">אומנות</a></li><li><a href="/gift-guide" data-i18n="home_nav_84">מדריך מתנות</a></li><li><a href="/contact" data-i18n="home_nav_85">צור קשר</a></li></ul>
+  
+
+    
+  <li><a href="/" data-i18n="home_nav_82">בית</a></li><li><a href="/craftsmanship" data-i18n="home_nav_83">אומנות</a></li><li><a href="/gift-guide" data-i18n="home_nav_84">מדריך מתנות</a></li><li><a href="/contact" data-i18n="home_nav_85">צור קשר</a></li></ul><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="cart-count">0</span></a><div class="nav-search-box">
+    <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
+    <button class="nav-search-btn" id="nav-search-btn" title="חיפוש">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+    </button>
+    <div class="nav-search-results" id="nav-search-results"></div>
+  </div></div><div class="nav-ecommerce-icons nav-icons-right"><button class="nav-search-toggle" id="mobile-search-toggle" title="חיפוש"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button></div>
 
 <script data-no-icon-edit="true">(function(){function f(){var b=document.querySelector('.lang-switcher-current');if(!b)return;var n=b.closest('nav')||b.closest('header')||b.closest('.navbar');if(!n)return;var a=n.querySelector('.nav-menu a,.nav-links a');if(!a)a=n.querySelector('a:not(.lang-option):not(.lang-switcher-current):not([class*="logo"])');if(a){var c=getComputedStyle(a).color;if(c&&c!=='rgb(0, 0, 0)'&&c!=='rgba(0, 0, 0, 0)'){b.style.color=c;return;}}var s=getComputedStyle(n).backgroundColor;if(s&&s!=='rgba(0, 0, 0, 0)'&&s!=='transparent'){var m=s.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);if(m){var l=(0.299*parseInt(m[1])+0.587*parseInt(m[2])+0.114*parseInt(m[3]))/255;b.style.color=l>0.5?'#1a1a1a':'#F3FAFF';}}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',f);}else{setTimeout(f,0);}})()</script>
 <div class="lang-switcher" data-no-icon-edit="true" data-icon-color="#F6F1E8" style="position:relative;display:inline-flex;align-items:center;z-index:1000;margin:0 4px;">
@@ -2198,13 +2201,7 @@ html[dir="rtl"] body {
     <button class="lang-option" data-lang="he" style="display:flex;align-items:center;gap:8px;width:100%;padding:10px 14px;background:none;border:none;text-align:left;cursor:pointer;font-size:14px;color:#333;"><img src="https://api.iconify.design/circle-flags/il.svg" width="20" height="20" alt="" style="display:inline-block;vertical-align:middle;border-radius:50%;"> עברית</button>
   </div>
 </div>
-<script data-no-icon-edit="true">(function(){function f(){var b=document.querySelector('.lang-switcher-current');if(!b)return;var n=b.closest('nav')||b.closest('header')||b.closest('.navbar');if(!n)return;var a=n.querySelector('.nav-menu a,.nav-links a');if(!a)a=n.querySelector('a:not(.lang-option):not(.lang-switcher-current):not([class*="logo"])');if(a){var c=getComputedStyle(a).color;if(c&&c!=='rgb(0, 0, 0)'&&c!=='rgba(0, 0, 0, 0)'){b.style.color=c;return;}}var s=getComputedStyle(n).backgroundColor;if(s&&s!=='rgba(0, 0, 0, 0)'&&s!=='transparent'){var m=s.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);if(m){var l=(0.299*parseInt(m[1])+0.587*parseInt(m[2])+0.114*parseInt(m[3]))/255;b.style.color=l>0.5?'#1a1a1a':'#F3FAFF';}}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',f);}else{setTimeout(f,0);}})()</script><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות" data-i18n-title="home_title_97"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות" data-i18n-title="home_title_98"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg><span class="cart-count">0</span></a><div class="nav-search-box">
-    <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש מוצרים..." autocomplete="off" data-i18n-placeholder="home_placeholder_88">
-    <button class="nav-search-btn" id="nav-search-btn" title="חיפוש" data-i18n-title="home_title_99">
-      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
-    </button>
-    <div class="nav-search-results" id="nav-search-results"></div>
-  </div></div><div class="nav-ecommerce-icons nav-icons-right"><button class="nav-search-toggle" id="mobile-search-toggle" title="חיפוש" data-i18n-title="home_title_100"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg></button></div></div>
+<script data-no-icon-edit="true">(function(){function f(){var b=document.querySelector('.lang-switcher-current');if(!b)return;var n=b.closest('nav')||b.closest('header')||b.closest('.navbar');if(!n)return;var a=n.querySelector('.nav-menu a,.nav-links a');if(!a)a=n.querySelector('a:not(.lang-option):not(.lang-switcher-current):not([class*="logo"])');if(a){var c=getComputedStyle(a).color;if(c&&c!=='rgb(0, 0, 0)'&&c!=='rgba(0, 0, 0, 0)'){b.style.color=c;return;}}var s=getComputedStyle(n).backgroundColor;if(s&&s!=='rgba(0, 0, 0, 0)'&&s!=='transparent'){var m=s.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);if(m){var l=(0.299*parseInt(m[1])+0.587*parseInt(m[2])+0.114*parseInt(m[3]))/255;b.style.color=l>0.5?'#1a1a1a':'#F3FAFF';}}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',f);}else{setTimeout(f,0);}})()</script></div>
     
     
     
@@ -2214,7 +2211,7 @@ html[dir="rtl"] body {
 
     <nav class="zappy-catalog-menu rtl" id="zappy-catalog-menu" style="display:none">
       <div class="catalog-menu-container">
-        <a href="/products" class="catalog-menu-item catalog-menu-all" data-i18n="account_nav_83">מוצרים</a>
+        <a href="/products" class="catalog-menu-item catalog-menu-all" data-i18n="home_nav_86">מוצרים</a>
         <div class="catalog-menu-categories" id="zappy-category-links">
           <!-- Categories will be loaded dynamically -->
         </div>
@@ -2228,40 +2225,40 @@ html[dir="rtl"] body {
             <div class="account-not-logged-in" id="account-not-logged-in">
               <div class="account-icon">
                 <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="12" cy="7" r="4"></circle>
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                  <circle cx="12" cy="7" r="4"/>
                 </svg>
               </div>
-              <h1 data-i18n="account_h1_1">לא מחובר</h1>
-              <p data-i18n="account_p_13">יש להתחבר כדי לצפות בחשבון</p>
-              <a href="/login" class="btn btn-primary" data-i18n="account_link_37">התחברות</a>
+              <h1 data-i18n="ecom_notLoggedIn">לא מחובר</h1>
+              <p data-i18n="ecom_pleaseLogin">יש להתחבר כדי לצפות בחשבון</p>
+              <a href="/login" class="btn btn-primary" data-i18n="ecom_login">התחברות</a>
             </div>
             
             <!-- Logged in state -->
             <div class="account-logged-in" id="account-logged-in" style="display: none;">
               <div class="account-header">
-                <h1 data-i18n="account_h1_2">החשבון שלי</h1>
+                <h1 data-i18n="ecom_myAccount">החשבון שלי</h1>
                 <div class="account-info">
-                  <p class="account-welcome" data-i18n="account_p_14"><span>ברוך הבא</span>, <span id="account-email"></span></p>
-                  <button class="btn btn-secondary btn-sm" id="logout-btn" data-i18n="account_btn_54">התנתק</button>
+                  <p class="account-welcome"><span data-i18n="ecom_accountWelcome">ברוך הבא</span>, <span id="account-email"></span></p>
+                  <button class="btn btn-secondary btn-sm" id="logout-btn" data-i18n="ecom_logout">התנתק</button>
                 </div>
               </div>
               
               <!-- Personal Details Section -->
               <div class="profile-section">
                 <div class="section-header">
-                  <h2 data-i18n="account_h2_3">פרטים אישיים</h2>
-                  <button class="btn btn-text btn-sm" id="edit-profile-btn" data-i18n="account_btn_55">עריכת פרופיל</button>
+                  <h2 data-i18n="ecom_personalDetails">פרטים אישיים</h2>
+                  <button class="btn btn-text btn-sm" id="edit-profile-btn" data-i18n="ecom_editProfile">עריכת פרופיל</button>
                 </div>
                 
                 <!-- Profile Display -->
                 <div class="profile-display" id="profile-display">
-                  <div class="profile-field" data-i18n="account_div_70">
-                    <span class="profile-label"><span>שם</span>:</span>
+                  <div class="profile-field">
+                    <span class="profile-label"><span data-i18n="ecom_name">שם</span>:</span>
                     <span class="profile-value" id="profile-name">-</span>
                   </div>
-                  <div class="profile-field" data-i18n="account_div_71">
-                    <span class="profile-label"><span>טלפון</span>:</span>
+                  <div class="profile-field">
+                    <span class="profile-label"><span data-i18n="ecom_phone">טלפון</span>:</span>
                     <span class="profile-value" id="profile-phone">-</span>
                   </div>
                 </div>
@@ -2269,16 +2266,16 @@ html[dir="rtl"] body {
                 <!-- Profile Edit Form (hidden by default) -->
                 <div class="profile-form" id="profile-form" style="display: none;">
                   <div class="form-group">
-                    <label for="edit-name" data-i18n="account_label_62">שם</label>
-                    <input type="text" id="edit-name" placeholder="שם" data-i18n-placeholder="account_placeholder_86">
+                    <label for="edit-name" data-i18n="ecom_name">שם</label>
+                    <input type="text" id="edit-name" placeholder="שם" data-i18n-placeholder="ecom_name">
                   </div>
                   <div class="form-group">
-                    <label for="edit-phone" data-i18n="account_label_63">טלפון</label>
-                    <input type="tel" id="edit-phone" placeholder="טלפון" data-i18n-placeholder="account_placeholder_87">
+                    <label for="edit-phone" data-i18n="ecom_phone">טלפון</label>
+                    <input type="tel" id="edit-phone" placeholder="טלפון" data-i18n-placeholder="ecom_phone">
                   </div>
                   <div class="form-actions">
-                    <button class="btn btn-primary btn-sm" id="save-profile-btn" data-i18n="account_btn_56">שמור שינויים</button>
-                    <button class="btn btn-secondary btn-sm" id="cancel-profile-btn" data-i18n="account_btn_57">ביטול</button>
+                    <button class="btn btn-primary btn-sm" id="save-profile-btn" data-i18n="ecom_saveChanges">שמור שינויים</button>
+                    <button class="btn btn-secondary btn-sm" id="cancel-profile-btn" data-i18n="ecom_cancel">ביטול</button>
                   </div>
                 </div>
               </div>
@@ -2286,40 +2283,40 @@ html[dir="rtl"] body {
               <!-- Addresses Section -->
               <div class="addresses-section">
                 <div class="section-header">
-                  <h2 data-i18n="account_h2_4">כתובות</h2>
-                  <button class="btn btn-primary btn-sm" id="add-address-btn" data-i18n="account_btn_58">הוסף כתובת</button>
+                  <h2 data-i18n="ecom_addresses">כתובות</h2>
+                  <button class="btn btn-primary btn-sm" id="add-address-btn" data-i18n="ecom_addAddress">הוסף כתובת</button>
                 </div>
                 
                 <div class="addresses-list" id="addresses-list">
                   <div class="addresses-empty" id="addresses-empty">
-                    <p data-i18n="account_p_15">אין כתובות שמורות</p>
+                    <p data-i18n="ecom_noAddresses">אין כתובות שמורות</p>
                   </div>
                 </div>
               </div>
               
               <!-- Favorites Section -->
               <div class="favorites-section">
-                <h2 data-i18n="account_h2_5">המועדפים שלי</h2>
+                <h2 data-i18n="ecom_myFavorites">המועדפים שלי</h2>
                 <div class="favorites-loading" id="favorites-loading">
                   <div class="loading-spinner"></div>
                 </div>
                 <div class="favorites-empty" id="favorites-empty" style="display: none;">
-                  <p data-i18n="account_p_16">אין עדיין מוצרים מועדפים</p>
-                  <a href="/products" class="btn btn-primary btn-sm" data-i18n="account_link_38">גלו את כל המוצרים שלנו</a>
+                  <p data-i18n="ecom_noFavorites">אין עדיין מוצרים מועדפים</p>
+                  <a href="/products" class="btn btn-primary btn-sm" data-i18n="ecom_browseFavorites">גלו את כל המוצרים שלנו</a>
                 </div>
                 <div class="favorites-grid" id="favorites-grid" style="display: none;"></div>
               </div>
               
               <!-- Orders Section -->
               <div class="orders-section">
-                <h2 data-i18n="account_h2_6">ההזמנות שלך</h2>
+                <h2 data-i18n="ecom_yourOrders">ההזמנות שלך</h2>
                 <div class="orders-loading" id="orders-loading">
                   <div class="loading-spinner"></div>
-                  <p data-i18n="account_p_17">טוען פרטי הזמנה...</p>
+                  <p data-i18n="ecom_loadingOrder">טוען פרטי הזמנה...</p>
                 </div>
                 <div class="orders-empty" id="orders-empty" style="display: none;">
-                  <p data-i18n="account_p_18">אין עדיין הזמנות</p>
-                  <a href="/products" class="btn btn-primary" data-i18n="account_link_39">להמשך קניות</a>
+                  <p data-i18n="ecom_noOrders">אין עדיין הזמנות</p>
+                  <a href="/products" class="btn btn-primary" data-i18n="ecom_continueShopping">להמשך קניות</a>
                 </div>
                 <div class="orders-list" id="orders-list" style="display: none;"></div>
               </div>
@@ -2331,45 +2328,45 @@ html[dir="rtl"] body {
         <div class="address-modal-overlay" id="address-modal-overlay" style="display: none;">
           <div class="address-modal">
             <div class="address-modal-header">
-              <h3 id="address-modal-title" data-i18n="account_h3_8">הוסף כתובת</h3>
-              <button class="address-modal-close" id="address-modal-close" data-i18n="account_btn_59">&amp;times;</button>
+              <h3 id="address-modal-title" data-i18n="ecom_addAddress">הוסף כתובת</h3>
+              <button class="address-modal-close" id="address-modal-close">&times;</button>
             </div>
             <div class="address-modal-body">
               <input type="hidden" id="address-edit-id">
               <div class="form-group">
-                <label for="address-label" data-i18n="account_label_64">שם הכתובת</label>
+                <label for="address-label" data-i18n="ecom_addressLabel">שם הכתובת</label>
                 <select id="address-label">
-                  <option value="home" data-i18n="account_opt_74">בית</option>
-                  <option value="work" data-i18n="account_opt_75">עבודה</option>
-                  <option value="other" data-i18n="account_opt_76">אחר</option>
+                  <option value="home" data-i18n="ecom_home">בית</option>
+                  <option value="work" data-i18n="ecom_work">עבודה</option>
+                  <option value="other" data-i18n="ecom_other">אחר</option>
                 </select>
               </div>
               <div class="form-group">
-                <label for="address-street" data-i18n="account_label_65">רחוב ומספר</label>
-                <input type="text" id="address-street" placeholder="רחוב ומספר" required="" data-i18n-placeholder="account_placeholder_88">
+                <label for="address-street" data-i18n="ecom_street">רחוב ומספר</label>
+                <input type="text" id="address-street" placeholder="רחוב ומספר" data-i18n-placeholder="ecom_street" required>
               </div>
               <div class="form-group">
-                <label for="address-apartment" data-i18n="account_label_66">דירה, קומה, כניסה</label>
-                <input type="text" id="address-apartment" placeholder="דירה, קומה, כניסה" data-i18n-placeholder="account_placeholder_89">
+                <label for="address-apartment" data-i18n="ecom_apartment">דירה, קומה, כניסה</label>
+                <input type="text" id="address-apartment" placeholder="דירה, קומה, כניסה" data-i18n-placeholder="ecom_apartment">
               </div>
               <div class="form-group">
-                <label for="address-city" data-i18n="account_label_67">עיר</label>
-                <input type="text" id="address-city" placeholder="עיר" required="" data-i18n-placeholder="account_placeholder_90">
+                <label for="address-city" data-i18n="ecom_city">עיר</label>
+                <input type="text" id="address-city" placeholder="עיר" data-i18n-placeholder="ecom_city" required>
               </div>
               <div class="form-group">
-                <label for="address-zip" data-i18n="account_label_68">מיקוד</label>
-                <input type="text" id="address-zip" placeholder="מיקוד" data-i18n-placeholder="account_placeholder_91">
+                <label for="address-zip" data-i18n="ecom_zip">מיקוד</label>
+                <input type="text" id="address-zip" placeholder="מיקוד" data-i18n-placeholder="ecom_zip">
               </div>
               <div class="form-group form-checkbox">
-                <label data-i18n="account_label_69">
+                <label>
                   <input type="checkbox" id="address-default">
-                  <span>הגדר כברירת מחדל</span>
+                  <span data-i18n="ecom_setAsDefault">הגדר כברירת מחדל</span>
                 </label>
               </div>
             </div>
             <div class="address-modal-footer">
-              <button class="btn btn-primary" id="save-address-btn" data-i18n="account_btn_60">שמור שינויים</button>
-              <button class="btn btn-secondary" id="cancel-address-btn" data-i18n="account_btn_61">ביטול</button>
+              <button class="btn btn-primary" id="save-address-btn" data-i18n="ecom_saveChanges">שמור שינויים</button>
+              <button class="btn btn-secondary" id="cancel-address-btn" data-i18n="ecom_cancel">ביטול</button>
             </div>
           </div>
         </div>
@@ -2452,27 +2449,43 @@ html[dir="rtl"] body {
 <div class="cart-drawer-overlay" id="cart-drawer-overlay"></div>
 <aside class="cart-drawer" id="cart-drawer">
   <div class="cart-drawer-header">
-    <h2 data-i18n="account_h2_7">עגלת הקניות שלך</h2>
-    <button type="button" class="cart-drawer-close" id="cart-drawer-close" aria-label="סגור" data-i18n-aria-label="account_aria_label_106">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+    <h2>עגלת הקניות שלך</h2>
+    <button type="button" class="cart-drawer-close" id="cart-drawer-close" aria-label="סגור">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
     </button>
   </div>
   <div class="cart-drawer-body" id="cart-drawer-items">
-    <div class="empty-cart" data-i18n="account_div_72">העגלה ריקה</div>
+    <div class="empty-cart">העגלה ריקה</div>
   </div>
   <div class="cart-drawer-footer">
-    <div class="cart-drawer-total">
-      <span><span><span data-i18n="account_text_73_0">סה"כ:</span></span></span>
-      <span id="cart-drawer-total" data-i18n="account_span_36">₪0</span>
+    <div class="cart-drawer-subtotal zappy-cart-summary-row">
+      <span>סכום ביניים:</span>
+      <span id="cart-drawer-subtotal">₪0</span>
     </div>
-    <a href="/checkout" class="cart-drawer-checkout" data-i18n="account_link_53">המשך לתשלום</a>
+    <div class="cart-drawer-bundle-discount zappy-cart-summary-row zappy-cart-discount-row">
+      <span>הנחת חבילה:</span>
+      <span id="cart-drawer-bundle-discount">-₪0</span>
+    </div>
+    <div class="cart-drawer-seasonal-discount zappy-cart-summary-row zappy-cart-discount-row">
+      <span>הנחה עונתית:</span>
+      <span id="cart-drawer-seasonal-discount">-₪0</span>
+    </div>
+    <div class="cart-drawer-customer-discount zappy-cart-summary-row zappy-cart-discount-row">
+      <span>הנחת לקוח:</span>
+      <span id="cart-drawer-customer-discount">-₪0</span>
+    </div>
+    <div class="cart-drawer-total">
+      <span>סה"כ:</span>
+      <span id="cart-drawer-total">₪0</span>
+    </div>
+    <a href="/checkout" class="cart-drawer-checkout">המשך לתשלום</a>
   </div>
 </aside>
   
-<div class="zappy-qv-overlay" id="zappy-qv-overlay" hidden=""></div>
-<div class="zappy-qv-modal" id="zappy-qv-modal" role="dialog" aria-modal="true" aria-label="תצוגה מהירה" hidden="" data-i18n-aria-label="account_aria_label_107">
-  <button type="button" class="zappy-qv-close" id="zappy-qv-close" aria-label="סגור" data-i18n-aria-label="account_aria_label_108">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+<div class="zappy-qv-overlay" id="zappy-qv-overlay" hidden></div>
+<div class="zappy-qv-modal" id="zappy-qv-modal" role="dialog" aria-modal="true" aria-label="תצוגה מהירה" hidden>
+  <button type="button" class="zappy-qv-close" id="zappy-qv-close" aria-label="סגור">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
   </button>
   <div class="zappy-qv-content" id="zappy-qv-content"></div>
 </div>
@@ -2571,12 +2584,18 @@ html[dir="rtl"] body {
     }
   })();
   </script>
-  <a href="https://wa.me/0554609960" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" data-i18n-aria-label="account_aria_label_109"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path></svg></a>
-
-
-
-
-
+  <a href="https://wa.me/0554609960" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+<script>
+(function() {
+  var messages = document.querySelectorAll('.zappy-announcement-message');
+  if (messages.length <= 1) return;
+  var current = 0;
+  setInterval(function() {
+    messages[current].classList.remove('active');
+    current = (current + 1) % messages.length;
+    messages[current].classList.add('active');
+  }, 4000);
+})();</script>
 
 <!-- i18next Multi-Language Support -->
 <script>
@@ -2606,17 +2625,22 @@ html[dir="rtl"] body {
       "ecom_applyCoupon": "Apply",
       "ecom_backToProducts": "Back to Products",
       "ecom_bookNow": "Book now",
+      "ecom_bookingChooseDate": "Choose a date",
       "ecom_bookingChooseTime": "Choose a time",
       "ecom_bookingDate": "Date",
       "ecom_bookingLoading": "Loading availability…",
+      "ecom_bookingNoDates": "No available dates right now",
       "ecom_bookingNoSlots": "No available times right now",
       "ecom_bookingRemaining": "{count} left",
       "ecom_bookingSelectOption": "Select",
       "ecom_bookingSelectTime": "Select a time",
+      "ecom_bookingSelectDateFirst": "Please choose a date first",
       "ecom_bookingSelectTimeFirst": "Please choose a date and time first",
       "ecom_bookingTime": "Time",
       "ecom_browseFavorites": "Discover all our products",
       "ecom_bundleDiscount": "Bundle Discount",
+      "ecom_seasonalDiscount": "Seasonal Discount",
+      "ecom_customerDiscount": "Customer Discount",
       "ecom_bundleTotal": "Bundle total",
       "ecom_callNow": "Call Now",
       "ecom_cancel": "Cancel",
@@ -2804,6 +2828,7 @@ html[dir="rtl"] body {
       "ecom_saveToFavorites": "Save to Favorites",
       "ecom_saving": "Saving...",
       "ecom_searchProducts": "Search products",
+      "ecom_searchResults": "Search results",
       "ecom_selectVariant": "Select option",
       "ecom_sendCode": "Send Code",
       "ecom_sendInquiry": "Send Inquiry",
@@ -2901,6 +2926,7 @@ html[dir="rtl"] body {
       "login_p_9": "Handcrafted jewelry combining beauty, quality, and meaning. Every piece is created with love to accompany the beautiful moments in your life.",
       "new_a_165": "Shipping Policy",
       "new_p_114": "Use of the site and making purchases is permitted for individuals <strong>18 and older</strong> only. Minors are not permitted to make purchases without the explicit consent of a parent or legal guardian. Completing a purchase constitutes a declaration that the purchaser is 18 or older, or is acting with the consent of a parent/guardian. Responsibility for the actions of minors lies with the parents or legal guardians.",
+      "new_p_115": "<strong><span><span>Email:</span></span></strong> <a href=\"mailto:bliainara.service@gmail.com\">bliainara.service@gmail.com</a>",
       "new_p_124": "בלי עין הרע places great emphasis on fast and reliable delivery of all orders. This policy details the shipping terms, delivery times, and shipping costs.",
       "new_p_126": "We provide shipping services throughout Israel, including:",
       "new_p_131": "Estimated delivery times from the date the order is placed:",
@@ -4462,8 +4488,7 @@ html[dir="rtl"] body {
       "thank_you_seo_twitter_description": "בלי עין הרע - Thank you for contacting us",
       "gift_guide_seo_twitter_description": "Lost in a sea of jewelry? Our smart gift guide will help you choose the ultimate piece for any woman or man you love. From style tips to surprising ideas – give a gift that steals the show effortlessly. Enter now!",
       "craftsmanship_seo_twitter_description": "Immerse yourself in the world of craftsmanship behind our jewelry. Discover how we combine premium materials like silver, gold plating, and genuine leather with precise handwork to create pieces that look like a million dollars – but cost much less. Come take a closer look at the magic!",
-      "new_text_183_1": "</a><span><span>&nbsp;can be found in the description of each piece of jewelry</span></span>",
-      "new_text_115_0": "<strong><span><span>Email:</span></span></strong> <a href=\"mailto:"
+      "new_text_183_1": "</a><span><span>&nbsp;can be found in the description of each piece of jewelry</span></span>"
     }
   },
   "he": {
@@ -4487,17 +4512,22 @@ html[dir="rtl"] body {
       "ecom_applyCoupon": "החל",
       "ecom_backToProducts": "חזרה למוצרים",
       "ecom_bookNow": "הזמינו עכשיו",
+      "ecom_bookingChooseDate": "בחרו תאריך",
       "ecom_bookingChooseTime": "בחרו שעה",
       "ecom_bookingDate": "תאריך",
       "ecom_bookingLoading": "טוען זמינות…",
+      "ecom_bookingNoDates": "אין תאריכים פנויים כרגע",
       "ecom_bookingNoSlots": "אין זמנים פנויים כרגע",
       "ecom_bookingRemaining": "נותרו {count}",
       "ecom_bookingSelectOption": "בחירה",
       "ecom_bookingSelectTime": "בחרו שעה",
+      "ecom_bookingSelectDateFirst": "אנא בחרו תאריך תחילה",
       "ecom_bookingSelectTimeFirst": "אנא בחרו תאריך ושעה תחילה",
       "ecom_bookingTime": "שעה",
       "ecom_browseFavorites": "גלו את כל המוצרים שלנו",
       "ecom_bundleDiscount": "הנחת חבילה",
+      "ecom_seasonalDiscount": "הנחה עונתית",
+      "ecom_customerDiscount": "הנחת לקוח",
       "ecom_bundleTotal": "סה\"כ לעגלה",
       "ecom_callNow": "התקשר עכשיו",
       "ecom_cancel": "ביטול",
@@ -4685,6 +4715,7 @@ html[dir="rtl"] body {
       "ecom_saveToFavorites": "שמור למועדפים",
       "ecom_saving": "שומר...",
       "ecom_searchProducts": "חיפוש מוצרים",
+      "ecom_searchResults": "תוצאות חיפוש",
       "ecom_selectVariant": "בחר אפשרות",
       "ecom_sendCode": "שלח קוד",
       "ecom_sendInquiry": "שלח פנייה",
@@ -4782,6 +4813,7 @@ html[dir="rtl"] body {
       "login_p_9": "תכשיטים בעבודת יד המשלבים יופי, איכות ומשמעות. כל פריט נוצר באהבה כדי ללוות את הרגעים היפים בחייך.",
       "new_a_165": "מדיניות משלוחים",
       "new_p_114": "השימוש באתר וביצוע רכישות מותר לבני <strong>18 ומעלה</strong> בלבד. קטינים אינם רשאים לבצע רכישות ללא אישור מפורש של הורה או אפוטרופוס חוקי. ביצוע רכישה מהווה הצהרה כי הרוכש הינו בן 18 ומעלה, או שפועל בהסכמת הורה/אפוטרופוס. אחריות לפעולות קטינים חלה על ההורים או האפוטרופוסים החוקיים.",
+      "new_p_115": "<strong><span><span>אימייל:</span></span></strong> <a href=\"mailto:bliainara.service@gmail.com\">bliainara.service@gmail.com</a>",
       "new_p_124": "בלי עין הרע שמה דגש על משלוח מהיר ואמין של כל ההזמנות. מדיניות זו מפרטת את תנאי המשלוח, זמני האספקה ועלויות המשלוח.",
       "new_p_126": "אנו מספקים שירותי משלוח לכל רחבי ישראל, כולל:",
       "new_p_131": "זמני האספקה המשוערים מיום ביצוע ההזמנה:",
@@ -6343,8 +6375,7 @@ html[dir="rtl"] body {
       "thank_you_seo_twitter_description": "בלי עין הרע - תודה שפנית אלינו",
       "gift_guide_seo_twitter_description": "אובדי עצות מול ים התכשיטים? מדריך המתנות החכם שלנו יעזור לכם לבחור את התכשיט האולטימטיבי לכל אישה או גבר שאתם אוהבים. מטיפים סטייל ועד רעיונות מפתיעים – תנו מתנה שתגנוב את ההצגה בלי להתאמץ. היכנסו עכשיו!",
       "craftsmanship_seo_twitter_description": "טבלו את עצמכן בעולם האומנות שמאחורי התכשיטים שלנו. גלו איך אנחנו משלבים חומרים משובחים כמו כסף, ציפוי זהב ועור אמיתי עם עבודת יד מדויקת כדי ליצור פריטים שנראים כמו מיליון דולר – אבל עולים הרבה פחות. היכנסו להכיר את הקסם מקרוב!",
-      "new_text_183_1": "</a><span><span>&nbsp;תוכלו למצוא בתאור של כל תכשיט</span></span>",
-      "new_text_115_0": "<strong><span><span>אימייל:</span></span></strong> <a href=\"mailto:"
+      "new_text_183_1": "</a><span><span>&nbsp;תוכלו למצוא בתאור של כל תכשיט</span></span>"
     }
   }
 };
@@ -7483,17 +7514,6 @@ html[dir="rtl"] body {
   }
 })();
 </script>
-<script>
-(function() {
-  var messages = document.querySelectorAll('.zappy-announcement-message');
-  if (messages.length <= 1) return;
-  var current = 0;
-  setInterval(function() {
-    messages[current].classList.remove('active');
-    current = (current + 1) % messages.length;
-    messages[current].classList.add('active');
-  }, 4000);
-})();</script>
 
     <script src="/script.js"></script>
 

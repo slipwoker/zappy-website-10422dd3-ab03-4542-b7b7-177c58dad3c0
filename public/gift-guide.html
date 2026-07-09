@@ -1833,7 +1833,13 @@ html[dir="rtl"] body {
     </div><ul class="nav-menu" id="navMenu">
 
     <li class="menu-item-has-children zappy-products-dropdown">
-      <a href="/products">מוצרים</a>
+      <a href="/products">
+        מדיניות אספקת מוצרים
+        
+        <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M6 9l6 6 6-6"></path>
+        </svg>
+      </a>
       <ul class="sub-menu" id="zappy-nav-category-links">
         <li><a href="/products">מוצרים</a></li>
         <!-- Categories will be loaded dynamically -->
@@ -1857,7 +1863,23 @@ html[dir="rtl"] body {
   
 
     
-  <li><a href="/">בית</a></li><li><a href="/craftsmanship">אומנות</a></li><li><a href="/gift-guide">מדריך מתנות</a></li><li><a href="/contact">צור קשר</a></li></ul>
+  
+
+    
+  <li><a href="/">בית</a></li><li><a href="/craftsmanship">אומנות</a></li><li><a href="/gift-guide">מדריך מתנות</a></li><li><a href="/contact">צור קשר</a></li></ul><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg><span class="cart-count">0</span></a><div class="lang-switcher" data-icon-color="#F6F1E8" style="position:relative;display:inline-flex;align-items:center;margin-left:auto;margin-right:8px;">
+        <button class="lang-switcher-current" type="button" style="display:flex;align-items:center;justify-content:center;gap:6px;background:transparent;border:none;cursor:pointer;padding:8px;border-radius:8px;color:inherit;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M12.039,.002s0,0,0,0c-.013,0-.026-.002-.039-.002-.005,0-.009,0-.014,0-.002,0-.003,0-.005,0C5.373,.011,0,5.39,0,12s5.383,12,12,12,12-5.383,12-12S18.638,.023,12.039,.002Zm9.747,6.998h-4.814c-1.067-2.669-2.712-4.781-3.731-5.925,3.734,.421,6.901,2.719,8.546,5.925Zm-4.786,5c0,1.407-.292,2.753-.731,4H7.731c-.439-1.247-.731-2.593-.731-4s.292-2.754,.73-4h8.539c.439,1.247,.731,2.593,.731,4Zm-1.122,5c-1.229,2.838-3.116,4.99-3.878,5.788-.762-.798-2.649-2.95-3.878-5.788h7.755ZM8.121,7c1.229-2.841,3.117-4.992,3.879-5.789,.762,.798,2.649,2.95,3.878,5.789h-7.757ZM10.757,1.075c-1.025,1.15-2.668,3.264-3.73,5.925H2.214C3.859,3.795,7.024,1.498,10.757,1.075ZM1.764,8H6.668c-.403,1.247-.668,2.589-.668,4s.265,2.752,.669,4H1.764c-.487-1.242-.764-2.588-.764-4s.277-2.758,.764-4Zm.45,9H7.029c1.067,2.669,2.712,4.781,3.731,5.925-3.734-.421,6.901-2.719-8.546-5.925Zm11.026,5.925c1.019-1.144,2.664-3.257,3.731-5.925h4.814c-1.645,3.206-4.812,5.504-8.546,5.925Zm8.996-6.925h-4.905c.404-1.248,.669-2.589,.669-4s-.265-2.752-.669-4h4.905c.487,1.242,.764,2.588,.764,4s-.277,2.758-.764,4Z"></path></svg>
+        </button>
+        <div class="lang-switcher-dropdown" style="position:absolute;top:100%;right:0;background:white;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);min-width:150px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:all 0.2s ease;z-index:1000;">
+          <a href="/en/gift-guide" class="lang-option" style="display:flex;align-items:center;gap:8px;width:100%;padding:10px 14px;text-decoration:none;color:#333;font-size:14px;"><img src="https://api.iconify.design/circle-flags/us.svg" width="20" height="20" alt="" style="display:inline-block;vertical-align:middle;border-radius:50%;"> English</a>
+        </div>
+      </div><div class="nav-search-box">
+    <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
+    <button class="nav-search-btn" id="nav-search-btn" title="חיפוש">
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+    </button>
+    <div class="nav-search-results" id="nav-search-results"></div>
+  </div></div><div class="nav-ecommerce-icons nav-icons-right"><button class="nav-search-toggle" id="mobile-search-toggle" title="חיפוש"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg></button></div>
 
 <script data-no-icon-edit="true">(function(){function f(){var b=document.querySelector('.lang-switcher-current');if(!b)return;var n=b.closest('nav')||b.closest('header')||b.closest('.navbar');if(!n)return;var a=n.querySelector('.nav-menu a,.nav-links a');if(!a)a=n.querySelector('a:not(.lang-option):not(.lang-switcher-current):not([class*="logo"])');if(a){var c=getComputedStyle(a).color;if(c&&c!=='rgb(0, 0, 0)'&&c!=='rgba(0, 0, 0, 0)'){b.style.color=c;return;}}var s=getComputedStyle(n).backgroundColor;if(s&&s!=='rgba(0, 0, 0, 0)'&&s!=='transparent'){var m=s.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);if(m){var l=(0.299*parseInt(m[1])+0.587*parseInt(m[2])+0.114*parseInt(m[3]))/255;b.style.color=l>0.5?'#1a1a1a':'#F3FAFF';}}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',f);}else{setTimeout(f,0);}})()</script>
 
@@ -1875,20 +1897,7 @@ html[dir="rtl"] body {
       </style>
       <script data-no-icon-edit="true">(function(){function f(){var b=document.querySelector('.lang-switcher-current');if(!b)return;var n=b.closest('nav')||b.closest('header')||b.closest('.navbar');if(!n)return;var a=n.querySelector('.nav-menu a,.nav-links a');if(!a)a=n.querySelector('a:not(.lang-option):not(.lang-switcher-current):not([class*="logo"])');if(a){var c=getComputedStyle(a).color;if(c&&c!=='rgb(0, 0, 0)'&&c!=='rgba(0, 0, 0, 0)'){b.style.color=c;return;}}var s=getComputedStyle(n).backgroundColor;if(s&&s!=='rgba(0, 0, 0, 0)'&&s!=='transparent'){var m=s.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);if(m){var l=(0.299*parseInt(m[1])+0.587*parseInt(m[2])+0.114*parseInt(m[3]))/255;b.style.color=l>0.5?'#1a1a1a':'#F3FAFF';}}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',f);}else{setTimeout(f,0);}})()</script>
     
-<script data-no-icon-edit="true">(function(){function f(){var b=document.querySelector('.lang-switcher-current');if(!b)return;var n=b.closest('nav')||b.closest('header')||b.closest('.navbar');if(!n)return;var a=n.querySelector('.nav-menu a,.nav-links a');if(!a)a=n.querySelector('a:not(.lang-option):not(.lang-switcher-current):not([class*="logo"])');if(a){var c=getComputedStyle(a).color;if(c&&c!=='rgb(0, 0, 0)'&&c!=='rgba(0, 0, 0, 0)'){b.style.color=c;return;}}var s=getComputedStyle(n).backgroundColor;if(s&&s!=='rgba(0, 0, 0, 0)'&&s!=='transparent'){var m=s.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);if(m){var l=(0.299*parseInt(m[1])+0.587*parseInt(m[2])+0.114*parseInt(m[3]))/255;b.style.color=l>0.5?'#1a1a1a':'#F3FAFF';}}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',f);}else{setTimeout(f,0);}})()</script><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg><span class="cart-count">0</span></a><div class="lang-switcher" data-icon-color="#F6F1E8" style="position:relative;display:inline-flex;align-items:center;margin-left:auto;margin-right:8px;">
-        <button class="lang-switcher-current" type="button" style="display:flex;align-items:center;justify-content:center;gap:6px;background:transparent;border:none;cursor:pointer;padding:8px;border-radius:8px;color:inherit;">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;"><path d="M12.039,.002s0,0,0,0c-.013,0-.026-.002-.039-.002-.005,0-.009,0-.014,0-.002,0-.003,0-.005,0C5.373,.011,0,5.39,0,12s5.383,12,12,12,12-5.383,12-12S18.638,.023,12.039,.002Zm9.747,6.998h-4.814c-1.067-2.669-2.712-4.781-3.731-5.925,3.734,.421,6.901,2.719,8.546,5.925Zm-4.786,5c0,1.407-.292,2.753-.731,4H7.731c-.439-1.247-.731-2.593-.731-4s.292-2.754,.73-4h8.539c.439,1.247,.731,2.593,.731,4Zm-1.122,5c-1.229,2.838-3.116,4.99-3.878,5.788-.762-.798-2.649-2.95-3.878-5.788h7.755ZM8.121,7c1.229-2.841,3.117-4.992,3.879-5.789,.762,.798,2.649,2.95,3.878,5.789h-7.757ZM10.757,1.075c-1.025,1.15-2.668,3.264-3.73,5.925H2.214C3.859,3.795,7.024,1.498,10.757,1.075ZM1.764,8H6.668c-.403,1.247-.668,2.589-.668,4s.265,2.752,.669,4H1.764c-.487-1.242-.764-2.588-.764-4s.277-2.758,.764-4Zm.45,9H7.029c1.067,2.669,2.712,4.781,3.731,5.925-3.734-.421,6.901-2.719-8.546-5.925Zm11.026,5.925c1.019-1.144,2.664-3.257,3.731-5.925h4.814c-1.645,3.206-4.812,5.504-8.546,5.925Zm8.996-6.925h-4.905c.404-1.248,.669-2.589,.669-4s-.265-2.752-.669-4h4.905c.487,1.242,.764,2.588,.764,4s-.277,2.758-.764,4Z"></path></svg>
-        </button>
-        <div class="lang-switcher-dropdown" style="position:absolute;top:100%;right:0;background:white;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);min-width:150px;opacity:0;visibility:hidden;transform:translateY(-8px);transition:all 0.2s ease;z-index:1000;">
-          <a href="/en/gift-guide" class="lang-option" style="display:flex;align-items:center;gap:8px;width:100%;padding:10px 14px;text-decoration:none;color:#333;font-size:14px;"><img src="https://api.iconify.design/circle-flags/us.svg" width="20" height="20" alt="" style="display:inline-block;vertical-align:middle;border-radius:50%;"> English</a>
-        </div>
-      </div><div class="nav-search-box">
-    <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
-    <button class="nav-search-btn" id="nav-search-btn" title="חיפוש">
-      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
-    </button>
-    <div class="nav-search-results" id="nav-search-results"></div>
-  </div></div><div class="nav-ecommerce-icons nav-icons-right"><button class="nav-search-toggle" id="mobile-search-toggle" title="חיפוש"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg></button></div></div>
+<script data-no-icon-edit="true">(function(){function f(){var b=document.querySelector('.lang-switcher-current');if(!b)return;var n=b.closest('nav')||b.closest('header')||b.closest('.navbar');if(!n)return;var a=n.querySelector('.nav-menu a,.nav-links a');if(!a)a=n.querySelector('a:not(.lang-option):not(.lang-switcher-current):not([class*="logo"])');if(a){var c=getComputedStyle(a).color;if(c&&c!=='rgb(0, 0, 0)'&&c!=='rgba(0, 0, 0, 0)'){b.style.color=c;return;}}var s=getComputedStyle(n).backgroundColor;if(s&&s!=='rgba(0, 0, 0, 0)'&&s!=='transparent'){var m=s.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);if(m){var l=(0.299*parseInt(m[1])+0.587*parseInt(m[2])+0.114*parseInt(m[3]))/255;b.style.color=l>0.5?'#1a1a1a':'#F3FAFF';}}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',f);}else{setTimeout(f,0);}})()</script></div>
     
     
     
@@ -2739,17 +2748,22 @@ html[dir="rtl"] body {
       "ecom_applyCoupon": "Apply",
       "ecom_backToProducts": "Back to Products",
       "ecom_bookNow": "Book now",
+      "ecom_bookingChooseDate": "Choose a date",
       "ecom_bookingChooseTime": "Choose a time",
       "ecom_bookingDate": "Date",
       "ecom_bookingLoading": "Loading availability…",
+      "ecom_bookingNoDates": "No available dates right now",
       "ecom_bookingNoSlots": "No available times right now",
       "ecom_bookingRemaining": "{count} left",
       "ecom_bookingSelectOption": "Select",
       "ecom_bookingSelectTime": "Select a time",
+      "ecom_bookingSelectDateFirst": "Please choose a date first",
       "ecom_bookingSelectTimeFirst": "Please choose a date and time first",
       "ecom_bookingTime": "Time",
       "ecom_browseFavorites": "Discover all our products",
       "ecom_bundleDiscount": "Bundle Discount",
+      "ecom_seasonalDiscount": "Seasonal Discount",
+      "ecom_customerDiscount": "Customer Discount",
       "ecom_bundleTotal": "Bundle total",
       "ecom_callNow": "Call Now",
       "ecom_cancel": "Cancel",
@@ -2937,6 +2951,7 @@ html[dir="rtl"] body {
       "ecom_saveToFavorites": "Save to Favorites",
       "ecom_saving": "Saving...",
       "ecom_searchProducts": "Search products",
+      "ecom_searchResults": "Search results",
       "ecom_selectVariant": "Select option",
       "ecom_sendCode": "Send Code",
       "ecom_sendInquiry": "Send Inquiry",
@@ -3034,6 +3049,7 @@ html[dir="rtl"] body {
       "login_p_9": "Handcrafted jewelry combining beauty, quality, and meaning. Every piece is created with love to accompany the beautiful moments in your life.",
       "new_a_165": "Shipping Policy",
       "new_p_114": "Use of the site and making purchases is permitted for individuals <strong>18 and older</strong> only. Minors are not permitted to make purchases without the explicit consent of a parent or legal guardian. Completing a purchase constitutes a declaration that the purchaser is 18 or older, or is acting with the consent of a parent/guardian. Responsibility for the actions of minors lies with the parents or legal guardians.",
+      "new_p_115": "<strong><span><span>Email:</span></span></strong> <a href=\"mailto:bliainara.service@gmail.com\">bliainara.service@gmail.com</a>",
       "new_p_124": "בלי עין הרע places great emphasis on fast and reliable delivery of all orders. This policy details the shipping terms, delivery times, and shipping costs.",
       "new_p_126": "We provide shipping services throughout Israel, including:",
       "new_p_131": "Estimated delivery times from the date the order is placed:",
@@ -4595,8 +4611,7 @@ html[dir="rtl"] body {
       "thank_you_seo_twitter_description": "בלי עין הרע - Thank you for contacting us",
       "gift_guide_seo_twitter_description": "Lost in a sea of jewelry? Our smart gift guide will help you choose the ultimate piece for any woman or man you love. From style tips to surprising ideas – give a gift that steals the show effortlessly. Enter now!",
       "craftsmanship_seo_twitter_description": "Immerse yourself in the world of craftsmanship behind our jewelry. Discover how we combine premium materials like silver, gold plating, and genuine leather with precise handwork to create pieces that look like a million dollars – but cost much less. Come take a closer look at the magic!",
-      "new_text_183_1": "</a><span><span>&nbsp;can be found in the description of each piece of jewelry</span></span>",
-      "new_text_115_0": "<strong><span><span>Email:</span></span></strong> <a href=\"mailto:"
+      "new_text_183_1": "</a><span><span>&nbsp;can be found in the description of each piece of jewelry</span></span>"
     }
   },
   "he": {
@@ -4620,17 +4635,22 @@ html[dir="rtl"] body {
       "ecom_applyCoupon": "החל",
       "ecom_backToProducts": "חזרה למוצרים",
       "ecom_bookNow": "הזמינו עכשיו",
+      "ecom_bookingChooseDate": "בחרו תאריך",
       "ecom_bookingChooseTime": "בחרו שעה",
       "ecom_bookingDate": "תאריך",
       "ecom_bookingLoading": "טוען זמינות…",
+      "ecom_bookingNoDates": "אין תאריכים פנויים כרגע",
       "ecom_bookingNoSlots": "אין זמנים פנויים כרגע",
       "ecom_bookingRemaining": "נותרו {count}",
       "ecom_bookingSelectOption": "בחירה",
       "ecom_bookingSelectTime": "בחרו שעה",
+      "ecom_bookingSelectDateFirst": "אנא בחרו תאריך תחילה",
       "ecom_bookingSelectTimeFirst": "אנא בחרו תאריך ושעה תחילה",
       "ecom_bookingTime": "שעה",
       "ecom_browseFavorites": "גלו את כל המוצרים שלנו",
       "ecom_bundleDiscount": "הנחת חבילה",
+      "ecom_seasonalDiscount": "הנחה עונתית",
+      "ecom_customerDiscount": "הנחת לקוח",
       "ecom_bundleTotal": "סה\"כ לעגלה",
       "ecom_callNow": "התקשר עכשיו",
       "ecom_cancel": "ביטול",
@@ -4818,6 +4838,7 @@ html[dir="rtl"] body {
       "ecom_saveToFavorites": "שמור למועדפים",
       "ecom_saving": "שומר...",
       "ecom_searchProducts": "חיפוש מוצרים",
+      "ecom_searchResults": "תוצאות חיפוש",
       "ecom_selectVariant": "בחר אפשרות",
       "ecom_sendCode": "שלח קוד",
       "ecom_sendInquiry": "שלח פנייה",
@@ -4915,6 +4936,7 @@ html[dir="rtl"] body {
       "login_p_9": "תכשיטים בעבודת יד המשלבים יופי, איכות ומשמעות. כל פריט נוצר באהבה כדי ללוות את הרגעים היפים בחייך.",
       "new_a_165": "מדיניות משלוחים",
       "new_p_114": "השימוש באתר וביצוע רכישות מותר לבני <strong>18 ומעלה</strong> בלבד. קטינים אינם רשאים לבצע רכישות ללא אישור מפורש של הורה או אפוטרופוס חוקי. ביצוע רכישה מהווה הצהרה כי הרוכש הינו בן 18 ומעלה, או שפועל בהסכמת הורה/אפוטרופוס. אחריות לפעולות קטינים חלה על ההורים או האפוטרופוסים החוקיים.",
+      "new_p_115": "<strong><span><span>אימייל:</span></span></strong> <a href=\"mailto:bliainara.service@gmail.com\">bliainara.service@gmail.com</a>",
       "new_p_124": "בלי עין הרע שמה דגש על משלוח מהיר ואמין של כל ההזמנות. מדיניות זו מפרטת את תנאי המשלוח, זמני האספקה ועלויות המשלוח.",
       "new_p_126": "אנו מספקים שירותי משלוח לכל רחבי ישראל, כולל:",
       "new_p_131": "זמני האספקה המשוערים מיום ביצוע ההזמנה:",
@@ -6476,8 +6498,7 @@ html[dir="rtl"] body {
       "thank_you_seo_twitter_description": "בלי עין הרע - תודה שפנית אלינו",
       "gift_guide_seo_twitter_description": "אובדי עצות מול ים התכשיטים? מדריך המתנות החכם שלנו יעזור לכם לבחור את התכשיט האולטימטיבי לכל אישה או גבר שאתם אוהבים. מטיפים סטייל ועד רעיונות מפתיעים – תנו מתנה שתגנוב את ההצגה בלי להתאמץ. היכנסו עכשיו!",
       "craftsmanship_seo_twitter_description": "טבלו את עצמכן בעולם האומנות שמאחורי התכשיטים שלנו. גלו איך אנחנו משלבים חומרים משובחים כמו כסף, ציפוי זהב ועור אמיתי עם עבודת יד מדויקת כדי ליצור פריטים שנראים כמו מיליון דולר – אבל עולים הרבה פחות. היכנסו להכיר את הקסם מקרוב!",
-      "new_text_183_1": "</a><span><span>&nbsp;תוכלו למצוא בתאור של כל תכשיט</span></span>",
-      "new_text_115_0": "<strong><span><span>אימייל:</span></span></strong> <a href=\"mailto:"
+      "new_text_183_1": "</a><span><span>&nbsp;תוכלו למצוא בתאור של כל תכשיט</span></span>"
     }
   }
 };
