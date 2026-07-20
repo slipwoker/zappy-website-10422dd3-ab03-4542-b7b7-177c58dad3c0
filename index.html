@@ -1,21 +1,19 @@
-<!DOCTYPE html>
-<html lang="he" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
+<!DOCTYPE html><html data-zappy-site-type="ecommerce" lang="he" dir="rtl"><head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
     <title>גלו תכשיטי יוקרה במחיר שווה לכל כיס — בלי עין הרע</title>
-    <meta name="description" content="חנות התכשיטים האונליין שמציעה לך עיצובים מרהיבים לנשים ולגברים במחירים שלא תאמיני. איכות גבוהה, ציפוי זהב וכסף אמיתי – כי מגיע לך להתקשט בלי לקרוע את הכיס. כנסי עכשיו לגלות את הקולקציה החדשה!">
-    <meta name="keywords" content="בלי עין הרע, תכשיטים לנשים, תכשיטים לגברים, תכשיטים לא יקרים, תכשיטי אופנה">
+    <meta name="description" content="חנות התכשיטים האונליין שמציעה לך עיצובים מרהיבים לנשים ולגברים במחירים שלא תאמיני. איכות גבוהה, ציפוי זהב וכסף אמיתי – כי מגיע לך להתקשט בלי לקרוע את הכיס. כנסי עכשיו לגלות את הקולקציה החדשה!" />
+    <meta name="keywords" content="בלי עין הרע, תכשיטים לנשים, תכשיטים לגברים, תכשיטים לא יקרים, תכשיטי אופנה" />
     
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
     <!-- Zappy Analytics -->
 <script>
 (function() {
@@ -223,11 +221,382 @@
 })();
 </script>
 <!-- End Zappy Analytics -->
-    <meta property="og:title" content="גלו תכשיטי יוקרה במחיר שווה לכל כיס — בלי עין הרע">
-    <meta property="og:description" content="חנות התכשיטים האונליין שמציעה לך עיצובים מרהיבים לנשים ולגברים במחירים שלא תאמיני. איכות גבוהה, ציפוי זהב וכסף אמיתי – כי מגיע לך להתקשט בלי לקרוע את הכיס. כנסי עכשיו לגלות את הקולקציה החדשה!">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="גלו תכשיטי יוקרה במחיר שווה לכל כיס — בלי עין הרע">
-    <meta name="twitter:description" content="חנות התכשיטים האונליין שמציעה לך עיצובים מרהיבים לנשים ולגברים במחירים שלא תאמיני. איכות גבוהה, ציפוי זהב וכסף אמיתי – כי מגיע לך להתקשט בלי לקרוע את הכיס. כנסי עכשיו לגלות את הקולקציה החדשה!">
+<!-- Zappy Marketing Events -->
+<script>
+(function() {
+  'use strict';
+  if (window.zappyFireMarketingEvent) return;
+
+  var ECOM_MODE = "full";
+  var IS_CATALOG = false;
+  var IS_FULL = true;
+
+  var ECOM_ALIAS = {
+    begin_checkout: 'checkout_started',
+    purchase: 'checkout_complete',
+    add_to_cart: 'add_to_cart',
+    view_product: 'view_product'
+  };
+
+  function pagePath() {
+    try {
+      if (window.ZAPPY_CONFIG && window.ZAPPY_CONFIG.currentPagePath) {
+        return window.ZAPPY_CONFIG.currentPagePath;
+      }
+    } catch (e) {}
+    try { return window.location.pathname || '/'; } catch (e2) { return '/'; }
+  }
+
+  function normalizeItems(meta) {
+    meta = meta || {};
+    var raw = meta.items || meta.cartItems || meta.cart_items || meta.lineItems || [];
+    if (!Array.isArray(raw)) raw = [];
+    var out = [];
+    for (var i = 0; i < raw.length; i++) {
+      var item = raw[i];
+      if (!item || typeof item !== 'object') continue;
+      var id = String(item.item_id || item.productId || item.product_id || item.id || '').trim();
+      var name = String(item.item_name || item.productName || item.product_name || item.name || '').trim();
+      var price = parseFloat(item.price != null ? item.price : (item.unitPrice != null ? item.unitPrice : 0)) || 0;
+      var quantity = Math.max(1, parseInt(item.quantity != null ? item.quantity : (item.qty != null ? item.qty : 1), 10) || 1);
+      if (!id && !name) continue;
+      out.push({ item_id: id || name, item_name: name || id, price: price, quantity: quantity });
+    }
+    return out;
+  }
+
+  function buildGa4Params(eventId, meta) {
+    meta = meta || {};
+    var items = normalizeItems(meta);
+    var value = parseFloat(meta.value != null ? meta.value : (meta.total != null ? meta.total : 0)) || 0;
+    var currency = String(meta.currency || 'USD').toUpperCase();
+
+    if (eventId === 'checkout_complete') {
+      return {
+        transaction_id: String(meta.transaction_id || meta.orderId || meta.order_id || meta.orderNumber || '') || undefined,
+        value: value,
+        currency: currency,
+        items: items
+      };
+    }
+    if (eventId === 'checkout_started') {
+      return { value: value, currency: currency, items: items };
+    }
+    if (eventId === 'add_to_cart') {
+      var atcItems = items.length ? items : [{
+        item_id: String(meta.productId || meta.product_id || ''),
+        item_name: String(meta.productName || meta.product_name || ''),
+        price: parseFloat(meta.value != null ? meta.value : (meta.price != null ? meta.price : 0)) || 0,
+        quantity: parseInt(meta.quantity != null ? meta.quantity : 1, 10) || 1
+      }].filter(function(x) { return x.item_id || x.item_name; });
+      return {
+        value: value || (atcItems[0] ? atcItems[0].price * atcItems[0].quantity : 0),
+        currency: currency,
+        items: atcItems
+      };
+    }
+    if (eventId === 'view_product') {
+      var vpItems = items.length ? items : [{
+        item_id: String(meta.productId || meta.product_id || ''),
+        item_name: String(meta.productName || meta.product_name || ''),
+        price: parseFloat(meta.price != null ? meta.price : (meta.value != null ? meta.value : 0)) || 0,
+        quantity: 1
+      }].filter(function(x) { return x.item_id || x.item_name; });
+      return {
+        currency: currency,
+        value: value || (vpItems[0] ? vpItems[0].price : 0),
+        items: vpItems
+      };
+    }
+    if (eventId === 'whatsapp_click' || eventId === 'phone_click') {
+      return { method: eventId === 'whatsapp_click' ? 'whatsapp' : 'phone', page_path: meta.pagePath || pagePath() };
+    }
+    if (eventId === 'contact_form_submitted' || eventId === 'product_inquiry') {
+      return { page_path: meta.pagePath || pagePath() };
+    }
+    return meta;
+  }
+
+  function buildMetaParams(eventId, meta) {
+    meta = meta || {};
+    var items = normalizeItems(meta);
+    var value = parseFloat(meta.value != null ? meta.value : (meta.total != null ? meta.total : 0)) || 0;
+    var currency = String(meta.currency || 'USD').toUpperCase();
+    var contentIds = [];
+    var numItems = 0;
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].item_id) contentIds.push(items[i].item_id);
+      numItems += items[i].quantity || 1;
+    }
+
+    if (eventId === 'checkout_complete') {
+      return {
+        value: value,
+        currency: currency,
+        content_ids: contentIds.length ? contentIds : undefined,
+        content_type: 'product',
+        num_items: numItems || undefined,
+        order_id: String(meta.order_id || meta.orderId || meta.transaction_id || meta.orderNumber || '') || undefined
+      };
+    }
+    if (eventId === 'checkout_started') {
+      return {
+        value: value,
+        currency: currency,
+        content_ids: contentIds.length ? contentIds : undefined,
+        content_type: 'product',
+        num_items: numItems || parseInt(meta.itemCount != null ? meta.itemCount : 0, 10) || undefined
+      };
+    }
+    if (eventId === 'add_to_cart') {
+      var id = String(meta.productId || meta.product_id || contentIds[0] || '');
+      return {
+        value: value || (items[0] ? items[0].price * items[0].quantity : 0),
+        currency: currency,
+        content_ids: id ? [id] : (contentIds.length ? contentIds : undefined),
+        content_type: 'product',
+        content_name: meta.productName || meta.product_name || (items[0] && items[0].item_name),
+        num_items: parseInt(meta.quantity != null ? meta.quantity : (numItems || 1), 10) || 1
+      };
+    }
+    if (eventId === 'view_product') {
+      var vid = String(meta.productId || meta.product_id || contentIds[0] || '');
+      return {
+        value: value || parseFloat(meta.price != null ? meta.price : 0) || 0,
+        currency: currency,
+        content_ids: vid ? [vid] : (contentIds.length ? contentIds : undefined),
+        content_type: 'product',
+        content_name: meta.productName || meta.product_name || (items[0] && items[0].item_name)
+      };
+    }
+    if (eventId === 'whatsapp_click' || eventId === 'phone_click') {
+      return {
+        content_name: eventId === 'whatsapp_click' ? 'WhatsApp' : 'Phone',
+        content_category: 'contact'
+      };
+    }
+    if (eventId === 'contact_form_submitted' || eventId === 'product_inquiry') {
+      return {
+        content_name: eventId === 'product_inquiry' ? 'Product inquiry' : 'Contact form',
+        content_category: meta.productName || meta.product_name || undefined
+      };
+    }
+    return meta;
+  }
+
+  var PLATFORM = {
+    whatsapp_click: { ga4: 'contact', meta: 'Contact', gtm: 'whatsapp_click', ecom: false },
+    phone_click: { ga4: 'contact', meta: 'Contact', gtm: 'phone_click', ecom: false },
+    contact_form_submitted: { ga4: 'generate_lead', meta: 'Lead', gtm: 'contact_form_submitted', ecom: false },
+    checkout_started: { ga4: 'begin_checkout', meta: 'InitiateCheckout', gtm: 'begin_checkout', ecom: true },
+    checkout_complete: { ga4: 'purchase', meta: 'Purchase', gtm: 'purchase', ecom: true },
+    product_inquiry: { ga4: 'generate_lead', meta: 'Lead', gtm: 'product_inquiry', ecom: false },
+    add_to_cart: { ga4: 'add_to_cart', meta: 'AddToCart', gtm: 'add_to_cart', ecom: true },
+    view_product: { ga4: 'view_item', meta: 'ViewContent', gtm: 'view_item', ecom: true }
+  };
+
+  function purchaseDedupKey(orderId) {
+    return 'zappy_purchase_fired_' + String(orderId || '');
+  }
+
+  function alreadyFiredPurchase(orderId) {
+    if (!orderId) return false;
+    try {
+      return sessionStorage.getItem(purchaseDedupKey(orderId)) === '1';
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function markPurchaseFired(orderId) {
+    if (!orderId) return;
+    try { sessionStorage.setItem(purchaseDedupKey(orderId), '1'); } catch (e) {}
+  }
+
+  /**
+   * Fire a marketing event to first-party analytics + GA4/GTM/Meta when present.
+   * @param {string} eventName marketing ID or ecommerce alias
+   * @param {object} [metadata]
+   * @param {{ skipFirstParty?: boolean }} [opts]
+   */
+  window.zappyFireMarketingEvent = function(eventName, metadata, opts) {
+    try {
+      opts = opts || {};
+      metadata = metadata || {};
+      var eventId = ECOM_ALIAS[eventName] || eventName;
+      var plat = PLATFORM[eventId];
+      if (!plat) return;
+
+      if (!metadata.pagePath && !metadata.page_path) {
+        metadata.pagePath = pagePath();
+      }
+
+      if (eventId === 'checkout_complete') {
+        var oid = String(metadata.orderId || metadata.order_id || metadata.transaction_id || '');
+        if (oid && alreadyFiredPurchase(oid)) return;
+        if (oid) markPurchaseFired(oid);
+      }
+
+      // First-party (skip when already tracked via zappyTrackEcomAnalytics path
+      // that opts out, or when caller already recorded under a different name)
+      if (!opts.skipFirstParty) {
+        try {
+          if (window.zappyAnalytics && typeof window.zappyAnalytics.track === 'function') {
+            window.zappyAnalytics.track(eventId, metadata);
+          }
+        } catch (e1) {}
+      }
+
+      // GTM / dataLayer — platform-standard ecommerce event names
+      try {
+        window.dataLayer = window.dataLayer || [];
+        if (plat.ecom) {
+          var ga4ForGtm = buildGa4Params(eventId, metadata);
+          var ecommerce = {};
+          if (ga4ForGtm.transaction_id) ecommerce.transaction_id = ga4ForGtm.transaction_id;
+          if (ga4ForGtm.value != null) ecommerce.value = ga4ForGtm.value;
+          if (ga4ForGtm.currency) ecommerce.currency = ga4ForGtm.currency;
+          if (ga4ForGtm.items) ecommerce.items = ga4ForGtm.items;
+          window.dataLayer.push({ event: plat.gtm, ecommerce: ecommerce });
+          // Secondary Zappy-specific trigger for merchants who want it
+          if (eventId === 'checkout_complete' || eventId === 'checkout_started') {
+            window.dataLayer.push({ event: eventId, ecommerce: ecommerce });
+          }
+        } else {
+          var dl = { event: plat.gtm };
+          for (var k in metadata) {
+            if (Object.prototype.hasOwnProperty.call(metadata, k)) dl[k] = metadata[k];
+          }
+          window.dataLayer.push(dl);
+        }
+      } catch (e2) {}
+
+      // GA4 gtag
+      try {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', plat.ga4, buildGa4Params(eventId, metadata));
+        }
+      } catch (e3) {}
+
+      // Meta Pixel (only when fbq is loaded — consent-gated lazy loader)
+      try {
+        if (typeof window.fbq === 'function') {
+          window.fbq('track', plat.meta, buildMetaParams(eventId, metadata));
+        }
+      } catch (e4) {}
+    } catch (err) {}
+  };
+
+  // ---- Click listeners (capture) ----
+  var recent = Object.create(null);
+  function dedupe(key) {
+    var now = Date.now();
+    if (recent[key] && now - recent[key] < 800) return true;
+    recent[key] = now;
+    return false;
+  }
+
+  function closest(el, selector) {
+    if (!el) return null;
+    if (el.closest) return el.closest(selector);
+    return null;
+  }
+
+  function findAnchor(el) {
+    var node = el;
+    while (node && node !== document) {
+      if (node.tagName === 'A') return node;
+      node = node.parentElement;
+    }
+    return null;
+  }
+
+  function isWhatsAppHref(href) {
+    if (!href) return false;
+    var h = String(href).toLowerCase();
+    return h.indexOf('wa.me/') !== -1 ||
+      h.indexOf('api.whatsapp.com') !== -1 ||
+      h.indexOf('whatsapp.com/send') !== -1 ||
+      h.indexOf('whatsapp:') === 0;
+  }
+
+  document.addEventListener('click', function(e) {
+    try {
+      var target = e.target;
+      if (!target) return;
+
+      // WhatsApp
+      var waFloat = closest(target, '.whatsapp-float, a.whatsapp-float, [data-zappy-whatsapp]');
+      var anchor = findAnchor(target);
+      var href = (anchor && anchor.href) || '';
+      if (waFloat || (anchor && isWhatsAppHref(href))) {
+        if (!dedupe('wa:' + href)) {
+          var waSource = waFloat ? 'float' : 'link';
+          window.zappyFireMarketingEvent('whatsapp_click', {
+            source: waSource,
+            href: href || null,
+            pagePath: pagePath()
+          });
+        }
+        return;
+      }
+
+      // Phone
+      var phoneBtn = closest(target, '.phone-header-btn, .nav-phone-btn, .call-btn, [data-zappy-phone]');
+      var telHref = '';
+      if (anchor && anchor.href && String(anchor.href).toLowerCase().indexOf('tel:') === 0) {
+        telHref = anchor.href;
+      } else if (phoneBtn && phoneBtn.href && String(phoneBtn.href).toLowerCase().indexOf('tel:') === 0) {
+        telHref = phoneBtn.href;
+      }
+      if (phoneBtn || telHref) {
+        var phone = '';
+        if (telHref) {
+          phone = String(telHref).replace(/^tel:/i, '').trim();
+        }
+        if (!dedupe('tel:' + (phone || (phoneBtn && phoneBtn.id) || 'btn'))) {
+          window.zappyFireMarketingEvent('phone_click', {
+            source: phoneBtn ? 'button' : 'link',
+            phone: phone || null,
+            href: telHref || null,
+            pagePath: pagePath()
+          });
+        }
+        return;
+      }
+
+      // Catalog / product inquiry
+      if (IS_CATALOG || IS_FULL) {
+        var inq = closest(target, '.card-inquiry-btn, #zappy-pdp-inquiry-btn, a.inquiry-btn');
+        if (inq) {
+          if (!dedupe('inq:' + (inq.id || inq.className))) {
+            var product = window.currentProduct || null;
+            var productId = (inq.getAttribute && inq.getAttribute('data-product-id')) ||
+              (product && product.id) || null;
+            var productName = (inq.getAttribute && inq.getAttribute('data-product-name')) ||
+              (product && product.name) || null;
+            var channel = 'contact_page';
+            var inqHref = (inq.tagName === 'A' && inq.href) ? inq.href : '';
+            if (inqHref && String(inqHref).toLowerCase().indexOf('mailto:') === 0) channel = 'mailto';
+            window.zappyFireMarketingEvent('product_inquiry', {
+              source: inq.id === 'zappy-pdp-inquiry-btn' ? 'pdp' : 'card',
+              productId: productId,
+              productName: productName,
+              channel: channel,
+              pagePath: pagePath()
+            });
+          }
+        }
+      }
+    } catch (err) {}
+  }, true);
+})();
+</script>
+    <meta property="og:title" content="גלו תכשיטי יוקרה במחיר שווה לכל כיס — בלי עין הרע" />
+    <meta property="og:description" content="חנות התכשיטים האונליין שמציעה לך עיצובים מרהיבים לנשים ולגברים במחירים שלא תאמיני. איכות גבוהה, ציפוי זהב וכסף אמיתי – כי מגיע לך להתקשט בלי לקרוע את הכיס. כנסי עכשיו לגלות את הקולקציה החדשה!" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="גלו תכשיטי יוקרה במחיר שווה לכל כיס — בלי עין הרע" />
+    <meta name="twitter:description" content="חנות התכשיטים האונליין שמציעה לך עיצובים מרהיבים לנשים ולגברים במחירים שלא תאמיני. איכות גבוהה, ציפוי זהב וכסף אמיתי – כי מגיע לך להתקשט בלי לקרוע את הכיס. כנסי עכשיו לגלות את הקולקציה החדשה!" />
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://www.bliainara.co.il#organization","name":"בלי עין הרע","url":"https://www.bliainara.co.il","description":"An online jewelry store offering high-quality jewelry for both women and men at affordable prices. The brand positions itself around the concept of accessible luxury — premium craftsmanship without the premium price tag. The store caters to a broad audience seeking elegant, well-made pieces that don't break the bank.","address":{"@type":"PostalAddress","streetAddress":"החשמל 9, עפולה, צפון, 1827109, ישראל"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"bliainara.service@gmail.com","telephone":"0554609960","availableLanguage":["en","he"]}]},{"@type":"WebSite","@id":"https://www.bliainara.co.il#website","url":"https://www.bliainara.co.il","name":"בלי עין הרע","publisher":{"@id":"https://www.bliainara.co.il#organization"},"inLanguage":"he"}]}</script>
     <title data-i18n="home_page_title">גלו תכשיטי יוקרה במחיר שווה לכל כיס — בלי עין הרע</title>
   
@@ -236,14 +605,13 @@
   
   
   
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="he_IL">
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="he_IL" />
   
   
   
   
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     .skip-link { position: absolute; top: 0; left: 0; transform: translateY(-200%); padding: 12px 18px; background: var(--bg-dark, #1a1a1a); color: var(--text-light, #fff); font-weight: 600; border-radius: 0 0 8px 0; z-index: 10000; }
     .skip-link:focus { transform: none; outline: 2px solid var(--ring, #fff); outline-offset: 2px; }
@@ -253,18 +621,18 @@
 
   
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
     <!-- Cookie Consent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    
     <!-- Mickidum Accessibility Toolbar -->
-    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+    
 
 
     <!-- Iconify for cross-platform flag icons -->
@@ -2015,8 +2383,58 @@ html[dir="rtl"] body {
       opacity: 1 !important;
     }
     </style>
-    <link rel="stylesheet" href="/styles.css">
-    <link rel="preload" as="image" href="/assets/site-index-hero-image-1-1782922577444-cqli4w.webp?v=1782922580041" fetchpriority="high">
+    <style id="zappy-critical-above-fold-css">
+html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{box-sizing:inherit}body{margin:0;min-width:320px;overflow-x:clip}img,svg,video{max-width:100%;height:auto}main{display:block}.container{width:min(100% - 32px,1200px);margin-inline:auto}.navbar,nav.navbar,header .navbar,header[role="banner"]{position:relative;z-index:1000;width:100%}.nav-container,.navbar .container{display:flex;align-items:center;justify-content:space-between;min-height:64px}.logo,.logo-link img{display:block;width:35px;height:35px;object-fit:contain}.nav-menu,#navMenu{list-style:none;margin:0;padding:0}.navbar a,.nav-menu a,#navMenu a,.navbar .nav-links a{color:inherit;text-decoration:none}.navbar .sub-menu,.nav-menu .sub-menu,#navMenu .sub-menu{display:none}.fa,.fas,.far,.fab,.fa-solid,.fa-regular,.fa-brands{display:inline-block;min-width:1em;text-align:center}html:not(#zappy-noop)[data-zappy-site-type="ecommerce"] .phone-header-btn,html:not(#zappy-noop) .navbar:has(.nav-ecommerce-icons)>.phone-header-btn{display:none!important;visibility:hidden!important;width:0!important;height:0!important;pointer-events:none!important}.zappy-preview-empty-store-cta{display:none!important;visibility:hidden!important;height:0!important;max-height:0!important;overflow:hidden!important;margin:0!important;padding:0!important;border:0!important;box-shadow:none!important}.zappy-catalog-menu{background:var(--surface-color,var(--surface,linear-gradient(135deg,#f8f9fa 0%,#fff 100%)));border-bottom:1px solid var(--border-color,#e5e7eb);padding:0;position:sticky;top:0;z-index:90}.zappy-catalog-menu[dir=rtl],.zappy-catalog-menu.rtl{direction:rtl}.zappy-catalog-menu[dir=ltr],.zappy-catalog-menu.ltr{direction:ltr}.catalog-menu-container{max-width:1440px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:10px 24px;overflow:visible}.catalog-menu-categories,.catalog-menu-list{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin:0;padding:0;list-style:none}.catalog-menu-item{display:inline-flex;align-items:center;padding:8px 16px;font-size:14px;font-weight:500;color:var(--text-color,var(--text,#374151));text-decoration:none;border-radius:20px;white-space:nowrap}.catalog-menu-all{background:var(--primary-color,var(--primary,#111));color:var(--text-light,#fff)!important}.catalog-menu-parent{position:relative;display:inline-flex;align-items:center}.catalog-menu-trigger{display:inline-flex;align-items:center;gap:6px}.catalog-menu-chevron{flex-shrink:0}.catalog-menu-parent>.sub-menu{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}.hero-section,.index-hero-section,section[class*="hero"]{position:relative;overflow:hidden;min-height:560px}.hero-bg-wrapper,.hero-bg-image,section[class*="hero"] [class*="hero-bg"]{position:absolute;inset:0;width:100%;height:100%}.hero-bg-wrapper img,.hero-bg-image img,section[class*="hero"] [data-hero-bg],section[class*="hero"] img[data-hero-background="true"]{width:100%!important;height:100%!important;object-fit:cover!important;display:block}.hero-content,section[class*="hero"] .container{position:relative;z-index:2}@media(max-width:768px){:root{--header-height:72px;--total-header-height:72px;--zappy-mobile-menu-top:72px}html[data-zappy-site-type="ecommerce"] body{padding-top:var(--total-header-height,72px)}html[data-zappy-site-type="ecommerce"] body>nav.navbar,html[data-zappy-site-type="ecommerce"] body>.navbar:not(.zappy-catalog-menu){position:fixed!important;top:0;left:0;right:0;z-index:100000;width:100%;margin-bottom:0}.zappy-catalog-menu{position:fixed;top:var(--header-height,72px);left:0;right:0;z-index:99999}.nav-container,.navbar .container{min-height:60px}.nav-menu,#navMenu{max-width:100vw;overflow-x:hidden}.hero-section,.index-hero-section,section[class*="hero"]{min-height:100svh}.hero-bg-wrapper,.hero-bg-image,.hero-scrim{min-height:100svh}}
+:root{--nav-bg:#F6F1E8}.navbar{background-color:#F6F1E8!important}
+
+/* ZAPPY_ANNOUNCEMENT_HEADER_OFFSET_CSS_V3 */
+:root {
+  --zappy-header-stack-height: calc(var(--zappy-announcement-height, 40px) + var(--header-height, 72px));
+}
+body:has(.zappy-announcement-bar) nav.navbar:not(.zappy-catalog-menu),
+body:has(.zappy-announcement-bar) header.navbar,
+body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-search-panel) {
+  top: var(--zappy-announcement-height, 40px) !important;
+}
+
+
+
+/* ZAPPY_CONTENT_ALIGNMENT_FIRST_PAINT_CSS_V1 */
+[data-zappy-content-align] {
+  display: flex !important;
+  flex-direction: column !important;
+}
+[data-zappy-content-align^="top-"] { justify-content: flex-start !important; }
+[data-zappy-content-align^="upper-"],
+[data-zappy-content-align^="center-"],
+[data-zappy-content-align^="lower-"] { justify-content: center !important; }
+[data-zappy-content-align^="bottom-"] { justify-content: flex-end !important; }
+[data-zappy-content-align$="-left"],
+[data-zappy-content-align$="-mid-left"] {
+  align-items: flex-start !important;
+  text-align: start !important;
+}
+[data-zappy-content-align$="-center"] {
+  align-items: center !important;
+  text-align: center !important;
+}
+[data-zappy-content-align$="-right"],
+[data-zappy-content-align$="-mid-right"] {
+  align-items: flex-end !important;
+  text-align: end !important;
+}
+[data-zappy-content-align] [data-zappy-align-target] {
+  margin-left: auto;
+  margin-right: auto;
+}
+[data-zappy-content-align$="-center"] [data-zappy-align-target],
+[data-zappy-content-align$="-center"] [data-zappy-align-target] > * {
+  text-align: center !important;
+}
+
+</style>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="preload" as="image" href="/assets/site-index-hero-image-1-1782922577444-cqli4w.webp?v=1782922580041" fetchpriority="high" />
     <script type="text/javascript" src="https://meshulam.co.il/_media/js/apple_pay_sdk/sdk.min.js"></script>
 
     <style id="zappy-dropdown-submenu-styles">
@@ -2024,7 +2442,7 @@ html[dir="rtl"] body {
       /* Base styles for dropdown submenus - parent must be positioned */
       .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { position: relative; }
       /* Submenu base - hidden by default */
-      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; background: white; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
+      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
       /* CRITICAL: Desktop hover styles to show dropdown */
       .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
       /* Submenu item styling */
@@ -2110,7 +2528,7 @@ html[dir="rtl"] body {
 
 <div class="zappy-announcement-bar">
       <span class="zappy-announcement-message active">ברוכים הבאים לבלי עין הרע </span>
-      <span class="zappy-announcement-message">משלוח חינם בקניה מעל 300 ש&#39;&#39;ח </span>
+      <span class="zappy-announcement-message">משלוח חינם בקניה מעל 300 ש''ח </span>
       <span class="zappy-announcement-message">נשמח לעמוד לרשותך בווטסאפ בכל שאלה </span>
     </div>
 <script>window.ZAPPY_PRODUCTS_LISTING_PATH = "/products";</script>
@@ -2118,50 +2536,49 @@ html[dir="rtl"] body {
 
     <div class="mobile-search-panel" id="mobile-search-panel">
       <div class="search-wrapper">
-        <input type="text" id="mobile-search-input" placeholder="חיפוש מוצרים..." autocomplete="off" data-i18n-placeholder="home_placeholder_87">
+        <input type="text" id="mobile-search-input" placeholder="חיפוש מוצרים..." autocomplete="off" data-i18n-placeholder="home_placeholder_87" />
         <button class="search-submit" id="mobile-search-submit" title="חיפוש" data-i18n-title="home_title_96">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
         </button>
         <button class="close-search" id="close-mobile-search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
         </button>
       </div>
       <div class="search-results" id="mobile-search-results"></div>
     </div>
-<script>window.ZAPPY_WEBSITE_ID = "10422dd3-ab03-4542-b7b7-177c58dad3c0";window.ZAPPY_API_BASE = "https://api.zappy5.com";</script><a class="skip-link" href="#main" data-i18n="home_link_53">דלג לתוכן הראשי</a>
+<script>window.ZAPPY_WEBSITE_ID = "10422dd3-ab03-4542-b7b7-177c58dad3c0";window.ZAPPY_API_BASE = "https://api.zappy5.com"</script><a class="skip-link" href="#main" data-i18n="home_link_53">דלג לתוכן הראשי</a>
   <nav class="navbar">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu" data-i18n-aria-label="home_aria_label_101">
-    <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+    <svg style="display:block !important" class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
     </svg>
-    <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
-      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+    <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display:none !important">
+      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
     </svg>
   </button>
   
   <button class="phone-header-btn" data-phone="0554609960" aria-label="Call" data-i18n-aria-label="home_aria_label_102">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
     </svg>
   </button>
 
   <div class="nav-container">
     <div class="nav-right-group"><div class="nav-brand">
-      <a href="/" class="logo-link"><img class="logo" src="/assets/jewelry-e-commerce-logo-1782756657153-kbzds1.webp?v=1782756657582-zp0lg5" alt="בלי עין הרע" data-i18n-alt="home_alt_89"></a>
+      <a href="/" class="logo-link"><img class="logo" src="/assets/jewelry-e-commerce-logo-1782756657153-kbzds1.webp?v=1782756657582-zp0lg5" alt="בלי עין הרע" data-i18n-alt="home_alt_89" decoding="async" width="35" height="35" /></a>
     </div><ul class="nav-menu" id="navMenu">
 
     <li class="menu-item-has-children zappy-products-dropdown">
       <a href="/products">
-        מדיניות אספקת מוצרים
-        
+        מוצרים
         <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M6 9l6 6 6-6"></path>
+          <path d="M6 9l6 6 6-6"/>
         </svg>
       </a>
-      <ul class="sub-menu" id="zappy-nav-category-links">
+      <ul class="sub-menu" id="zappy-nav-category-links" dir="rtl">
         <li><a href="/products" data-i18n="ecom_products">מוצרים</a></li>
         <!-- Categories will be loaded dynamically -->
-      </ul>
+      <li data-category-id="d9980b73-da56-40fc-afea-df294bf3ffd1" data-category-slug="mens-jewelryaccessories"><a href="/category/mens-jewelryaccessories" dir="rtl">בלי עין הרע לגברים</a></li><li data-category-id="a40e1226-7f69-4919-8a1f-7b62e69ad3d6" data-category-slug="evil-eye-jewelry-women"><a href="/category/evil-eye-jewelry-women" dir="rtl">בלי עין הרע לנשים</a></li></ul>
     </li>
   
 
@@ -2184,21 +2601,24 @@ html[dir="rtl"] body {
   
 
     
-  <li><a href="/" data-i18n="home_nav_82">בית</a></li><li><a href="/craftsmanship" data-i18n="home_nav_83">אומנות</a></li><li><a href="/gift-guide" data-i18n="home_nav_84">מדריך מתנות</a></li><li><a href="/contact" data-i18n="home_nav_85">צור קשר</a></li></ul><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg><span class="cart-count">0</span></a><div class="nav-search-box">
-    <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
+  
+
+    
+  <li><a href="/" data-i18n="home_nav_82">בית</a></li><li><a href="/craftsmanship" data-i18n="home_nav_83">אומנות</a></li><li><a href="/gift-guide" data-i18n="home_nav_84">מדריך מתנות</a></li><li><a href="/contact" data-i18n="home_nav_85">צור קשר</a></li></ul><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="cart-count">0</span></a><div class="nav-search-box">
+    <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש מוצרים..." autocomplete="off" />
     <button class="nav-search-btn" id="nav-search-btn" title="חיפוש">
-      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+      <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
     </button>
     <div class="nav-search-results" id="nav-search-results"></div>
-  </div></div><div class="nav-ecommerce-icons nav-icons-right"><button class="nav-search-toggle" id="mobile-search-toggle" title="חיפוש"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg></button></div>
+  </div></div><div class="nav-ecommerce-icons nav-icons-right"><button class="nav-search-toggle" id="mobile-search-toggle" title="חיפוש"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg></button></div>
 
 <script data-no-icon-edit="true">(function(){function f(){var b=document.querySelector('.lang-switcher-current');if(!b)return;var n=b.closest('nav')||b.closest('header')||b.closest('.navbar');if(!n)return;var a=n.querySelector('.nav-menu a,.nav-links a');if(!a)a=n.querySelector('a:not(.lang-option):not(.lang-switcher-current):not([class*="logo"])');if(a){var c=getComputedStyle(a).color;if(c&&c!=='rgb(0, 0, 0)'&&c!=='rgba(0, 0, 0, 0)'){b.style.color=c;return;}}var s=getComputedStyle(n).backgroundColor;if(s&&s!=='rgba(0, 0, 0, 0)'&&s!=='transparent'){var m=s.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);if(m){var l=(0.299*parseInt(m[1])+0.587*parseInt(m[2])+0.114*parseInt(m[3]))/255;b.style.color=l>0.5?'#1a1a1a':'#F3FAFF';}}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',f);}else{setTimeout(f,0);}})()</script>
 <div class="lang-switcher" data-no-icon-edit="true" data-icon-color="#F6F1E8" style="position:relative;display:inline-flex;align-items:center;z-index:1000;margin:0 4px;">
   <button class="lang-switcher-current" aria-haspopup="true" aria-expanded="false" data-no-icon-edit="true" style="display:flex;align-items:center;padding:8px;background:transparent;border:none;border-radius:6px;cursor:pointer;color:inherit;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;" data-no-icon-edit="true"><path d="M12.039,.002s0,0,0,0c-.013,0-.026-.002-.039-.002-.005,0-.009,0-.014,0-.002,0-.003,0-.005,0C5.373,.011,0,5.39,0,12s5.383,12,12,12,12-5.383,12-12S18.638,.023,12.039,.002Zm9.747,6.998h-4.814c-1.067-2.669-2.712-4.781-3.731-5.925,3.734,.421,6.901,2.719,8.546,5.925Zm-4.786,5c0,1.407-.292,2.753-.731,4H7.731c-.439-1.247-.731-2.593-.731-4s.292-2.754,.73-4h8.539c.439,1.247,.731,2.593,.731,4Zm-1.122,5c-1.229,2.838-3.116,4.99-3.878,5.788-.762-.798-2.649-2.95-3.878-5.788h7.755ZM8.121,7c1.229-2.841,3.117-4.992,3.879-5.789,.762,.798,2.649,2.95,3.878,5.789h-7.757ZM10.757,1.075c-1.025,1.15-2.668,3.264-3.73,5.925H2.214C3.859,3.795,7.024,1.498,10.757,1.075ZM1.764,8H6.668c-.403,1.247-.668,2.589-.668,4s.265,2.752,.669,4H1.764c-.487-1.242-.764-2.588-.764-4s.277-2.758,.764-4Zm.45,9H7.029c1.067,2.669,2.712,4.781,3.731,5.925-3.734-.421-6.901-2.719-8.546-5.925Zm11.026,5.925c1.019-1.144,2.664-3.257,3.731-5.925h4.814c-1.645,3.206-4.812,5.504-8.546,5.925Zm8.996-6.925h-4.905c.404-1.248,.669-2.589,.669-4s-.265-2.752-.669-4h4.905c.487,1.242,.764,2.588,.764,4s-.277,2.758-.764,4Z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;" data-no-icon-edit="true"><path d="M12.039,.002s0,0,0,0c-.013,0-.026-.002-.039-.002-.005,0-.009,0-.014,0-.002,0-.003,0-.005,0C5.373,.011,0,5.39,0,12s5.383,12,12,12,12-5.383,12-12S18.638,.023,12.039,.002Zm9.747,6.998h-4.814c-1.067-2.669-2.712-4.781-3.731-5.925,3.734,.421,6.901,2.719,8.546,5.925Zm-4.786,5c0,1.407-.292,2.753-.731,4H7.731c-.439-1.247-.731-2.593-.731-4s.292-2.754,.73-4h8.539c.439,1.247,.731,2.593,.731,4Zm-1.122,5c-1.229,2.838-3.116,4.99-3.878,5.788-.762-.798-2.649-2.95-3.878-5.788h7.755ZM8.121,7c1.229-2.841,3.117-4.992,3.879-5.789,.762,.798,2.649,2.95,3.878,5.789h-7.757ZM10.757,1.075c-1.025,1.15-2.668,3.264-3.73,5.925H2.214C3.859,3.795,7.024,1.498,10.757,1.075ZM1.764,8H6.668c-.403,1.247-.668,2.589-.668,4s.265,2.752,.669,4H1.764c-.487-1.242-.764-2.588-.764-4s.277-2.758,.764-4Zm.45,9H7.029c1.067,2.669,2.712,4.781,3.731,5.925-3.734-.421-6.901-2.719-8.546-5.925Zm11.026,5.925c1.019-1.144,2.664-3.257,3.731-5.925h4.814c-1.645,3.206-4.812,5.504-8.546,5.925Zm8.996-6.925h-4.905c.404-1.248,.669-2.589,.669-4s-.265-2.752-.669-4h4.905c.487,1.242,.764,2.588,.764,4s-.277,2.758-.764,4Z"/></svg>
   </button>
   <div class="lang-switcher-dropdown" role="menu" style="position:absolute;top:100%;right:0;margin-top:4px;min-width:140px;background:white;border:1px solid rgba(128,128,128,0.2);border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);opacity:0;visibility:hidden;transform:translateY(-8px);transition:all 0.2s ease;z-index:1001;">
-    <button class="lang-option" data-lang="he" style="display:flex;align-items:center;gap:8px;width:100%;padding:10px 14px;background:none;border:none;text-align:left;cursor:pointer;font-size:14px;color:#333;"><img src="https://api.iconify.design/circle-flags/il.svg" width="20" height="20" alt="" style="display:inline-block;vertical-align:middle;border-radius:50%;"> עברית</button>
+    <button class="lang-option" data-lang="he" style="display:flex;align-items:center;gap:8px;width:100%;padding:10px 14px;background:none;border:none;text-align:left;cursor:pointer;font-size:14px;color:#333;"><img src="https://api.iconify.design/circle-flags/il.svg" width="20" height="20" alt style="display:inline-block;vertical-align:middle;border-radius:50%;" decoding="async" /> עברית</button>
   </div>
 </div>
 <script data-no-icon-edit="true">(function(){function f(){var b=document.querySelector('.lang-switcher-current');if(!b)return;var n=b.closest('nav')||b.closest('header')||b.closest('.navbar');if(!n)return;var a=n.querySelector('.nav-menu a,.nav-links a');if(!a)a=n.querySelector('a:not(.lang-option):not(.lang-switcher-current):not([class*="logo"])');if(a){var c=getComputedStyle(a).color;if(c&&c!=='rgb(0, 0, 0)'&&c!=='rgba(0, 0, 0, 0)'){b.style.color=c;return;}}var s=getComputedStyle(n).backgroundColor;if(s&&s!=='rgba(0, 0, 0, 0)'&&s!=='transparent'){var m=s.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);if(m){var l=(0.299*parseInt(m[1])+0.587*parseInt(m[2])+0.114*parseInt(m[3]))/255;b.style.color=l>0.5?'#1a1a1a':'#F3FAFF';}}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',f);}else{setTimeout(f,0);}})()</script></div>
@@ -2209,12 +2629,10 @@ html[dir="rtl"] body {
   </div>
 </nav>
 
-    <nav class="zappy-catalog-menu rtl" id="zappy-catalog-menu" style="display:none">
+    <nav class="zappy-catalog-menu rtl" id="zappy-catalog-menu" dir="rtl">
       <div class="catalog-menu-container">
         <a href="/products" class="catalog-menu-item catalog-menu-all" data-i18n="home_nav_86">מוצרים</a>
-        <div class="catalog-menu-categories" id="zappy-category-links">
-          <!-- Categories will be loaded dynamically -->
-        </div>
+        <div class="catalog-menu-categories" id="zappy-category-links" dir="rtl" data-zappy-catalog-baked="1"><a href="/category/mens-jewelryaccessories" class="catalog-menu-item" data-category-id="d9980b73-da56-40fc-afea-df294bf3ffd1" data-category-slug="mens-jewelryaccessories" dir="rtl">בלי עין הרע לגברים</a><a href="/category/evil-eye-jewelry-women" class="catalog-menu-item" data-category-id="a40e1226-7f69-4919-8a1f-7b62e69ad3d6" data-category-slug="evil-eye-jewelry-women" dir="rtl">בלי עין הרע לנשים</a></div>
       </div>
     </nav>
   
@@ -2679,7 +3097,7 @@ html[dir="rtl"] body {
     <section data-band-index="0" class="index-hero-section" data-layout-spec="בית-hero" data-hero-type="fullscreen-scrim" id="index-hero-section" style="min-height: 894.286px !important;">
   <!-- Background Image Layer -->
   <div class="index-hero-section__bg-wrapper">
-    <div data-zappy-zoom-wrapper="true" data-element-id="img-1782114052120-olag5polh" data-element-type="image" data-zappy-zoom-wrapper-width-mode="full" style="position: absolute !important; top: 0px !important; left: 0px !important; width: 100% !important; height: 100% !important; max-width: none !important; margin-left: 0px !important; margin-right: 0px !important; z-index: 1 !important; overflow: hidden !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" data-zappy-zoom-wrapper-align="center" data-zappy-zoom-wrapper-width="407px" data-zappy-zoom-wrapper-height="894px"><img loading="eager" fetchpriority="high" decoding="async" data-hero-bg="true" data-placeholder="index-hero-image-1" data-context="Close-up intimate jewelry photograph: a woman with a pale manicure wearing a delicate gold evil-eye bracelet and stacked gold rings, resting her hand on white lace fabric in warm, sunlit, blush-toned natural light. Skin-close, editorial, soft focus on background, calm composition with the subject positioned toward the END side leaving open space on the START side for text overlay." width="1200" height="600" src="/assets/site-index-hero-image-1-1782922577444-cqli4w.webp?v=1782922580041" alt="צילום תכשיטי זהב עדינים באור שמש חמים" class="index-hero-section__bg-img" data-hero-background="true" data-element-type="image" data-element-id="img-1782114052120-olag5polh" style="object-position: 50% 50% !important; width: 100%; height: 100%; object-fit: cover; position: absolute !important; margin: 0px !important; left: -26.298% !important; top: 0% !important; max-width: none !important; max-height: none !important; display: block !important;" data-zappy-zoom="1" data-zappy-object-position="50% 50%" data-zappy-original-width="406.66668701171875" data-zappy-original-height="894.28125" data-i18n-alt="home_alt_90"></div>
+    <div data-zappy-zoom-wrapper="true" data-element-id="img-1782114052120-olag5polh" data-element-type="image" data-zappy-zoom-wrapper-width-mode="full" style="position: absolute; top: 0px !important; left: 0px !important; width: 100%; height: 100%; max-width: none; margin-left: 0px !important; margin-right: 0px !important; z-index: 1 !important; overflow: hidden; inset: 0; max-height: none" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" data-zappy-zoom-wrapper-align="center" data-zappy-zoom-wrapper-width="407px" data-zappy-zoom-wrapper-height="894px"><img loading="eager" fetchpriority="high" data-hero-bg="true" data-placeholder="index-hero-image-1" data-context="Close-up intimate jewelry photograph: a woman with a pale manicure wearing a delicate gold evil-eye bracelet and stacked gold rings, resting her hand on white lace fabric in warm, sunlit, blush-toned natural light. Skin-close, editorial, soft focus on background, calm composition with the subject positioned toward the END side leaving open space on the START side for text overlay." width="1200" height="600" src="/assets/site-index-hero-image-1-1782922577444-cqli4w.webp?v=1782922580041" alt="צילום תכשיטי זהב עדינים באור שמש חמים" class="index-hero-section__bg-img" data-hero-background="true" data-element-type="image" data-element-id="img-1782114052120-olag5polh" style="object-position: 50% 50%; width: 100%; height: 100%; object-fit: cover; position: absolute; margin: 0; max-width: none; max-height: none; display: block !important; inset: 0" data-zappy-zoom="1" data-zappy-object-position="50% 50%" data-zappy-original-width="406.66668701171875" data-zappy-original-height="894.28125" data-i18n-alt="home_alt_90" decoding="async" /></div>
   </div>
 
   <!-- Scrim Overlay Layer -->
@@ -2692,7 +3110,7 @@ html[dir="rtl"] body {
       
 
       <h1 class="index-hero-section__headline" data-i18n="home_h1_1">יופי יוקרתי, מחיר שווה לכל כיס</h1>
-      <h3 class="index-hero-section__subtitle"  data-i18n="home_h3_8">תכשיטים איכותיים בעבודת יד מוקפדת, עיצובים מלאי משמעות ומחירים שמאפשרים לך להרגיש מיוחדת או מיוחד בכל יום — בלי להתפשר על איכות</h3>
+      <h3 class="index-hero-section__subtitle" data-i18n="home_h3_8">תכשיטים איכותיים בעבודת יד מוקפדת, עיצובים מלאי משמעות ומחירים שמאפשרים לך להרגיש מיוחדת או מיוחד בכל יום — בלי להתפשר על איכות</h3>
       
       <div class="index-hero-section__ctas">
         <a href="/contact" class="index-hero-section__cta index-hero-section__cta--primary" style="color: rgb(42, 36, 30) !important;" data-i18n="home_link_54">צרי קשר</a>
@@ -2706,11 +3124,11 @@ html[dir="rtl"] body {
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="heroDivGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" stop-color="var(--bg-light)" stop-opacity="0"></stop>
-          <stop offset="100%" stop-color="var(--bg-light)" stop-opacity="1"></stop>
+          <stop offset="0%" stop-color="var(--bg-light)" stop-opacity="0"/>
+          <stop offset="100%" stop-color="var(--bg-light)" stop-opacity="1"/>
         </linearGradient>
       </defs>
-      <path d="M0,80 L0,45 Q60,35 120,42 T240,38 Q300,42 360,35 T480,40 Q540,38 600,42 T720,35 Q780,40 840,38 T960,42 Q1020,35 1080,40 T1200,45 L1200,80 Z" fill="var(--bg-light)"></path>
+      <path d="M0,80 L0,45 Q60,35 120,42 T240,38 Q300,42 360,35 T480,40 Q540,38 600,42 T720,35 Q780,40 840,38 T960,42 Q1020,35 1080,40 T1200,45 L1200,80 Z" fill="var(--bg-light)"/>
     </svg>
   </div>
 </section>
@@ -2745,15 +3163,15 @@ html[dir="rtl"] body {
     <!-- Intro Block -->
     <div class="index-features-section__intro">
       <p data-i18n="home_p_17"><span class="index-features-section__kicker" style="color: #1A1A1A !important">הערכים שלנו</span>
-      </p><h2 class="index-features-section__title"  data-i18n="home_h2_4">תכשיטים איכותיים במחיר שווה לכל כיס<br><br><br><br><br></h2>
-      <p class="index-features-section__subtitle"  data-i18n="home_p_18">ב״בלי עין הרע״ אנחנו מאמינים שכל אחד ראוי לענוד תכשיטים איכותיים, מרהיבים שמשדרים יוקרה ועדינות, מבלי לשלם מחיר מופקע. כל פריט מעוצב בקפידה ומגיע אליכם ישירות מהיוצרים.</p>
+      </p><h2 class="index-features-section__title" data-i18n="home_h2_4">תכשיטים איכותיים במחיר שווה לכל כיס<br /><br /><br /><br /><br /></h2>
+      <p class="index-features-section__subtitle" data-i18n="home_p_18">ב״בלי עין הרע״ אנחנו מאמינים שכל אחד ראוי לענוד תכשיטים איכותיים, מרהיבים שמשדרים יוקרה ועדינות, מבלי לשלם מחיר מופקע. כל פריט מעוצב בקפידה ומגיע אליכם ישירות מהיוצרים.</p>
     </div>
 
     <!-- Gold Divider -->
     <div class="index-features-section__divider" aria-hidden="true">
       <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 120 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <line x1="0" y1="4" x2="120" y2="4" stroke="var(--primary)" stroke-width="1" stroke-dasharray="4 4"></line>
-        <circle cx="60" cy="4" r="3" fill="var(--primary)"></circle>
+        <line x1="0" y1="4" x2="120" y2="4" stroke="var(--primary)" stroke-width="1" stroke-dasharray="4 4"/>
+        <circle cx="60" cy="4" r="3" fill="var(--primary)"/>
       </svg>
     </div>
 
@@ -2763,8 +3181,8 @@ html[dir="rtl"] body {
       <article class="index-features-section__card" data-grid-item-index="0">
         <div class="index-features-section__card-icon">
           <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="20" fill="var(--secondary)" stroke="var(--primary)" stroke-width="1.5"></circle>
-            <path d="M16 26L22 32L32 18" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="24" cy="24" r="20" fill="var(--secondary)" stroke="var(--primary)" stroke-width="1.5"/>
+            <path d="M16 26L22 32L32 18" stroke="var(--primary)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <h3 class="index-features-section__card-title" data-i18n="home_h3_9">איכות פרימיום במחיר נגיש</h3>
@@ -2772,9 +3190,9 @@ html[dir="rtl"] body {
         <!-- Evil-eye accent -->
         <div class="index-features-section__accent" aria-hidden="true">
           <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="10" cy="10" rx="7" ry="6" stroke="var(--accent)" stroke-width="1.2"></ellipse>
-            <circle cx="10" cy="10" r="2.5" fill="var(--accent)"></circle>
-            <path d="M3 10H1.5M17 10H18.5M10 4V2.5M10 16V17.5M5.5 5.5L4.5 4.5M14.5 5.5L15.5 4.5M5.5 14.5L4.5 15.5M14.5 14.5L15.5 15.5" stroke="var(--accent)" stroke-width="1" stroke-linecap="round"></path>
+            <ellipse cx="10" cy="10" rx="7" ry="6" stroke="var(--accent)" stroke-width="1.2"/>
+            <circle cx="10" cy="10" r="2.5" fill="var(--accent)"/>
+            <path d="M3 10H1.5M17 10H18.5M10 4V2.5M10 16V17.5M5.5 5.5L4.5 4.5M14.5 5.5L15.5 4.5M5.5 14.5L4.5 15.5M14.5 14.5L15.5 15.5" stroke="var(--accent)" stroke-width="1" stroke-linecap="round"/>
           </svg>
         </div>
       </article>
@@ -2783,9 +3201,9 @@ html[dir="rtl"] body {
       <article class="index-features-section__card" data-grid-item-index="1">
         <div class="index-features-section__card-icon">
           <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="20" fill="var(--secondary)" stroke="var(--primary)" stroke-width="1.5"></circle>
-            <path d="M24 16V20M24 28V32M18 22H16M32 22H30M20.5 18.5L18.5 16.5M27.5 18.5L29.5 16.5M20.5 29.5L18.5 31.5M27.5 29.5L29.5 31.5" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"></path>
-            <circle cx="24" cy="24" r="4" fill="var(--primary)"></circle>
+            <circle cx="24" cy="24" r="20" fill="var(--secondary)" stroke="var(--primary)" stroke-width="1.5"/>
+            <path d="M24 16V20M24 28V32M18 22H16M32 22H30M20.5 18.5L18.5 16.5M27.5 18.5L29.5 16.5M20.5 29.5L18.5 31.5M27.5 29.5L29.5 31.5" stroke="var(--primary)" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="24" cy="24" r="4" fill="var(--primary)"/>
           </svg>
         </div>
         <h3 class="index-features-section__card-title" data-i18n="home_h3_10">לכל סגנון ולכל מתנה</h3>
@@ -2793,9 +3211,9 @@ html[dir="rtl"] body {
         <!-- Evil-eye accent -->
         <div class="index-features-section__accent" aria-hidden="true">
           <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="10" cy="10" rx="7" ry="6" stroke="var(--accent)" stroke-width="1.2"></ellipse>
-            <circle cx="10" cy="10" r="2.5" fill="var(--accent)"></circle>
-            <path d="M3 10H1.5M17 10H18.5M10 4V2.5M10 16V17.5M5.5 5.5L4.5 4.5M14.5 5.5L15.5 4.5M5.5 14.5L4.5 15.5M14.5 14.5L15.5 15.5" stroke="var(--accent)" stroke-width="1" stroke-linecap="round"></path>
+            <ellipse cx="10" cy="10" rx="7" ry="6" stroke="var(--accent)" stroke-width="1.2"/>
+            <circle cx="10" cy="10" r="2.5" fill="var(--accent)"/>
+            <path d="M3 10H1.5M17 10H18.5M10 4V2.5M10 16V17.5M5.5 5.5L4.5 4.5M14.5 5.5L15.5 4.5M5.5 14.5L4.5 15.5M14.5 14.5L15.5 15.5" stroke="var(--accent)" stroke-width="1" stroke-linecap="round"/>
           </svg>
         </div>
       </article>
@@ -2804,8 +3222,8 @@ html[dir="rtl"] body {
       <article class="index-features-section__card" data-grid-item-index="2">
         <div class="index-features-section__card-icon">
           <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="24" cy="24" r="20" fill="var(--secondary)" stroke="var(--primary)" stroke-width="1.5"></circle>
-            <path d="M24 14L27.09 20.26L34 21.27L29 26.14L30.18 33.02L24 29.77L17.82 33.02L19 26.14L14 21.27L20.91 20.26L24 14Z" fill="var(--primary)" stroke="var(--primary)" stroke-width="1" stroke-linejoin="round"></path>
+            <circle cx="24" cy="24" r="20" fill="var(--secondary)" stroke="var(--primary)" stroke-width="1.5"/>
+            <path d="M24 14L27.09 20.26L34 21.27L29 26.14L30.18 33.02L24 29.77L17.82 33.02L19 26.14L14 21.27L20.91 20.26L24 14Z" fill="var(--primary)" stroke="var(--primary)" stroke-width="1" stroke-linejoin="round"/>
           </svg>
         </div>
         <h3 class="index-features-section__card-title" data-i18n="home_h3_11">עיצוב עדין עם נשמה</h3>
@@ -2813,9 +3231,9 @@ html[dir="rtl"] body {
         <!-- Evil-eye accent -->
         <div class="index-features-section__accent" aria-hidden="true">
           <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <ellipse cx="10" cy="10" rx="7" ry="6" stroke="var(--accent)" stroke-width="1.2"></ellipse>
-            <circle cx="10" cy="10" r="2.5" fill="var(--accent)"></circle>
-            <path d="M3 10H1.5M17 10H18.5M10 4V2.5M10 16V17.5M5.5 5.5L4.5 4.5M14.5 5.5L15.5 4.5M5.5 14.5L4.5 15.5M14.5 14.5L15.5 15.5" stroke="var(--accent)" stroke-width="1" stroke-linecap="round"></path>
+            <ellipse cx="10" cy="10" rx="7" ry="6" stroke="var(--accent)" stroke-width="1.2"/>
+            <circle cx="10" cy="10" r="2.5" fill="var(--accent)"/>
+            <path d="M3 10H1.5M17 10H18.5M10 4V2.5M10 16V17.5M5.5 5.5L4.5 4.5M14.5 5.5L15.5 4.5M5.5 14.5L4.5 15.5M14.5 14.5L15.5 15.5" stroke="var(--accent)" stroke-width="1" stroke-linecap="round"/>
           </svg>
         </div>
       </article>
@@ -2826,26 +3244,26 @@ html[dir="rtl"] body {
   <div class="index-features-section__divider-wrapper" aria-hidden="true">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <circle id="blue-bead" cx="0" cy="0" r="3" fill="var(--accent)" opacity="0.6"></circle>
+        <circle id="blue-bead" cx="0" cy="0" r="3" fill="var(--accent)" opacity="0.6"/>
       </defs>
       <!-- Scalloped lace path filling bottom -->
-      <path d="M0,60 L0,10 Q20,0 40,10 Q60,20 80,10 Q100,0 120,10 Q140,20 160,10 Q180,0 200,10 Q220,20 240,10 Q260,0 280,10 Q300,20 320,10 Q340,0 360,10 Q380,20 400,10 Q420,0 440,10 Q460,20 480,10 Q500,0 520,10 Q540,20 560,10 Q580,0 600,10 Q620,20 640,10 Q660,0 680,10 Q700,20 720,10 Q740,0 760,10 Q780,20 800,10 Q820,0 840,10 Q860,20 880,10 Q900,0 920,10 Q940,20 960,10 Q980,0 1000,10 Q1020,20 1040,10 Q1060,0 1080,10 Q1100,20 1120,10 Q1140,0 1160,10 Q1180,20 1200,10 L1200,60 Z" fill="#FBF6F0"></path>
+      <path d="M0,60 L0,10 Q20,0 40,10 Q60,20 80,10 Q100,0 120,10 Q140,20 160,10 Q180,0 200,10 Q220,20 240,10 Q260,0 280,10 Q300,20 320,10 Q340,0 360,10 Q380,20 400,10 Q420,0 440,10 Q460,20 480,10 Q500,0 520,10 Q540,20 560,10 Q580,0 600,10 Q620,20 640,10 Q660,0 680,10 Q700,20 720,10 Q740,0 760,10 Q780,20 800,10 Q820,0 840,10 Q860,20 880,10 Q900,0 920,10 Q940,20 960,10 Q980,0 1000,10 Q1020,20 1040,10 Q1060,0 1080,10 Q1100,20 1120,10 Q1140,0 1160,10 Q1180,20 1200,10 L1200,60 Z" fill="#FBF6F0"/>
       <!-- Blue bead accents on the lace -->
-      <use href="#blue-bead" x="40" y="12"></use>
-      <use href="#blue-bead" x="120" y="12"></use>
-      <use href="#blue-bead" x="200" y="12"></use>
-      <use href="#blue-bead" x="280" y="12"></use>
-      <use href="#blue-bead" x="360" y="12"></use>
-      <use href="#blue-bead" x="440" y="12"></use>
-      <use href="#blue-bead" x="520" y="12"></use>
-      <use href="#blue-bead" x="600" y="12"></use>
-      <use href="#blue-bead" x="680" y="12"></use>
-      <use href="#blue-bead" x="760" y="12"></use>
-      <use href="#blue-bead" x="840" y="12"></use>
-      <use href="#blue-bead" x="920" y="12"></use>
-      <use href="#blue-bead" x="1000" y="12"></use>
-      <use href="#blue-bead" x="1080" y="12"></use>
-      <use href="#blue-bead" x="1160" y="12"></use>
+      <use href="#blue-bead" x="40" y="12"/>
+      <use href="#blue-bead" x="120" y="12"/>
+      <use href="#blue-bead" x="200" y="12"/>
+      <use href="#blue-bead" x="280" y="12"/>
+      <use href="#blue-bead" x="360" y="12"/>
+      <use href="#blue-bead" x="440" y="12"/>
+      <use href="#blue-bead" x="520" y="12"/>
+      <use href="#blue-bead" x="600" y="12"/>
+      <use href="#blue-bead" x="680" y="12"/>
+      <use href="#blue-bead" x="760" y="12"/>
+      <use href="#blue-bead" x="840" y="12"/>
+      <use href="#blue-bead" x="920" y="12"/>
+      <use href="#blue-bead" x="1000" y="12"/>
+      <use href="#blue-bead" x="1080" y="12"/>
+      <use href="#blue-bead" x="1160" y="12"/>
     </svg>
   </div>
 </section>
@@ -2855,7 +3273,7 @@ html[dir="rtl"] body {
     <!-- Intro Block -->
     <div class="showcase-intro">
       <p data-i18n="home_p_22"><span class="showcase-label" style="color: rgb(42, 36, 30) !important;">הקולקציה שלנו</span>
-      </p><h2 class="showcase-title" style="text-align: center;" data-i18n="home_h2_5">תכשיטים שמלווים אותך בכל רגע ביום וגם לארוע<br><br><br></h2>
+      </p><h2 class="showcase-title" style="text-align: center;" data-i18n="home_h2_5">תכשיטים שמלווים אותך בכל רגע ביום וגם לארוע<br /><br /><br /></h2>
       <p class="showcase-description" data-i18n="home_p_23">ב״בלי עין הרע״ אנחנו מאמינים שתכשיט איכותי לא צריך להיות שמור לאירועים מיוחדים. הקולקציה שלנו מעוצבת מתוך מחשבה על היומיום — צמידים עדינים, שרשראות שכבות, ותליוני חמסה ועין הרע שמרגישים כמו קמע אישי. כל פריט עשוי מחומרים מובחרים, בציפוי זהב או כסף אמיתי, במחירים שמאפשרים לך להתפנק באמת.</p>
       <p data-i18n="home_p_24"><a href="#" class="showcase-cta" style="color: rgb(42, 36, 30) !important;" data-i18n="home_link_57">גלו את הקולקציה</a>
     </p></div>
@@ -2865,17 +3283,17 @@ html[dir="rtl"] body {
       <!-- Large oval image (START side = right in RTL) -->
       <div class="collage-item collage-large">
         <div class="collage-image-wrapper collage-oval">
-          <input type="checkbox" id="zappy-lightbox-toggle-img-1782110004070-3hmuyi6tf" class="zappy-lightbox-toggle" data-zappy-image-lightbox="true"><label class="zappy-lightbox-trigger" for="zappy-lightbox-toggle-img-1782110004070-3hmuyi6tf" data-zappy-image-lightbox="true"><div data-zappy-zoom-wrapper="true" data-element-id="img-1782110004070-3hmuyi6tf" data-element-type="image" data-zappy-zoom-wrapper-width="448px" data-zappy-zoom-wrapper-height="600px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="cursor: pointer; position: relative !important; overflow: hidden !important; width: 448px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 600px !important; display: block !important; padding-bottom: 0px !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" data-zappy-click-action="expand"><img decoding="async" data-placeholder="index-showcase-image-1" data-context="Close-up editorial photograph of a woman wearing layered gold necklaces and a delicate bracelet, resting her hand on a blush silk fabric. Soft natural light, warm skin tones, intimate jewelry styling for an affordable luxury brand." width="600" height="750" src="/assets/site-index-showcase-image-1-1782199422902-6porhk.webp?v=1782199422902" alt="תכשיטי זהב עדינים על רקע משי בגוון אפרסק" class="collage-img" data-element-type="image" data-element-id="img-1782110004070-3hmuyi6tf" style="border-radius: 8px; object-position: 55% 89% !important; display: block !important; object-fit: cover !important; width: 100% !important; height: 100% !important; max-width: none !important; margin: 0px !important; left: 0% !important; top: 0% !important; max-height: none !important; position: absolute !important;" data-zappy-object-position="55% 89%" data-zappy-zoom="1" data-zappy-click-action="expand" data-i18n-alt="home_alt_91"></div></label>
+          <input type="checkbox" id="zappy-lightbox-toggle-img-1782110004070-3hmuyi6tf" class="zappy-lightbox-toggle" data-zappy-image-lightbox="true" /><label class="zappy-lightbox-trigger" for="zappy-lightbox-toggle-img-1782110004070-3hmuyi6tf" data-zappy-image-lightbox="true"><div data-zappy-zoom-wrapper="true" data-element-id="img-1782110004070-3hmuyi6tf" data-element-type="image" data-zappy-zoom-wrapper-width="448px" data-zappy-zoom-wrapper-height="600px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="cursor: pointer; position: relative !important; overflow: hidden !important; width: 448px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 600px !important; display: block !important; padding-bottom: 0px !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" data-zappy-click-action="expand"><img decoding="async" data-placeholder="index-showcase-image-1" data-context="Close-up editorial photograph of a woman wearing layered gold necklaces and a delicate bracelet, resting her hand on a blush silk fabric. Soft natural light, warm skin tones, intimate jewelry styling for an affordable luxury brand." width="600" height="750" src="/assets/site-index-showcase-image-1-1782199422902-6porhk.webp?v=1782199422902" alt="תכשיטי זהב עדינים על רקע משי בגוון אפרסק" class="collage-img" data-element-type="image" data-element-id="img-1782110004070-3hmuyi6tf" style="border-radius: 8px; object-position: 55% 89% !important; display: block !important; object-fit: cover !important; width: 100% !important; height: 100% !important; max-width: none !important; margin: 0px !important; left: 0% !important; top: 0% !important; max-height: none !important; position: absolute !important;" data-zappy-object-position="55% 89%" data-zappy-zoom="1" data-zappy-click-action="expand" data-i18n-alt="home_alt_91" loading="lazy" fetchpriority="low" /></div></label>
         </div>
       </div>
 
       <!-- Two smaller rectangular images stacked (END side = left in RTL) -->
       <div class="collage-item collage-stack">
         <div class="collage-image-wrapper collage-rect-top">
-          <img loading="lazy" decoding="async" data-placeholder="index-showcase-image-2" data-context="Flat-lay tabletop composition on a sand-colored linen surface: a gold evil-eye bracelet, a turquoise beaded necklace, and a small seashell. Natural daylight, soft shadows, boutique jewelry brand aesthetic." width="500" height="350" src="/assets/site-index-showcase-image-2.webp" alt="קומפוזיציית תכשיטים עם צמיד עין הרע ושרשרת טורקיז" class="collage-img" data-element-type="image" data-element-id="img-1782110004070-ptvx4vwrs"  data-i18n-alt="home_alt_92">
+          <img loading="lazy" decoding="async" data-placeholder="index-showcase-image-2" data-context="Flat-lay tabletop composition on a sand-colored linen surface: a gold evil-eye bracelet, a turquoise beaded necklace, and a small seashell. Natural daylight, soft shadows, boutique jewelry brand aesthetic." width="500" height="350" src="/assets/site-index-showcase-image-2.webp" alt="קומפוזיציית תכשיטים עם צמיד עין הרע ושרשרת טורקיז" class="collage-img" data-element-type="image" data-element-id="img-1782110004070-ptvx4vwrs" data-i18n-alt="home_alt_92" fetchpriority="low" />
         </div>
         <div class="collage-image-wrapper collage-rect-bottom">
-          <div data-zappy-zoom-wrapper="true" data-element-id="img-1782110004070-xfmfj77z3" data-element-type="image" data-zappy-zoom-wrapper-width="375px" data-zappy-zoom-wrapper-height="280px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 375px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 280px !important; display: block !important; padding-bottom: 0px !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img decoding="async" data-placeholder="index-showcase-image-3" data-context="Close-up of a male wrist wearing a braided leather bracelet with a small gold accent bead, resting on a textured ivory ceramic surface. Masculine yet refined, natural light, warm tones." width="500" height="350" src="/assets/site-index-showcase-image-3-1782486467677-24hqpf.webp?v=1782486469820" alt="צמיד עור קלוע לגבר עם חרוז זהב קטן" class="collage-img" data-element-type="image" data-element-id="img-1782110004070-xfmfj77z3" style="display: block !important; object-position: 50% 50% !important; object-fit: cover !important; margin: 0px !important; left: -0.0279173% !important; top: 0% !important; width: 100.056% !important; height: 100% !important; max-width: none !important; max-height: none !important; position: absolute !important;" data-zappy-zoom="1" data-zappy-object-position="50% 50%" data-zappy-original-width="374.66668701171875" data-zappy-original-height="280" data-i18n-alt="home_alt_93"></div>
+          <div data-zappy-zoom-wrapper="true" data-element-id="img-1782110004070-xfmfj77z3" data-element-type="image" data-zappy-zoom-wrapper-width="375px" data-zappy-zoom-wrapper-height="280px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 375px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 280px !important; display: block !important; padding-bottom: 0px !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true"><img decoding="async" data-placeholder="index-showcase-image-3" data-context="Close-up of a male wrist wearing a braided leather bracelet with a small gold accent bead, resting on a textured ivory ceramic surface. Masculine yet refined, natural light, warm tones." width="500" height="350" src="/assets/site-index-showcase-image-3-1782486467677-24hqpf.webp?v=1782486469820" alt="צמיד עור קלוע לגבר עם חרוז זהב קטן" class="collage-img" data-element-type="image" data-element-id="img-1782110004070-xfmfj77z3" style="display: block !important; object-position: 50% 50% !important; object-fit: cover !important; margin: 0px !important; left: -0.0279173% !important; top: 0% !important; width: 100.056% !important; height: 100% !important; max-width: none !important; max-height: none !important; position: absolute !important;" data-zappy-zoom="1" data-zappy-object-position="50% 50%" data-zappy-original-width="374.66668701171875" data-zappy-original-height="280" data-i18n-alt="home_alt_93" loading="lazy" fetchpriority="low" /></div>
         </div>
       </div>
 
@@ -2883,13 +3301,13 @@ html[dir="rtl"] body {
       <div class="collage-item collage-text-panel">
         <div class="text-panel-inner">
           <svg data-element-type="icon" data-icon-type="svg" class="panel-icon" viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"></circle>
-            <circle cx="12" cy="12" r="3"></circle>
-            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            <circle cx="12" cy="12" r="10"/>
+            <circle cx="12" cy="12" r="3"/>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
           </svg>
           <h3 class="panel-title" data-i18n="home_h3_12">איכות שמרגישים</h3>
-          <p class="panel-text" style="outline: none; text-align: center;" data-i18n="home_p_25">כל תכשיט עובר בקרת איכות קפדנית ומיוצר מחומרים היפואלרגניים שמתאימים גם לעור רגיש. התכשיטים שלנו שומרים על עמידות והברק שלהם לאורך זמן.<br>אנחנו משתמשים בחומרי גלם איכותיים כגון, פלדת אל חלד, ציפויים איכותיים של זהב, טיטניום, אירודיום, כסף 925, וחלקם מגיעים בשילובים מהממים טבעיים של אבני חן, עור, פנינים מתורבתות ממים מתוקים ועוד..<br></p>
-          <p ><a href="#" class="panel-link" style="color: rgb(42, 36, 30) !important;" data-i18n="home_link_58">עוד על החומרים שלנו</a><span><span><span data-i18n="new_text_183_1">&nbsp;תוכלו למצוא בתאור של כל תכשיט</span></span></span></p></div>
+          <p class="panel-text" style="outline: none; text-align: center;" data-i18n="home_p_25">כל תכשיט עובר בקרת איכות קפדנית ומיוצר מחומרים היפואלרגניים שמתאימים גם לעור רגיש. התכשיטים שלנו שומרים על עמידות והברק שלהם לאורך זמן.<br />אנחנו משתמשים בחומרי גלם איכותיים כגון, פלדת אל חלד, ציפויים איכותיים של זהב, טיטניום, אירודיום, כסף 925, וחלקם מגיעים בשילובים מהממים טבעיים של אבני חן, עור, פנינים מתורבתות ממים מתוקים ועוד..<br /></p>
+          <p><a href="#" class="panel-link" style="color: rgb(42, 36, 30) !important;" data-i18n="home_link_58">עוד על החומרים שלנו</a><span><span><span data-i18n="new_text_183_1">&nbsp;תוכלו למצוא בתאור של כל תכשיט</span></span></span></p></div>
       </div>
     </div>
   </div>
@@ -2899,12 +3317,12 @@ html[dir="rtl"] body {
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="showcase-divider-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stop-color="#D4A373"></stop>
-          <stop offset="50%" stop-color="#8B5A2B"></stop>
-          <stop offset="100%" stop-color="#3D2B1F"></stop>
+          <stop offset="0%" stop-color="#D4A373"/>
+          <stop offset="50%" stop-color="#8B5A2B"/>
+          <stop offset="100%" stop-color="#3D2B1F"/>
         </linearGradient>
       </defs>
-      <path d="M0,80 L0,25 Q150,45 300,20 Q450,5 600,30 Q750,50 900,15 Q1050,5 1200,25 L1200,80 Z" fill="#3D2B1F"></path>
+      <path d="M0,80 L0,25 Q150,45 300,20 Q450,5 600,30 Q750,50 900,15 Q1050,5 1200,25 L1200,80 Z" fill="#3D2B1F"/>
     </svg>
   </div>
 </section>
@@ -2912,23 +3330,23 @@ html[dir="rtl"] body {
 <section data-band-index="3" class="index-testimonials-section" data-layout-spec="בית-testimonials" id="index-testimonials-section">
   <div class="index-testimonials-section__container">
     <div class="index-testimonials-section__header">
-      <h2 class="index-testimonials-section__title"  data-i18n="home_h2_6">מה הלקוחות שלנו אומרים</h2>
-      <p class="index-testimonials-section__subtitle"  data-i18n="home_p_27">התכשיטים שלנו מדברים בעד עצמם, אבל אנחנו תמיד שמחים לשמוע את החוויה האישית שלכם</p>
+      <h2 class="index-testimonials-section__title" data-i18n="home_h2_6">מה הלקוחות שלנו אומרים</h2>
+      <p class="index-testimonials-section__subtitle" data-i18n="home_p_27">התכשיטים שלנו מדברים בעד עצמם, אבל אנחנו תמיד שמחים לשמוע את החוויה האישית שלכם</p>
     </div>
     <div class="index-testimonials-section__grid zappy-preserve-css-grid" id="zappy-auto-grid-1782573880575-9uedgt" data-zappy-auto-grid="true" data-original-item-width="379" data-original-gap="32px" style="--zappy-grid-cols: repeat(auto-fit, minmax(min(100%, 379px), 1fr)); grid-template-columns: repeat(auto-fit, minmax(min(100%, 379px), 1fr)); display: grid; align-items: stretch !important;" data-zappy-explicit-columns="true">
       <article class="index-testimonials-section__card" data-grid-item-index="0">
         <div class="index-testimonials-section__stars" aria-hidden="true">
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
         </div>
         <blockquote class="index-testimonials-section__quote" data-i18n="home_quote_74">
           <p data-i18n="home_p_28">"הזמנתי שרשרת במתנה לאחותי ולא האמנתי שהאיכות תהיה כל כך גבוהה במחיר הזה. היא לא הורידה אותה מאז. קנייה משתלמת בטירוף."</p>
         </blockquote>
         <div class="index-testimonials-section__divider" aria-hidden="true">
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 4" fill="currentColor"><rect x="10" y="0" width="4" height="4" rx="1"></rect></svg>
+          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 4" fill="currentColor"><rect x="10" y="0" width="4" height="4" rx="1"/></svg>
         </div>
         <footer class="index-testimonials-section__author">
           <span class="index-testimonials-section__author-name" data-i18n="home_span_41">מיכל כהן</span>
@@ -2938,17 +3356,17 @@ html[dir="rtl"] body {
 
       <article class="index-testimonials-section__card" data-grid-item-index="1">
         <div class="index-testimonials-section__stars" aria-hidden="true">
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
         </div>
         <blockquote class="index-testimonials-section__quote" data-i18n="home_quote_75">
-          <p  data-i18n="home_p_29">"חיפשתי צמיד איכותי לגבר שיהיה אלגנטי ואופנתי אבל לא יקר מדי. האריזה הייתה מהממת, והצמיד נראה הרבה יותר יקר ממה ששילמתי. האבזם סגירה ופתיחה מעולה, ממליץ בחום."</p>
+          <p data-i18n="home_p_29">"חיפשתי צמיד איכותי לגבר שיהיה אלגנטי ואופנתי אבל לא יקר מדי. האריזה הייתה מהממת, והצמיד נראה הרבה יותר יקר ממה ששילמתי. האבזם סגירה ופתיחה מעולה, ממליץ בחום."</p>
         </blockquote>
         <div class="index-testimonials-section__divider" aria-hidden="true">
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 4" fill="currentColor"><rect x="10" y="0" width="4" height="4" rx="1"></rect></svg>
+          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 4" fill="currentColor"><rect x="10" y="0" width="4" height="4" rx="1"/></svg>
         </div>
         <footer class="index-testimonials-section__author">
           <span class="index-testimonials-section__author-name" data-i18n="home_span_43">דניאל לוי</span>
@@ -2958,17 +3376,17 @@ html[dir="rtl"] body {
 
       <article class="index-testimonials-section__card" data-grid-item-index="2">
         <div class="index-testimonials-section__stars" aria-hidden="true">
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 20 20" fill="currentColor"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
         </div>
         <blockquote class="index-testimonials-section__quote" data-i18n="home_quote_76">
           <p data-i18n="home_p_30">"אני קונה תכשיטים רק כאן כבר שנה. כל פעם מחדש אני מופתעת מהאיכות ומהתחושה היוקרתית. הציפוי מחזיק מעולה והמחמאות לא מפסיקות."</p>
         </blockquote>
         <div class="index-testimonials-section__divider" aria-hidden="true">
-          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 4" fill="currentColor"><rect x="10" y="0" width="4" height="4" rx="1"></rect></svg>
+          <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 24 4" fill="currentColor"><rect x="10" y="0" width="4" height="4" rx="1"/></svg>
         </div>
         <footer class="index-testimonials-section__author">
           <span class="index-testimonials-section__author-name" data-i18n="home_span_45">נועה אברהם</span>
@@ -2979,7 +3397,7 @@ html[dir="rtl"] body {
   </div>
   <div class="index-testimonials-section__divider-wrapper" aria-hidden="true">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,60 L0,25 Q40,20 80,24 T160,22 Q200,26 240,20 T320,24 Q360,20 400,25 T480,22 Q520,26 560,20 T640,24 Q680,20 720,25 T800,22 Q840,26 880,20 T960,24 Q1000,20 1040,25 T1120,22 Q1160,26 1200,20 L1200,60 Z" fill="#FBF6F0"></path>
+      <path d="M0,60 L0,25 Q40,20 80,24 T160,22 Q200,26 240,20 T320,24 Q360,20 400,25 T480,22 Q520,26 560,20 T640,24 Q680,20 720,25 T800,22 Q840,26 880,20 T960,24 Q1000,20 1040,25 T1120,22 Q1160,26 1200,20 L1200,60 Z" fill="#FBF6F0"/>
     </svg>
   </div>
 </section>
@@ -3003,7 +3421,7 @@ html[dir="rtl"] body {
 
     <!-- Supporting Image Tile peeking from the end-bottom corner -->
     <div class="index-cta-section__image-tile" aria-hidden="true">
-      <div data-zappy-zoom-wrapper="true" data-element-id="img-1782486571865-04ee68ots" data-element-type="image" data-zappy-zoom-wrapper-width="291px" data-zappy-zoom-wrapper-height="234px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 291px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 234px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" data-zappy-card-slot-fill="1"><img loading="lazy" decoding="async" data-placeholder="index-cta-image-1" data-context="Close-up lifestyle shot of a woman wearing elegant gold and pearl jewelry on her wrist and neck, soft natural lighting, blush fabric background, shallow depth of field, intimate and luxurious feel" width="400" height="300" src="/assets/site-index-cta-image-1.webp" alt="תכשיטים על עור בתאורה רכה" data-element-type="image" data-element-id="img-1782486571865-04ee68ots" style="object-position: 50% 35% !important; display: block; margin: 0px !important; left: 0% !important; top: 0% !important; width: 100% !important; height: 100% !important; max-width: none !important; max-height: none !important; object-fit: cover !important;" data-zappy-object-position="50% 35%" data-zappy-zoom="1" data-i18n-alt="home_alt_94"></div>
+      <div data-zappy-zoom-wrapper="true" data-element-id="img-1782486571865-04ee68ots" data-element-type="image" data-zappy-zoom-wrapper-width="291px" data-zappy-zoom-wrapper-height="234px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="position: relative !important; overflow: hidden !important; width: 291px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 234px !important; display: block !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" data-zappy-card-slot-fill="1"><img loading="lazy" decoding="async" data-placeholder="index-cta-image-1" data-context="Close-up lifestyle shot of a woman wearing elegant gold and pearl jewelry on her wrist and neck, soft natural lighting, blush fabric background, shallow depth of field, intimate and luxurious feel" width="400" height="300" src="/assets/site-index-cta-image-1.webp" alt="תכשיטים על עור בתאורה רכה" data-element-type="image" data-element-id="img-1782486571865-04ee68ots" style="object-position: 50% 35% !important; display: block; margin: 0px !important; left: 0% !important; top: 0% !important; width: 100% !important; height: 100% !important; max-width: none !important; max-height: none !important; object-fit: cover !important;" data-zappy-object-position="50% 35%" data-zappy-zoom="1" data-i18n-alt="home_alt_94" fetchpriority="low" /></div>
     </div>
   </div>
 </section>
@@ -3196,7 +3614,7 @@ html[dir="rtl"] body {
 }</style>
 </head>
 <body>
-<div class=" zappy-announcement-bar"="">
+<div class=" zappy-announcement-bar">
       <span class="zappy-announcement-message active">ברוכים הבאים לבלי עין הרע </span>
       <span class="zappy-announcement-message">משלוח חינם בקניה מעל 300 ש&#39;&#39;ח </span>
       <span class="zappy-announcement-message">נשמח לעמוד לרשותך בווטסאפ בכל שאלה </span>
@@ -3212,17 +3630,17 @@ html[dir="rtl"] body {
     </div>
     <form class="&quot;club-popup-form&quot;" id="&quot;clubForm&quot;">
       <div class="&quot;form-field&quot;">
-        <input type="&quot;text&quot;" id="&quot;fullName&quot;" placeholder="&quot;שם" מלא="" *&quot;="" required="">
+        <input type="&quot;text&quot;" id="&quot;fullName&quot;" placeholder="&quot;שם" מלא *&quot; required />
       </div>
       <div class="&quot;form-field&quot;">
-        <input type="&quot;tel&quot;" id="&quot;phone&quot;" placeholder="&quot;טלפון" נייד="" *&quot;="" required="">
+        <input type="&quot;tel&quot;" id="&quot;phone&quot;" placeholder="&quot;טלפון" נייד *&quot; required />
       </div>
       <div class="&quot;form-field&quot;">
-        <input type="&quot;email&quot;" id="&quot;email&quot;" placeholder="&quot;אימייל" *&quot;="" required="">
+        <input type="&quot;email&quot;" id="&quot;email&quot;" placeholder="&quot;אימייל" *&quot; required />
       </div>
       <div class="&quot;form-consent&quot;">
         <label class="&quot;consent-label&quot;">
-          <input type="&quot;checkbox&quot;" id="&quot;consent&quot;" required="">
+          <input type="&quot;checkbox&quot;" id="&quot;consent&quot;" required />
           <span>אני מאשר/ת קבלת עדכונים, מבצעים והטבות בדוא״ל ו/או ב-SMS ומאשר/ת את <a href="&quot;/privacy&quot;" target="&quot;_blank&quot;">מדיניות הפרטיות</a></span>
         </label>
       </div>
@@ -3336,6 +3754,7 @@ document.getElementById('clubForm').addEventListener('submit', function(e) {
       "ecom_bookingSelectTime": "Select a time",
       "ecom_bookingSelectDateFirst": "Please choose a date first",
       "ecom_bookingSelectTimeFirst": "Please choose a date and time first",
+      "ecom_bookingCompleteFormFirst": "Please fill in the required booking fields",
       "ecom_bookingTime": "Time",
       "ecom_browseFavorites": "Discover all our products",
       "ecom_bundleDiscount": "Bundle Discount",
@@ -3451,6 +3870,8 @@ document.getElementById('clubForm').addEventListener('submit', function(e) {
       "ecom_haveCouponCode": "I have a coupon code",
       "ecom_home": "Home",
       "ecom_inStock": "In Stock",
+      "ecom_onlyOneLeft": "Only 1 left in stock",
+      "ecom_onlyXLeft": "Only {count} left in stock",
       "ecom_inquiryAbout": "Inquiry about",
       "ecom_invalidCoupon": "Invalid coupon code",
       "ecom_items": "Items",
@@ -3538,6 +3959,7 @@ document.getElementById('clubForm').addEventListener('submit', function(e) {
       "ecom_shippingAddress": "Shipping Address",
       "ecom_shippingMethod": "Shipping Method",
       "ecom_shippingRequired": "Please select a shipping method",
+      "ecom_pickup": "Pickup",
       "ecom_signInHere": "Sign in here",
       "ecom_size": "Size",
       "ecom_sku": "SKU",
@@ -5223,6 +5645,7 @@ document.getElementById('clubForm').addEventListener('submit', function(e) {
       "ecom_bookingSelectTime": "בחרו שעה",
       "ecom_bookingSelectDateFirst": "אנא בחרו תאריך תחילה",
       "ecom_bookingSelectTimeFirst": "אנא בחרו תאריך ושעה תחילה",
+      "ecom_bookingCompleteFormFirst": "אנא מלאו את שדות ההזמנה הנדרשים",
       "ecom_bookingTime": "שעה",
       "ecom_browseFavorites": "גלו את כל המוצרים שלנו",
       "ecom_bundleDiscount": "הנחת חבילה",
@@ -5338,6 +5761,8 @@ document.getElementById('clubForm').addEventListener('submit', function(e) {
       "ecom_haveCouponCode": "יש לי קוד קופון",
       "ecom_home": "דף הבית",
       "ecom_inStock": "במלאי",
+      "ecom_onlyOneLeft": "נותר פריט אחד בלבד",
+      "ecom_onlyXLeft": "נותרו רק {count} במלאי",
       "ecom_inquiryAbout": "פנייה בנושא",
       "ecom_invalidCoupon": "קוד קופון לא תקין",
       "ecom_items": "פריטים",
@@ -5425,6 +5850,7 @@ document.getElementById('clubForm').addEventListener('submit', function(e) {
       "ecom_shippingAddress": "כתובת למשלוח",
       "ecom_shippingMethod": "שיטת משלוח",
       "ecom_shippingRequired": "נא לבחור שיטת משלוח",
+      "ecom_pickup": "איסוף",
       "ecom_signInHere": "התחבר כאן",
       "ecom_size": "גודל",
       "ecom_sku": "מק\"ט",
@@ -8049,77 +8475,38 @@ document.getElementById('clubForm').addEventListener('submit', function(e) {
   
   // ============================================
   // LANGUAGE SWITCHER ICON COLOR DETECTION
-  // Dynamically detect if navbar has light/dark background
-  // and set the globe icon color accordingly
+  // (shared source — see getFixLanguageSwitcherColorSource)
   // ============================================
   function fixLanguageSwitcherColor() {
+    /* ZAPPY_LANG_SWITCHER_COLOR_FIX_V3 */
     var switcher = document.querySelector('.lang-switcher-current');
     var svg = switcher ? switcher.querySelector('svg') : null;
     if (!switcher || !svg) return;
-    
-    // Find the navbar or header element
-    var navbar = document.querySelector('.navbar') || 
-                 document.querySelector('nav') || 
+
+    var navbar = document.querySelector('.navbar') ||
+                 document.querySelector('nav') ||
                  document.querySelector('header');
     if (!navbar) return;
-    
-    // Get the effective background color by walking up the DOM tree
-    function getEffectiveBackgroundColor(element) {
-      var el = element;
-      var maxDepth = 10; // Prevent infinite loops
-      
-      while (el && maxDepth > 0) {
-        var style = window.getComputedStyle(el);
-        var bg = style.backgroundColor;
-        
-        // Skip transparent backgrounds
-        if (bg && bg !== 'transparent' && bg !== 'rgba(0, 0, 0, 0)') {
-          return bg;
-        }
-        
-        // Check background-image for gradients
-        var bgImage = style.backgroundImage;
-        if (bgImage && bgImage !== 'none') {
-          // Extract first color from gradient
-          var gradientMatch = bgImage.match(/rgba?\([^)]+\)|#[a-fA-F0-9]{3,8}/);
-          if (gradientMatch) {
-            return gradientMatch[0];
-          }
-        }
-        
-        el = el.parentElement;
-        maxDepth--;
-      }
-      
-      // Default to white if no background found (assume light)
-      return 'rgb(255, 255, 255)';
+
+    function applyColor(color) {
+      if (!color) return;
+      // Keep SVG on currentColor so frosted-scroll CSS / setScrolledColors can
+      // retint the globe by setting only the button's color.
+      try { svg.style.fill = 'currentColor'; } catch (e1) {}
+      try { svg.setAttribute('fill', 'currentColor'); } catch (e2) {}
+      switcher.style.color = color;
     }
-    
-    // Parse color string to RGB values
+
     function parseColor(colorStr) {
       if (!colorStr) return null;
-      
-      // Handle rgb/rgba
       var rgbMatch = colorStr.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);
       if (rgbMatch) {
-        return {
-          r: parseInt(rgbMatch[1], 10),
-          g: parseInt(rgbMatch[2], 10),
-          b: parseInt(rgbMatch[3], 10)
-        };
+        return { r: parseInt(rgbMatch[1], 10), g: parseInt(rgbMatch[2], 10), b: parseInt(rgbMatch[3], 10) };
       }
-      
-      // Handle hex
       var hexMatch = colorStr.match(/#([a-fA-F0-9]{2})([a-fA-F0-9]{2})([a-fA-F0-9]{2})/);
       if (hexMatch) {
-        return {
-          r: parseInt(hexMatch[1], 16),
-          g: parseInt(hexMatch[2], 16),
-          b: parseInt(hexMatch[3], 16)
-        };
+        return { r: parseInt(hexMatch[1], 16), g: parseInt(hexMatch[2], 16), b: parseInt(hexMatch[3], 16) };
       }
-      
-      // Handle 3-digit hex
       var hex3Match = colorStr.match(/#([a-fA-F0-9])([a-fA-F0-9])([a-fA-F0-9])$/);
       if (hex3Match) {
         return {
@@ -8128,46 +8515,143 @@ document.getElementById('clubForm').addEventListener('submit', function(e) {
           b: parseInt(hex3Match[3] + hex3Match[3], 16)
         };
       }
-      
       return null;
     }
-    
-    // Calculate relative luminance (WCAG formula)
+
     function getLuminance(rgb) {
-      if (!rgb) return 0.5; // Default to middle
-      
-      var r = rgb.r / 255;
-      var g = rgb.g / 255;
-      var b = rgb.b / 255;
-      
-      // Apply gamma correction
+      if (!rgb) return 0.5;
+      var r = rgb.r / 255, g = rgb.g / 255, b = rgb.b / 255;
       r = r <= 0.03928 ? r / 12.92 : Math.pow((r + 0.055) / 1.055, 2.4);
       g = g <= 0.03928 ? g / 12.92 : Math.pow((g + 0.055) / 1.055, 2.4);
       b = b <= 0.03928 ? b / 12.92 : Math.pow((b + 0.055) / 1.055, 2.4);
-      
       return 0.2126 * r + 0.7152 * g + 0.0722 * b;
     }
-    
-    // Get the effective background color
-    var bgColor = getEffectiveBackgroundColor(navbar);
-    var rgb = parseColor(bgColor);
-    var luminance = getLuminance(rgb);
-    
-    // Threshold: 0.5 is middle, lower = darker background
-    // Use 0.4 as threshold for better contrast
-    var isLightBackground = luminance > 0.4;
-    
-    // Set icon color based on background
-    // Light background = dark icon (#1a1a1a)
-    // Dark background = light icon (#F3FAFF)
-    var iconColor = isLightBackground ? '#1a1a1a' : '#F3FAFF';
-    
-    svg.style.fill = iconColor;
-    switcher.style.color = iconColor;
-    
-    console.log('[i18n] Language switcher icon color:', iconColor, 
-                '(bg luminance:', luminance.toFixed(2), 
-                ', isLight:', isLightBackground, ')');
+
+    function isOpaqueBg(bg) {
+      if (!bg || bg === 'transparent' || bg === 'rgba(0, 0, 0, 0)') return false;
+      var am = bg.match(/rgba\(\s*\d+\s*,\s*\d+\s*,\s*\d+\s*,\s*([\d.]+)/);
+      if (am && parseFloat(am[1]) < 0.6) return false;
+      return true;
+    }
+
+    function pickFromLuminance(rgb) {
+      return getLuminance(rgb) > 0.4 ? '#1a1a1a' : '#F3FAFF';
+    }
+
+    var isScrolled = navbar.classList.contains('scrolled');
+    var frostedText = '';
+    try { frostedText = (navbar.style.getPropertyValue('--frosted-text') || window.getComputedStyle(navbar).getPropertyValue('--frosted-text') || '').trim(); } catch (e3) {}
+
+    // 0) Frosted / scrolled transparent navbar — light glass needs a DARK globe.
+    //    Must win over --nav-text (which stays light for the at-top hero overlay).
+    if (isScrolled || frostedText) {
+      if (frostedText) {
+        applyColor(frostedText);
+        return;
+      }
+      var rootForFrost = window.getComputedStyle(document.documentElement);
+      var frostDark = (rootForFrost.getPropertyValue('--text-dark') || '').trim() || '#1a1a1a';
+      applyColor(frostDark);
+      return;
+    }
+
+    // 1) Match a real top-level nav link — contrast-correct at-top over hero.
+    var navLink = navbar.querySelector('.nav-menu > li > a, .nav-links > li > a, .nav-menu a, .nav-links a');
+    if (!navLink) {
+      navLink = navbar.querySelector('a:not(.lang-option):not(.lang-switcher-current):not([class*="logo"]):not(.logo-link)');
+    }
+    if (navLink) {
+      var linkColor = window.getComputedStyle(navLink).color;
+      if (linkColor && linkColor !== 'rgb(0, 0, 0)' && linkColor !== 'rgba(0, 0, 0, 0)') {
+        applyColor(linkColor);
+        return;
+      }
+    }
+
+    // 2) Prefer --nav-text (baked for transparent navbars over heroes) — at-top only.
+    var rootCs = window.getComputedStyle(document.documentElement);
+    var navText = (rootCs.getPropertyValue('--nav-text') || '').trim();
+    if (navText && navText.toLowerCase() !== 'currentcolor') {
+      applyColor(navText);
+      return;
+    }
+
+    var nbCs = window.getComputedStyle(navbar);
+    var bg = nbCs.backgroundColor;
+
+    // 3) Opaque navbar background → luminance pick.
+    if (isOpaqueBg(bg)) {
+      applyColor(pickFromLuminance(parseColor(bg)));
+      return;
+    }
+
+    // 4) Transparent navbar with a gradient scrim (e.g. rgba(0,0,0,.35) → clear):
+    //    use the darkest non-near-transparent stop — never the page body beneath.
+    var bi = nbCs.backgroundImage || '';
+    if (bi && bi !== 'none') {
+      var stops = bi.match(/rgba?\([^)]+\)|#[a-fA-F0-9]{3,8}/g) || [];
+      var darkest = null, darkestLum = 2;
+      for (var si = 0; si < stops.length; si++) {
+        var alphaM = stops[si].match(/rgba\(\s*\d+\s*,\s*\d+\s*,\s*\d+\s*,\s*([\d.]+)/);
+        if (alphaM && parseFloat(alphaM[1]) < 0.15) continue;
+        var pr = parseColor(stops[si]);
+        if (!pr) continue;
+        var sl = getLuminance(pr);
+        if (sl < darkestLum) { darkestLum = sl; darkest = pr; }
+      }
+      if (darkest) {
+        applyColor(pickFromLuminance(darkest));
+        return;
+      }
+    }
+
+    // 5) Transparent over hero media → light icon (do NOT walk to body/html).
+    function hasHeroMediaBehind() {
+      var hero = document.querySelector(
+        'section[class*="hero"], .hero, [data-zappy-section="hero"], main > section:first-of-type, body > section:first-of-type'
+      );
+      if (!hero) return false;
+      if (hero.querySelector('img, video, [data-hero-bg], .zappy-section-video-bg, .zappy-section-video')) return true;
+      var hbi = window.getComputedStyle(hero).backgroundImage || '';
+      return hbi.indexOf('url(') >= 0;
+    }
+    if (hasHeroMediaBehind()) {
+      var textLight = (rootCs.getPropertyValue('--text-light') || '').trim() || '#F3FAFF';
+      applyColor(textLight);
+      return;
+    }
+
+    // 6) Last resort for transparent nav without hero cue — prefer --text-light
+    //    over walking to body (cream page bg was the false "light navbar" signal).
+    var fallbackLight = (rootCs.getPropertyValue('--text-light') || '').trim() || '#F3FAFF';
+    applyColor(fallbackLight);
+  }
+
+  // Expose + re-run on frosted scroll so at-top (light) and scrolled (dark) both work.
+  window.fixLanguageSwitcherColor = fixLanguageSwitcherColor;
+  if (!window.__zappyLangSwitcherColorScrollBound) {
+    window.__zappyLangSwitcherColorScrollBound = true;
+    var _langColorScrollTimer = null;
+    function scheduleLangSwitcherColorFix() {
+      if (_langColorScrollTimer) return;
+      _langColorScrollTimer = setTimeout(function() {
+        _langColorScrollTimer = null;
+        try { fixLanguageSwitcherColor(); } catch (e4) {}
+      }, 16);
+    }
+    window.addEventListener('scroll', scheduleLangSwitcherColorFix, { passive: true });
+    window.addEventListener('resize', scheduleLangSwitcherColorFix, { passive: true });
+    if (typeof MutationObserver === 'function') {
+      try {
+        var _langNav = document.querySelector('.navbar') || document.querySelector('nav');
+        if (_langNav) {
+          new MutationObserver(scheduleLangSwitcherColorFix).observe(_langNav, {
+            attributes: true,
+            attributeFilter: ['class', 'style']
+          });
+        }
+      } catch (e5) {}
+    }
   }
   
   // Initialize on DOM ready
@@ -8226,7 +8710,116 @@ document.getElementById('clubForm').addEventListener('submit', function(e) {
   }, 4000);
 })();</script>
 </iframe></section>
+"&gt;
+
+
+
+<section class="zappy-block-section" data-zappy-block="1" data-zappy-block-id="blk_1c10b89b8896" data-zappy-block-title="פופאפ הרשמה למועדון לקוחות" data-zappy-block-html="PGRpdiBjbGFzcz0icG9wdXAtb3ZlcmxheSIgaWQ9ImNsdWItcG9wdXAtb3ZlcmxheSI+CiAgPGRpdiBjbGFzcz0icG9wdXAtY29udGFpbmVyIj4KICAgIDxidXR0b24gY2xhc3M9InBvcHVwLWNsb3NlIiBpZD0icG9wdXAtY2xvc2UtYnRuIiBhcmlhLWxhYmVsPSLXodeS15XXqCI+CiAgICAgIDxzdmcgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+CiAgICAgICAgPHBhdGggZD0iTTE4IDZMNiAxOE02IDZsMTIgMTIiLz4KICAgICAgPC9zdmc+CiAgICA8L2J1dHRvbj4KCiAgICA8ZGl2IGNsYXNzPSJwb3B1cC1icmFuZCI+CiAgICAgIDxkaXYgY2xhc3M9InBvcHVwLWljb24iPgogICAgICAgIDxzdmcgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgNDggNDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICAgICAgICA8Y2lyY2xlIGN4PSIyNCIgY3k9IjI0IiByPSIyMCIgZmlsbD0icmdiYSgyMDEsMTYyLDc3LDAuMTUpIiBzdHJva2U9IiNDOUEyNEQiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICAgICAgICA8cGF0aCBkPSJNMjQgMTRMMjcuMDkgMjAuMjZMMzQgMjEuMjdMMjkgMjYuMTRMMzAuMTggMzMuMDJMMjQgMjkuNzdMMTcuODIgMzMuMDJMMTkgMjYuMTRMMTQgMjEuMjdMMjAuOTEgMjAuMjZMMjQgMTRaIiBmaWxsPSIjQzlBMjREIiBzdHJva2U9IiNDOUEyNEQiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogICAgICAgIDwvc3ZnPgogICAgICA8L2Rpdj4KICAgICAgPGgyIGNsYXNzPSJwb3B1cC10aXRsZSI+15TXpteY16jXpNeZINec157Xldei15PXldefINeU15zXp9eV15fXldeqPC9oMj4KICAgICAgPHAgY2xhc3M9InBvcHVwLXN1YnRpdGxlIj7XlNep15DXmdeo15kg16TXqNeY15nXnSDXlden15HXnNeZINei15PXm9eV16DXmdedINei15wg157Xkdem16LXmdedLCDXp9eV15zXp9em15nXldeqINeX15PXqdeV16og15XXlNeY15HXldeqINee15nXldeX15PXldeqINec15fXkdeo15XXqiDXlNee15XXoteT15XXnzwvcD4KICAgIDwvZGl2PgoKICAgIDxkaXYgY2xhc3M9InBvcHVwLWJlbmVmaXRzIj4KICAgICAgPGRpdiBjbGFzcz0iYmVuZWZpdC1pdGVtIj4KICAgICAgICA8c3BhbiBjbGFzcz0iYmVuZWZpdC1pY29uIj7wn46BPC9zcGFuPgogICAgICAgIDxzcGFuPteU15jXkdeV16og15XXlNeg15fXldeqINec15fXkdeo15kg157Xldei15PXldefPC9zcGFuPgogICAgICA8L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0iYmVuZWZpdC1pdGVtIj4KICAgICAgICA8c3BhbiBjbGFzcz0iYmVuZWZpdC1pY29uIj7wn5SUPC9zcGFuPgogICAgICAgIDxzcGFuPtei15PXm9eV16DXmdedINei15wg16fXldec16fXpteZ15XXqiDXl9eT16nXldeqPC9zcGFuPgogICAgICA8L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0iYmVuZWZpdC1pdGVtIj4KICAgICAgICA8c3BhbiBjbGFzcz0iYmVuZWZpdC1pY29uIj7irZA8L3NwYW4+CiAgICAgICAgPHNwYW4+157Xkdem16LXmdedINeR15zXoteT15nXmdedINec16TXoNeZINeb15XXnNedPC9zcGFuPgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgoKICAgIDxkaXYgY2xhc3M9InBvcHVwLWZvcm0td3JhcHBlciI+CiAgICAgIDxpZnJhbWUgCiAgICAgICAgc3JjPSJodHRwczovL2RvY3MuZ29vZ2xlLmNvbS9mb3Jtcy9kL2UvMUZBSXBRTFNkQ1dKRHVpdkpyaDM5LU41QnU1ZEkzS1V2bmNmQ0xfMWVZdlZYdmtNODJweHhvaGcvdmlld2Zvcm0/ZW1iZWRkZWQ9dHJ1ZSIgCiAgICAgICAgY2xhc3M9Imdvb2dsZS1mb3JtLWlmcmFtZSIKICAgICAgICBmcmFtZWJvcmRlcj0iMCIgCiAgICAgICAgbWFyZ2luaGVpZ2h0PSIwIiAKICAgICAgICBtYXJnaW53aWR0aD0iMCIKICAgICAgICB0aXRsZT0i15jXldek16Eg15TXqNep157XlCDXnNee15XXoteT15XXnyDXnNen15XXl9eV16oiPgogICAgICAgINeY15XXotefLi4uCiAgICAgIDwvaWZyYW1lPgogICAgPC9kaXY+CgogICAgPHAgY2xhc3M9InBvcHVwLWZvb3Rlci10ZXh0Ij7XlNeU16jXqdee15Qg15vXldec15zXqiDXlNeh15vXnteUINec16fXkdec16og16LXk9eb15XXoNeZ150uINeg15nXqtefINec15HXmNecINeR15vXnCDXoteqLjwvcD4KICA8L2Rpdj4KPC9kaXY+Cg==" data-zappy-block-css="QGltcG9ydCB1cmwoJ2h0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9SGVlYm86d2dodEAzMDA7NDAwOzUwMDs2MDA7NzAwJmRpc3BsYXk9c3dhcCcpOwoKKiB7CiAgbWFyZ2luOiAwOwogIHBhZGRpbmc6IDA7CiAgYm94LXNpemluZzogYm9yZGVyLWJveDsKfQoKLnBvcHVwLW92ZXJsYXkgewogIHBvc2l0aW9uOiBmaXhlZDsKICBpbnNldDogMDsKICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNTUpOwogIGJhY2tkcm9wLWZpbHRlcjogYmx1cig2cHgpOwogIGRpc3BsYXk6IGZsZXg7CiAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsKICB6LWluZGV4OiA5OTk5OTsKICBwYWRkaW5nOiAxNnB4OwogIGZvbnQtZmFtaWx5OiAnSGVlYm8nLCBzYW5zLXNlcmlmOwogIGFuaW1hdGlvbjogZmFkZUluIDAuM3MgZWFzZTsKfQoKQGtleWZyYW1lcyBmYWRlSW4gewogIGZyb20geyBvcGFjaXR5OiAwOyB9CiAgdG8geyBvcGFjaXR5OiAxOyB9Cn0KCi5wb3B1cC1jb250YWluZXIgewogIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgxODBkZWcsICNGNkYxRTggMCUsICNGREY5RjUgMTAwJSk7CiAgYm9yZGVyLXJhZGl1czogMjBweDsKICB3aWR0aDogMTAwJTsKICBtYXgtd2lkdGg6IDUyMHB4OwogIG1heC1oZWlnaHQ6IDkwdmg7CiAgb3ZlcmZsb3cteTogYXV0bzsKICBwb3NpdGlvbjogcmVsYXRpdmU7CiAgYm94LXNoYWRvdzogMCAyMHB4IDYwcHggcmdiYSgwLDAsMCwwLjI1KSwgMCAwIDAgMXB4IHJnYmEoMjAxLDE2Miw3NywwLjMpOwogIHBhZGRpbmc6IDMycHggMjhweCAyNHB4OwogIGRpcmVjdGlvbjogcnRsOwogIHRleHQtYWxpZ246IHJpZ2h0OwogIGFuaW1hdGlvbjogc2xpZGVVcCAwLjRzIGN1YmljLWJlemllcigwLjE2LCAxLCAwLjMsIDEpOwp9CgpAa2V5ZnJhbWVzIHNsaWRlVXAgewogIGZyb20geyBvcGFjaXR5OiAwOyB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoNDBweCkgc2NhbGUoMC45Nik7IH0KICB0byB7IG9wYWNpdHk6IDE7IHRyYW5zZm9ybTogdHJhbnNsYXRlWSgwKSBzY2FsZSgxKTsgfQp9CgoucG9wdXAtY2xvc2UgewogIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICB0b3A6IDE0cHg7CiAgbGVmdDogMTRweDsKICB3aWR0aDogMzZweDsKICBoZWlnaHQ6IDM2cHg7CiAgYm9yZGVyLXJhZGl1czogNTAlOwogIGJvcmRlcjogMXB4IHNvbGlkICNFOERDQ0Q7CiAgYmFja2dyb3VuZDogd2hpdGU7CiAgY29sb3I6ICM4QTdCNkE7CiAgY3Vyc29yOiBwb2ludGVyOwogIGRpc3BsYXk6IGZsZXg7CiAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsKICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlOwogIHotaW5kZXg6IDEwOwogIGZvbnQtc2l6ZTogMTZweDsKfQoKLnBvcHVwLWNsb3NlOmhvdmVyIHsKICBiYWNrZ3JvdW5kOiAjMkEyNDFFOwogIGNvbG9yOiAjRjZGMUU4OwogIGJvcmRlci1jb2xvcjogIzJBMjQxRTsKfQoKLnBvcHVwLWJyYW5kIHsKICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgbWFyZ2luLWJvdHRvbTogMThweDsKfQoKLnBvcHVwLWljb24gewogIG1hcmdpbi1ib3R0b206IDEwcHg7CiAgZGlzcGxheTogaW5saW5lLWJsb2NrOwp9CgoucG9wdXAtdGl0bGUgewogIGZvbnQtc2l6ZTogMjZweDsKICBmb250LXdlaWdodDogNzAwOwogIGNvbG9yOiAjMkEyNDFFOwogIG1hcmdpbi1ib3R0b206IDZweDsKICBsZXR0ZXItc3BhY2luZzogLTAuM3B4Owp9CgoucG9wdXAtc3VidGl0bGUgewogIGZvbnQtc2l6ZTogMTVweDsKICBjb2xvcjogIzhBN0I2QTsKICBsaW5lLWhlaWdodDogMS41OwogIG1heC13aWR0aDogMzgwcHg7CiAgbWFyZ2luOiAwIGF1dG87Cn0KCi5wb3B1cC1iZW5lZml0cyB7CiAgZGlzcGxheTogZmxleDsKICBmbGV4LWRpcmVjdGlvbjogY29sdW1uOwogIGdhcDogOHB4OwogIG1hcmdpbi1ib3R0b206IDIwcHg7CiAgYmFja2dyb3VuZDogcmdiYSgyMDEsMTYyLDc3LDAuMDYpOwogIGJvcmRlcjogMXB4IHNvbGlkIHJnYmEoMjAxLDE2Miw3NywwLjIpOwogIGJvcmRlci1yYWRpdXM6IDEycHg7CiAgcGFkZGluZzogMTRweCAxNnB4Owp9CgouYmVuZWZpdC1pdGVtIHsKICBkaXNwbGF5OiBmbGV4OwogIGFsaWduLWl0ZW1zOiBjZW50ZXI7CiAgZ2FwOiAxMHB4OwogIGZvbnQtc2l6ZTogMTRweDsKICBjb2xvcjogIzJBMjQxRTsKICBmb250LXdlaWdodDogNTAwOwp9CgouYmVuZWZpdC1pY29uIHsKICBmb250LXNpemU6IDE4cHg7CiAgZmxleC1zaHJpbms6IDA7CiAgd2lkdGg6IDI4cHg7CiAgdGV4dC1hbGlnbjogY2VudGVyOwp9CgoucG9wdXAtZm9ybS13cmFwcGVyIHsKICBib3JkZXItcmFkaXVzOiAxMnB4OwogIG92ZXJmbG93OiBoaWRkZW47CiAgYm9yZGVyOiAxcHggc29saWQgI0U4RENDRDsKICBiYWNrZ3JvdW5kOiB3aGl0ZTsKICBtYXJnaW4tYm90dG9tOiAxNHB4Owp9CgouZ29vZ2xlLWZvcm0taWZyYW1lIHsKICB3aWR0aDogMTAwJTsKICBoZWlnaHQ6IDU4MHB4OwogIGJvcmRlcjogbm9uZTsKICBkaXNwbGF5OiBibG9jazsKfQoKLnBvcHVwLWZvb3Rlci10ZXh0IHsKICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgZm9udC1zaXplOiAxMnB4OwogIGNvbG9yOiAjOEE3QjZBOwogIGxpbmUtaGVpZ2h0OiAxLjQ7Cn0KCi5wb3B1cC1jb250YWluZXI6Oi13ZWJraXQtc2Nyb2xsYmFyIHsKICB3aWR0aDogNnB4Owp9Ci5wb3B1cC1jb250YWluZXI6Oi13ZWJraXQtc2Nyb2xsYmFyLXRyYWNrIHsKICBiYWNrZ3JvdW5kOiB0cmFuc3BhcmVudDsKfQoucG9wdXAtY29udGFpbmVyOjotd2Via2l0LXNjcm9sbGJhci10aHVtYiB7CiAgYmFja2dyb3VuZDogcmdiYSgyMDEsMTYyLDc3LDAuMyk7CiAgYm9yZGVyLXJhZGl1czogM3B4Owp9CgpAbWVkaWEgKG1heC13aWR0aDogNDgwcHgpIHsKICAucG9wdXAtb3ZlcmxheSB7CiAgICBwYWRkaW5nOiA4cHg7CiAgICBhbGlnbi1pdGVtczogZmxleC1lbmQ7CiAgfQogIAogIC5wb3B1cC1jb250YWluZXIgewogICAgYm9yZGVyLXJhZGl1czogMjBweCAyMHB4IDAgMDsKICAgIG1heC1oZWlnaHQ6IDg1dmg7CiAgICBwYWRkaW5nOiAyNHB4IDE4cHggMThweDsKICB9CiAgCiAgLnBvcHVwLXRpdGxlIHsKICAgIGZvbnQtc2l6ZTogMjJweDsKICB9CiAgCiAgLnBvcHVwLXN1YnRpdGxlIHsKICAgIGZvbnQtc2l6ZTogMTNweDsKICB9CiAgCiAgLmdvb2dsZS1mb3JtLWlmcmFtZSB7CiAgICBoZWlnaHQ6IDUwMHB4OwogIH0KfQo=" data-zappy-block-js="KGZ1bmN0aW9uKCkgewogIHZhciBvdmVybGF5ID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2NsdWItcG9wdXAtb3ZlcmxheScpOwogIGlmICghb3ZlcmxheSkgcmV0dXJuOwoKICAvLyBTdGFydCBoaWRkZW4sIHNob3cgYWZ0ZXIgZGVsYXkKICBvdmVybGF5LnN0eWxlLmRpc3BsYXkgPSAnbm9uZSc7CiAgdmFyIHNob3duID0gZmFsc2U7CiAgdmFyIGNsb3NlZCA9IGZhbHNlOwoKICBmdW5jdGlvbiBzaG93UG9wdXAoKSB7CiAgICBpZiAoc2hvd24gfHwgY2xvc2VkKSByZXR1cm47CiAgICBzaG93biA9IHRydWU7CiAgICBvdmVybGF5LnN0eWxlLmRpc3BsYXkgPSAnZmxleCc7CiAgfQoKICBmdW5jdGlvbiBoaWRlUG9wdXAoKSB7CiAgICBjbG9zZWQgPSB0cnVlOwogICAgb3ZlcmxheS5zdHlsZS5kaXNwbGF5ID0gJ25vbmUnOwogIH0KCiAgLy8gU2hvdyBhZnRlciA0IHNlY29uZHMKICBzZXRUaW1lb3V0KHNob3dQb3B1cCwgNDAwMCk7CgogIC8vIENsb3NlIGJ1dHRvbgogIHZhciBjbG9zZUJ0biA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdwb3B1cC1jbG9zZS1idG4nKTsKICBpZiAoY2xvc2VCdG4pIHsKICAgIGNsb3NlQnRuLmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgZnVuY3Rpb24oZSkgewogICAgICBlLnByZXZlbnREZWZhdWx0KCk7CiAgICAgIGhpZGVQb3B1cCgpOwogICAgfSk7CiAgfQoKICAvLyBDbG9zZSBvbiBvdmVybGF5IGJhY2tncm91bmQgY2xpY2sKICBvdmVybGF5LmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgZnVuY3Rpb24oZSkgewogICAgaWYgKGUudGFyZ2V0ID09PSBvdmVybGF5KSB7CiAgICAgIGhpZGVQb3B1cCgpOwogICAgfQogIH0pOwoKICAvLyBDbG9zZSBvbiBFc2NhcGUga2V5CiAgZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigna2V5ZG93bicsIGZ1bmN0aW9uKGUpIHsKICAgIGlmIChlLmtleSA9PT0gJ0VzY2FwZScgJiYgb3ZlcmxheS5zdHlsZS5kaXNwbGF5ID09PSAnZmxleCcpIHsKICAgICAgaGlkZVBvcHVwKCk7CiAgICB9CiAgfSk7Cn0pKCk7Cg==" data-zappy-block-doc="PCFET0NUWVBFIGh0bWw+CjxodG1sPgo8aGVhZD4KPG1ldGEgY2hhcnNldD0idXRmLTgiPgo8bWV0YSBodHRwLWVxdWl2PSJDb250ZW50LVNlY3VyaXR5LVBvbGljeSIgY29udGVudD0iZGVmYXVsdC1zcmMgJ25vbmUnOyBpbWctc3JjIGh0dHBzOiBkYXRhOiBibG9iOjsgbWVkaWEtc3JjIGh0dHBzOiBkYXRhOiBibG9iOjsgc3R5bGUtc3JjICd1bnNhZmUtaW5saW5lJyBodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tIGh0dHBzOi8vZm9udHMuYnVubnkubmV0OyBmb250LXNyYyBodHRwczogZGF0YTo7IHNjcmlwdC1zcmMgJ3Vuc2FmZS1pbmxpbmUnOyBjb25uZWN0LXNyYyAnbm9uZSc7IGZyYW1lLXNyYyAnbm9uZSc7IGNoaWxkLXNyYyAnbm9uZSc7IG9iamVjdC1zcmMgJ25vbmUnOyBiYXNlLXVyaSAnbm9uZSc7IGZvcm0tYWN0aW9uICdub25lJyI+CjxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MSI+Cjx0aXRsZT7XpNeV16TXkNekINeU16jXqdee15Qg15zXnteV16LXk9eV158g15zXp9eV15fXldeqPC90aXRsZT4KPHN0eWxlPmh0bWwsYm9keXttYXJnaW46MDtwYWRkaW5nOjA7YmFja2dyb3VuZDp0cmFuc3BhcmVudDt9I3phcHB5LWJsb2NrLXJvb3R7ZGlzcGxheTpmbG93LXJvb3Q7fWJvZHl7Zm9udC1mYW1pbHk6aW5oZXJpdDt9QGltcG9ydCB1cmwoJ2h0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9SGVlYm86d2dodEAzMDA7NDAwOzUwMDs2MDA7NzAwJmRpc3BsYXk9c3dhcCcpOwoKKiB7CiAgbWFyZ2luOiAwOwogIHBhZGRpbmc6IDA7CiAgYm94LXNpemluZzogYm9yZGVyLWJveDsKfQoKLnBvcHVwLW92ZXJsYXkgewogIHBvc2l0aW9uOiBmaXhlZDsKICBpbnNldDogMDsKICBiYWNrZ3JvdW5kOiByZ2JhKDAsIDAsIDAsIDAuNTUpOwogIGJhY2tkcm9wLWZpbHRlcjogYmx1cig2cHgpOwogIGRpc3BsYXk6IGZsZXg7CiAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsKICB6LWluZGV4OiA5OTk5OTsKICBwYWRkaW5nOiAxNnB4OwogIGZvbnQtZmFtaWx5OiAnSGVlYm8nLCBzYW5zLXNlcmlmOwogIGFuaW1hdGlvbjogZmFkZUluIDAuM3MgZWFzZTsKfQoKQGtleWZyYW1lcyBmYWRlSW4gewogIGZyb20geyBvcGFjaXR5OiAwOyB9CiAgdG8geyBvcGFjaXR5OiAxOyB9Cn0KCi5wb3B1cC1jb250YWluZXIgewogIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCgxODBkZWcsICNGNkYxRTggMCUsICNGREY5RjUgMTAwJSk7CiAgYm9yZGVyLXJhZGl1czogMjBweDsKICB3aWR0aDogMTAwJTsKICBtYXgtd2lkdGg6IDUyMHB4OwogIG1heC1oZWlnaHQ6IDkwdmg7CiAgb3ZlcmZsb3cteTogYXV0bzsKICBwb3NpdGlvbjogcmVsYXRpdmU7CiAgYm94LXNoYWRvdzogMCAyMHB4IDYwcHggcmdiYSgwLDAsMCwwLjI1KSwgMCAwIDAgMXB4IHJnYmEoMjAxLDE2Miw3NywwLjMpOwogIHBhZGRpbmc6IDMycHggMjhweCAyNHB4OwogIGRpcmVjdGlvbjogcnRsOwogIHRleHQtYWxpZ246IHJpZ2h0OwogIGFuaW1hdGlvbjogc2xpZGVVcCAwLjRzIGN1YmljLWJlemllcigwLjE2LCAxLCAwLjMsIDEpOwp9CgpAa2V5ZnJhbWVzIHNsaWRlVXAgewogIGZyb20geyBvcGFjaXR5OiAwOyB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoNDBweCkgc2NhbGUoMC45Nik7IH0KICB0byB7IG9wYWNpdHk6IDE7IHRyYW5zZm9ybTogdHJhbnNsYXRlWSgwKSBzY2FsZSgxKTsgfQp9CgoucG9wdXAtY2xvc2UgewogIHBvc2l0aW9uOiBhYnNvbHV0ZTsKICB0b3A6IDE0cHg7CiAgbGVmdDogMTRweDsKICB3aWR0aDogMzZweDsKICBoZWlnaHQ6IDM2cHg7CiAgYm9yZGVyLXJhZGl1czogNTAlOwogIGJvcmRlcjogMXB4IHNvbGlkICNFOERDQ0Q7CiAgYmFja2dyb3VuZDogd2hpdGU7CiAgY29sb3I6ICM4QTdCNkE7CiAgY3Vyc29yOiBwb2ludGVyOwogIGRpc3BsYXk6IGZsZXg7CiAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsKICB0cmFuc2l0aW9uOiBhbGwgMC4ycyBlYXNlOwogIHotaW5kZXg6IDEwOwogIGZvbnQtc2l6ZTogMTZweDsKfQoKLnBvcHVwLWNsb3NlOmhvdmVyIHsKICBiYWNrZ3JvdW5kOiAjMkEyNDFFOwogIGNvbG9yOiAjRjZGMUU4OwogIGJvcmRlci1jb2xvcjogIzJBMjQxRTsKfQoKLnBvcHVwLWJyYW5kIHsKICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgbWFyZ2luLWJvdHRvbTogMThweDsKfQoKLnBvcHVwLWljb24gewogIG1hcmdpbi1ib3R0b206IDEwcHg7CiAgZGlzcGxheTogaW5saW5lLWJsb2NrOwp9CgoucG9wdXAtdGl0bGUgewogIGZvbnQtc2l6ZTogMjZweDsKICBmb250LXdlaWdodDogNzAwOwogIGNvbG9yOiAjMkEyNDFFOwogIG1hcmdpbi1ib3R0b206IDZweDsKICBsZXR0ZXItc3BhY2luZzogLTAuM3B4Owp9CgoucG9wdXAtc3VidGl0bGUgewogIGZvbnQtc2l6ZTogMTVweDsKICBjb2xvcjogIzhBN0I2QTsKICBsaW5lLWhlaWdodDogMS41OwogIG1heC13aWR0aDogMzgwcHg7CiAgbWFyZ2luOiAwIGF1dG87Cn0KCi5wb3B1cC1iZW5lZml0cyB7CiAgZGlzcGxheTogZmxleDsKICBmbGV4LWRpcmVjdGlvbjogY29sdW1uOwogIGdhcDogOHB4OwogIG1hcmdpbi1ib3R0b206IDIwcHg7CiAgYmFja2dyb3VuZDogcmdiYSgyMDEsMTYyLDc3LDAuMDYpOwogIGJvcmRlcjogMXB4IHNvbGlkIHJnYmEoMjAxLDE2Miw3NywwLjIpOwogIGJvcmRlci1yYWRpdXM6IDEycHg7CiAgcGFkZGluZzogMTRweCAxNnB4Owp9CgouYmVuZWZpdC1pdGVtIHsKICBkaXNwbGF5OiBmbGV4OwogIGFsaWduLWl0ZW1zOiBjZW50ZXI7CiAgZ2FwOiAxMHB4OwogIGZvbnQtc2l6ZTogMTRweDsKICBjb2xvcjogIzJBMjQxRTsKICBmb250LXdlaWdodDogNTAwOwp9CgouYmVuZWZpdC1pY29uIHsKICBmb250LXNpemU6IDE4cHg7CiAgZmxleC1zaHJpbms6IDA7CiAgd2lkdGg6IDI4cHg7CiAgdGV4dC1hbGlnbjogY2VudGVyOwp9CgoucG9wdXAtZm9ybS13cmFwcGVyIHsKICBib3JkZXItcmFkaXVzOiAxMnB4OwogIG92ZXJmbG93OiBoaWRkZW47CiAgYm9yZGVyOiAxcHggc29saWQgI0U4RENDRDsKICBiYWNrZ3JvdW5kOiB3aGl0ZTsKICBtYXJnaW4tYm90dG9tOiAxNHB4Owp9CgouZ29vZ2xlLWZvcm0taWZyYW1lIHsKICB3aWR0aDogMTAwJTsKICBoZWlnaHQ6IDU4MHB4OwogIGJvcmRlcjogbm9uZTsKICBkaXNwbGF5OiBibG9jazsKfQoKLnBvcHVwLWZvb3Rlci10ZXh0IHsKICB0ZXh0LWFsaWduOiBjZW50ZXI7CiAgZm9udC1zaXplOiAxMnB4OwogIGNvbG9yOiAjOEE3QjZBOwogIGxpbmUtaGVpZ2h0OiAxLjQ7Cn0KCi5wb3B1cC1jb250YWluZXI6Oi13ZWJraXQtc2Nyb2xsYmFyIHsKICB3aWR0aDogNnB4Owp9Ci5wb3B1cC1jb250YWluZXI6Oi13ZWJraXQtc2Nyb2xsYmFyLXRyYWNrIHsKICBiYWNrZ3JvdW5kOiB0cmFuc3BhcmVudDsKfQoucG9wdXAtY29udGFpbmVyOjotd2Via2l0LXNjcm9sbGJhci10aHVtYiB7CiAgYmFja2dyb3VuZDogcmdiYSgyMDEsMTYyLDc3LDAuMyk7CiAgYm9yZGVyLXJhZGl1czogM3B4Owp9CgpAbWVkaWEgKG1heC13aWR0aDogNDgwcHgpIHsKICAucG9wdXAtb3ZlcmxheSB7CiAgICBwYWRkaW5nOiA4cHg7CiAgICBhbGlnbi1pdGVtczogZmxleC1lbmQ7CiAgfQogIAogIC5wb3B1cC1jb250YWluZXIgewogICAgYm9yZGVyLXJhZGl1czogMjBweCAyMHB4IDAgMDsKICAgIG1heC1oZWlnaHQ6IDg1dmg7CiAgICBwYWRkaW5nOiAyNHB4IDE4cHggMThweDsKICB9CiAgCiAgLnBvcHVwLXRpdGxlIHsKICAgIGZvbnQtc2l6ZTogMjJweDsKICB9CiAgCiAgLnBvcHVwLXN1YnRpdGxlIHsKICAgIGZvbnQtc2l6ZTogMTNweDsKICB9CiAgCiAgLmdvb2dsZS1mb3JtLWlmcmFtZSB7CiAgICBoZWlnaHQ6IDUwMHB4OwogIH0KfQo8L3N0eWxlPgo8L2hlYWQ+Cjxib2R5Pgo8ZGl2IGlkPSJ6YXBweS1ibG9jay1yb290Ij4KPGRpdiBjbGFzcz0icG9wdXAtb3ZlcmxheSIgaWQ9ImNsdWItcG9wdXAtb3ZlcmxheSI+CiAgPGRpdiBjbGFzcz0icG9wdXAtY29udGFpbmVyIj4KICAgIDxidXR0b24gY2xhc3M9InBvcHVwLWNsb3NlIiBpZD0icG9wdXAtY2xvc2UtYnRuIiBhcmlhLWxhYmVsPSLXodeS15XXqCI+CiAgICAgIDxzdmcgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCI+CiAgICAgICAgPHBhdGggZD0iTTE4IDZMNiAxOE02IDZsMTIgMTIiLz4KICAgICAgPC9zdmc+CiAgICA8L2J1dHRvbj4KCiAgICA8ZGl2IGNsYXNzPSJwb3B1cC1icmFuZCI+CiAgICAgIDxkaXYgY2xhc3M9InBvcHVwLWljb24iPgogICAgICAgIDxzdmcgd2lkdGg9IjQwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgNDggNDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICAgICAgICA8Y2lyY2xlIGN4PSIyNCIgY3k9IjI0IiByPSIyMCIgZmlsbD0icmdiYSgyMDEsMTYyLDc3LDAuMTUpIiBzdHJva2U9IiNDOUEyNEQiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgICAgICAgICA8cGF0aCBkPSJNMjQgMTRMMjcuMDkgMjAuMjZMMzQgMjEuMjdMMjkgMjYuMTRMMzAuMTggMzMuMDJMMjQgMjkuNzdMMTcuODIgMzMuMDJMMTkgMjYuMTRMMTQgMjEuMjdMMjAuOTEgMjAuMjZMMjQgMTRaIiBmaWxsPSIjQzlBMjREIiBzdHJva2U9IiNDOUEyNEQiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgogICAgICAgIDwvc3ZnPgogICAgICA8L2Rpdj4KICAgICAgPGgyIGNsYXNzPSJwb3B1cC10aXRsZSI+15TXpteY16jXpNeZINec157Xldei15PXldefINeU15zXp9eV15fXldeqPC9oMj4KICAgICAgPHAgY2xhc3M9InBvcHVwLXN1YnRpdGxlIj7XlNep15DXmdeo15kg16TXqNeY15nXnSDXlden15HXnNeZINei15PXm9eV16DXmdedINei15wg157Xkdem16LXmdedLCDXp9eV15zXp9em15nXldeqINeX15PXqdeV16og15XXlNeY15HXldeqINee15nXldeX15PXldeqINec15fXkdeo15XXqiDXlNee15XXoteT15XXnzwvcD4KICAgIDwvZGl2PgoKICAgIDxkaXYgY2xhc3M9InBvcHVwLWJlbmVmaXRzIj4KICAgICAgPGRpdiBjbGFzcz0iYmVuZWZpdC1pdGVtIj4KICAgICAgICA8c3BhbiBjbGFzcz0iYmVuZWZpdC1pY29uIj7wn46BPC9zcGFuPgogICAgICAgIDxzcGFuPteU15jXkdeV16og15XXlNeg15fXldeqINec15fXkdeo15kg157Xldei15PXldefPC9zcGFuPgogICAgICA8L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0iYmVuZWZpdC1pdGVtIj4KICAgICAgICA8c3BhbiBjbGFzcz0iYmVuZWZpdC1pY29uIj7wn5SUPC9zcGFuPgogICAgICAgIDxzcGFuPtei15PXm9eV16DXmdedINei15wg16fXldec16fXpteZ15XXqiDXl9eT16nXldeqPC9zcGFuPgogICAgICA8L2Rpdj4KICAgICAgPGRpdiBjbGFzcz0iYmVuZWZpdC1pdGVtIj4KICAgICAgICA8c3BhbiBjbGFzcz0iYmVuZWZpdC1pY29uIj7irZA8L3NwYW4+CiAgICAgICAgPHNwYW4+157Xkdem16LXmdedINeR15zXoteT15nXmdedINec16TXoNeZINeb15XXnNedPC9zcGFuPgogICAgICA8L2Rpdj4KICAgIDwvZGl2PgoKICAgIDxkaXYgY2xhc3M9InBvcHVwLWZvcm0td3JhcHBlciI+CiAgICAgIDxpZnJhbWUgCiAgICAgICAgc3JjPSJodHRwczovL2RvY3MuZ29vZ2xlLmNvbS9mb3Jtcy9kL2UvMUZBSXBRTFNkQ1dKRHVpdkpyaDM5LU41QnU1ZEkzS1V2bmNmQ0xfMWVZdlZYdmtNODJweHhvaGcvdmlld2Zvcm0/ZW1iZWRkZWQ9dHJ1ZSIgCiAgICAgICAgY2xhc3M9Imdvb2dsZS1mb3JtLWlmcmFtZSIKICAgICAgICBmcmFtZWJvcmRlcj0iMCIgCiAgICAgICAgbWFyZ2luaGVpZ2h0PSIwIiAKICAgICAgICBtYXJnaW53aWR0aD0iMCIKICAgICAgICB0aXRsZT0i15jXldek16Eg15TXqNep157XlCDXnNee15XXoteT15XXnyDXnNen15XXl9eV16oiPgogICAgICAgINeY15XXotefLi4uCiAgICAgIDwvaWZyYW1lPgogICAgPC9kaXY+CgogICAgPHAgY2xhc3M9InBvcHVwLWZvb3Rlci10ZXh0Ij7XlNeU16jXqdee15Qg15vXldec15zXqiDXlNeh15vXnteUINec16fXkdec16og16LXk9eb15XXoNeZ150uINeg15nXqtefINec15HXmNecINeR15vXnCDXoteqLjwvcD4KICA8L2Rpdj4KPC9kaXY+Cgo8L2Rpdj4KPHNjcmlwdD4KICAgIChmdW5jdGlvbigpewogICAgICB2YXIgSUQgPSAiYmxrXzFjMTBiODliODg5NiI7CiAgICAgIHZhciBsYXN0ID0gMDsKICAgICAgZnVuY3Rpb24gcm9vdEVsKCl7IHJldHVybiBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnemFwcHktYmxvY2stcm9vdCcpIHx8IGRvY3VtZW50LmJvZHk7IH0KICAgICAgZnVuY3Rpb24gcG9zdEhlaWdodCgpewogICAgICAgIHRyeSB7CiAgICAgICAgICB2YXIgZWwgPSByb290RWwoKTsKICAgICAgICAgIGlmICghZWwpIHJldHVybjsKICAgICAgICAgIHZhciBoID0gTWF0aC5jZWlsKGVsLmdldEJvdW5kaW5nQ2xpZW50UmVjdCgpLmhlaWdodCk7CiAgICAgICAgICBpZiAoIWggfHwgaCA9PT0gbGFzdCkgcmV0dXJuOwogICAgICAgICAgbGFzdCA9IGg7CiAgICAgICAgICBwYXJlbnQucG9zdE1lc3NhZ2UoeyBfX3phcHB5QmxvY2s6IHRydWUsIHR5cGU6ICdyZXNpemUnLCBpZDogSUQsIGhlaWdodDogaCB9LCAnKicpOwogICAgICAgIH0gY2F0Y2ggKGUpIHt9CiAgICAgIH0KICAgICAgd2luZG93LmFkZEV2ZW50TGlzdGVuZXIoJ2xvYWQnLCBwb3N0SGVpZ2h0KTsKICAgICAgdHJ5IHsgbmV3IFJlc2l6ZU9ic2VydmVyKHBvc3RIZWlnaHQpLm9ic2VydmUocm9vdEVsKCkpOyB9IGNhdGNoIChlKSB7fQogICAgICBzZXRUaW1lb3V0KHBvc3RIZWlnaHQsIDYwKTsgc2V0VGltZW91dChwb3N0SGVpZ2h0LCAzMDApOyBzZXRUaW1lb3V0KHBvc3RIZWlnaHQsIDEwMDApOwogICAgfSkoKTsKICA8L3NjcmlwdD4KPHNjcmlwdD4oZnVuY3Rpb24oKSB7CiAgdmFyIG92ZXJsYXkgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnY2x1Yi1wb3B1cC1vdmVybGF5Jyk7CiAgaWYgKCFvdmVybGF5KSByZXR1cm47CgogIC8vIFN0YXJ0IGhpZGRlbiwgc2hvdyBhZnRlciBkZWxheQogIG92ZXJsYXkuc3R5bGUuZGlzcGxheSA9ICdub25lJzsKICB2YXIgc2hvd24gPSBmYWxzZTsKICB2YXIgY2xvc2VkID0gZmFsc2U7CgogIGZ1bmN0aW9uIHNob3dQb3B1cCgpIHsKICAgIGlmIChzaG93biB8fCBjbG9zZWQpIHJldHVybjsKICAgIHNob3duID0gdHJ1ZTsKICAgIG92ZXJsYXkuc3R5bGUuZGlzcGxheSA9ICdmbGV4JzsKICB9CgogIGZ1bmN0aW9uIGhpZGVQb3B1cCgpIHsKICAgIGNsb3NlZCA9IHRydWU7CiAgICBvdmVybGF5LnN0eWxlLmRpc3BsYXkgPSAnbm9uZSc7CiAgfQoKICAvLyBTaG93IGFmdGVyIDQgc2Vjb25kcwogIHNldFRpbWVvdXQoc2hvd1BvcHVwLCA0MDAwKTsKCiAgLy8gQ2xvc2UgYnV0dG9uCiAgdmFyIGNsb3NlQnRuID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3BvcHVwLWNsb3NlLWJ0bicpOwogIGlmIChjbG9zZUJ0bikgewogICAgY2xvc2VCdG4uYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCBmdW5jdGlvbihlKSB7CiAgICAgIGUucHJldmVudERlZmF1bHQoKTsKICAgICAgaGlkZVBvcHVwKCk7CiAgICB9KTsKICB9CgogIC8vIENsb3NlIG9uIG92ZXJsYXkgYmFja2dyb3VuZCBjbGljawogIG92ZXJsYXkuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCBmdW5jdGlvbihlKSB7CiAgICBpZiAoZS50YXJnZXQgPT09IG92ZXJsYXkpIHsKICAgICAgaGlkZVBvcHVwKCk7CiAgICB9CiAgfSk7CgogIC8vIENsb3NlIG9uIEVzY2FwZSBrZXkKICBkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCdrZXlkb3duJywgZnVuY3Rpb24oZSkgewogICAgaWYgKGUua2V5ID09PSAnRXNjYXBlJyAmJiBvdmVybGF5LnN0eWxlLmRpc3BsYXkgPT09ICdmbGV4JykgewogICAgICBoaWRlUG9wdXAoKTsKICAgIH0KICB9KTsKfSkoKTsKPC9zY3JpcHQ+CjwvYm9keT4KPC9odG1sPg=="><iframe class="zappy-block-frame" data-zappy-block-frame="blk_1c10b89b8896" title="פופאפ הרשמה למועדון לקוחות" loading="lazy" sandbox="allow-scripts" referrerpolicy="no-referrer" style="width:100%;border:0;display:block;min-height:120px;overflow:hidden;"></iframe></section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <!-- Company Info -->
+      <div class="footer-col footer-company-col">
+        <a data-zappy-click-action="link" href="/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: contents;"><div data-zappy-zoom-wrapper="true" data-element-id="img-1782486571865-fu6pxrona" data-element-type="image" data-zappy-zoom-wrapper-width="110px" data-zappy-zoom-wrapper-height="40px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="cursor: pointer; position: relative !important; overflow: hidden !important; width: 110px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 40px !important; display: block !important; padding-bottom: 0px !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" data-zappy-click-action="link"><img src="/assets/jewelry-e-commerce-service-1782757091687-yy1ono.webp?v=1782757094019" alt="בלי עין הרע" class="logo" data-element-type="image" data-element-id="img-1782486571865-fu6pxrona" data-zappy-footer-image="true" style="display: block !important; object-fit: cover !important; object-position: 2% 81% !important; margin: 0px !important; left: 0% !important; top: 0% !important; width: 100% !important; height: 100% !important; max-width: none !important; max-height: none !important; position: absolute !important;" data-zappy-zoom="1" data-zappy-original-width="110" data-zappy-original-height="40" data-zappy-object-position="2% 81%" data-zappy-click-action="link" data-i18n-alt="home_alt_95" decoding="async" width="35" height="35" /></div></a>
+        <p class="company-blurb" style="outline: none; text-align: center;" data-i18n="home_p_32">תכשיטים בעבודת יד המשלבים יופי, איכות ומשמעות. כל פריט נוצר באהבה כדי ללוות את הרגעים היפים בחייך.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col footer-links-col">
+        <h4 data-i18n="home_h4_13">ניווט מהיר</h4>
+        <ul class="footer-links">
+          <li><a href="/" data-i18n="home_link_61">בית</a></li>
+          <li><a href="/craftsmanship" data-i18n="home_link_62">אומנות</a></li>
+          <li><a href="/gift-guide" data-i18n="home_link_63">מדריך מתנות</a></li>
+          <li><a href="/contact" data-i18n="home_link_64">צור קשר</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="footer-col footer-contact-col">
+        <h4 data-i18n="home_h4_14">צור קשר</h4>
+        <ul class="footer-contact"><li>
+            <span class="contact-icon"><i class="fas fa-envelope" data-element-type="icon" data-element-id="icon-1782486571856-jm50iz2vx" data-icon-type="fontawesome" style="cursor: pointer;"></i></span>
+            <span class="contact-text" data-i18n="home_span_47"><a href="mailto:bliainara.service@gmail.com" data-i18n="home_link_65">bliainara.service@gmail.com</a></span>
+          </li><li>
+            <span class="contact-icon"><i class="fas fa-phone" data-element-type="icon" data-element-id="icon-1782486571856-0zef5mf4i" data-icon-type="fontawesome" style="font-size: 14px !important; color: rgb(201, 162, 77); cursor: pointer;"></i></span>
+            <span class="contact-text"><a href="tel:0554609960">0554609960</a></span>
+          </li><li><a href="/" data-i18n="home_link_66"><span class="contact-icon"><i class="fas fa-map-marker-alt" style="cursor: pointer;"></i></span>
+            <span class="contact-text">מחסן: החשמל 9, עפולה, צפון, 1827109, ישראל(בתאום מראש בלבד)</span></a></li></ul>
+      </div>
+
+      <!-- Business Hours -->
+      <div class="footer-col footer-hours-col">
+        <h4 data-i18n="home_h4_15">שעות פעילות שרות לקוחות:</h4>
+        <ul class="footer-hours"><li><a href="/" data-i18n="home_link_67"><span class="hours-day">ימים א’–ה’</span> <span class="hours-time">09:00–17:00</span></a></li><li><a href="/" data-i18n="home_link_68"><span class="hours-day">ימים ו’–שבת</span> <span class="hours-time">סגור (ניתן לשלוח ווטסאפ)</span></a></li></ul>
+      </div>
+
+      <!-- Social Media -->
+      <div class="footer-col footer-social-col">
+        <h4 data-i18n="home_h4_16">עקבו אחרינו</h4>
+        <div class="footer-social">
+          <a href="https://facebook.com/profile.php?id=61591249412348" aria-label="Facebook" data-zappy-social-placeholder="true" data-i18n-aria-label="home_aria_label_103"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://instagram.com/bliainara2026" aria-label="Instagram" data-zappy-social-placeholder="true" data-i18n-aria-label="home_aria_label_104"><i class="fab fa-instagram" data-element-type="icon" data-element-id="icon-1782486571856-x0500tqtm" data-icon-type="fontawesome"></i></a>
+          <a href="https://wa.me/972554609960" aria-label="WhatsApp" data-zappy-social-placeholder="true" data-i18n-aria-label="home_aria_label_105"><i class="fab fa-whatsapp" data-element-type="icon" data-element-id="icon-1782486571857-5i77m8nlc" data-icon-type="fontawesome"></i></a>
+          <a href="https://tiktok.com/@@bliainara" aria-label="TikTok" data-element-id="element-ai-1782286694637-tk8m2a" data-element-type="social-link" data-i18n-aria-label="home_aria_label_106"><i class="fab fa-tiktok" data-element-type="icon" data-element-id="icon-1782486571857-f31z1dxvu" data-icon-type="fontawesome"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <p class="copyright" style="color: rgb(246, 241, 232) !important;" data-i18n="home_p_33">© 2026 בלי עין הרע. כל הזכויות שמורות.</p>
+      </div>
+      <div class="footer-bottom-right">
+        <div class="legal-links">
+          <a href="/privacy" style="color: rgb(246, 241, 232) !important;" data-i18n="home_link_69">מדיניות פרטיות</a>
+          <a href="/terms" style="color: rgb(246, 241, 232) !important;" data-i18n="home_link_70">תנאי שימוש</a><span class="separator">|</span>
+            <a href="/return-policy" aria-label="מדיניות החזרות" style="color: rgb(246, 241, 232) !important;" data-i18n="home_link_71" data-i18n-aria-label="home_aria_label_107">
+              מדיניות החזרות
+            </a>
+          <a href="/accessibility" style="color: rgb(246, 241, 232) !important;" data-i18n="home_link_72">נגישות</a><span class="separator">|</span>
+            <a href="/shipping-policy" aria-label="מדיניות משלוחים" data-i18n="new_a_165">
+              מדיניות משלוחים
+            </a>
+        </div>
+        <p style="color: rgb(246, 241, 232) !important;" data-i18n="home_p_34"><a href="https://zappy5.com" target="_blank" class="zappy-attribution" style="color: rgb(246, 241, 232) !important;" data-i18n="home_link_73">נוצר באמצעות Zappy</a>
+      </p></div>
+    </div>
+  </div>
+</footer>
+  
+  <a href="https://wa.me/972554609960" class="whatsapp-float" aria-label="WhatsApp" data-i18n-aria-label="home_aria_label_108">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  
+  <div class="zappy-qv-overlay" id="zappy-qv-overlay" hidden></div>
+<div class="zappy-qv-modal" id="zappy-qv-modal" role="dialog" aria-modal="true" aria-label="תצוגה מהירה" hidden data-i18n-aria-label="home_aria_label_109">
+  <button type="button" class="zappy-qv-close" id="zappy-qv-close" aria-label="סגור" data-i18n-aria-label="home_aria_label_110">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <div class="zappy-qv-content" id="zappy-qv-content"></div>
+</div>
+    <div data-integration="accessibility:toolbar"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script src="/script.js"></script>
+
+    <script id="zappy-font-awesome-loader">
+(function(){if(window.__zappyFontAwesomeLoader)return;window.__zappyFontAwesomeLoader=true;var href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';function load(){if(document.querySelector('link[href*="font-awesome"][href*="all.min.css"]'))return;var l=document.createElement('link');l.rel='stylesheet';l.href=href;l.crossOrigin='anonymous';l.referrerPolicy='no-referrer';document.head.appendChild(l);}function schedule(){if('requestIdleCallback'in window){requestIdleCallback(load,{timeout:5000});}else{setTimeout(load,3500);}}['pointerdown','keydown','touchstart','mouseover'].forEach(function(evt){window.addEventListener(evt,load,{once:true,passive:true});});schedule();})();
+</script>
 
     <script id="zappy-mobile-submenu-script">
     (function() {
@@ -8420,5 +9013,4 @@ document.getElementById('clubForm').addEventListener('submit', function(e) {
       else setTimeout(init,50);
     })();
     </script>
-</body>
-</html>
+</body></html>

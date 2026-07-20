@@ -1,21 +1,19 @@
-<!DOCTYPE html>
-<html lang="he" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow">
+<!DOCTYPE html><html data-zappy-site-type="ecommerce" lang="he" dir="rtl"><head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
     <title>יש לך שאלה על תכשיט? אנחנו כאן בשבילך — בלי עין הרע</title>
-    <meta name="description" content="רוצה להתייעץ על מידה, חומר או סתם לקבל המלצה אישית? צוות המומחים שלנו מחכה לשמוע ממך! צרי קשר עוד היום ונחזור אלייך במהירות עם חיוך ושירות שאין שני לו. כי מגיע לך יחס אישי כמו התכשיטים שלנו.">
-    <meta name="keywords" content="בלי עין הרע, צור קשר, תכשיטים לא יקרים, תכשיטים מכסף, שירות לקוחות תכשיטים">
+    <meta name="description" content="רוצה להתייעץ על מידה, חומר או סתם לקבל המלצה אישית? צוות המומחים שלנו מחכה לשמוע ממך! צרי קשר עוד היום ונחזור אלייך במהירות עם חיוך ושירות שאין שני לו. כי מגיע לך יחס אישי כמו התכשיטים שלנו." />
+    <meta name="keywords" content="בלי עין הרע, צור קשר, תכשיטים לא יקרים, תכשיטים מכסף, שירות לקוחות תכשיטים" />
     
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
     <!-- Zappy Analytics -->
 <script>
 (function() {
@@ -223,11 +221,382 @@
 })();
 </script>
 <!-- End Zappy Analytics -->
-    <meta property="og:title" content="יש לך שאלה על תכשיט? אנחנו כאן בשבילך — בלי עין הרע">
-    <meta property="og:description" content="רוצה להתייעץ על מידה, חומר או סתם לקבל המלצה אישית? צוות המומחים שלנו מחכה לשמוע ממך! צרי קשר עוד היום ונחזור אלייך במהירות עם חיוך ושירות שאין שני לו. כי מגיע לך יחס אישי כמו התכשיטים שלנו.">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="יש לך שאלה על תכשיט? אנחנו כאן בשבילך — בלי עין הרע">
-    <meta name="twitter:description" content="רוצה להתייעץ על מידה, חומר או סתם לקבל המלצה אישית? צוות המומחים שלנו מחכה לשמוע ממך! צרי קשר עוד היום ונחזור אלייך במהירות עם חיוך ושירות שאין שני לו. כי מגיע לך יחס אישי כמו התכשיטים שלנו.">
+<!-- Zappy Marketing Events -->
+<script>
+(function() {
+  'use strict';
+  if (window.zappyFireMarketingEvent) return;
+
+  var ECOM_MODE = "full";
+  var IS_CATALOG = false;
+  var IS_FULL = true;
+
+  var ECOM_ALIAS = {
+    begin_checkout: 'checkout_started',
+    purchase: 'checkout_complete',
+    add_to_cart: 'add_to_cart',
+    view_product: 'view_product'
+  };
+
+  function pagePath() {
+    try {
+      if (window.ZAPPY_CONFIG && window.ZAPPY_CONFIG.currentPagePath) {
+        return window.ZAPPY_CONFIG.currentPagePath;
+      }
+    } catch (e) {}
+    try { return window.location.pathname || '/'; } catch (e2) { return '/'; }
+  }
+
+  function normalizeItems(meta) {
+    meta = meta || {};
+    var raw = meta.items || meta.cartItems || meta.cart_items || meta.lineItems || [];
+    if (!Array.isArray(raw)) raw = [];
+    var out = [];
+    for (var i = 0; i < raw.length; i++) {
+      var item = raw[i];
+      if (!item || typeof item !== 'object') continue;
+      var id = String(item.item_id || item.productId || item.product_id || item.id || '').trim();
+      var name = String(item.item_name || item.productName || item.product_name || item.name || '').trim();
+      var price = parseFloat(item.price != null ? item.price : (item.unitPrice != null ? item.unitPrice : 0)) || 0;
+      var quantity = Math.max(1, parseInt(item.quantity != null ? item.quantity : (item.qty != null ? item.qty : 1), 10) || 1);
+      if (!id && !name) continue;
+      out.push({ item_id: id || name, item_name: name || id, price: price, quantity: quantity });
+    }
+    return out;
+  }
+
+  function buildGa4Params(eventId, meta) {
+    meta = meta || {};
+    var items = normalizeItems(meta);
+    var value = parseFloat(meta.value != null ? meta.value : (meta.total != null ? meta.total : 0)) || 0;
+    var currency = String(meta.currency || 'USD').toUpperCase();
+
+    if (eventId === 'checkout_complete') {
+      return {
+        transaction_id: String(meta.transaction_id || meta.orderId || meta.order_id || meta.orderNumber || '') || undefined,
+        value: value,
+        currency: currency,
+        items: items
+      };
+    }
+    if (eventId === 'checkout_started') {
+      return { value: value, currency: currency, items: items };
+    }
+    if (eventId === 'add_to_cart') {
+      var atcItems = items.length ? items : [{
+        item_id: String(meta.productId || meta.product_id || ''),
+        item_name: String(meta.productName || meta.product_name || ''),
+        price: parseFloat(meta.value != null ? meta.value : (meta.price != null ? meta.price : 0)) || 0,
+        quantity: parseInt(meta.quantity != null ? meta.quantity : 1, 10) || 1
+      }].filter(function(x) { return x.item_id || x.item_name; });
+      return {
+        value: value || (atcItems[0] ? atcItems[0].price * atcItems[0].quantity : 0),
+        currency: currency,
+        items: atcItems
+      };
+    }
+    if (eventId === 'view_product') {
+      var vpItems = items.length ? items : [{
+        item_id: String(meta.productId || meta.product_id || ''),
+        item_name: String(meta.productName || meta.product_name || ''),
+        price: parseFloat(meta.price != null ? meta.price : (meta.value != null ? meta.value : 0)) || 0,
+        quantity: 1
+      }].filter(function(x) { return x.item_id || x.item_name; });
+      return {
+        currency: currency,
+        value: value || (vpItems[0] ? vpItems[0].price : 0),
+        items: vpItems
+      };
+    }
+    if (eventId === 'whatsapp_click' || eventId === 'phone_click') {
+      return { method: eventId === 'whatsapp_click' ? 'whatsapp' : 'phone', page_path: meta.pagePath || pagePath() };
+    }
+    if (eventId === 'contact_form_submitted' || eventId === 'product_inquiry') {
+      return { page_path: meta.pagePath || pagePath() };
+    }
+    return meta;
+  }
+
+  function buildMetaParams(eventId, meta) {
+    meta = meta || {};
+    var items = normalizeItems(meta);
+    var value = parseFloat(meta.value != null ? meta.value : (meta.total != null ? meta.total : 0)) || 0;
+    var currency = String(meta.currency || 'USD').toUpperCase();
+    var contentIds = [];
+    var numItems = 0;
+    for (var i = 0; i < items.length; i++) {
+      if (items[i].item_id) contentIds.push(items[i].item_id);
+      numItems += items[i].quantity || 1;
+    }
+
+    if (eventId === 'checkout_complete') {
+      return {
+        value: value,
+        currency: currency,
+        content_ids: contentIds.length ? contentIds : undefined,
+        content_type: 'product',
+        num_items: numItems || undefined,
+        order_id: String(meta.order_id || meta.orderId || meta.transaction_id || meta.orderNumber || '') || undefined
+      };
+    }
+    if (eventId === 'checkout_started') {
+      return {
+        value: value,
+        currency: currency,
+        content_ids: contentIds.length ? contentIds : undefined,
+        content_type: 'product',
+        num_items: numItems || parseInt(meta.itemCount != null ? meta.itemCount : 0, 10) || undefined
+      };
+    }
+    if (eventId === 'add_to_cart') {
+      var id = String(meta.productId || meta.product_id || contentIds[0] || '');
+      return {
+        value: value || (items[0] ? items[0].price * items[0].quantity : 0),
+        currency: currency,
+        content_ids: id ? [id] : (contentIds.length ? contentIds : undefined),
+        content_type: 'product',
+        content_name: meta.productName || meta.product_name || (items[0] && items[0].item_name),
+        num_items: parseInt(meta.quantity != null ? meta.quantity : (numItems || 1), 10) || 1
+      };
+    }
+    if (eventId === 'view_product') {
+      var vid = String(meta.productId || meta.product_id || contentIds[0] || '');
+      return {
+        value: value || parseFloat(meta.price != null ? meta.price : 0) || 0,
+        currency: currency,
+        content_ids: vid ? [vid] : (contentIds.length ? contentIds : undefined),
+        content_type: 'product',
+        content_name: meta.productName || meta.product_name || (items[0] && items[0].item_name)
+      };
+    }
+    if (eventId === 'whatsapp_click' || eventId === 'phone_click') {
+      return {
+        content_name: eventId === 'whatsapp_click' ? 'WhatsApp' : 'Phone',
+        content_category: 'contact'
+      };
+    }
+    if (eventId === 'contact_form_submitted' || eventId === 'product_inquiry') {
+      return {
+        content_name: eventId === 'product_inquiry' ? 'Product inquiry' : 'Contact form',
+        content_category: meta.productName || meta.product_name || undefined
+      };
+    }
+    return meta;
+  }
+
+  var PLATFORM = {
+    whatsapp_click: { ga4: 'contact', meta: 'Contact', gtm: 'whatsapp_click', ecom: false },
+    phone_click: { ga4: 'contact', meta: 'Contact', gtm: 'phone_click', ecom: false },
+    contact_form_submitted: { ga4: 'generate_lead', meta: 'Lead', gtm: 'contact_form_submitted', ecom: false },
+    checkout_started: { ga4: 'begin_checkout', meta: 'InitiateCheckout', gtm: 'begin_checkout', ecom: true },
+    checkout_complete: { ga4: 'purchase', meta: 'Purchase', gtm: 'purchase', ecom: true },
+    product_inquiry: { ga4: 'generate_lead', meta: 'Lead', gtm: 'product_inquiry', ecom: false },
+    add_to_cart: { ga4: 'add_to_cart', meta: 'AddToCart', gtm: 'add_to_cart', ecom: true },
+    view_product: { ga4: 'view_item', meta: 'ViewContent', gtm: 'view_item', ecom: true }
+  };
+
+  function purchaseDedupKey(orderId) {
+    return 'zappy_purchase_fired_' + String(orderId || '');
+  }
+
+  function alreadyFiredPurchase(orderId) {
+    if (!orderId) return false;
+    try {
+      return sessionStorage.getItem(purchaseDedupKey(orderId)) === '1';
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function markPurchaseFired(orderId) {
+    if (!orderId) return;
+    try { sessionStorage.setItem(purchaseDedupKey(orderId), '1'); } catch (e) {}
+  }
+
+  /**
+   * Fire a marketing event to first-party analytics + GA4/GTM/Meta when present.
+   * @param {string} eventName marketing ID or ecommerce alias
+   * @param {object} [metadata]
+   * @param {{ skipFirstParty?: boolean }} [opts]
+   */
+  window.zappyFireMarketingEvent = function(eventName, metadata, opts) {
+    try {
+      opts = opts || {};
+      metadata = metadata || {};
+      var eventId = ECOM_ALIAS[eventName] || eventName;
+      var plat = PLATFORM[eventId];
+      if (!plat) return;
+
+      if (!metadata.pagePath && !metadata.page_path) {
+        metadata.pagePath = pagePath();
+      }
+
+      if (eventId === 'checkout_complete') {
+        var oid = String(metadata.orderId || metadata.order_id || metadata.transaction_id || '');
+        if (oid && alreadyFiredPurchase(oid)) return;
+        if (oid) markPurchaseFired(oid);
+      }
+
+      // First-party (skip when already tracked via zappyTrackEcomAnalytics path
+      // that opts out, or when caller already recorded under a different name)
+      if (!opts.skipFirstParty) {
+        try {
+          if (window.zappyAnalytics && typeof window.zappyAnalytics.track === 'function') {
+            window.zappyAnalytics.track(eventId, metadata);
+          }
+        } catch (e1) {}
+      }
+
+      // GTM / dataLayer — platform-standard ecommerce event names
+      try {
+        window.dataLayer = window.dataLayer || [];
+        if (plat.ecom) {
+          var ga4ForGtm = buildGa4Params(eventId, metadata);
+          var ecommerce = {};
+          if (ga4ForGtm.transaction_id) ecommerce.transaction_id = ga4ForGtm.transaction_id;
+          if (ga4ForGtm.value != null) ecommerce.value = ga4ForGtm.value;
+          if (ga4ForGtm.currency) ecommerce.currency = ga4ForGtm.currency;
+          if (ga4ForGtm.items) ecommerce.items = ga4ForGtm.items;
+          window.dataLayer.push({ event: plat.gtm, ecommerce: ecommerce });
+          // Secondary Zappy-specific trigger for merchants who want it
+          if (eventId === 'checkout_complete' || eventId === 'checkout_started') {
+            window.dataLayer.push({ event: eventId, ecommerce: ecommerce });
+          }
+        } else {
+          var dl = { event: plat.gtm };
+          for (var k in metadata) {
+            if (Object.prototype.hasOwnProperty.call(metadata, k)) dl[k] = metadata[k];
+          }
+          window.dataLayer.push(dl);
+        }
+      } catch (e2) {}
+
+      // GA4 gtag
+      try {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', plat.ga4, buildGa4Params(eventId, metadata));
+        }
+      } catch (e3) {}
+
+      // Meta Pixel (only when fbq is loaded — consent-gated lazy loader)
+      try {
+        if (typeof window.fbq === 'function') {
+          window.fbq('track', plat.meta, buildMetaParams(eventId, metadata));
+        }
+      } catch (e4) {}
+    } catch (err) {}
+  };
+
+  // ---- Click listeners (capture) ----
+  var recent = Object.create(null);
+  function dedupe(key) {
+    var now = Date.now();
+    if (recent[key] && now - recent[key] < 800) return true;
+    recent[key] = now;
+    return false;
+  }
+
+  function closest(el, selector) {
+    if (!el) return null;
+    if (el.closest) return el.closest(selector);
+    return null;
+  }
+
+  function findAnchor(el) {
+    var node = el;
+    while (node && node !== document) {
+      if (node.tagName === 'A') return node;
+      node = node.parentElement;
+    }
+    return null;
+  }
+
+  function isWhatsAppHref(href) {
+    if (!href) return false;
+    var h = String(href).toLowerCase();
+    return h.indexOf('wa.me/') !== -1 ||
+      h.indexOf('api.whatsapp.com') !== -1 ||
+      h.indexOf('whatsapp.com/send') !== -1 ||
+      h.indexOf('whatsapp:') === 0;
+  }
+
+  document.addEventListener('click', function(e) {
+    try {
+      var target = e.target;
+      if (!target) return;
+
+      // WhatsApp
+      var waFloat = closest(target, '.whatsapp-float, a.whatsapp-float, [data-zappy-whatsapp]');
+      var anchor = findAnchor(target);
+      var href = (anchor && anchor.href) || '';
+      if (waFloat || (anchor && isWhatsAppHref(href))) {
+        if (!dedupe('wa:' + href)) {
+          var waSource = waFloat ? 'float' : 'link';
+          window.zappyFireMarketingEvent('whatsapp_click', {
+            source: waSource,
+            href: href || null,
+            pagePath: pagePath()
+          });
+        }
+        return;
+      }
+
+      // Phone
+      var phoneBtn = closest(target, '.phone-header-btn, .nav-phone-btn, .call-btn, [data-zappy-phone]');
+      var telHref = '';
+      if (anchor && anchor.href && String(anchor.href).toLowerCase().indexOf('tel:') === 0) {
+        telHref = anchor.href;
+      } else if (phoneBtn && phoneBtn.href && String(phoneBtn.href).toLowerCase().indexOf('tel:') === 0) {
+        telHref = phoneBtn.href;
+      }
+      if (phoneBtn || telHref) {
+        var phone = '';
+        if (telHref) {
+          phone = String(telHref).replace(/^tel:/i, '').trim();
+        }
+        if (!dedupe('tel:' + (phone || (phoneBtn && phoneBtn.id) || 'btn'))) {
+          window.zappyFireMarketingEvent('phone_click', {
+            source: phoneBtn ? 'button' : 'link',
+            phone: phone || null,
+            href: telHref || null,
+            pagePath: pagePath()
+          });
+        }
+        return;
+      }
+
+      // Catalog / product inquiry
+      if (IS_CATALOG || IS_FULL) {
+        var inq = closest(target, '.card-inquiry-btn, #zappy-pdp-inquiry-btn, a.inquiry-btn');
+        if (inq) {
+          if (!dedupe('inq:' + (inq.id || inq.className))) {
+            var product = window.currentProduct || null;
+            var productId = (inq.getAttribute && inq.getAttribute('data-product-id')) ||
+              (product && product.id) || null;
+            var productName = (inq.getAttribute && inq.getAttribute('data-product-name')) ||
+              (product && product.name) || null;
+            var channel = 'contact_page';
+            var inqHref = (inq.tagName === 'A' && inq.href) ? inq.href : '';
+            if (inqHref && String(inqHref).toLowerCase().indexOf('mailto:') === 0) channel = 'mailto';
+            window.zappyFireMarketingEvent('product_inquiry', {
+              source: inq.id === 'zappy-pdp-inquiry-btn' ? 'pdp' : 'card',
+              productId: productId,
+              productName: productName,
+              channel: channel,
+              pagePath: pagePath()
+            });
+          }
+        }
+      }
+    } catch (err) {}
+  }, true);
+})();
+</script>
+    <meta property="og:title" content="יש לך שאלה על תכשיט? אנחנו כאן בשבילך — בלי עין הרע" />
+    <meta property="og:description" content="רוצה להתייעץ על מידה, חומר או סתם לקבל המלצה אישית? צוות המומחים שלנו מחכה לשמוע ממך! צרי קשר עוד היום ונחזור אלייך במהירות עם חיוך ושירות שאין שני לו. כי מגיע לך יחס אישי כמו התכשיטים שלנו." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="יש לך שאלה על תכשיט? אנחנו כאן בשבילך — בלי עין הרע" />
+    <meta name="twitter:description" content="רוצה להתייעץ על מידה, חומר או סתם לקבל המלצה אישית? צוות המומחים שלנו מחכה לשמוע ממך! צרי קשר עוד היום ונחזור אלייך במהירות עם חיוך ושירות שאין שני לו. כי מגיע לך יחס אישי כמו התכשיטים שלנו." />
     <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://www.bliainara.co.il#organization","name":"בלי עין הרע","url":"https://www.bliainara.co.il","description":"An online jewelry store offering high-quality jewelry for both women and men at affordable prices. The brand positions itself around the concept of accessible luxury — premium craftsmanship without the premium price tag. The store caters to a broad audience seeking elegant, well-made pieces that don't break the bank.","address":{"@type":"PostalAddress","streetAddress":"החשמל 9, עפולה, צפון, 1827109, ישראל"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"bliainara.service@gmail.com","telephone":"0554609960","availableLanguage":["en","he"]}]},{"@type":"WebSite","@id":"https://www.bliainara.co.il#website","url":"https://www.bliainara.co.il","name":"בלי עין הרע","publisher":{"@id":"https://www.bliainara.co.il#organization"},"inLanguage":"he"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.bliainara.co.il"},{"@type":"ListItem","position":2,"name":"Contact","item":"https://www.bliainara.co.il/contact"}]},{"@type":"ContactPage","@id":"https://www.bliainara.co.il/contact#contactpage","url":"https://www.bliainara.co.il/contact","name":"יש לך שאלה על תכשיט? אנחנו כאן בשבילך — בלי עין הרע","mainEntity":{"@id":"https://www.bliainara.co.il#organization"},"potentialAction":{"@type":"CommunicateAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.bliainara.co.il/api/email/contact-form","actionPlatform":["http/method=POST"],"contentType":"application/json"},"instrument":[{"@type":"PropertyValue","name":"name","propertyID":"text","valueRequired":true,"description":"השם שלך"},{"@type":"PropertyValue","name":"email","propertyID":"email","valueRequired":true,"description":"your@email.com"},{"@type":"PropertyValue","name":"phone","propertyID":"tel","valueRequired":false,"description":"050-0000000"},{"@type":"PropertyValue","name":"message","propertyID":"textarea","valueRequired":true,"description":"איך נוכל לעזור? נשמח לשמוע ממך..."},{"@type":"PropertyValue","name":"privacy_consent","propertyID":"checkbox","valueRequired":true}]}}]}</script>
     <title data-i18n="contact_page_title">יש לך שאלה על תכשיט? אנחנו כאן בשבילך — בלי עין הרע</title>
   
@@ -236,14 +605,13 @@
   
   
   
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="he_IL">
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="he_IL" />
   
   
   
   
   
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     .skip-link { position: absolute; top: 0; left: 0; transform: translateY(-200%); padding: 12px 18px; background: var(--bg-dark, #1a1a1a); color: var(--text-light, #fff); font-weight: 600; border-radius: 0 0 8px 0; z-index: 10000; }
     .skip-link:focus { transform: none; outline: 2px solid var(--ring, #fff); outline-offset: 2px; }
@@ -253,18 +621,18 @@
 
   
     <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
     <!-- Cookie Consent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    
     <!-- Mickidum Accessibility Toolbar -->
-    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
+    
 
 
     <!-- Iconify for cross-platform flag icons -->
@@ -2015,7 +2383,57 @@ html[dir="rtl"] body {
       opacity: 1 !important;
     }
     </style>
-    <link rel="stylesheet" href="/styles.css">
+    <style id="zappy-critical-above-fold-css">
+html{box-sizing:border-box;-webkit-text-size-adjust:100%}*,*::before,*::after{box-sizing:inherit}body{margin:0;min-width:320px;overflow-x:clip}img,svg,video{max-width:100%;height:auto}main{display:block}.container{width:min(100% - 32px,1200px);margin-inline:auto}.navbar,nav.navbar,header .navbar,header[role="banner"]{position:relative;z-index:1000;width:100%}.nav-container,.navbar .container{display:flex;align-items:center;justify-content:space-between;min-height:64px}.logo,.logo-link img{display:block;width:35px;height:35px;object-fit:contain}.nav-menu,#navMenu{list-style:none;margin:0;padding:0}.navbar a,.nav-menu a,#navMenu a,.navbar .nav-links a{color:inherit;text-decoration:none}.navbar .sub-menu,.nav-menu .sub-menu,#navMenu .sub-menu{display:none}.fa,.fas,.far,.fab,.fa-solid,.fa-regular,.fa-brands{display:inline-block;min-width:1em;text-align:center}html:not(#zappy-noop)[data-zappy-site-type="ecommerce"] .phone-header-btn,html:not(#zappy-noop) .navbar:has(.nav-ecommerce-icons)>.phone-header-btn{display:none!important;visibility:hidden!important;width:0!important;height:0!important;pointer-events:none!important}.zappy-preview-empty-store-cta{display:none!important;visibility:hidden!important;height:0!important;max-height:0!important;overflow:hidden!important;margin:0!important;padding:0!important;border:0!important;box-shadow:none!important}.zappy-catalog-menu{background:var(--surface-color,var(--surface,linear-gradient(135deg,#f8f9fa 0%,#fff 100%)));border-bottom:1px solid var(--border-color,#e5e7eb);padding:0;position:sticky;top:0;z-index:90}.zappy-catalog-menu[dir=rtl],.zappy-catalog-menu.rtl{direction:rtl}.zappy-catalog-menu[dir=ltr],.zappy-catalog-menu.ltr{direction:ltr}.catalog-menu-container{max-width:1440px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:10px 24px;overflow:visible}.catalog-menu-categories,.catalog-menu-list{display:flex;align-items:center;gap:4px;flex-wrap:wrap;margin:0;padding:0;list-style:none}.catalog-menu-item{display:inline-flex;align-items:center;padding:8px 16px;font-size:14px;font-weight:500;color:var(--text-color,var(--text,#374151));text-decoration:none;border-radius:20px;white-space:nowrap}.catalog-menu-all{background:var(--primary-color,var(--primary,#111));color:var(--text-light,#fff)!important}.catalog-menu-parent{position:relative;display:inline-flex;align-items:center}.catalog-menu-trigger{display:inline-flex;align-items:center;gap:6px}.catalog-menu-chevron{flex-shrink:0}.catalog-menu-parent>.sub-menu{display:none!important;visibility:hidden!important;opacity:0!important;pointer-events:none!important}.hero-section,.index-hero-section,section[class*="hero"]{position:relative;overflow:hidden;min-height:560px}.hero-bg-wrapper,.hero-bg-image,section[class*="hero"] [class*="hero-bg"]{position:absolute;inset:0;width:100%;height:100%}.hero-bg-wrapper img,.hero-bg-image img,section[class*="hero"] [data-hero-bg],section[class*="hero"] img[data-hero-background="true"]{width:100%!important;height:100%!important;object-fit:cover!important;display:block}.hero-content,section[class*="hero"] .container{position:relative;z-index:2}@media(max-width:768px){:root{--header-height:72px;--total-header-height:72px;--zappy-mobile-menu-top:72px}html[data-zappy-site-type="ecommerce"] body{padding-top:var(--total-header-height,72px)}html[data-zappy-site-type="ecommerce"] body>nav.navbar,html[data-zappy-site-type="ecommerce"] body>.navbar:not(.zappy-catalog-menu){position:fixed!important;top:0;left:0;right:0;z-index:100000;width:100%;margin-bottom:0}.zappy-catalog-menu{position:fixed;top:var(--header-height,72px);left:0;right:0;z-index:99999}.nav-container,.navbar .container{min-height:60px}.nav-menu,#navMenu{max-width:100vw;overflow-x:hidden}.hero-section,.index-hero-section,section[class*="hero"]{min-height:100svh}.hero-bg-wrapper,.hero-bg-image,.hero-scrim{min-height:100svh}}
+:root{--nav-bg:#F6F1E8}.navbar{background-color:#F6F1E8!important}
+
+/* ZAPPY_ANNOUNCEMENT_HEADER_OFFSET_CSS_V3 */
+:root {
+  --zappy-header-stack-height: calc(var(--zappy-announcement-height, 40px) + var(--header-height, 72px));
+}
+body:has(.zappy-announcement-bar) nav.navbar:not(.zappy-catalog-menu),
+body:has(.zappy-announcement-bar) header.navbar,
+body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-search-panel) {
+  top: var(--zappy-announcement-height, 40px) !important;
+}
+
+
+
+/* ZAPPY_CONTENT_ALIGNMENT_FIRST_PAINT_CSS_V1 */
+[data-zappy-content-align] {
+  display: flex !important;
+  flex-direction: column !important;
+}
+[data-zappy-content-align^="top-"] { justify-content: flex-start !important; }
+[data-zappy-content-align^="upper-"],
+[data-zappy-content-align^="center-"],
+[data-zappy-content-align^="lower-"] { justify-content: center !important; }
+[data-zappy-content-align^="bottom-"] { justify-content: flex-end !important; }
+[data-zappy-content-align$="-left"],
+[data-zappy-content-align$="-mid-left"] {
+  align-items: flex-start !important;
+  text-align: start !important;
+}
+[data-zappy-content-align$="-center"] {
+  align-items: center !important;
+  text-align: center !important;
+}
+[data-zappy-content-align$="-right"],
+[data-zappy-content-align$="-mid-right"] {
+  align-items: flex-end !important;
+  text-align: end !important;
+}
+[data-zappy-content-align] [data-zappy-align-target] {
+  margin-left: auto;
+  margin-right: auto;
+}
+[data-zappy-content-align$="-center"] [data-zappy-align-target],
+[data-zappy-content-align$="-center"] [data-zappy-align-target] > * {
+  text-align: center !important;
+}
+
+</style>
+    <link rel="stylesheet" href="/styles.css" />
     <script type="text/javascript" src="https://meshulam.co.il/_media/js/apple_pay_sdk/sdk.min.js"></script>
 
     <style id="zappy-dropdown-submenu-styles">
@@ -2023,7 +2441,7 @@ html[dir="rtl"] body {
       /* Base styles for dropdown submenus - parent must be positioned */
       .nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu) { position: relative; }
       /* Submenu base - hidden by default */
-      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; background: white; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
+      .nav-menu .sub-menu, nav .sub-menu, .navbar .sub-menu, #navMenu .sub-menu { display: block !important; position: absolute !important; top: 100%; left: 0; min-width: 220px; border-radius: 8px; box-shadow: 0 8px 25px rgba(0,0,0,0.15); padding: 8px 0; opacity: 0; visibility: hidden; transform: translateY(10px); transition: all 0.3s ease; z-index: 1000; list-style: none; pointer-events: none; }
       /* CRITICAL: Desktop hover styles to show dropdown */
       .nav-menu li:hover > .sub-menu, nav li:hover > .sub-menu, .navbar li:hover > .sub-menu, #navMenu li:hover > .sub-menu { opacity: 1 !important; visibility: visible !important; transform: translateY(0) !important; pointer-events: auto !important; }
       /* Submenu item styling */
@@ -2109,7 +2527,7 @@ html[dir="rtl"] body {
 
 <div class="zappy-announcement-bar">
       <span class="zappy-announcement-message active">ברוכים הבאים לבלי עין הרע </span>
-      <span class="zappy-announcement-message">משלוח חינם בקניה מעל 300 ש&#39;&#39;ח </span>
+      <span class="zappy-announcement-message">משלוח חינם בקניה מעל 300 ש''ח </span>
       <span class="zappy-announcement-message">נשמח לעמוד לרשותך בווטסאפ בכל שאלה </span>
     </div>
 <script>window.ZAPPY_PRODUCTS_LISTING_PATH = "/products";</script>
@@ -2117,50 +2535,49 @@ html[dir="rtl"] body {
 
     <div class="mobile-search-panel" id="mobile-search-panel">
       <div class="search-wrapper">
-        <input type="text" id="mobile-search-input" placeholder="חיפוש מוצרים..." autocomplete="off" data-i18n-placeholder="contact_placeholder_79">
+        <input type="text" id="mobile-search-input" placeholder="חיפוש מוצרים..." autocomplete="off" data-i18n-placeholder="contact_placeholder_79" />
         <button class="search-submit" id="mobile-search-submit" title="חיפוש" data-i18n-title="contact_title_90">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="M21 21l-4.35-4.35"></path></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
         </button>
         <button class="close-search" id="close-mobile-search">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
         </button>
       </div>
       <div class="search-results" id="mobile-search-results"></div>
     </div>
-<script>window.ZAPPY_WEBSITE_ID = "10422dd3-ab03-4542-b7b7-177c58dad3c0";window.ZAPPY_API_BASE = "https://api.zappy5.com";</script><a class="skip-link" href="#main" data-i18n="contact_link_43">דלג לתוכן הראשי</a>
+<script>window.ZAPPY_WEBSITE_ID = "10422dd3-ab03-4542-b7b7-177c58dad3c0";window.ZAPPY_API_BASE = "https://api.zappy5.com"</script><a class="skip-link" href="#main" data-i18n="contact_link_43">דלג לתוכן הראשי</a>
   <nav class="navbar">
   <button class="mobile-toggle" id="mobileToggle" aria-label="Menu" data-i18n-aria-label="home_aria_label_101">
-    <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+    <svg style="display:block !important" class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
     </svg>
-    <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
-      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+    <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display:none !important">
+      <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
     </svg>
   </button>
   
   <button class="phone-header-btn" data-phone="0554609960" aria-label="Call" data-i18n-aria-label="home_aria_label_102">
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
     </svg>
   </button>
 
   <div class="nav-container">
     <div class="nav-right-group"><div class="nav-brand">
-      <a href="/" class="logo-link"><img class="logo" src="/assets/jewelry-e-commerce-logo-1782756657153-kbzds1.webp?v=1782756657582-zp0lg5" alt="בלי עין הרע" data-i18n-alt="home_alt_89"></a>
+      <a href="/" class="logo-link"><img class="logo" src="/assets/jewelry-e-commerce-logo-1782756657153-kbzds1.webp?v=1782756657582-zp0lg5" alt="בלי עין הרע" data-i18n-alt="home_alt_89" decoding="async" width="35" height="35" /></a>
     </div><ul class="nav-menu" id="navMenu">
 
     <li class="menu-item-has-children zappy-products-dropdown">
       <a href="/products">
-        מדיניות אספקת מוצרים
-        
+        מוצרים
         <svg class="dropdown-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M6 9l6 6 6-6"></path>
+          <path d="M6 9l6 6 6-6"/>
         </svg>
       </a>
-      <ul class="sub-menu" id="zappy-nav-category-links">
+      <ul class="sub-menu" id="zappy-nav-category-links" dir="rtl">
         <li><a href="/products" data-i18n="ecom_products">מוצרים</a></li>
         <!-- Categories will be loaded dynamically -->
-      </ul>
+      <li data-category-id="d9980b73-da56-40fc-afea-df294bf3ffd1" data-category-slug="mens-jewelryaccessories"><a href="/category/mens-jewelryaccessories" dir="rtl">בלי עין הרע לגברים</a></li><li data-category-id="a40e1226-7f69-4919-8a1f-7b62e69ad3d6" data-category-slug="evil-eye-jewelry-women"><a href="/category/evil-eye-jewelry-women" dir="rtl">בלי עין הרע לנשים</a></li></ul>
     </li>
   
 
@@ -2183,8 +2600,11 @@ html[dir="rtl"] body {
   
 
     
+  
+
+    
   <li><a href="/" data-i18n="home_nav_82">בית</a></li><li><a href="/craftsmanship" data-i18n="home_nav_83">אומנות</a></li><li><a href="/gift-guide" data-i18n="home_nav_84">מדריך מתנות</a></li><li><a href="/contact" data-i18n="home_nav_85">צור קשר</a></li></ul><div class="nav-ecommerce-icons nav-icons-left"><a href="/login" class="login-link nav-login" title="התחברות"><svg class="login-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></a><a href="#cart" class="cart-link nav-cart" id="cart-drawer-toggle" title="עגלת קניות"><svg class="cart-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><span class="cart-count">0</span></a><div class="nav-search-box">
-    <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש מוצרים..." autocomplete="off">
+    <input type="text" class="nav-search-input" id="nav-search-input" placeholder="חיפוש מוצרים..." autocomplete="off" />
     <button class="nav-search-btn" id="nav-search-btn" title="חיפוש">
       <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
     </button>
@@ -2194,10 +2614,10 @@ html[dir="rtl"] body {
 <script data-no-icon-edit="true">(function(){function f(){var b=document.querySelector('.lang-switcher-current');if(!b)return;var n=b.closest('nav')||b.closest('header')||b.closest('.navbar');if(!n)return;var a=n.querySelector('.nav-menu a,.nav-links a');if(!a)a=n.querySelector('a:not(.lang-option):not(.lang-switcher-current):not([class*="logo"])');if(a){var c=getComputedStyle(a).color;if(c&&c!=='rgb(0, 0, 0)'&&c!=='rgba(0, 0, 0, 0)'){b.style.color=c;return;}}var s=getComputedStyle(n).backgroundColor;if(s&&s!=='rgba(0, 0, 0, 0)'&&s!=='transparent'){var m=s.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);if(m){var l=(0.299*parseInt(m[1])+0.587*parseInt(m[2])+0.114*parseInt(m[3]))/255;b.style.color=l>0.5?'#1a1a1a':'#F3FAFF';}}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',f);}else{setTimeout(f,0);}})()</script>
 <div class="lang-switcher" data-no-icon-edit="true" data-icon-color="#F6F1E8" style="position:relative;display:inline-flex;align-items:center;z-index:1000;margin:0 4px;">
   <button class="lang-switcher-current" aria-haspopup="true" aria-expanded="false" data-no-icon-edit="true" style="display:flex;align-items:center;padding:8px;background:transparent;border:none;border-radius:6px;cursor:pointer;color:inherit;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;" data-no-icon-edit="true"><path d="M12.039,.002s0,0,0,0c-.013,0-.026-.002-.039-.002-.005,0-.009,0-.014,0-.002,0-.003,0-.005,0C5.373,.011,0,5.39,0,12s5.383,12,12,12,12-5.383,12-12S18.638,.023,12.039,.002Zm9.747,6.998h-4.814c-1.067-2.669-2.712-4.781-3.731-5.925,3.734,.421,6.901,2.719,8.546,5.925Zm-4.786,5c0,1.407-.292,2.753-.731,4H7.731c-.439-1.247-.731-2.593-.731-4s.292-2.754,.73-4h8.539c.439,1.247,.731,2.593,.731,4Zm-1.122,5c-1.229,2.838-3.116,4.99-3.878,5.788-.762-.798-2.649-2.95-3.878-5.788h7.755ZM8.121,7c1.229-2.841,3.117-4.992,3.879-5.789,.762,.798,2.649,2.95,3.878,5.789h-7.757ZM10.757,1.075c-1.025,1.15-2.668,3.264-3.73,5.925H2.214C3.859,3.795,7.024,1.498,10.757,1.075ZM1.764,8H6.668c-.403,1.247-.668,2.589-.668,4s.265,2.752,.669,4H1.764c-.487-1.242-.764-2.588-.764-4s.277-2.758,.764-4Zm.45,9H7.029c1.067,2.669,2.712,4.781,3.731,5.925-3.734-.421-6.901-2.719-8.546-5.925Zm11.026,5.925c1.019-1.144,2.664-3.257,3.731-5.925h4.814c-1.645,3.206-4.812,5.504-8.546,5.925Zm8.996-6.925h-4.905c.404-1.248,.669-2.589,.669-4s-.265-2.752-.669-4h4.905c.487,1.242,.764,2.588,.764,4s-.277,2.758-.764,4Z"></path></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink:0;" data-no-icon-edit="true"><path d="M12.039,.002s0,0,0,0c-.013,0-.026-.002-.039-.002-.005,0-.009,0-.014,0-.002,0-.003,0-.005,0C5.373,.011,0,5.39,0,12s5.383,12,12,12,12-5.383,12-12S18.638,.023,12.039,.002Zm9.747,6.998h-4.814c-1.067-2.669-2.712-4.781-3.731-5.925,3.734,.421,6.901,2.719,8.546,5.925Zm-4.786,5c0,1.407-.292,2.753-.731,4H7.731c-.439-1.247-.731-2.593-.731-4s.292-2.754,.73-4h8.539c.439,1.247,.731,2.593,.731,4Zm-1.122,5c-1.229,2.838-3.116,4.99-3.878,5.788-.762-.798-2.649-2.95-3.878-5.788h7.755ZM8.121,7c1.229-2.841,3.117-4.992,3.879-5.789,.762,.798,2.649,2.95,3.878,5.789h-7.757ZM10.757,1.075c-1.025,1.15-2.668,3.264-3.73,5.925H2.214C3.859,3.795,7.024,1.498,10.757,1.075ZM1.764,8H6.668c-.403,1.247-.668,2.589-.668,4s.265,2.752,.669,4H1.764c-.487-1.242-.764-2.588-.764-4s.277-2.758,.764-4Zm.45,9H7.029c1.067,2.669,2.712,4.781,3.731,5.925-3.734-.421-6.901-2.719-8.546-5.925Zm11.026,5.925c1.019-1.144,2.664-3.257,3.731-5.925h4.814c-1.645,3.206-4.812,5.504-8.546,5.925Zm8.996-6.925h-4.905c.404-1.248,.669-2.589,.669-4s-.265-2.752-.669-4h4.905c.487,1.242,.764,2.588,.764,4s-.277,2.758-.764,4Z"/></svg>
   </button>
   <div class="lang-switcher-dropdown" role="menu" style="position:absolute;top:100%;right:0;margin-top:4px;min-width:140px;background:white;border:1px solid rgba(128,128,128,0.2);border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.15);opacity:0;visibility:hidden;transform:translateY(-8px);transition:all 0.2s ease;z-index:1001;">
-    <button class="lang-option" data-lang="he" style="display:flex;align-items:center;gap:8px;width:100%;padding:10px 14px;background:none;border:none;text-align:left;cursor:pointer;font-size:14px;color:#333;"><img src="https://api.iconify.design/circle-flags/il.svg" width="20" height="20" alt="" style="display:inline-block;vertical-align:middle;border-radius:50%;"> עברית</button>
+    <button class="lang-option" data-lang="he" style="display:flex;align-items:center;gap:8px;width:100%;padding:10px 14px;background:none;border:none;text-align:left;cursor:pointer;font-size:14px;color:#333;"><img src="https://api.iconify.design/circle-flags/il.svg" width="20" height="20" alt style="display:inline-block;vertical-align:middle;border-radius:50%;" decoding="async" /> עברית</button>
   </div>
 </div>
 <script data-no-icon-edit="true">(function(){function f(){var b=document.querySelector('.lang-switcher-current');if(!b)return;var n=b.closest('nav')||b.closest('header')||b.closest('.navbar');if(!n)return;var a=n.querySelector('.nav-menu a,.nav-links a');if(!a)a=n.querySelector('a:not(.lang-option):not(.lang-switcher-current):not([class*="logo"])');if(a){var c=getComputedStyle(a).color;if(c&&c!=='rgb(0, 0, 0)'&&c!=='rgba(0, 0, 0, 0)'){b.style.color=c;return;}}var s=getComputedStyle(n).backgroundColor;if(s&&s!=='rgba(0, 0, 0, 0)'&&s!=='transparent'){var m=s.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);if(m){var l=(0.299*parseInt(m[1])+0.587*parseInt(m[2])+0.114*parseInt(m[3]))/255;b.style.color=l>0.5?'#1a1a1a':'#F3FAFF';}}}if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',f);}else{setTimeout(f,0);}})()</script></div>
@@ -2208,12 +2628,10 @@ html[dir="rtl"] body {
   </div>
 </nav>
 
-    <nav class="zappy-catalog-menu rtl" id="zappy-catalog-menu" style="display:none">
+    <nav class="zappy-catalog-menu rtl" id="zappy-catalog-menu" dir="rtl">
       <div class="catalog-menu-container">
         <a href="/products" class="catalog-menu-item catalog-menu-all" data-i18n="contact_nav_78">מוצרים</a>
-        <div class="catalog-menu-categories" id="zappy-category-links">
-          <!-- Categories will be loaded dynamically -->
-        </div>
+        <div class="catalog-menu-categories" id="zappy-category-links" dir="rtl" data-zappy-catalog-baked="1"><a href="/category/mens-jewelryaccessories" class="catalog-menu-item" data-category-id="d9980b73-da56-40fc-afea-df294bf3ffd1" data-category-slug="mens-jewelryaccessories" dir="rtl">בלי עין הרע לגברים</a><a href="/category/evil-eye-jewelry-women" class="catalog-menu-item" data-category-id="a40e1226-7f69-4919-8a1f-7b62e69ad3d6" data-category-slug="evil-eye-jewelry-women" dir="rtl">בלי עין הרע לנשים</a></div>
       </div>
     </nav>
   
@@ -2691,10 +3109,10 @@ html[dir="rtl"] body {
     <!-- Image Strip -->
     <div class="contact-lead-image-strip">
       <div class="contact-lead-image-wrapper">
-        <img loading="eager" fetchpriority="high" data-placeholder="contact-lead-image-1" data-context="A soft, intimate close-up of a woman wearing delicate gold and pearl jewelry, warm blush-toned background with lace texture, editorial fashion mood, soft natural lighting, shallow depth of field" width="600" height="400" src="/assets/site-contact-lead-image-1.webp" alt="אישה עונדת תכשיטי זהב עדינים בצילום רך ואינטימי" data-i18n-alt="contact_alt_86">
+        <img loading="lazy" fetchpriority="low" data-placeholder="contact-lead-image-1" data-context="A soft, intimate close-up of a woman wearing delicate gold and pearl jewelry, warm blush-toned background with lace texture, editorial fashion mood, soft natural lighting, shallow depth of field" width="600" height="400" src="/assets/site-contact-lead-image-1.webp" alt="אישה עונדת תכשיטי זהב עדינים בצילום רך ואינטימי" data-i18n-alt="contact_alt_86" decoding="async" />
       </div>
       <div class="contact-lead-image-wrapper">
-        <img loading="lazy" decoding="async" data-placeholder="contact-lead-image-2" data-context="A flat-lay arrangement of elegant unisex jewelry pieces including a silver chain, a leather bracelet, and a gold ring, resting on a soft ivory fabric with a subtle evil-eye charm accent, warm diffused light" width="600" height="400" src="/assets/site-contact-lead-image-2.webp" alt="מבחר תכשיטים יוניסקס מונחים על בד שנהב רך עם קמע עין הרע עדין" data-i18n-alt="contact_alt_87">
+        <img loading="lazy" decoding="async" data-placeholder="contact-lead-image-2" data-context="A flat-lay arrangement of elegant unisex jewelry pieces including a silver chain, a leather bracelet, and a gold ring, resting on a soft ivory fabric with a subtle evil-eye charm accent, warm diffused light" width="600" height="400" src="/assets/site-contact-lead-image-2.webp" alt="מבחר תכשיטים יוניסקס מונחים על בד שנהב רך עם קמע עין הרע עדין" data-i18n-alt="contact_alt_87" fetchpriority="low" />
       </div>
     </div>
   </div>
@@ -2702,7 +3120,7 @@ html[dir="rtl"] body {
   <!-- Bottom Divider: Blush Curved Edge -->
   <div class="contact-lead-divider-wrapper">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,80 L0,45 Q150,25 300,38 T600,32 Q750,38 900,28 T1200,42 L1200,80 Z" fill="#FBF6F0"></path>
+      <path d="M0,80 L0,45 Q150,25 300,38 T600,32 Q750,38 900,28 T1200,42 L1200,80 Z" fill="#FBF6F0"/>
     </svg>
   </div>
 </section>
@@ -2716,23 +3134,23 @@ html[dir="rtl"] body {
                     <form class="contact-contact-form-section__form">
                         <div class="contact-contact-form-section__field">
                             <label for="contact-name" class="contact-contact-form-section__label" data-i18n="contact_label_64">שם מלא</label>
-                            <input type="text" id="contact-name" name="name" class="contact-contact-form-section__input" placeholder="השם שלך" required="" data-i18n-placeholder="contact_placeholder_81">
+                            <input type="text" id="contact-name" name="name" class="contact-contact-form-section__input" placeholder="השם שלך" required data-i18n-placeholder="contact_placeholder_81" />
                         </div>
                         <div class="contact-contact-form-section__field">
                             <label for="contact-email" class="contact-contact-form-section__label" data-i18n="contact_label_65">דוא"ל</label>
-                            <input type="email" id="contact-email" name="email" class="contact-contact-form-section__input" placeholder="your@email.com" required="" data-i18n-placeholder="contact_placeholder_82">
+                            <input type="email" id="contact-email" name="email" class="contact-contact-form-section__input" placeholder="your@email.com" required data-i18n-placeholder="contact_placeholder_82" />
                         </div>
                         <div class="contact-contact-form-section__field">
                             <label for="contact-phone" class="contact-contact-form-section__label" data-i18n="contact_label_66">טלפון</label>
-                            <input type="tel" id="contact-phone" name="phone" class="contact-contact-form-section__input" placeholder="050-0000000" data-i18n-placeholder="contact_placeholder_83">
+                            <input type="tel" id="contact-phone" name="phone" class="contact-contact-form-section__input" placeholder="050-0000000" data-i18n-placeholder="contact_placeholder_83" />
                         </div>
                         <div class="contact-contact-form-section__field">
                             <label for="contact-message" class="contact-contact-form-section__label" data-i18n="contact_label_67">הודעה</label>
-                            <textarea id="contact-message" name="message" class="contact-contact-form-section__textarea" rows="5" placeholder="איך נוכל לעזור? נשמח לשמוע ממך..." required="" data-i18n-placeholder="contact_placeholder_84"></textarea>
+                            <textarea id="contact-message" name="message" class="contact-contact-form-section__textarea" rows="5" placeholder="איך נוכל לעזור? נשמח לשמוע ממך..." required data-i18n-placeholder="contact_placeholder_84"></textarea>
                         </div>
                         <div class="privacy-consent">
                             <label class="privacy-consent-label">
-                                <input type="checkbox" name="privacy_consent" class="privacy-consent-checkbox" required="">
+                                <input type="checkbox" name="privacy_consent" class="privacy-consent-checkbox" required />
                                 <span><span><span data-i18n="contact_text_68_0">קראתי ואני מסכים/ה ל</span></span><a href="/terms" target="_blank" data-i18n="contact_link_44">תנאי השימוש</a><span class="separator">|</span>
             <a href="/return-policy" aria-label="מדיניות החזרות" data-i18n="contact_link_45" data-i18n-aria-label="contact_aria_label_97">
               מדיניות החזרות
@@ -2770,9 +3188,9 @@ html[dir="rtl"] body {
                 <!-- Decorative Evil Eye Motif -->
                 <div class="contact-contact-form-section__decor" aria-hidden="true">
                     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M30 8C18 8 8 18 8 30s10 22 22 22 22-10 22-22S42 8 30 8zm0 36c-7.7 0-14-6.3-14-14s6.3-14 14-14 14 6.3 14 14-6.3 14-14 14z" fill="var(--primary)" opacity="0.15"></path>
-                        <circle cx="30" cy="30" r="5" fill="var(--primary)" opacity="0.3"></circle>
-                        <circle cx="30" cy="30" r="2.5" fill="var(--primary)" opacity="0.6"></circle>
+                        <path d="M30 8C18 8 8 18 8 30s10 22 22 22 22-10 22-22S42 8 30 8zm0 36c-7.7 0-14-6.3-14-14s6.3-14 14-14 14 6.3 14 14-6.3 14-14 14z" fill="var(--primary)" opacity="0.15"/>
+                        <circle cx="30" cy="30" r="5" fill="var(--primary)" opacity="0.3"/>
+                        <circle cx="30" cy="30" r="2.5" fill="var(--primary)" opacity="0.6"/>
                     </svg>
                 </div>
             </div>
@@ -2784,12 +3202,12 @@ html[dir="rtl"] body {
         <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <linearGradient id="contactFadeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="var(--bg-light)" stop-opacity="0"></stop>
-                    <stop offset="100%" stop-color="var(--bg-dark)" stop-opacity="1"></stop>
+                    <stop offset="0%" stop-color="var(--bg-light)" stop-opacity="0"/>
+                    <stop offset="100%" stop-color="var(--bg-dark)" stop-opacity="1"/>
                 </linearGradient>
             </defs>
-            <path d="M0,120 L0,45 Q40,35 80,42 T160,38 Q200,42 240,35 T320,40 Q360,38 400,42 T480,35 Q520,40 560,38 T640,42 Q680,35 720,40 T800,38 Q840,42 880,35 T960,40 Q1000,38 1040,42 T1120,35 Q1160,40 1200,45 L1200,120 Z" fill="#FBF6F0"></path>
-            <line x1="0" y1="44" x2="1200" y2="44" stroke="var(--primary)" stroke-width="1.5" opacity="0.4"></line>
+            <path d="M0,120 L0,45 Q40,35 80,42 T160,38 Q200,42 240,35 T320,40 Q360,38 400,42 T480,35 Q520,40 560,38 T640,42 Q680,35 720,40 T800,38 Q840,42 880,35 T960,40 Q1000,38 1040,42 T1120,35 Q1160,40 1200,45 L1200,120 Z" fill="#FBF6F0"/>
+            <line x1="0" y1="44" x2="1200" y2="44" stroke="var(--primary)" stroke-width="1.5" opacity="0.4"/>
         </svg>
     </div>
 </section>
@@ -2801,8 +3219,8 @@ html[dir="rtl"] body {
       <article class="contact-trust-section__card">
         <div class="contact-trust-section__icon-wrapper">
           <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"></circle>
-            <path d="M16 24L22 30L32 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <circle cx="24" cy="24" r="22" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M16 24L22 30L32 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <h3 class="contact-trust-section__title" data-i18n="contact_h3_4">ליווי אישי בבחירת התכשיט</h3>
@@ -2813,8 +3231,8 @@ html[dir="rtl"] body {
       <article class="contact-trust-section__card">
         <div class="contact-trust-section__icon-wrapper">
           <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="currentColor" stroke-width="1.5"></path>
-            <path d="M24 14V24L30 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M24 14V24L30 30" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <h3 class="contact-trust-section__title" data-i18n="contact_h3_5">משלוח מהיר ואמין עד הבית</h3>
@@ -2825,8 +3243,8 @@ html[dir="rtl"] body {
       <article class="contact-trust-section__card">
         <div class="contact-trust-section__icon-wrapper">
           <svg data-element-type="icon" data-icon-type="svg" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24Z" stroke="currentColor" stroke-width="1.5"></path>
-            <path d="M24 36L24 24M24 16H24.02" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M44 24C44 35.0457 35.0457 44 24 44C12.9543 44 4 35.0457 4 24C4 12.9543 12.9543 4 24 4C35.0457 4 44 12.9543 44 24Z" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M24 36L24 24M24 16H24.02" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </div>
         <h3 class="contact-trust-section__title" data-i18n="contact_h3_6">אחריות מלאה על כל פריט</h3>
@@ -2838,7 +3256,7 @@ html[dir="rtl"] body {
   <!-- Bottom Lace Scallop Divider -->
   <div class="contact-trust-section__divider-wrapper" aria-hidden="true">
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,60 L0,20 Q37.5,55 75,20 Q112.5,55 150,20 Q187.5,55 225,20 Q262.5,55 300,20 Q337.5,55 375,20 Q412.5,55 450,20 Q487.5,55 525,20 Q562.5,55 600,20 Q637.5,55 675,20 Q712.5,55 750,20 Q787.5,55 825,20 Q862.5,55 900,20 Q937.5,55 975,20 Q1012.5,55 1050,20 Q1087.5,55 1125,20 Q1162.5,55 1200,20 L1200,60 Z" fill="#FBF6F0"></path>
+      <path d="M0,60 L0,20 Q37.5,55 75,20 Q112.5,55 150,20 Q187.5,55 225,20 Q262.5,55 300,20 Q337.5,55 375,20 Q412.5,55 450,20 Q487.5,55 525,20 Q562.5,55 600,20 Q637.5,55 675,20 Q712.5,55 750,20 Q787.5,55 825,20 Q862.5,55 900,20 Q937.5,55 975,20 Q1012.5,55 1050,20 Q1087.5,55 1125,20 Q1162.5,55 1200,20 L1200,60 Z" fill="#FBF6F0"/>
     </svg>
   </div>
 </section>
@@ -2852,7 +3270,7 @@ html[dir="rtl"] body {
     <div class="contact-location-panel">
       <div class="contact-location-map-area">
         <div class="contact-location-map-visual">
-          <img loading="lazy" decoding="async" data-placeholder="contact-location-image-1" data-context="An elegant, minimal illustrated map or abstract service-area visual for an online jewelry brand, featuring soft blush and gold tones with subtle geometric accents, representing nationwide online availability rather than a physical storefront" width="600" height="400" src="/assets/site-contact-location-image-1.webp" alt="מפת אזור שירות ארצית — תכשיטי בלי עין הרע זמינים במשלוח לכל הארץ" data-i18n-alt="contact_alt_88">
+          <img loading="lazy" decoding="async" data-placeholder="contact-location-image-1" data-context="An elegant, minimal illustrated map or abstract service-area visual for an online jewelry brand, featuring soft blush and gold tones with subtle geometric accents, representing nationwide online availability rather than a physical storefront" width="600" height="400" src="/assets/site-contact-location-image-1.webp" alt="מפת אזור שירות ארצית — תכשיטי בלי עין הרע זמינים במשלוח לכל הארץ" data-i18n-alt="contact_alt_88" fetchpriority="low" />
           <div class="contact-location-map-overlay"></div>
         </div>
         <div class="contact-location-badge" data-i18n="contact_div_71">
@@ -2863,8 +3281,8 @@ html[dir="rtl"] body {
         <div class="contact-location-detail-card" data-zappy-contact-field="address">
           <div class="contact-location-detail-icon">
             <svg data-element-type="icon" data-icon-type="svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
             </svg>
           </div>
           <h3 class="contact-location-detail-title" data-i18n="contact_h3_7">כתובת למשלוחים והחזרות</h3>
@@ -2873,24 +3291,24 @@ html[dir="rtl"] body {
         <div class="contact-location-detail-card">
           <div class="contact-location-detail-icon">
             <svg data-element-type="icon" data-icon-type="svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-              <line x1="16" y1="2" x2="16" y2="6"></line>
-              <line x1="8" y1="2" x2="8" y2="6"></line>
-              <line x1="3" y1="10" x2="21" y2="10"></line>
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+              <line x1="16" y1="2" x2="16" y2="6"/>
+              <line x1="8" y1="2" x2="8" y2="6"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
             </svg>
           </div>
           <h3 class="contact-location-detail-title" data-i18n="contact_h3_8">שעות מענה טלפוני</h3>
-          <p class="contact-location-detail-text" data-i18n="contact_p_22">ימים א׳–ה׳: 09:00–18:00<br>יום ו׳: 09:00–13:00</p>
+          <p class="contact-location-detail-text" data-i18n="contact_p_22">ימים א׳–ה׳: 09:00–18:00<br />יום ו׳: 09:00–13:00</p>
         </div>
         <div class="contact-location-detail-card" data-zappy-contact-field="phone">
           <div class="contact-location-detail-icon">
             <svg data-element-type="icon" data-icon-type="svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
             </svg>
           </div>
           <h3 class="contact-location-detail-title" data-i18n="contact_h3_9">צרו קשר</h3>
           <p class="contact-location-detail-text" data-i18n="contact_p_23">
-            <a href="tel:0554609960" class="contact-location-link">0554609960</a><br>
+            <a href="tel:0554609960" class="contact-location-link">0554609960</a><br />
             <a href="mailto:bliainara.service@gmail.com" class="contact-location-link" data-i18n="contact_link_48">bliainara.service@gmail.com</a>
           </p>
         </div>
@@ -2902,11 +3320,11 @@ html[dir="rtl"] body {
     <svg data-no-icon-edit="true" aria-hidden="true" viewBox="0 0 1200 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="contact-location-fade" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stop-color="var(--bg-light)" stop-opacity="0"></stop>
-          <stop offset="100%" stop-color="var(--bg-dark)" stop-opacity="1"></stop>
+          <stop offset="0%" stop-color="var(--bg-light)" stop-opacity="0"/>
+          <stop offset="100%" stop-color="var(--bg-dark)" stop-opacity="1"/>
         </linearGradient>
       </defs>
-      <rect x="0" y="0" width="1200" height="60" fill="url(#contact-location-fade)"></rect>
+      <rect x="0" y="0" width="1200" height="60" fill="url(#contact-location-fade)"/>
     </svg>
   </div>
 </section>
@@ -2918,7 +3336,7 @@ html[dir="rtl"] body {
 
     <!-- Centered paragraph -->
     <p class="contact-cta-text" data-i18n="contact_p_24">
-      מתלבטים איזו מתנה הכי תרגש את הקרובים לכם?<br>
+      מתלבטים איזו מתנה הכי תרגש את הקרובים לכם?<br />
       הצוות שלנו כאן כדי לעזור לכם לבחור תכשיט שמתאים בדיוק לאנרגיה ולסגנון שלה — או שלו.
     </p>
 
@@ -2926,7 +3344,7 @@ html[dir="rtl"] body {
     <a href="/contact" class="contact-cta-btn" data-i18n="contact_link_49">
       <span>דברו איתנו</span>
       <svg class="contact-cta-btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" data-element-type="icon" data-icon-type="svg">
-        <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M6 4L10 8L6 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </a>
 
@@ -2941,7 +3359,7 @@ html[dir="rtl"] body {
     <div class="footer-grid">
       <!-- Company Info -->
       <div class="footer-col footer-company-col">
-        <a data-zappy-click-action="link" href="/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: contents;"><div data-zappy-zoom-wrapper="true" data-element-id="img-1782486571865-fu6pxrona" data-element-type="image" data-zappy-zoom-wrapper-width="110px" data-zappy-zoom-wrapper-height="40px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="cursor: pointer; position: relative !important; overflow: hidden !important; width: 110px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 40px !important; display: block !important; padding-bottom: 0px !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" data-zappy-click-action="link"><img src="/assets/jewelry-e-commerce-service-1782757091687-yy1ono.webp?v=1782757094019" alt="בלי עין הרע" class="logo" data-element-type="image" data-element-id="img-1782486571865-fu6pxrona" data-zappy-footer-image="true" style="display: block !important; object-fit: cover !important; object-position: 2% 81% !important; margin: 0px !important; left: 0% !important; top: 0% !important; width: 100% !important; height: 100% !important; max-width: none !important; max-height: none !important; position: absolute !important;" data-zappy-zoom="1" data-zappy-original-width="110" data-zappy-original-height="40" data-zappy-object-position="2% 81%" data-zappy-click-action="link" data-i18n-alt="home_alt_95"></div></a>
+        <a data-zappy-click-action="link" href="/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit; display: contents;"><div data-zappy-zoom-wrapper="true" data-element-id="img-1782486571865-fu6pxrona" data-element-type="image" data-zappy-zoom-wrapper-width="110px" data-zappy-zoom-wrapper-height="40px" data-zappy-zoom-wrapper-width-mode="px" data-zappy-zoom-wrapper-align="center" style="cursor: pointer; position: relative !important; overflow: hidden !important; width: 110px !important; max-width: 100% !important; margin-left: auto !important; margin-right: auto !important; height: 40px !important; display: block !important; padding-bottom: 0px !important;" data-zappy-zoom-clip="true" data-zappy-wrapper-margins-applied="true" data-zappy-click-action="link"><img src="/assets/jewelry-e-commerce-service-1782757091687-yy1ono.webp?v=1782757094019" alt="בלי עין הרע" class="logo" data-element-type="image" data-element-id="img-1782486571865-fu6pxrona" data-zappy-footer-image="true" style="display: block !important; object-fit: cover !important; object-position: 2% 81% !important; margin: 0px !important; left: 0% !important; top: 0% !important; width: 100% !important; height: 100% !important; max-width: none !important; max-height: none !important; position: absolute !important;" data-zappy-zoom="1" data-zappy-original-width="110" data-zappy-original-height="40" data-zappy-object-position="2% 81%" data-zappy-click-action="link" data-i18n-alt="home_alt_95" decoding="async" width="35" height="35" /></div></a>
         <p class="company-blurb" style="outline: none; text-align: center;" data-i18n="home_p_32">תכשיטים בעבודת יד המשלבים יופי, איכות ומשמעות. כל פריט נוצר באהבה כדי ללוות את הרגעים היפים בחייך.</p>
       </div>
 
@@ -2952,27 +3370,27 @@ html[dir="rtl"] body {
           <li><a href="/" data-i18n="home_link_61">בית</a></li>
           <li><a href="/craftsmanship" data-i18n="home_link_62">אומנות</a></li>
           <li><a href="/gift-guide" data-i18n="home_link_63">מדריך מתנות</a></li>
-          <li><a href="/contact"  data-i18n="home_link_64">צור קשר</a></li>
+          <li><a href="/contact" data-i18n="home_link_64">צור קשר</a></li>
         </ul>
       </div>
 
       <!-- Contact Info -->
       <div class="footer-col footer-contact-col">
         <h4 data-i18n="home_h4_14">צור קשר</h4>
-        <ul class="footer-contact" ><li>
+        <ul class="footer-contact"><li>
             <span class="contact-icon"><i class="fas fa-envelope" data-element-type="icon" data-element-id="icon-1782486571856-jm50iz2vx" data-icon-type="fontawesome" style="cursor: pointer;"></i></span>
             <span class="contact-text" data-i18n="home_span_47"><a href="mailto:bliainara.service@gmail.com" data-i18n="home_link_65">bliainara.service@gmail.com</a></span>
           </li><li>
             <span class="contact-icon"><i class="fas fa-phone" data-element-type="icon" data-element-id="icon-1782486571856-0zef5mf4i" data-icon-type="fontawesome" style="font-size: 14px !important; color: rgb(201, 162, 77); cursor: pointer;"></i></span>
             <span class="contact-text"><a href="tel:0554609960">0554609960</a></span>
-          </li><li><a href="/"  data-i18n="home_link_66"><span class="contact-icon"><i class="fas fa-map-marker-alt" style="cursor: pointer;"></i></span>
+          </li><li><a href="/" data-i18n="home_link_66"><span class="contact-icon"><i class="fas fa-map-marker-alt" style="cursor: pointer;"></i></span>
             <span class="contact-text">מחסן: החשמל 9, עפולה, צפון, 1827109, ישראל(בתאום מראש בלבד)</span></a></li></ul>
       </div>
 
       <!-- Business Hours -->
       <div class="footer-col footer-hours-col">
-        <h4  data-i18n="home_h4_15">שעות פעילות שרות לקוחות:</h4>
-        <ul class="footer-hours" ><li><a href="/" data-i18n="home_link_67"><span class="hours-day">ימים א’–ה’</span> <span class="hours-time">09:00–17:00</span></a></li><li><a href="/" data-i18n="home_link_68"><span class="hours-day">ימים ו’–שבת</span> <span class="hours-time">סגור (ניתן לשלוח ווטסאפ)</span></a></li></ul>
+        <h4 data-i18n="home_h4_15">שעות פעילות שרות לקוחות:</h4>
+        <ul class="footer-hours"><li><a href="/" data-i18n="home_link_67"><span class="hours-day">ימים א’–ה’</span> <span class="hours-time">09:00–17:00</span></a></li><li><a href="/" data-i18n="home_link_68"><span class="hours-day">ימים ו’–שבת</span> <span class="hours-time">סגור (ניתן לשלוח ווטסאפ)</span></a></li></ul>
       </div>
 
       <!-- Social Media -->
@@ -3014,10 +3432,10 @@ html[dir="rtl"] body {
     <i class="fab fa-whatsapp"></i>
   </a>
   
-  <div class="zappy-qv-overlay" id="zappy-qv-overlay" hidden=""></div>
-<div class="zappy-qv-modal" id="zappy-qv-modal" role="dialog" aria-modal="true" aria-label="תצוגה מהירה" hidden="" data-i18n-aria-label="contact_aria_label_104">
+  <div class="zappy-qv-overlay" id="zappy-qv-overlay" hidden></div>
+<div class="zappy-qv-modal" id="zappy-qv-modal" role="dialog" aria-modal="true" aria-label="תצוגה מהירה" hidden data-i18n-aria-label="contact_aria_label_104">
   <button type="button" class="zappy-qv-close" id="zappy-qv-close" aria-label="סגור" data-i18n-aria-label="contact_aria_label_105">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
   </button>
   <div class="zappy-qv-content" id="zappy-qv-content"></div>
 </div>
@@ -3068,6 +3486,7 @@ html[dir="rtl"] body {
       "ecom_bookingSelectTime": "Select a time",
       "ecom_bookingSelectDateFirst": "Please choose a date first",
       "ecom_bookingSelectTimeFirst": "Please choose a date and time first",
+      "ecom_bookingCompleteFormFirst": "Please fill in the required booking fields",
       "ecom_bookingTime": "Time",
       "ecom_browseFavorites": "Discover all our products",
       "ecom_bundleDiscount": "Bundle Discount",
@@ -3183,6 +3602,8 @@ html[dir="rtl"] body {
       "ecom_haveCouponCode": "I have a coupon code",
       "ecom_home": "Home",
       "ecom_inStock": "In Stock",
+      "ecom_onlyOneLeft": "Only 1 left in stock",
+      "ecom_onlyXLeft": "Only {count} left in stock",
       "ecom_inquiryAbout": "Inquiry about",
       "ecom_invalidCoupon": "Invalid coupon code",
       "ecom_items": "Items",
@@ -3270,6 +3691,7 @@ html[dir="rtl"] body {
       "ecom_shippingAddress": "Shipping Address",
       "ecom_shippingMethod": "Shipping Method",
       "ecom_shippingRequired": "Please select a shipping method",
+      "ecom_pickup": "Pickup",
       "ecom_signInHere": "Sign in here",
       "ecom_size": "Size",
       "ecom_sku": "SKU",
@@ -4955,6 +5377,7 @@ html[dir="rtl"] body {
       "ecom_bookingSelectTime": "בחרו שעה",
       "ecom_bookingSelectDateFirst": "אנא בחרו תאריך תחילה",
       "ecom_bookingSelectTimeFirst": "אנא בחרו תאריך ושעה תחילה",
+      "ecom_bookingCompleteFormFirst": "אנא מלאו את שדות ההזמנה הנדרשים",
       "ecom_bookingTime": "שעה",
       "ecom_browseFavorites": "גלו את כל המוצרים שלנו",
       "ecom_bundleDiscount": "הנחת חבילה",
@@ -5070,6 +5493,8 @@ html[dir="rtl"] body {
       "ecom_haveCouponCode": "יש לי קוד קופון",
       "ecom_home": "דף הבית",
       "ecom_inStock": "במלאי",
+      "ecom_onlyOneLeft": "נותר פריט אחד בלבד",
+      "ecom_onlyXLeft": "נותרו רק {count} במלאי",
       "ecom_inquiryAbout": "פנייה בנושא",
       "ecom_invalidCoupon": "קוד קופון לא תקין",
       "ecom_items": "פריטים",
@@ -5157,6 +5582,7 @@ html[dir="rtl"] body {
       "ecom_shippingAddress": "כתובת למשלוח",
       "ecom_shippingMethod": "שיטת משלוח",
       "ecom_shippingRequired": "נא לבחור שיטת משלוח",
+      "ecom_pickup": "איסוף",
       "ecom_signInHere": "התחבר כאן",
       "ecom_size": "גודל",
       "ecom_sku": "מק\"ט",
@@ -7781,77 +8207,38 @@ html[dir="rtl"] body {
   
   // ============================================
   // LANGUAGE SWITCHER ICON COLOR DETECTION
-  // Dynamically detect if navbar has light/dark background
-  // and set the globe icon color accordingly
+  // (shared source — see getFixLanguageSwitcherColorSource)
   // ============================================
   function fixLanguageSwitcherColor() {
+    /* ZAPPY_LANG_SWITCHER_COLOR_FIX_V3 */
     var switcher = document.querySelector('.lang-switcher-current');
     var svg = switcher ? switcher.querySelector('svg') : null;
     if (!switcher || !svg) return;
-    
-    // Find the navbar or header element
-    var navbar = document.querySelector('.navbar') || 
-                 document.querySelector('nav') || 
+
+    var navbar = document.querySelector('.navbar') ||
+                 document.querySelector('nav') ||
                  document.querySelector('header');
     if (!navbar) return;
-    
-    // Get the effective background color by walking up the DOM tree
-    function getEffectiveBackgroundColor(element) {
-      var el = element;
-      var maxDepth = 10; // Prevent infinite loops
-      
-      while (el && maxDepth > 0) {
-        var style = window.getComputedStyle(el);
-        var bg = style.backgroundColor;
-        
-        // Skip transparent backgrounds
-        if (bg && bg !== 'transparent' && bg !== 'rgba(0, 0, 0, 0)') {
-          return bg;
-        }
-        
-        // Check background-image for gradients
-        var bgImage = style.backgroundImage;
-        if (bgImage && bgImage !== 'none') {
-          // Extract first color from gradient
-          var gradientMatch = bgImage.match(/rgba?\([^)]+\)|#[a-fA-F0-9]{3,8}/);
-          if (gradientMatch) {
-            return gradientMatch[0];
-          }
-        }
-        
-        el = el.parentElement;
-        maxDepth--;
-      }
-      
-      // Default to white if no background found (assume light)
-      return 'rgb(255, 255, 255)';
+
+    function applyColor(color) {
+      if (!color) return;
+      // Keep SVG on currentColor so frosted-scroll CSS / setScrolledColors can
+      // retint the globe by setting only the button's color.
+      try { svg.style.fill = 'currentColor'; } catch (e1) {}
+      try { svg.setAttribute('fill', 'currentColor'); } catch (e2) {}
+      switcher.style.color = color;
     }
-    
-    // Parse color string to RGB values
+
     function parseColor(colorStr) {
       if (!colorStr) return null;
-      
-      // Handle rgb/rgba
       var rgbMatch = colorStr.match(/rgba?\(\s*(\d+)\s*,\s*(\d+)\s*,\s*(\d+)/);
       if (rgbMatch) {
-        return {
-          r: parseInt(rgbMatch[1], 10),
-          g: parseInt(rgbMatch[2], 10),
-          b: parseInt(rgbMatch[3], 10)
-        };
+        return { r: parseInt(rgbMatch[1], 10), g: parseInt(rgbMatch[2], 10), b: parseInt(rgbMatch[3], 10) };
       }
-      
-      // Handle hex
       var hexMatch = colorStr.match(/#([a-fA-F0-9]{2})([a-fA-F0-9]{2})([a-fA-F0-9]{2})/);
       if (hexMatch) {
-        return {
-          r: parseInt(hexMatch[1], 16),
-          g: parseInt(hexMatch[2], 16),
-          b: parseInt(hexMatch[3], 16)
-        };
+        return { r: parseInt(hexMatch[1], 16), g: parseInt(hexMatch[2], 16), b: parseInt(hexMatch[3], 16) };
       }
-      
-      // Handle 3-digit hex
       var hex3Match = colorStr.match(/#([a-fA-F0-9])([a-fA-F0-9])([a-fA-F0-9])$/);
       if (hex3Match) {
         return {
@@ -7860,46 +8247,143 @@ html[dir="rtl"] body {
           b: parseInt(hex3Match[3] + hex3Match[3], 16)
         };
       }
-      
       return null;
     }
-    
-    // Calculate relative luminance (WCAG formula)
+
     function getLuminance(rgb) {
-      if (!rgb) return 0.5; // Default to middle
-      
-      var r = rgb.r / 255;
-      var g = rgb.g / 255;
-      var b = rgb.b / 255;
-      
-      // Apply gamma correction
+      if (!rgb) return 0.5;
+      var r = rgb.r / 255, g = rgb.g / 255, b = rgb.b / 255;
       r = r <= 0.03928 ? r / 12.92 : Math.pow((r + 0.055) / 1.055, 2.4);
       g = g <= 0.03928 ? g / 12.92 : Math.pow((g + 0.055) / 1.055, 2.4);
       b = b <= 0.03928 ? b / 12.92 : Math.pow((b + 0.055) / 1.055, 2.4);
-      
       return 0.2126 * r + 0.7152 * g + 0.0722 * b;
     }
-    
-    // Get the effective background color
-    var bgColor = getEffectiveBackgroundColor(navbar);
-    var rgb = parseColor(bgColor);
-    var luminance = getLuminance(rgb);
-    
-    // Threshold: 0.5 is middle, lower = darker background
-    // Use 0.4 as threshold for better contrast
-    var isLightBackground = luminance > 0.4;
-    
-    // Set icon color based on background
-    // Light background = dark icon (#1a1a1a)
-    // Dark background = light icon (#F3FAFF)
-    var iconColor = isLightBackground ? '#1a1a1a' : '#F3FAFF';
-    
-    svg.style.fill = iconColor;
-    switcher.style.color = iconColor;
-    
-    console.log('[i18n] Language switcher icon color:', iconColor, 
-                '(bg luminance:', luminance.toFixed(2), 
-                ', isLight:', isLightBackground, ')');
+
+    function isOpaqueBg(bg) {
+      if (!bg || bg === 'transparent' || bg === 'rgba(0, 0, 0, 0)') return false;
+      var am = bg.match(/rgba\(\s*\d+\s*,\s*\d+\s*,\s*\d+\s*,\s*([\d.]+)/);
+      if (am && parseFloat(am[1]) < 0.6) return false;
+      return true;
+    }
+
+    function pickFromLuminance(rgb) {
+      return getLuminance(rgb) > 0.4 ? '#1a1a1a' : '#F3FAFF';
+    }
+
+    var isScrolled = navbar.classList.contains('scrolled');
+    var frostedText = '';
+    try { frostedText = (navbar.style.getPropertyValue('--frosted-text') || window.getComputedStyle(navbar).getPropertyValue('--frosted-text') || '').trim(); } catch (e3) {}
+
+    // 0) Frosted / scrolled transparent navbar — light glass needs a DARK globe.
+    //    Must win over --nav-text (which stays light for the at-top hero overlay).
+    if (isScrolled || frostedText) {
+      if (frostedText) {
+        applyColor(frostedText);
+        return;
+      }
+      var rootForFrost = window.getComputedStyle(document.documentElement);
+      var frostDark = (rootForFrost.getPropertyValue('--text-dark') || '').trim() || '#1a1a1a';
+      applyColor(frostDark);
+      return;
+    }
+
+    // 1) Match a real top-level nav link — contrast-correct at-top over hero.
+    var navLink = navbar.querySelector('.nav-menu > li > a, .nav-links > li > a, .nav-menu a, .nav-links a');
+    if (!navLink) {
+      navLink = navbar.querySelector('a:not(.lang-option):not(.lang-switcher-current):not([class*="logo"]):not(.logo-link)');
+    }
+    if (navLink) {
+      var linkColor = window.getComputedStyle(navLink).color;
+      if (linkColor && linkColor !== 'rgb(0, 0, 0)' && linkColor !== 'rgba(0, 0, 0, 0)') {
+        applyColor(linkColor);
+        return;
+      }
+    }
+
+    // 2) Prefer --nav-text (baked for transparent navbars over heroes) — at-top only.
+    var rootCs = window.getComputedStyle(document.documentElement);
+    var navText = (rootCs.getPropertyValue('--nav-text') || '').trim();
+    if (navText && navText.toLowerCase() !== 'currentcolor') {
+      applyColor(navText);
+      return;
+    }
+
+    var nbCs = window.getComputedStyle(navbar);
+    var bg = nbCs.backgroundColor;
+
+    // 3) Opaque navbar background → luminance pick.
+    if (isOpaqueBg(bg)) {
+      applyColor(pickFromLuminance(parseColor(bg)));
+      return;
+    }
+
+    // 4) Transparent navbar with a gradient scrim (e.g. rgba(0,0,0,.35) → clear):
+    //    use the darkest non-near-transparent stop — never the page body beneath.
+    var bi = nbCs.backgroundImage || '';
+    if (bi && bi !== 'none') {
+      var stops = bi.match(/rgba?\([^)]+\)|#[a-fA-F0-9]{3,8}/g) || [];
+      var darkest = null, darkestLum = 2;
+      for (var si = 0; si < stops.length; si++) {
+        var alphaM = stops[si].match(/rgba\(\s*\d+\s*,\s*\d+\s*,\s*\d+\s*,\s*([\d.]+)/);
+        if (alphaM && parseFloat(alphaM[1]) < 0.15) continue;
+        var pr = parseColor(stops[si]);
+        if (!pr) continue;
+        var sl = getLuminance(pr);
+        if (sl < darkestLum) { darkestLum = sl; darkest = pr; }
+      }
+      if (darkest) {
+        applyColor(pickFromLuminance(darkest));
+        return;
+      }
+    }
+
+    // 5) Transparent over hero media → light icon (do NOT walk to body/html).
+    function hasHeroMediaBehind() {
+      var hero = document.querySelector(
+        'section[class*="hero"], .hero, [data-zappy-section="hero"], main > section:first-of-type, body > section:first-of-type'
+      );
+      if (!hero) return false;
+      if (hero.querySelector('img, video, [data-hero-bg], .zappy-section-video-bg, .zappy-section-video')) return true;
+      var hbi = window.getComputedStyle(hero).backgroundImage || '';
+      return hbi.indexOf('url(') >= 0;
+    }
+    if (hasHeroMediaBehind()) {
+      var textLight = (rootCs.getPropertyValue('--text-light') || '').trim() || '#F3FAFF';
+      applyColor(textLight);
+      return;
+    }
+
+    // 6) Last resort for transparent nav without hero cue — prefer --text-light
+    //    over walking to body (cream page bg was the false "light navbar" signal).
+    var fallbackLight = (rootCs.getPropertyValue('--text-light') || '').trim() || '#F3FAFF';
+    applyColor(fallbackLight);
+  }
+
+  // Expose + re-run on frosted scroll so at-top (light) and scrolled (dark) both work.
+  window.fixLanguageSwitcherColor = fixLanguageSwitcherColor;
+  if (!window.__zappyLangSwitcherColorScrollBound) {
+    window.__zappyLangSwitcherColorScrollBound = true;
+    var _langColorScrollTimer = null;
+    function scheduleLangSwitcherColorFix() {
+      if (_langColorScrollTimer) return;
+      _langColorScrollTimer = setTimeout(function() {
+        _langColorScrollTimer = null;
+        try { fixLanguageSwitcherColor(); } catch (e4) {}
+      }, 16);
+    }
+    window.addEventListener('scroll', scheduleLangSwitcherColorFix, { passive: true });
+    window.addEventListener('resize', scheduleLangSwitcherColorFix, { passive: true });
+    if (typeof MutationObserver === 'function') {
+      try {
+        var _langNav = document.querySelector('.navbar') || document.querySelector('nav');
+        if (_langNav) {
+          new MutationObserver(scheduleLangSwitcherColorFix).observe(_langNav, {
+            attributes: true,
+            attributeFilter: ['class', 'style']
+          });
+        }
+      } catch (e5) {}
+    }
   }
   
   // Initialize on DOM ready
@@ -7959,6 +8443,10 @@ html[dir="rtl"] body {
 })();</script>
 
     <script src="/script.js"></script>
+
+    <script id="zappy-font-awesome-loader">
+(function(){if(window.__zappyFontAwesomeLoader)return;window.__zappyFontAwesomeLoader=true;var href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css';function load(){if(document.querySelector('link[href*="font-awesome"][href*="all.min.css"]'))return;var l=document.createElement('link');l.rel='stylesheet';l.href=href;l.crossOrigin='anonymous';l.referrerPolicy='no-referrer';document.head.appendChild(l);}function schedule(){if('requestIdleCallback'in window){requestIdleCallback(load,{timeout:5000});}else{setTimeout(load,3500);}}['pointerdown','keydown','touchstart','mouseover'].forEach(function(evt){window.addEventListener(evt,load,{once:true,passive:true});});schedule();})();
+</script>
 
     <script id="zappy-mobile-submenu-script">
     (function() {
@@ -8152,5 +8640,4 @@ html[dir="rtl"] body {
       else setTimeout(init,50);
     })();
     </script>
-</body>
-</html>
+</body></html>
