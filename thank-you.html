@@ -2789,7 +2789,7 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
 </head>
 <body>
 
-<div class="zappy-announcement-bar">
+<div class="zappy-announcement-bar" data-interval="3000">
       <span class="zappy-announcement-message active">ברוכים הבאים לבלי עין הרע </span>
       <span class="zappy-announcement-message">משלוח חינם בקניה מעל 300 ש''ח </span>
       <span class="zappy-announcement-message">נשמח לעמוד לרשותך בווטסאפ בכל שאלה </span>
@@ -2843,6 +2843,9 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
         <!-- Categories will be loaded dynamically -->
       <li data-category-id="d9980b73-da56-40fc-afea-df294bf3ffd1" data-category-slug="mens-jewelryaccessories"><a href="/category/mens-jewelryaccessories" dir="rtl">בלי עין הרע לגברים</a></li><li data-category-id="a40e1226-7f69-4919-8a1f-7b62e69ad3d6" data-category-slug="evil-eye-jewelry-women"><a href="/category/evil-eye-jewelry-women" dir="rtl">בלי עין הרע לנשים</a></li></ul>
     </li>
+  
+
+    
   
 
     
@@ -8574,12 +8577,23 @@ body:has(.zappy-announcement-bar) .navbar:not(.zappy-catalog-menu):not(.mobile-s
   }
 })();
 </script>
-<script>
+<script id="zappy-announcement-bar-rotation">
 (function() {
+  var bar = document.querySelector('.zappy-announcement-bar');
+  if (typeof window.zappyStartAnnouncementRotation === 'function') {
+    window.zappyStartAnnouncementRotation(bar, 3000);
+    return;
+  }
   var messages = document.querySelectorAll('.zappy-announcement-message');
   if (messages.length <= 1) return;
+  if (window.__zappyAnnouncementRotateTimer) {
+    clearInterval(window.__zappyAnnouncementRotateTimer);
+    window.__zappyAnnouncementRotateTimer = null;
+  }
   var current = 0;
-  setInterval(function() {
+  // Must register on the shared timer so script.js can clear this when the
+  // eager ZAPPY_ANNOUNCEMENT_BAR_ROTATION runtime boots (inline often runs first).
+  window.__zappyAnnouncementRotateTimer = setInterval(function() {
     messages[current].classList.remove('active');
     current = (current + 1) % messages.length;
     messages[current].classList.add('active');
