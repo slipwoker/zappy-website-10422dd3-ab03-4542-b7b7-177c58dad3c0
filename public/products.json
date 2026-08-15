@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-08-15T09:58:13.265Z",
+  "generated_at": "2026-08-15T10:09:33.332Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 29,
+  "count": 30,
   "products": [
+    {
+      "id": "b78c9292-de5e-41aa-992c-3579b32b4685",
+      "slug": "tsmyd-yd-lgbr-k-21-sm-mshvlb-avr-vkyshvty-pldt-al-chld-chtsy-ksvp-vchtsy-shchvr-x73eyo",
+      "name": "צמיד יד לגבר כ-21 ס\"מ משולב עור וקישוטי פלדת אל חלד חצי כסוף וחצי שחור",
+      "name_translations": {
+        "en": "Men's Bracelet approx. 21 cm Combined Leather and Stainless Steel Ornaments Half Silver and Half Black",
+        "he": "צמיד יד לגבר כ-21 ס\"מ משולב עור וקישוטי פלדת אל חלד חצי כסוף וחצי שחור"
+      },
+      "description": "<p>צמיד יד לגבר מהמם ומיוחד</p>",
+      "short_description": "צמיד יד לגבר משולב עור שחור קישוטי פלדת אל חלד חצי כסוף וחצי שחור, אבזם סגירה בטיחותי",
+      "sku": "3093671420010-06026sil+blac",
+      "brand": "בלי עין הרע",
+      "price": 69,
+      "base_price": 99,
+      "sale_price": 69,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1786788324965-j3y15s.webp",
+        "https://www.bliainara.co.il/assets/product-1786788403979-ickekc.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tsmyd-yd-lgbr-k-21-sm-mshvlb-avr-vkyshvty-pldt-al-chld-chtsy-ksvp-vchtsy-shchvr-x73eyo",
+      "categories": [
+        "בלי עין הרע לגברים"
+      ],
+      "updated_at": "2026-08-15T10:09:00.581Z"
+    },
     {
       "id": "9508dd8b-01a4-43b4-973d-7b966782029e",
       "slug": "tsmyd-yd-lgbr-k-21sm-mshvlb-avr-vkyshvty-pldt-al-chld-vabzm-sgyrh-btychvty-wgbzzd",

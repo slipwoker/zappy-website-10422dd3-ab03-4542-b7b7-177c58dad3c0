@@ -76,7 +76,17 @@ Information about WCAG compliance and accessibility features.
 
 ## Products
 
-**Total active products: 29**
+**Total active products: 30**
+
+### צמיד יד לגבר כ-21 ס"מ משולב עור וקישוטי פלדת אל חלד חצי כסוף וחצי שחור
+https://www.bliainara.co.il/product/tsmyd-yd-lgbr-k-21-sm-mshvlb-avr-vkyshvty-pldt-al-chld-chtsy-ksvp-vchtsy-shchvr-x73eyo
+- Price: 69.00 ILS (sale, was 99.00 ILS)
+- Availability: In stock
+- Category: בלי עין הרע לגברים
+- SKU: 3093671420010-06026sil+blac
+- Brand: בלי עין הרע
+- Description: צמיד יד לגבר משולב עור שחור קישוטי פלדת אל חלד חצי כסוף וחצי שחור, אבזם סגירה בטיחותי
+- Image: https://www.bliainara.co.il/assets/product-1786788324965-j3y15s.webp
 
 ### צמיד יד לגבר כ-21ס"מ משולב עור וקישוטי פלדת אל חלד ואבזם סגירה בטיחותי
 https://www.bliainara.co.il/product/tsmyd-yd-lgbr-k-21sm-mshvlb-avr-vkyshvty-pldt-al-chld-vabzm-sgyrh-btychvty-wgbzzd
