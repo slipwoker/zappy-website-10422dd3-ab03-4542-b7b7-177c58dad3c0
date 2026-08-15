@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-08-15T10:09:33.332Z",
+  "generated_at": "2026-08-15T10:21:48.965Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 30,
+  "count": 31,
   "products": [
+    {
+      "id": "8fd84928-29ca-4551-bed7-f732e02adc2b",
+      "slug": "tsmyd-yd-lgbr-hahvb-k-21sm-mshvlb-avr-vpldt-al-chld-chtsy-ksvp-vchtsy-shchvr-am-chrytt-hmylh-love-28sqcp",
+      "name": "צמיד יד לגבר האהוב, כ-21ס\"מ משולב עור ופלדת אל חלד חצי כסוף וחצי שחור עם חריטת המילה love",
+      "name_translations": {
+        "en": "Men's bracelet for the beloved man, ~21cm combined leather and stainless steel half silver and half black with the word love engraved",
+        "he": "צמיד יד לגבר האהוב, כ-21ס\"מ משולב עור ופלדת אל חלד חצי כסוף וחצי שחור עם חריטת המילה love"
+      },
+      "description": "",
+      "short_description": "צמיד יד מרשים לגבר האהוב עם חריטת המילה love באנגלית, מתנה מהממת לגבר, לבן זוג, לאבא, לאח ולכל גבר אהוב",
+      "sku": "3093671420010-06026blac+love",
+      "brand": "בלי עין הרע",
+      "price": 79,
+      "base_price": 109,
+      "sale_price": 79,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1786789127061-suxnfg.webp",
+        "https://www.bliainara.co.il/assets/product-1786789167592-x9futh.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tsmyd-yd-lgbr-hahvb-k-21sm-mshvlb-avr-vpldt-al-chld-chtsy-ksvp-vchtsy-shchvr-am-chrytt-hmylh-love-28sqcp",
+      "categories": [
+        "בלי עין הרע לגברים"
+      ],
+      "updated_at": "2026-08-15T10:21:13.518Z"
+    },
     {
       "id": "b78c9292-de5e-41aa-992c-3579b32b4685",
       "slug": "tsmyd-yd-lgbr-k-21-sm-mshvlb-avr-vkyshvty-pldt-al-chld-chtsy-ksvp-vchtsy-shchvr-x73eyo",
