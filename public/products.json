@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-08-15T10:23:06.631Z",
+  "generated_at": "2026-08-15T10:42:09.316Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 31,
+  "count": 32,
   "products": [
+    {
+      "id": "b7239bdd-bbb1-46c2-b9bf-640dedc7fd86",
+      "slug": "tsmyd-mhmm-lgbr-mshvlb-avr-klva-bchlkv-vshrshrt-am-kvkb-mpldt-al-chld-vabzm-sgyrh-btychvty-clkw8g",
+      "name": "צמיד מהמם לגבר משולב עור קלוע בחלקו ושרשרת עם כוכב מפלדת אל חלד ואבזם סגירה בטיחותי",
+      "name_translations": {
+        "en": "Stunning Men's Bracelet with Partially Braided Leather and Stainless Steel Star Chain with Safety Clasp",
+        "he": "צמיד מהמם לגבר משולב עור קלוע בחלקו ושרשרת עם כוכב מפלדת אל חלד ואבזם סגירה בטיחותי"
+      },
+      "description": "<p>צמיד מיוחד לגבר מיוחד</p>",
+      "short_description": "צמיד יד לגבר מהמם בשילובים מהממים כ-21 ס\"מ ללוק מיוחד ומהמם",
+      "sku": "3087582585010-010075sil",
+      "brand": "בלי עין הרע",
+      "price": 99,
+      "base_price": 129,
+      "sale_price": 99,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1786790362410-2p63vl.webp",
+        "https://www.bliainara.co.il/assets/product-1786790431934-1cn7ps.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tsmyd-mhmm-lgbr-mshvlb-avr-klva-bchlkv-vshrshrt-am-kvkb-mpldt-al-chld-vabzm-sgyrh-btychvty-clkw8g",
+      "categories": [
+        "בלי עין הרע לגברים"
+      ],
+      "updated_at": "2026-08-15T10:41:33.762Z"
+    },
     {
       "id": "8fd84928-29ca-4551-bed7-f732e02adc2b",
       "slug": "tsmyd-yd-lgbr-hahvb-k-21sm-mshvlb-avr-vpldt-al-chld-chtsy-ksvp-vchtsy-shchvr-am-chrytt-hmylh-love-28sqcp",
