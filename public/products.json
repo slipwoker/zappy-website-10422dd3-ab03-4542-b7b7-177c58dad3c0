@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-07-26T10:30:04.197Z",
+  "generated_at": "2026-08-15T08:44:25.591Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 27,
+  "count": 28,
   "products": [
+    {
+      "id": "b20609d7-6867-48f1-bb52-5991d7d48c39",
+      "slug": "tlyvn-mrchp-mhmm-mshvbts-zyrkvn-yvkrty-dmvy-yhlvm-bkvtr-08sm-l3isxr",
+      "name": "תליון מרחף מהמם משובץ זירקון יוקרתי דמוי יהלום בקוטר 0.8ס\"מ",
+      "name_translations": {
+        "en": "Stunning Floating Pendant Set with Luxurious Diamond-Like Zircon, 0.8cm Diameter",
+        "he": "תליון מרחף מהמם משובץ זירקון יוקרתי דמוי יהלום בקוטר 0.8ס\"מ"
+      },
+      "description": "<p>תליון בעל מראה יוקרתי דמוי יהלום בעל אפקט הריחוף המנצנץ מרחוק ליום יום ולארועים במיוחד</p>",
+      "short_description": "תליון מרחף על חוט איכותי שקוף למראה יוקרתי מושך תשומת לב בכל יום ולכל ארוע.  גודל האבן: 0.8 ס\"מ, אורך החוט השקוף: 40 ס\"מ",
+      "sku": "3089988030010-09064",
+      "brand": "בלי עין הרע",
+      "price": 159,
+      "base_price": 109,
+      "sale_price": 159,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1786783013532-hh05u.webp",
+        "https://www.bliainara.co.il/assets/product-1786783094242-t5n2rx.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tlyvn-mrchp-mhmm-mshvbts-zyrkvn-yvkrty-dmvy-yhlvm-bkvtr-08sm-l3isxr",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-08-15T08:43:50.060Z"
+    },
     {
       "id": "9b944635-9179-4aa6-a5f6-f7c052fcb342",
       "slug": "tsmyd-tbat-tnys-yvkrtyym-mshvbts-zyrkvnym-mtsvpym-zhb-aykvty-mpldt-al-chld-anypqq",
