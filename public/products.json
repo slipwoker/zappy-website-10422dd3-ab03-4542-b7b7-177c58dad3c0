@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-08-15T08:57:41.254Z",
+  "generated_at": "2026-08-15T09:00:21.680Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 28,
@@ -734,19 +734,19 @@
     },
     {
       "id": "8252a47c-daef-4ae6-97b5-206faf63cca0",
-      "slug": "tsmyd-chvm-mshvlb-klva-aykvty-babvdt-yd-lgbrsgyrh-mgntyt-mpldt-al-chld-btvchh-qmnly7",
+      "slug": "tsmyd-chvm-mshvlb-klva-aykvty-babvdt-yd-lgbrsgyrh-mgntyt-mpldt-al-chld-btvchh-861jss",
       "name": "צמיד חום משולב קלוע איכותי בעבודת יד לגבר,סגירה מגנטית מפלדת אל חלד בטוחה",
       "name_translations": {
-        "en": "צמיד חום משולב קלוע איכותי בעבודת יד לגבר,סגירה מגנטית מפלדת אל חלד בטוחה",
+        "en": "Quality Handmade Braided Brown Men's Bracelet, Secure Stainless Steel Magnetic Clasp",
         "he": "צמיד חום משולב קלוע איכותי בעבודת יד לגבר,סגירה מגנטית מפלדת אל חלד בטוחה"
       },
-      "description": "<p>צמיד חום אופנתי משולב קלוע בעבודת יד לגבר, סגירה ופתיחה בטוחה ,סגר מפלדת אל חלד שחור, קוטר כ-21 ס\"מ</p>",
+      "description": "<p>צמיד חום אופנתי משולב קלוע בעבודת יד לגבר, סגירה ופתיחה בטוחה ,סגר מפלדת אל חלד שחור, קוטר כ-21 ס&quot;מ</p>",
       "short_description": "צמיד חום אופנתי משולב קלוע בעבודת יד לגבר, סגירה מגנטית מפלדת אל חלד בטוחה, קוטר כ-21 ס\"מ",
       "sku": "3028878260007068br",
       "brand": "בלי עין הרע",
-      "price": 69,
+      "price": 59,
       "base_price": 79,
-      "sale_price": 69,
+      "sale_price": 59,
       "currency": "ILS",
       "images": [
         "https://www.bliainara.co.il/assets/product-1782652602429-78vqk.webp",
@@ -754,11 +754,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/tsmyd-chvm-mshvlb-klva-aykvty-babvdt-yd-lgbrsgyrh-mgntyt-mpldt-al-chld-btvchh-qmnly7",
+      "url": "https://www.bliainara.co.il/product/tsmyd-chvm-mshvlb-klva-aykvty-babvdt-yd-lgbrsgyrh-mgntyt-mpldt-al-chld-btvchh-861jss",
       "categories": [
         "בלי עין הרע לגברים"
       ],
-      "updated_at": "2026-07-01T16:35:01.375Z"
+      "updated_at": "2026-08-15T08:59:43.752Z"
     },
     {
       "id": "1d66e94b-33f5-4d84-8700-51bfa1b0acf5",
