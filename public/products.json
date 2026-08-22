@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-08-22T13:54:34.732Z",
+  "generated_at": "2026-08-22T14:01:44.862Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 35,
+  "count": 36,
   "products": [
+    {
+      "id": "53744734-10f6-4b6a-867c-5e5e5582cac0",
+      "slug": "tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-advmh-btsypvy-zhb-aykvty-z3josi",
+      "name": "צמיד עדין חבל מוזהב משולב חרוזים עם עין אדומה בציפוי זהב איכותי",
+      "name_translations": {
+        "en": "Delicate Gold-Plated Rope Bracelet with Beads and Red Eye in Quality Gold Plating",
+        "he": "צמיד עדין חבל מוזהב משולב חרוזים עם עין אדומה בציפוי זהב איכותי"
+      },
+      "description": "<p>צמיד עדין ומהמם, שיהיה לך בלי עין הרע</p>",
+      "short_description": "צמיד עדין מתכוונן נגד עין הרע",
+      "sku": "3089210795010-03024red",
+      "brand": "בלי עין הרע",
+      "price": 30,
+      "base_price": 35,
+      "sale_price": 30,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1787406974349-zrier.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1787407094470-u8onf8.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-advmh-btsypvy-zhb-aykvty-z3josi",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-08-22T14:01:08.721Z"
+    },
     {
       "id": "54ba8766-faf0-4c1b-a947-84fdca8e304c",
       "slug": "tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-tklt-btsypvy-zhb-aykvty-2hbtq8",
