@@ -1,16 +1,16 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-08-22T13:50:39.543Z",
+  "generated_at": "2026-08-22T13:54:34.732Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 35,
   "products": [
     {
       "id": "54ba8766-faf0-4c1b-a947-84fdca8e304c",
-      "slug": "tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-tklt-btsypvy-zhb-aykvty-2eakoi",
+      "slug": "tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-tklt-btsypvy-zhb-aykvty-2hbtq8",
       "name": "צמיד עדין חבל מוזהב משולב חרוזים עם עין תכלת בציפוי זהב איכותי",
       "name_translations": {
-        "en": "Delicate Gold-Plated Rope Bracelet with Beads and Turquoise Eye in Quality Gold Plating",
+        "en": "Delicate Gold-Plated Rope Bracelet with Beads and Turquoise Evil Eye in Quality Gold Plating",
         "he": "צמיד עדין חבל מוזהב משולב חרוזים עם עין תכלת בציפוי זהב איכותי"
       },
       "description": "<p>צמיד עדין ומהמם ,שיהיה לך בלי עין הרע</p>",
@@ -27,11 +27,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-tklt-btsypvy-zhb-aykvty-2eakoi",
+      "url": "https://www.bliainara.co.il/product/tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-tklt-btsypvy-zhb-aykvty-2hbtq8",
       "categories": [
         "בלי עין הרע לנשים"
       ],
-      "updated_at": "2026-08-22T13:50:04.388Z"
+      "updated_at": "2026-08-22T13:53:58.230Z"
     },
     {
       "id": "9f34c25c-4770-41dd-a557-5ce79405bff4",
