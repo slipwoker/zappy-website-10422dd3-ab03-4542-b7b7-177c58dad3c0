@@ -1,13 +1,13 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-08-22T14:01:44.862Z",
+  "generated_at": "2026-08-22T14:03:15.274Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 36,
   "products": [
     {
       "id": "53744734-10f6-4b6a-867c-5e5e5582cac0",
-      "slug": "tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-advmh-btsypvy-zhb-aykvty-z3josi",
+      "slug": "tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-advmh-btsypvy-zhb-aykvty-dnpvsr",
       "name": "צמיד עדין חבל מוזהב משולב חרוזים עם עין אדומה בציפוי זהב איכותי",
       "name_translations": {
         "en": "Delicate Gold-Plated Rope Bracelet with Beads and Red Eye in Quality Gold Plating",
@@ -27,11 +27,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-advmh-btsypvy-zhb-aykvty-z3josi",
+      "url": "https://www.bliainara.co.il/product/tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-advmh-btsypvy-zhb-aykvty-dnpvsr",
       "categories": [
         "בלי עין הרע לנשים"
       ],
-      "updated_at": "2026-08-22T14:01:08.721Z"
+      "updated_at": "2026-08-22T14:02:41.536Z"
     },
     {
       "id": "54ba8766-faf0-4c1b-a947-84fdca8e304c",
