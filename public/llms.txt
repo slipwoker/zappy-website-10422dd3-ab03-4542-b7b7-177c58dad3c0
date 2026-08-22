@@ -76,7 +76,17 @@ Information about WCAG compliance and accessibility features.
 
 ## Products
 
-**Total active products: 33**
+**Total active products: 34**
+
+### צמיד עדין חבל מוזהב משולב חרוזים עם עין כחולה מפלדת אל חלד בציפוי זהב איכותי
+https://www.bliainara.co.il/product/tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-kchvlh-mpldt-al-chld-btsypvy-zhb-aykvty-kkk8yt
+- Price: 30.00 ILS (sale, was 35.00 ILS)
+- Availability: In stock
+- Category: בלי עין הרע לנשים
+- SKU: 3089210795010-03024blu
+- Brand: בלי עין הרע
+- Description: צמיד נגד עין הרע מתכוונן, עדין ויפה
+- Image: https://www.bliainara.co.il/assets/product-1787405242278-vpc2pa.webp
 
 ### צמיד מהמם לגבר משולב עור קלוע ושרשרת עם כוכב מפלדת אל חלד בציפוי שחור כולל האבזם סגירה הבטיחותי
 https://www.bliainara.co.il/product/tsmyd-mhmm-lgbr-mshvlb-avr-klva-vshrshrt-am-kvkb-mpldt-al-chld-btsypvy-shchvr-kvll-habzm-sgyrh-hbtychvty-9vluio

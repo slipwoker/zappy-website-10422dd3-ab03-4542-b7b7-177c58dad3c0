@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-08-15T11:21:48.235Z",
+  "generated_at": "2026-08-22T13:32:39.491Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 33,
+  "count": 34,
   "products": [
+    {
+      "id": "9f34c25c-4770-41dd-a557-5ce79405bff4",
+      "slug": "tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-kchvlh-mpldt-al-chld-btsypvy-zhb-aykvty-kkk8yt",
+      "name": "צמיד עדין חבל מוזהב משולב חרוזים עם עין כחולה מפלדת אל חלד בציפוי זהב איכותי",
+      "name_translations": {
+        "en": "Delicate Gold-Plated Rope Bracelet with Beads and Blue Evil Eye in Quality Gold-Plated Stainless Steel",
+        "he": "צמיד עדין חבל מוזהב משולב חרוזים עם עין כחולה מפלדת אל חלד בציפוי זהב איכותי"
+      },
+      "description": "<p>צמיד עדין ומהמם, שיהיה לך בלי עין הרע</p>",
+      "short_description": "צמיד נגד עין הרע מתכוונן, עדין ויפה",
+      "sku": "3089210795010-03024blu",
+      "brand": "בלי עין הרע",
+      "price": 30,
+      "base_price": 35,
+      "sale_price": 30,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1787405242278-vpc2pa.webp",
+        "https://www.bliainara.co.il/assets/product-1787405332506-pusc3e.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-kchvlh-mpldt-al-chld-btsypvy-zhb-aykvty-kkk8yt",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-08-22T13:32:03.622Z"
+    },
     {
       "id": "33d088f2-0c1d-4d4b-8df2-f06ec0d98dab",
       "slug": "tsmyd-mhmm-lgbr-mshvlb-avr-klva-vshrshrt-am-kvkb-mpldt-al-chld-btsypvy-shchvr-kvll-habzm-sgyrh-hbtychvty-9vluio",
