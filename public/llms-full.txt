@@ -197,6 +197,8 @@ Description: חנות התכשיטים האונליין שמציעה לך עיצ
 ## מוצרים מובילים
 
 
+טוען...
+
 
 צפה בכל המוצרים →
 
@@ -212,6 +214,8 @@ Description: חנות התכשיטים האונליין שמציעה לך עיצ
 
 ## קנו לפי קטגוריה
 
+
+טוען מוצרים...
 
 
 
@@ -2278,6 +2282,141 @@ Description: המוצרים שלנו - בלי עין הרע
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+טוען מוצרים...
 
 
 
@@ -5105,6 +5244,8 @@ Description: מוצרים - בלי עין הרע
 
 
 
+טוען מוצרים...
+
 
 
 
@@ -6602,6 +6743,15 @@ Description: בלי עין הרע - תודה שפנית אלינו
 ---
 
 ## Product Catalog
+
+### שרשרת תליון מגן דויד משולב זירקונים, כסוף עדין מטיטניום בשילוב זירקון פנימי מרחף ומסתובב
+URL: https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-mshvlb-zyrkvnym-ksvp-adyn-mtytnyvm-bshylvb-zyrkvn-pnymy-mrchp-vmstvbb-g5omoa
+Price: 105.00 ILS (sale, was 149.00 ILS)
+Availability: In stock
+SKU: 3052598580010-07053silv
+Brand: בלי עין הרע
+
+---
 
 ### צמיד עדין חבל מוזהב משולב חרוזים עם עין אדומה בציפוי זהב איכותי
 URL: https://www.bliainara.co.il/product/tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-advmh-btsypvy-zhb-aykvty-dnpvsr

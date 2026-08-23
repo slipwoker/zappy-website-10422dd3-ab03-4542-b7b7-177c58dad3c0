@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-08-22T14:05:43.784Z",
+  "generated_at": "2026-08-23T15:53:17.974Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 36,
+  "count": 37,
   "products": [
+    {
+      "id": "ee2c0b56-4287-4bda-a87a-59a30ffcb569",
+      "slug": "shrshrt-tlyvn-mgn-dvyd-mshvlb-zyrkvnym-ksvp-adyn-mtytnyvm-bshylvb-zyrkvn-pnymy-mrchp-vmstvbb-g5omoa",
+      "name": "שרשרת תליון מגן דויד משולב זירקונים, כסוף עדין מטיטניום בשילוב זירקון פנימי מרחף ומסתובב",
+      "name_translations": {
+        "en": "Star of David Pendant Necklace with Zircons, Delicate Silver Titanium with a Floating and Rotating Inner Zircon",
+        "he": "שרשרת תליון מגן דויד משולב זירקונים, כסוף עדין מטיטניום בשילוב זירקון פנימי מרחף ומסתובב"
+      },
+      "description": "",
+      "short_description": "שרשרת תליון מהמם, מנצנץ, עדין ומיוחד,ליום יום ולארועים",
+      "sku": "3052598580010-07053silv",
+      "brand": "בלי עין הרע",
+      "price": 105,
+      "base_price": 149,
+      "sale_price": 105,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1787500131910-n2a03g.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1787500217719-m8cvrp.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-mshvlb-zyrkvnym-ksvp-adyn-mtytnyvm-bshylvb-zyrkvn-pnymy-mrchp-vmstvbb-g5omoa",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-08-23T15:52:40.896Z"
+    },
     {
       "id": "53744734-10f6-4b6a-867c-5e5e5582cac0",
       "slug": "tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-advmh-btsypvy-zhb-aykvty-dnpvsr",
