@@ -1,17 +1,17 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-08-23T15:53:17.974Z",
+  "generated_at": "2026-08-23T15:54:15.206Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 37,
   "products": [
     {
       "id": "ee2c0b56-4287-4bda-a87a-59a30ffcb569",
-      "slug": "shrshrt-tlyvn-mgn-dvyd-mshvlb-zyrkvnym-ksvp-adyn-mtytnyvm-bshylvb-zyrkvn-pnymy-mrchp-vmstvbb-g5omoa",
-      "name": "שרשרת תליון מגן דויד משולב זירקונים, כסוף עדין מטיטניום בשילוב זירקון פנימי מרחף ומסתובב",
+      "slug": "shrshrt-tlyvn-mgn-dvyd-ktn-mshvlb-zyrkvnym-ksvp-adyn-mtytnyvm-bshylvb-zyrkvn-pnymy-mrchp-vmstvbb-civq8e",
+      "name": "שרשרת תליון מגן דויד קטן משולב זירקונים, כסוף עדין מטיטניום בשילוב זירקון פנימי מרחף ומסתובב",
       "name_translations": {
-        "en": "Star of David Pendant Necklace with Zircons, Delicate Silver Titanium with a Floating and Rotating Inner Zircon",
-        "he": "שרשרת תליון מגן דויד משולב זירקונים, כסוף עדין מטיטניום בשילוב זירקון פנימי מרחף ומסתובב"
+        "en": "Small Star of David Pendant Necklace with Zircons, Delicate Silver Titanium with Floating and Rotating Inner Zircon",
+        "he": "שרשרת תליון מגן דויד קטן משולב זירקונים, כסוף עדין מטיטניום בשילוב זירקון פנימי מרחף ומסתובב"
       },
       "description": "",
       "short_description": "שרשרת תליון מהמם, מנצנץ, עדין ומיוחד,ליום יום ולארועים",
@@ -27,11 +27,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-mshvlb-zyrkvnym-ksvp-adyn-mtytnyvm-bshylvb-zyrkvn-pnymy-mrchp-vmstvbb-g5omoa",
+      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-ktn-mshvlb-zyrkvnym-ksvp-adyn-mtytnyvm-bshylvb-zyrkvn-pnymy-mrchp-vmstvbb-civq8e",
       "categories": [
         "בלי עין הרע לנשים"
       ],
-      "updated_at": "2026-08-23T15:52:40.896Z"
+      "updated_at": "2026-08-23T15:53:40.338Z"
     },
     {
       "id": "53744734-10f6-4b6a-867c-5e5e5582cac0",
