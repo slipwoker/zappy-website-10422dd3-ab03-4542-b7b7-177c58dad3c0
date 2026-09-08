@@ -76,7 +76,17 @@ Information about WCAG compliance and accessibility features.
 
 ## Products
 
-**Total active products: 38**
+**Total active products: 39**
+
+### תליון בן פורת יוסף להגנה, סגולה וברכה נגד עין הרע מפלדת אל חלד, כסוף משובץ זירקון
+https://www.bliainara.co.il/product/tlyvn-bn-pvrt-yvsp-lhgnh-sgvlh-vbrkh-ngd-ayn-hra-mpldt-al-chld-ksvp-mshvbts-zyrkvn-p6dam6
+- Price: 105.00 ILS (sale, was 149.00 ILS)
+- Availability: In stock
+- Category: בלי עין הרע לגברים
+- SKU: 3109506115010-0603silv
+- Brand: בלי עין הרע
+- Description: תליון שרשרת מהמם אורך השרשרת כ-60 ס"מ, גודל התליון רוחב:2.5ס"מ, גובה 2.8ס"מ
+- Image: https://www.bliainara.co.il/assets/product-1788848659262-y9md.webp
 
 ### תליון בן פורת להגנה ברכה וסגולה נגד עין הרע מפלדת אל חלד כסוף
 https://www.bliainara.co.il/product/tlyvn-bn-pvrt-lhgnh-brkh-vsgvlh-ngd-ayn-hra-mpldt-al-chld-ksvp-ilm6k9

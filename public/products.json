@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-09-08T06:20:06.604Z",
+  "generated_at": "2026-09-08T06:34:01.021Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 38,
+  "count": 39,
   "products": [
+    {
+      "id": "b87c3a7f-1500-4997-873e-c3cc791f6e3d",
+      "slug": "tlyvn-bn-pvrt-yvsp-lhgnh-sgvlh-vbrkh-ngd-ayn-hra-mpldt-al-chld-ksvp-mshvbts-zyrkvn-p6dam6",
+      "name": "תליון בן פורת יוסף להגנה, סגולה וברכה נגד עין הרע מפלדת אל חלד, כסוף משובץ זירקון",
+      "name_translations": {
+        "en": "Ben Porat Yosef Pendant for Protection, Good Luck and Blessing Against the Evil Eye, Silver Stainless Steel with Zircon",
+        "he": "תליון בן פורת יוסף להגנה, סגולה וברכה נגד עין הרע מפלדת אל חלד, כסוף משובץ זירקון"
+      },
+      "description": "<p>תליון שרשרת מהמם להגנה,סגולה וברכה נגד עין הרע</p>",
+      "short_description": "תליון שרשרת מהמם אורך השרשרת כ-60 ס\"מ,  גודל התליון רוחב:2.5ס\"מ, גובה 2.8ס\"מ",
+      "sku": "3109506115010-0603silv",
+      "brand": "בלי עין הרע",
+      "price": 105,
+      "base_price": 149,
+      "sale_price": 105,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1788848659262-y9md.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1788848951141-9jzjdo.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tlyvn-bn-pvrt-yvsp-lhgnh-sgvlh-vbrkh-ngd-ayn-hra-mpldt-al-chld-ksvp-mshvbts-zyrkvn-p6dam6",
+      "categories": [
+        "בלי עין הרע לגברים"
+      ],
+      "updated_at": "2026-09-08T06:33:26.933Z"
+    },
     {
       "id": "6b807bf3-14ca-4413-807b-6352beeb099b",
       "slug": "tlyvn-bn-pvrt-lhgnh-brkh-vsgvlh-ngd-ayn-hra-mpldt-al-chld-ksvp-ilm6k9",
