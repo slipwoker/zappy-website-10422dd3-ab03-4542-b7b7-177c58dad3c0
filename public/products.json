@@ -1,10 +1,39 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-09-08T07:00:01.717Z",
+  "generated_at": "2026-09-08T07:21:08.973Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 41,
+  "count": 42,
   "products": [
+    {
+      "id": "13372a9c-02ad-481f-804f-efad1de9bb55",
+      "slug": "tsmyd-nchsh-shtvch-3-tsbaym-adyn-vmyvchd-mpldt-al-chld-ksvp-mshvlbym-btsypvy-rvz-gvld-vzhb-tshvb-amyd-3yxlrc",
+      "name": "צמיד נחש שטוח 3 צבעים  עדין ומיוחד מפלדת אל חלד כסוף משולבים בציפוי רוז גולד וזהב צהוב עמיד",
+      "name_translations": {
+        "en": "Flat Snake Bracelet 3 Colors Delicate and Unique Made of Stainless Steel Silver Combined with Rose Gold and Yellow Gold Plating Durable",
+        "he": "צמיד נחש שטוח 3 צבעים  עדין ומיוחד מפלדת אל חלד כסוף משולבים בציפוי רוז גולד וזהב צהוב עמיד"
+      },
+      "description": "<p>צמיד עדין נחש שטוח 3 צבעים עמיד,מתאים ליום יום וארועים</p>",
+      "short_description": "צמיד מיוחד ומהמם משולב 3 צבעים אורך כ- 17+5 ס\"מ. מתאים ליום יום ולארועים",
+      "sku": "3117344875010-06063",
+      "brand": "בלי עין הרע",
+      "price": 109,
+      "base_price": 169,
+      "sale_price": 109,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1788851324389-doahcj.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1788851834454-7ztnqm.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1788851617734-9x16qm.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tsmyd-nchsh-shtvch-3-tsbaym-adyn-vmyvchd-mpldt-al-chld-ksvp-mshvlbym-btsypvy-rvz-gvld-vzhb-tshvb-amyd-3yxlrc",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-09-08T07:20:56.410Z"
+    },
     {
       "id": "8d59c12b-e4e4-41b5-8eb4-5990fe5e7c7f",
       "slug": "tlyvn-shrshrt-bn-pvrt-yvsp-mpldt-al-chld-btsypvy-zhb-amyd-vyro4w",
