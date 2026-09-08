@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-09-08T06:35:11.011Z",
+  "generated_at": "2026-09-08T06:49:01.105Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 39,
+  "count": 40,
   "products": [
+    {
+      "id": "1e427e78-2a2f-4c59-a4e6-afd6203a4712",
+      "slug": "tlyvn-shrshrt-bn-pvrt-yvsp-mpldt-al-chld-btsypvy-zhb-amyd-gtr5f0",
+      "name": "תליון שרשרת בן פורת יוסף מפלדת אל חלד בציפוי זהב עמיד",
+      "name_translations": {
+        "en": "Ben Porat Yosef Stainless Steel Necklace Pendant with Durable Gold Plating",
+        "he": "תליון שרשרת בן פורת יוסף מפלדת אל חלד בציפוי זהב עמיד"
+      },
+      "description": "<p>תליון שרשרת מהמם מפלדת אל חלד בציפוי זהב עמיד להגנה, סגולה וברכה נגד עין הרע</p>",
+      "short_description": "תליון שרשרת להגנה,סגולה וברכה נגד עין הרע, אורך השרשרת כ-60 ס\"מ, גודל תליון רוחב 2.5ס\"מ, גובה 2.7ס\"מ",
+      "sku": "3109506115010-0603gold",
+      "brand": "בלי עין הרע",
+      "price": 115,
+      "base_price": 159,
+      "sale_price": 115,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1788849698740-zjpsya.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1788849938073-6d7ord.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tlyvn-shrshrt-bn-pvrt-yvsp-mpldt-al-chld-btsypvy-zhb-amyd-gtr5f0",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-09-08T06:48:31.706Z"
+    },
     {
       "id": "b87c3a7f-1500-4997-873e-c3cc791f6e3d",
       "slug": "tlyvn-bn-pvrt-yvsp-lhgnh-sgvlh-vbrkh-ngd-ayn-hra-mpldt-al-chld-ksvp-mshvbts-zyrkvn-ddu08h",
