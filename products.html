@@ -399,10 +399,14 @@
     return 'zappy_purchase_fired_' + String(orderId || '');
   }
 
+  function purchaseMetaDedupKey(orderId) {
+    return 'zappy_purchase_meta_fired_' + String(orderId || '');
+  }
+
   function alreadyFiredPurchase(orderId) {
     if (!orderId) return false;
     try {
-      return sessionStorage.getItem(purchaseDedupKey(orderId)) === '1';
+      return window.sessionStorage.getItem(purchaseDedupKey(orderId)) === '1';
     } catch (e) {
       return false;
     }
@@ -410,8 +414,77 @@
 
   function markPurchaseFired(orderId) {
     if (!orderId) return;
-    try { sessionStorage.setItem(purchaseDedupKey(orderId), '1'); } catch (e) {}
+    try { window.sessionStorage.setItem(purchaseDedupKey(orderId), '1'); } catch (e) {}
   }
+
+  function alreadyFiredPurchaseMeta(orderId) {
+    if (!orderId) return false;
+    try {
+      return window.sessionStorage.getItem(purchaseMetaDedupKey(orderId)) === '1';
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function markPurchaseMetaFired(orderId) {
+    if (!orderId) return;
+    try { window.sessionStorage.setItem(purchaseMetaDedupKey(orderId), '1'); } catch (e) {}
+  }
+
+  function getPendingMetaEvents() {
+    try {
+      if (!Array.isArray(window.__zappyPendingMetaEvents)) {
+        window.__zappyPendingMetaEvents = [];
+      }
+      return window.__zappyPendingMetaEvents;
+    } catch (e) {
+      return [];
+    }
+  }
+
+  function enqueueMetaEvent(eventName, params, orderId) {
+    var q = getPendingMetaEvents();
+    if (orderId) {
+      for (var i = 0; i < q.length; i++) {
+        if (q[i] && q[i].orderId === orderId && q[i].eventName === eventName) return;
+      }
+    }
+    q.push({ eventName: eventName, params: params || {}, orderId: orderId || null });
+  }
+
+  /**
+   * Live sites replace the eager Meta snippet with a consent-gated lazy
+   * loader. Payment providers bounce the shopper back to /order-success
+   * before CookieConsent hydrates, so confirm-order used to fire Purchase
+   * while window.fbq was still undefined — then sessionStorage blocked a
+   * retry. Queue until fbq exists, then flush.
+   */
+  function flushPendingMetaEvents() {
+    if (typeof window.fbq !== 'function') return;
+    var q = getPendingMetaEvents().slice();
+    try { window.__zappyPendingMetaEvents = []; } catch (e) {}
+    for (var i = 0; i < q.length; i++) {
+      var item = q[i];
+      if (!item || !item.eventName) continue;
+      if (item.orderId && alreadyFiredPurchaseMeta(item.orderId)) continue;
+      try {
+        window.fbq('track', item.eventName, item.params || {});
+        if (item.orderId) markPurchaseMetaFired(item.orderId);
+      } catch (e2) {}
+    }
+  }
+  window.zappyFlushPendingMetaEvents = flushPendingMetaEvents;
+
+  var metaFlushAttempts = 0;
+  var metaFlushTimer = setInterval(function() {
+    metaFlushAttempts++;
+    flushPendingMetaEvents();
+    var pendingLen = 0;
+    try { pendingLen = (window.__zappyPendingMetaEvents || []).length; } catch (e) {}
+    if ((pendingLen === 0 && typeof window.fbq === 'function') || metaFlushAttempts > 60) {
+      clearInterval(metaFlushTimer);
+    }
+  }, 500);
 
   /**
    * Fire a marketing event to first-party analytics + GA4/GTM/Meta when present.
@@ -431,15 +504,19 @@
         metadata.pagePath = pagePath();
       }
 
+      var oid = '';
+      var purchaseAlreadySent = false;
+      var purchaseMetaAlreadySent = false;
       if (eventId === 'checkout_complete') {
-        var oid = String(metadata.orderId || metadata.order_id || metadata.transaction_id || '');
-        if (oid && alreadyFiredPurchase(oid)) return;
-        if (oid) markPurchaseFired(oid);
+        oid = String(metadata.orderId || metadata.order_id || metadata.transaction_id || '');
+        purchaseAlreadySent = !!(oid && alreadyFiredPurchase(oid));
+        purchaseMetaAlreadySent = !!(oid && alreadyFiredPurchaseMeta(oid));
+        if (purchaseAlreadySent && purchaseMetaAlreadySent) return;
       }
 
       // First-party (skip when already tracked via zappyTrackEcomAnalytics path
       // that opts out, or when caller already recorded under a different name)
-      if (!opts.skipFirstParty) {
+      if (!opts.skipFirstParty && !purchaseAlreadySent) {
         try {
           if (window.zappyAnalytics && typeof window.zappyAnalytics.track === 'function') {
             window.zappyAnalytics.track(eventId, metadata);
@@ -448,40 +525,53 @@
       }
 
       // GTM / dataLayer — platform-standard ecommerce event names
-      try {
-        window.dataLayer = window.dataLayer || [];
-        if (plat.ecom) {
-          var ga4ForGtm = buildGa4Params(eventId, metadata);
-          var ecommerce = {};
-          if (ga4ForGtm.transaction_id) ecommerce.transaction_id = ga4ForGtm.transaction_id;
-          if (ga4ForGtm.value != null) ecommerce.value = ga4ForGtm.value;
-          if (ga4ForGtm.currency) ecommerce.currency = ga4ForGtm.currency;
-          if (ga4ForGtm.items) ecommerce.items = ga4ForGtm.items;
-          window.dataLayer.push({ event: plat.gtm, ecommerce: ecommerce });
-          // Secondary Zappy-specific trigger for merchants who want it
-          if (eventId === 'checkout_complete' || eventId === 'checkout_started') {
-            window.dataLayer.push({ event: eventId, ecommerce: ecommerce });
+      if (!purchaseAlreadySent) {
+        try {
+          window.dataLayer = window.dataLayer || [];
+          if (plat.ecom) {
+            var ga4ForGtm = buildGa4Params(eventId, metadata);
+            var ecommerce = {};
+            if (ga4ForGtm.transaction_id) ecommerce.transaction_id = ga4ForGtm.transaction_id;
+            if (ga4ForGtm.value != null) ecommerce.value = ga4ForGtm.value;
+            if (ga4ForGtm.currency) ecommerce.currency = ga4ForGtm.currency;
+            if (ga4ForGtm.items) ecommerce.items = ga4ForGtm.items;
+            window.dataLayer.push({ event: plat.gtm, ecommerce: ecommerce });
+            // Secondary Zappy-specific trigger for merchants who want it
+            if (eventId === 'checkout_complete' || eventId === 'checkout_started') {
+              window.dataLayer.push({ event: eventId, ecommerce: ecommerce });
+            }
+          } else {
+            var dl = { event: plat.gtm };
+            for (var k in metadata) {
+              if (Object.prototype.hasOwnProperty.call(metadata, k)) dl[k] = metadata[k];
+            }
+            window.dataLayer.push(dl);
           }
+        } catch (e2) {}
+
+        // GA4 gtag
+        try {
+          if (typeof window.gtag === 'function') {
+            window.gtag('event', plat.ga4, buildGa4Params(eventId, metadata));
+          }
+        } catch (e3) {}
+
+        if (oid) markPurchaseFired(oid);
+      }
+
+      // Meta Pixel — live sites lazy-load fbq after marketing consent. If the
+      // stub is not defined yet, queue and flush when the pixel arrives.
+      try {
+        if (purchaseMetaAlreadySent) {
+          // already delivered to Meta
         } else {
-          var dl = { event: plat.gtm };
-          for (var k in metadata) {
-            if (Object.prototype.hasOwnProperty.call(metadata, k)) dl[k] = metadata[k];
+          var metaParams = buildMetaParams(eventId, metadata);
+          if (typeof window.fbq === 'function') {
+            window.fbq('track', plat.meta, metaParams);
+            if (oid) markPurchaseMetaFired(oid);
+          } else {
+            enqueueMetaEvent(plat.meta, metaParams, eventId === 'checkout_complete' ? oid : null);
           }
-          window.dataLayer.push(dl);
-        }
-      } catch (e2) {}
-
-      // GA4 gtag
-      try {
-        if (typeof window.gtag === 'function') {
-          window.gtag('event', plat.ga4, buildGa4Params(eventId, metadata));
-        }
-      } catch (e3) {}
-
-      // Meta Pixel (only when fbq is loaded — consent-gated lazy loader)
-      try {
-        if (typeof window.fbq === 'function') {
-          window.fbq('track', plat.meta, buildMetaParams(eventId, metadata));
         }
       } catch (e4) {}
     } catch (err) {}
@@ -597,7 +687,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="מוצרים" />
     <meta name="twitter:description" content="המוצרים שלנו - בלי עין הרע" />
-    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://www.bliainara.co.il#organization","name":"בלי עין הרע","url":"https://www.bliainara.co.il","description":"An online jewelry store offering high-quality jewelry for both women and men at affordable prices. The brand positions itself around the concept of accessible luxury — premium craftsmanship without the premium price tag. The store caters to a broad audience seeking elegant, well-made pieces that don't break the bank.","address":{"@type":"PostalAddress","streetAddress":"החשמל 9, עפולה, צפון, 1827109, ישראל"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"bliainara.service@gmail.com","telephone":"0554609960","availableLanguage":["en","he"]}]},{"@type":"WebSite","@id":"https://www.bliainara.co.il#website","url":"https://www.bliainara.co.il","name":"בלי עין הרע","publisher":{"@id":"https://www.bliainara.co.il#organization"},"inLanguage":"he"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.bliainara.co.il"},{"@type":"ListItem","position":2,"name":"Products","item":"https://www.bliainara.co.il/products"}]},{"@type":"ItemList","@id":"https://www.bliainara.co.il/products#itemlist","numberOfItems":37,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-ktn-mshvlb-zyrkvnym-ksvp-adyn-mtytnyvm-bshylvb-zyrkvn-pnymy-mrchp-vmstvbb-civq8e","name":"שרשרת תליון מגן דויד קטן משולב זירקונים, כסוף עדין מטיטניום בשילוב זירקון פנימי מרחף ומסתובב"},{"@type":"ListItem","position":2,"url":"https://www.bliainara.co.il/product/tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-advmh-btsypvy-zhb-aykvty-dnpvsr","name":"צמיד עדין חבל מוזהב משולב חרוזים עם עין אדומה בציפוי זהב איכותי"},{"@type":"ListItem","position":3,"url":"https://www.bliainara.co.il/product/tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-tklt-btsypvy-zhb-aykvty-2hbtq8","name":"צמיד עדין חבל מוזהב משולב חרוזים עם עין תכלת בציפוי זהב איכותי"},{"@type":"ListItem","position":4,"url":"https://www.bliainara.co.il/product/tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-kchvlh-mpldt-al-chld-btsypvy-zhb-aykvty-kkk8yt","name":"צמיד עדין חבל מוזהב משולב חרוזים עם עין כחולה מפלדת אל חלד בציפוי זהב איכותי"},{"@type":"ListItem","position":5,"url":"https://www.bliainara.co.il/product/tsmyd-mhmm-lgbr-mshvlb-avr-klva-vshrshrt-am-kvkb-mpldt-al-chld-btsypvy-shchvr-kvll-habzm-sgyrh-hbtychvty-9vluio","name":"צמיד מהמם לגבר משולב עור קלוע ושרשרת עם כוכב מפלדת אל חלד בציפוי שחור כולל האבזם סגירה הבטיחותי"},{"@type":"ListItem","position":6,"url":"https://www.bliainara.co.il/product/tsmyd-mhmm-lgbr-mshvlb-avr-klva-bchlkv-vshrshrt-am-kvkb-mpldt-al-chld-vabzm-sgyrh-btychvty-clkw8g","name":"צמיד מהמם לגבר משולב עור קלוע בחלקו ושרשרת עם כוכב מפלדת אל חלד ואבזם סגירה בטיחותי"},{"@type":"ListItem","position":7,"url":"https://www.bliainara.co.il/product/tsmyd-yd-lgbr-hahvb-k-21sm-mshvlb-avr-vpldt-al-chld-chtsy-ksvp-vchtsy-shchvr-am-chrytt-hmylh-love-28sqcp","name":"צמיד יד לגבר האהוב, כ-21ס\"מ משולב עור ופלדת אל חלד חצי כסוף וחצי שחור עם חריטת המילה love"},{"@type":"ListItem","position":8,"url":"https://www.bliainara.co.il/product/tsmyd-yd-lgbr-k-21-sm-mshvlb-avr-vkyshvty-pldt-al-chld-chtsy-ksvp-vchtsy-shchvr-x73eyo","name":"צמיד יד לגבר כ-21 ס\"מ משולב עור וקישוטי פלדת אל חלד חצי כסוף וחצי שחור"},{"@type":"ListItem","position":9,"url":"https://www.bliainara.co.il/product/tsmyd-yd-lgbr-k-21sm-mshvlb-avr-vkyshvty-pldt-al-chld-vabzm-sgyrh-btychvty-wgbzzd","name":"צמיד יד לגבר כ-21ס\"מ משולב עור וקישוטי פלדת אל חלד ואבזם סגירה בטיחותי"},{"@type":"ListItem","position":10,"url":"https://www.bliainara.co.il/product/tlyvn-mrchp-mhmm-mshvbts-zyrkvn-yvkrty-dmvy-yhlvm-bkvtr-08sm-a2ebfp","name":"תליון מרחף מהמם משובץ זירקון יוקרתי דמוי יהלום בקוטר 0.8ס\"מ"},{"@type":"ListItem","position":11,"url":"https://www.bliainara.co.il/product/tsmyd-tbat-tnys-yvkrtyym-mshvbts-zyrkvnym-mtsvpym-zhb-aykvty-mpldt-al-chld-anypqq","name":"צמיד טבעת טניס יוקרתיים משובץ זירקונים מצופים זהב איכותי מפלדת אל חלד"},{"@type":"ListItem","position":12,"url":"https://www.bliainara.co.il/product/tsmyd-tbat-mshvlshym-mhmm-adyn-mshvlb-shybvtsy-zyrkvnym-mpldt-al-chld-lish5v","name":"צמיד טבעת משולשים מהמם, עדין משולב שיבוצי זירקונים מפלדת אל חלד"},{"@type":"ListItem","position":13,"url":"https://www.bliainara.co.il/product/tsmyd-tbat-prchym-vbvddym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-btsypvy-zhb-aykvty-ittgu5","name":"צמיד טבעת פרחים ובודדים משובצים זירקונים מנצנצים מפלדת אל חלד בציפוי זהב איכותי"},{"@type":"ListItem","position":14,"url":"https://www.bliainara.co.il/product/tsmyd-tbat-mavynym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-btsypvy-zhb-aykvty-qy3ds9","name":"צמיד טבעת מעוינים משובצים זירקונים מנצנצים מפלדת אל חלד בציפוי זהב איכותי"},{"@type":"ListItem","position":15,"url":"https://www.bliainara.co.il/product/tsmyd-tbat-mavynym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-ksvpym-4zla27","name":"צמיד טבעת מעוינים משובצים זירקונים מנצנצים מפלדת אל חלד כסופים "},{"@type":"ListItem","position":16,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-agvl-ayn-hra-mpldt-al-chld-btsypvy-zhb-aykvty-lshmyrh-vhgnh-mayn-hra-gxe9jj","name":"שרשרת תליון עגול עין הרע מפלדת אל חלד בציפוי זהב איכותי לשמירה והגנה מעין הרע"},{"@type":"ListItem","position":17,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-ayn-hra-agvlh-kchvlh-mpldt-al-chld-ksvph-lshmyrh-vhgnh-mayn-hra-xg7y9r","name":"שרשרת תליון עין הרע עגולה כחולה מפלדת אל חלד כסופה לשמירה והגנה מעין הרע"},{"@type":"ListItem","position":18,"url":"https://www.bliainara.co.il/product/shrshrt-lgbr-babvdt-yd-mklypvt-kvkvs-tbayym-chrvzy-ats-vabnym-tbayvt-btsba-kchvl-khh-o5fgep","name":"שרשרת לגבר בעבודת יד מקליפות קוקוס טבעיים חרוזי עץ ואבנים טבעיות בצבע כחול כהה"},{"@type":"ListItem","position":19,"url":"https://www.bliainara.co.il/product/shrshrt-lgbr-abvdt-yd-mklypvt-kvkvs-tbayym-chrvzy-ats-vabnym-tbayvt-btsba-kchvl-mnth-siq82c","name":"שרשרת לגבר עבודת יד מקליפות קוקוס טבעיים חרוזי עץ ואבנים טבעיות בצבע כחול מנטה"},{"@type":"ListItem","position":20,"url":"https://www.bliainara.co.il/product/shrshrt-lgbr-mklypvt-kvkvs-tbayym-bshylvb-chrvzy-ats-vabnym-tbayvt-btsba-yrvk-mnth-5pg10z","name":"שרשרת לגבר מקליפות קוקוס טבעיים בשילוב חרוזי עץ ואבנים טבעיות בצבע ירוק מנטה"},{"@type":"ListItem","position":21,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-mavdnym-mpt-yshral-bshylvb-mgn-dvyd-adyn-mpldt-al-chld-btsypvy-zhb-aykvty-9595bs","name":"שרשרת תליון מעודנים ,מפת ישראל בשילוב מגן דויד עדין מפלדת אל חלד בציפוי זהב איכותי"},{"@type":"ListItem","position":22,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-ksvpym-mpt-yshral-mshvlbt-mgn-dvyd-adyn-mpldt-al-chld-tkf01h","name":"שרשרת תליון כסופים, מפת ישראל משולבת מגן דויד עדין מפלדת אל חלד"},{"@type":"ListItem","position":23,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-chy-mpldt-al-chld-mtsvpym-zhb-aykvty-lbrkharykvt-ymymshpa-vhgnh-szhxc6","name":"שרשרת תליון חי מפלדת אל חלד מצופים זהב איכותי לברכה,אריכות ימים,שפע והגנה"},{"@type":"ListItem","position":24,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-chy-mpldt-al-chld-ksvpym-lbrkharykvt-ymymshpa-vhgnh-hhxww0","name":"שרשרת תליון חי מפלדת אל חלד כסופים לברכה,אריכות ימים,שפע והגנה"},{"@type":"ListItem","position":25,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-agvl-shma-yshral-mpldt-al-chld-mtsvpym-zhb-aykvty-lbrkhshmyrh-vhgnh-8ob4yg","name":"שרשרת תליון עגול שמע ישראל מפלדת אל חלד מצופים זהב איכותי לברכה,שמירה והגנה"},{"@type":"ListItem","position":26,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-agvl-shma-yshral-mpldt-al-chld-ksvpym-lbrkh-shmyrh-vhgnh-dlqd5l","name":"שרשרת תליון עגול שמע ישראל מפלדת אל חלד כסופים לברכה, שמירה והגנה"},{"@type":"ListItem","position":27,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-mpldt-al-chld-btsypvy-zhb-aykvty-rvchb26sm-avrk-29sm-g8gd94","name":"שרשרת תליון מגן דויד מפלדת אל חלד בציפוי זהב איכותי, רוחב:2.6ס\"מ, אורך: 2.9ס\"מ"},{"@type":"ListItem","position":28,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-mpldt-al-chld-ksvp-gdvl-rvchb26sm-gvbh29sm-904sal","name":"שרשרת תליון מגן דויד מפלדת אל חלד כסוף גדול, רוחב:2.6ס\"מ, גובה:2.9ס\"מ"},{"@type":"ListItem","position":29,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-brkt-hkhnym-mpldt-al-chld-btsypvy-zhb-aykvty-v8sbz3","name":"שרשרת תליון ברכת הכהנים מפלדת אל חלד בציפוי זהב איכותי"},{"@type":"ListItem","position":30,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-brkt-hkhnym-mpldt-al-chld-ieg84k","name":"שרשרת תליון ברכת הכהנים מפלדת אל חלד "},{"@type":"ListItem","position":31,"url":"https://www.bliainara.co.il/product/shrshrt-am-tlyvn-mgn-dvyd-agvl-adyn-mtsvpym-zhb-aykvty-mshvbts-babny-zyrkvn-msbyb-z9g2sn","name":"שרשרת עם תליון מגן דויד עגול עדין מצופים זהב איכותי משובץ באבני זירקון מסביב"},{"@type":"ListItem","position":32,"url":"https://www.bliainara.co.il/product/shrshrt-am-tlyvn-mgn-dvyd-agvl-adyn-mshvbts-babny-zyrkvn-msbyb-vy2lgf","name":"שרשרת עם תליון מגן דויד עגול עדין משובץ באבני זירקון מסביב"},{"@type":"ListItem","position":33,"url":"https://www.bliainara.co.il/product/tsmyd-mhmm-chvm-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-2myzgd","name":"צמיד מהמם חום קלוע בעבודת יד בשילוב אבני עין הנמר המיוחדות"},{"@type":"ListItem","position":34,"url":"https://www.bliainara.co.il/product/tsmyd-mhmm-lbn-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-rbkiem","name":"צמיד מהמם לבן קלוע בעבודת יד בשילוב אבני עין הנמר המיוחדות"},{"@type":"ListItem","position":35,"url":"https://www.bliainara.co.il/product/tsmyd-mhmm-shchvr-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-lxvzsm","name":"צמיד מהמם שחור קלוע בעבודת יד בשילוב אבני עין הנמר המיוחדות"},{"@type":"ListItem","position":36,"url":"https://www.bliainara.co.il/product/tsmyd-chvm-mshvlb-klva-aykvty-babvdt-yd-lgbrsgyrh-mgntyt-mpldt-al-chld-btvchh-861jss","name":"צמיד חום משולב קלוע איכותי בעבודת יד לגבר,סגירה מגנטית מפלדת אל חלד בטוחה"},{"@type":"ListItem","position":37,"url":"https://www.bliainara.co.il/product/tsmyd-shchvr-mshvlb-klva-aykvty-babvdt-yd-lgbr-sgyrh-mgntyt-mpldt-al-chld-btvchh-copy-zyhh0a","name":"צמיד שחור משולב קלוע איכותי בעבודת יד לגבר סגירה מגנטית מפלדת אל חלד בטוחה (Copy)"}]}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"LocalBusiness","@id":"https://www.bliainara.co.il#organization","name":"בלי עין הרע","url":"https://www.bliainara.co.il","description":"An online jewelry store offering high-quality jewelry for both women and men at affordable prices. The brand positions itself around the concept of accessible luxury — premium craftsmanship without the premium price tag. The store caters to a broad audience seeking elegant, well-made pieces that don't break the bank.","address":{"@type":"PostalAddress","streetAddress":"החשמל 9, עפולה, צפון, 1827109, ישראל"},"contactPoint":[{"@type":"ContactPoint","contactType":"customer service","email":"bliainara.service@gmail.com","telephone":"0554609960","availableLanguage":["en","he"]}]},{"@type":"WebSite","@id":"https://www.bliainara.co.il#website","url":"https://www.bliainara.co.il","name":"בלי עין הרע","publisher":{"@id":"https://www.bliainara.co.il#organization"},"inLanguage":"he"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.bliainara.co.il"},{"@type":"ListItem","position":2,"name":"Products","item":"https://www.bliainara.co.il/products"}]},{"@type":"ItemList","@id":"https://www.bliainara.co.il/products#itemlist","numberOfItems":42,"itemListElement":[{"@type":"ListItem","position":1,"url":"https://www.bliainara.co.il/product/tsmyd-nchsh-shtvch-3-tsbaym-adyn-vmyvchd-mpldt-al-chld-ksvp-mshvlbym-btsypvy-rvz-gvld-vzhb-tshvb-amyd-3yxlrc","name":"צמיד נחש שטוח 3 צבעים  עדין ומיוחד מפלדת אל חלד כסוף משולבים בציפוי רוז גולד וזהב צהוב עמיד"},{"@type":"ListItem","position":2,"url":"https://www.bliainara.co.il/product/tlyvn-shrshrt-bn-pvrt-yvsp-mpldt-al-chld-btsypvy-zhb-amyd-vyro4w","name":"תליון שרשרת בן פורת יוסף מפלדת אל חלד בציפוי זהב עמיד"},{"@type":"ListItem","position":3,"url":"https://www.bliainara.co.il/product/tlyvn-shrshrt-bn-pvrt-yvsp-mpldt-al-chld-btsypvy-zhb-amyd-gtr5f0","name":"תליון שרשרת בן פורת יוסף מפלדת אל חלד בציפוי זהב עמיד"},{"@type":"ListItem","position":4,"url":"https://www.bliainara.co.il/product/tlyvn-bn-pvrt-yvsp-lhgnh-sgvlh-vbrkh-ngd-ayn-hra-mpldt-al-chld-ksvp-mshvbts-zyrkvn-ddu08h","name":"תליון בן פורת יוסף להגנה, סגולה וברכה נגד עין הרע מפלדת אל חלד, כסוף משובץ זירקון"},{"@type":"ListItem","position":5,"url":"https://www.bliainara.co.il/product/tlyvn-bn-pvrt-lhgnh-brkh-vsgvlh-ngd-ayn-hra-mpldt-al-chld-ksvp-ilm6k9","name":"תליון בן פורת להגנה ברכה וסגולה נגד עין הרע מפלדת אל חלד כסוף"},{"@type":"ListItem","position":6,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-ktn-mshvlb-zyrkvnym-ksvp-adyn-mtytnyvm-bshylvb-zyrkvn-pnymy-mrchp-vmstvbb-civq8e","name":"שרשרת תליון מגן דויד קטן משולב זירקונים, כסוף עדין מטיטניום בשילוב זירקון פנימי מרחף ומסתובב"},{"@type":"ListItem","position":7,"url":"https://www.bliainara.co.il/product/tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-advmh-btsypvy-zhb-aykvty-dnpvsr","name":"צמיד עדין חבל מוזהב משולב חרוזים עם עין אדומה בציפוי זהב איכותי"},{"@type":"ListItem","position":8,"url":"https://www.bliainara.co.il/product/tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-tklt-btsypvy-zhb-aykvty-2hbtq8","name":"צמיד עדין חבל מוזהב משולב חרוזים עם עין תכלת בציפוי זהב איכותי"},{"@type":"ListItem","position":9,"url":"https://www.bliainara.co.il/product/tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-kchvlh-mpldt-al-chld-btsypvy-zhb-aykvty-kkk8yt","name":"צמיד עדין חבל מוזהב משולב חרוזים עם עין כחולה מפלדת אל חלד בציפוי זהב איכותי"},{"@type":"ListItem","position":10,"url":"https://www.bliainara.co.il/product/tsmyd-mhmm-lgbr-mshvlb-avr-klva-vshrshrt-am-kvkb-mpldt-al-chld-btsypvy-shchvr-kvll-habzm-sgyrh-hbtychvty-9vluio","name":"צמיד מהמם לגבר משולב עור קלוע ושרשרת עם כוכב מפלדת אל חלד בציפוי שחור כולל האבזם סגירה הבטיחותי"},{"@type":"ListItem","position":11,"url":"https://www.bliainara.co.il/product/tsmyd-mhmm-lgbr-mshvlb-avr-klva-bchlkv-vshrshrt-am-kvkb-mpldt-al-chld-vabzm-sgyrh-btychvty-clkw8g","name":"צמיד מהמם לגבר משולב עור קלוע בחלקו ושרשרת עם כוכב מפלדת אל חלד ואבזם סגירה בטיחותי"},{"@type":"ListItem","position":12,"url":"https://www.bliainara.co.il/product/tsmyd-yd-lgbr-hahvb-k-21sm-mshvlb-avr-vpldt-al-chld-chtsy-ksvp-vchtsy-shchvr-am-chrytt-hmylh-love-28sqcp","name":"צמיד יד לגבר האהוב, כ-21ס\"מ משולב עור ופלדת אל חלד חצי כסוף וחצי שחור עם חריטת המילה love"},{"@type":"ListItem","position":13,"url":"https://www.bliainara.co.il/product/tsmyd-yd-lgbr-k-21-sm-mshvlb-avr-vkyshvty-pldt-al-chld-chtsy-ksvp-vchtsy-shchvr-x73eyo","name":"צמיד יד לגבר כ-21 ס\"מ משולב עור וקישוטי פלדת אל חלד חצי כסוף וחצי שחור"},{"@type":"ListItem","position":14,"url":"https://www.bliainara.co.il/product/tsmyd-yd-lgbr-k-21sm-mshvlb-avr-vkyshvty-pldt-al-chld-vabzm-sgyrh-btychvty-wgbzzd","name":"צמיד יד לגבר כ-21ס\"מ משולב עור וקישוטי פלדת אל חלד ואבזם סגירה בטיחותי"},{"@type":"ListItem","position":15,"url":"https://www.bliainara.co.il/product/tlyvn-mrchp-mhmm-mshvbts-zyrkvn-yvkrty-dmvy-yhlvm-bkvtr-08sm-a2ebfp","name":"תליון מרחף מהמם משובץ זירקון יוקרתי דמוי יהלום בקוטר 0.8ס\"מ"},{"@type":"ListItem","position":16,"url":"https://www.bliainara.co.il/product/tsmyd-tbat-tnys-yvkrtyym-mshvbts-zyrkvnym-mtsvpym-zhb-aykvty-mpldt-al-chld-anypqq","name":"צמיד טבעת טניס יוקרתיים משובץ זירקונים מצופים זהב איכותי מפלדת אל חלד"},{"@type":"ListItem","position":17,"url":"https://www.bliainara.co.il/product/tsmyd-tbat-mshvlshym-mhmm-adyn-mshvlb-shybvtsy-zyrkvnym-mpldt-al-chld-lish5v","name":"צמיד טבעת משולשים מהמם, עדין משולב שיבוצי זירקונים מפלדת אל חלד"},{"@type":"ListItem","position":18,"url":"https://www.bliainara.co.il/product/tsmyd-tbat-prchym-vbvddym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-btsypvy-zhb-aykvty-ittgu5","name":"צמיד טבעת פרחים ובודדים משובצים זירקונים מנצנצים מפלדת אל חלד בציפוי זהב איכותי"},{"@type":"ListItem","position":19,"url":"https://www.bliainara.co.il/product/tsmyd-tbat-mavynym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-btsypvy-zhb-aykvty-qy3ds9","name":"צמיד טבעת מעוינים משובצים זירקונים מנצנצים מפלדת אל חלד בציפוי זהב איכותי"},{"@type":"ListItem","position":20,"url":"https://www.bliainara.co.il/product/tsmyd-tbat-mavynym-mshvbtsym-zyrkvnym-mntsntsym-mpldt-al-chld-ksvpym-4zla27","name":"צמיד טבעת מעוינים משובצים זירקונים מנצנצים מפלדת אל חלד כסופים "},{"@type":"ListItem","position":21,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-agvl-ayn-hra-mpldt-al-chld-btsypvy-zhb-aykvty-lshmyrh-vhgnh-mayn-hra-gxe9jj","name":"שרשרת תליון עגול עין הרע מפלדת אל חלד בציפוי זהב איכותי לשמירה והגנה מעין הרע"},{"@type":"ListItem","position":22,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-ayn-hra-agvlh-kchvlh-mpldt-al-chld-ksvph-lshmyrh-vhgnh-mayn-hra-xg7y9r","name":"שרשרת תליון עין הרע עגולה כחולה מפלדת אל חלד כסופה לשמירה והגנה מעין הרע"},{"@type":"ListItem","position":23,"url":"https://www.bliainara.co.il/product/shrshrt-lgbr-babvdt-yd-mklypvt-kvkvs-tbayym-chrvzy-ats-vabnym-tbayvt-btsba-kchvl-khh-o5fgep","name":"שרשרת לגבר בעבודת יד מקליפות קוקוס טבעיים חרוזי עץ ואבנים טבעיות בצבע כחול כהה"},{"@type":"ListItem","position":24,"url":"https://www.bliainara.co.il/product/shrshrt-lgbr-abvdt-yd-mklypvt-kvkvs-tbayym-chrvzy-ats-vabnym-tbayvt-btsba-kchvl-mnth-siq82c","name":"שרשרת לגבר עבודת יד מקליפות קוקוס טבעיים חרוזי עץ ואבנים טבעיות בצבע כחול מנטה"},{"@type":"ListItem","position":25,"url":"https://www.bliainara.co.il/product/shrshrt-lgbr-mklypvt-kvkvs-tbayym-bshylvb-chrvzy-ats-vabnym-tbayvt-btsba-yrvk-mnth-5pg10z","name":"שרשרת לגבר מקליפות קוקוס טבעיים בשילוב חרוזי עץ ואבנים טבעיות בצבע ירוק מנטה"},{"@type":"ListItem","position":26,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-mavdnym-mpt-yshral-bshylvb-mgn-dvyd-adyn-mpldt-al-chld-btsypvy-zhb-aykvty-9595bs","name":"שרשרת תליון מעודנים ,מפת ישראל בשילוב מגן דויד עדין מפלדת אל חלד בציפוי זהב איכותי"},{"@type":"ListItem","position":27,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-ksvpym-mpt-yshral-mshvlbt-mgn-dvyd-adyn-mpldt-al-chld-tkf01h","name":"שרשרת תליון כסופים, מפת ישראל משולבת מגן דויד עדין מפלדת אל חלד"},{"@type":"ListItem","position":28,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-chy-mpldt-al-chld-mtsvpym-zhb-aykvty-lbrkharykvt-ymymshpa-vhgnh-szhxc6","name":"שרשרת תליון חי מפלדת אל חלד מצופים זהב איכותי לברכה,אריכות ימים,שפע והגנה"},{"@type":"ListItem","position":29,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-chy-mpldt-al-chld-ksvpym-lbrkharykvt-ymymshpa-vhgnh-hhxww0","name":"שרשרת תליון חי מפלדת אל חלד כסופים לברכה,אריכות ימים,שפע והגנה"},{"@type":"ListItem","position":30,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-agvl-shma-yshral-mpldt-al-chld-mtsvpym-zhb-aykvty-lbrkhshmyrh-vhgnh-8ob4yg","name":"שרשרת תליון עגול שמע ישראל מפלדת אל חלד מצופים זהב איכותי לברכה,שמירה והגנה"},{"@type":"ListItem","position":31,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-agvl-shma-yshral-mpldt-al-chld-ksvpym-lbrkh-shmyrh-vhgnh-dlqd5l","name":"שרשרת תליון עגול שמע ישראל מפלדת אל חלד כסופים לברכה, שמירה והגנה"},{"@type":"ListItem","position":32,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-mpldt-al-chld-btsypvy-zhb-aykvty-rvchb26sm-avrk-29sm-g8gd94","name":"שרשרת תליון מגן דויד מפלדת אל חלד בציפוי זהב איכותי, רוחב:2.6ס\"מ, אורך: 2.9ס\"מ"},{"@type":"ListItem","position":33,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-mpldt-al-chld-ksvp-gdvl-rvchb26sm-gvbh29sm-904sal","name":"שרשרת תליון מגן דויד מפלדת אל חלד כסוף גדול, רוחב:2.6ס\"מ, גובה:2.9ס\"מ"},{"@type":"ListItem","position":34,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-brkt-hkhnym-mpldt-al-chld-btsypvy-zhb-aykvty-v8sbz3","name":"שרשרת תליון ברכת הכהנים מפלדת אל חלד בציפוי זהב איכותי"},{"@type":"ListItem","position":35,"url":"https://www.bliainara.co.il/product/shrshrt-tlyvn-brkt-hkhnym-mpldt-al-chld-ieg84k","name":"שרשרת תליון ברכת הכהנים מפלדת אל חלד "},{"@type":"ListItem","position":36,"url":"https://www.bliainara.co.il/product/shrshrt-am-tlyvn-mgn-dvyd-agvl-adyn-mtsvpym-zhb-aykvty-mshvbts-babny-zyrkvn-msbyb-z9g2sn","name":"שרשרת עם תליון מגן דויד עגול עדין מצופים זהב איכותי משובץ באבני זירקון מסביב"},{"@type":"ListItem","position":37,"url":"https://www.bliainara.co.il/product/shrshrt-am-tlyvn-mgn-dvyd-agvl-adyn-mshvbts-babny-zyrkvn-msbyb-vy2lgf","name":"שרשרת עם תליון מגן דויד עגול עדין משובץ באבני זירקון מסביב"},{"@type":"ListItem","position":38,"url":"https://www.bliainara.co.il/product/tsmyd-mhmm-chvm-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-2myzgd","name":"צמיד מהמם חום קלוע בעבודת יד בשילוב אבני עין הנמר המיוחדות"},{"@type":"ListItem","position":39,"url":"https://www.bliainara.co.il/product/tsmyd-mhmm-lbn-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-rbkiem","name":"צמיד מהמם לבן קלוע בעבודת יד בשילוב אבני עין הנמר המיוחדות"},{"@type":"ListItem","position":40,"url":"https://www.bliainara.co.il/product/tsmyd-mhmm-shchvr-klva-babvdt-yd-bshylvb-abny-ayn-hnmr-hmyvchdvt-lxvzsm","name":"צמיד מהמם שחור קלוע בעבודת יד בשילוב אבני עין הנמר המיוחדות"},{"@type":"ListItem","position":41,"url":"https://www.bliainara.co.il/product/tsmyd-chvm-mshvlb-klva-aykvty-babvdt-yd-lgbrsgyrh-mgntyt-mpldt-al-chld-btvchh-861jss","name":"צמיד חום משולב קלוע איכותי בעבודת יד לגבר,סגירה מגנטית מפלדת אל חלד בטוחה"},{"@type":"ListItem","position":42,"url":"https://www.bliainara.co.il/product/tsmyd-shchvr-mshvlb-klva-aykvty-babvdt-yd-lgbr-sgyrh-mgntyt-mpldt-al-chld-btvchh-copy-zyhh0a","name":"צמיד שחור משולב קלוע איכותי בעבודת יד לגבר סגירה מגנטית מפלדת אל חלד בטוחה (Copy)"}]}]}</script>
     <meta property="og:type" content="website" />
   <meta property="og:locale" content="he_IL" />
   
