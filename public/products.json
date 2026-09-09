@@ -1,13 +1,13 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-09-09T10:58:27.951Z",
+  "generated_at": "2026-09-09T10:59:21.949Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 47,
   "products": [
     {
       "id": "d65027fb-81eb-4568-b4cd-f2adc0d6f777",
-      "slug": "tsmyd-mavr-lgbr-shchvr-babvdt-yd-bavrk-k-22sm-fa9nki",
+      "slug": "tsmyd-mavr-lgbr-shchvr-babvdt-yd-bavrk-k-22sm-zf65xl",
       "name": "צמיד מעור לגבר שחור בעבודת יד באורך כ-22ס\"מ",
       "name_translations": {
         "en": "Handmade Black Leather Bracelet for Men, approx. 22cm",
@@ -18,7 +18,7 @@
       "sku": "3111892070010-02011black",
       "brand": "בלי עין הרע",
       "price": 35,
-      "base_price": 45,
+      "base_price": 55,
       "sale_price": 35,
       "currency": "ILS",
       "images": [
@@ -27,27 +27,27 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/tsmyd-mavr-lgbr-shchvr-babvdt-yd-bavrk-k-22sm-fa9nki",
+      "url": "https://www.bliainara.co.il/product/tsmyd-mavr-lgbr-shchvr-babvdt-yd-bavrk-k-22sm-zf65xl",
       "categories": [
         "בלי עין הרע לגברים"
       ],
-      "updated_at": "2026-09-09T10:57:53.148Z"
+      "updated_at": "2026-09-09T10:59:20.259Z"
     },
     {
       "id": "7762f37d-1f67-4897-96eb-d2aa8e4d63cd",
-      "slug": "tsmyd-avr-klva-mshvlb-shchvr-vchvm-lgbr-bavrk-18sm-dniul0",
+      "slug": "tsmyd-avr-klva-mshvlb-shchvr-vchvm-lgbr-bavrk-18sm-abkwff",
       "name": "צמיד עור קלוע משולב שחור וחום לגבר באורך 18ס\"מ",
       "name_translations": {
-        "en": "Braided Leather Bracelet in Black and Brown for Men, 18cm Length",
+        "en": "Braided Leather Bracelet Combined Black and Brown for Men, 18cm Length",
         "he": "צמיד עור קלוע משולב שחור וחום לגבר באורך 18ס\"מ"
       },
       "description": "<p>צמיד קלוע לגבר מעור משולב שחור וחום בעבודת יד, אורך כ-18ס&quot;מ</p>",
       "short_description": "צמיד עור קלוע משולב שחור וחום אורך כ-18ס\"מ בעבודת יד",
       "sku": "3119339905010-02025blac+bru",
       "brand": "בלי עין הרע",
-      "price": 38.98,
+      "price": 39,
       "base_price": 59,
-      "sale_price": 38.98,
+      "sale_price": 39,
       "currency": "ILS",
       "images": [
         "https://www.bliainara.co.il/assets/product-1788949447032-o0gn6.webp",
@@ -55,11 +55,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/tsmyd-avr-klva-mshvlb-shchvr-vchvm-lgbr-bavrk-18sm-dniul0",
+      "url": "https://www.bliainara.co.il/product/tsmyd-avr-klva-mshvlb-shchvr-vchvm-lgbr-bavrk-18sm-abkwff",
       "categories": [
         "בלי עין הרע לגברים"
       ],
-      "updated_at": "2026-09-09T10:34:23.831Z"
+      "updated_at": "2026-09-09T10:58:46.379Z"
     },
     {
       "id": "02d57628-df95-4eea-866c-9b9abc5a284c",
