@@ -1,10 +1,39 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-09-08T07:23:10.024Z",
+  "generated_at": "2026-09-09T08:20:53.672Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 42,
+  "count": 43,
   "products": [
+    {
+      "id": "52689047-72cb-44d9-a0ca-9c0a5e5f5789",
+      "slug": "tlyvn-shrshrt-mgn-dvyd-mpldt-al-chld-ksvp-mshvbts-zyrkvnym-adyn-vmdhym-vulsby",
+      "name": "תליון שרשרת מגן דויד מפלדת אל חלד כסוף משובץ זירקונים עדין ומדהים",
+      "name_translations": {
+        "en": "Silver Stainless Steel Star of David Pendant Necklace with Delicate and Stunning Zirconia Stones",
+        "he": "תליון שרשרת מגן דויד מפלדת אל חלד כסוף משובץ זירקונים עדין ומדהים"
+      },
+      "description": "<p>לוק יוקרתי ליום יום וגם לארועים</p>",
+      "short_description": "תליון שרשרת משובץ אבני זירקונים מדהים ללוק יוקרתי נוצץ, אורך שרשרת 50+5 ס\"מ.  גודל תליון רוחב 1.6ס\"מ, גובה 1.9ס\"מ",
+      "sku": "3123799185010-15033silv",
+      "brand": "בלי עין הרע",
+      "price": 159,
+      "base_price": 199,
+      "sale_price": 159,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1788941557968-344m8l.webp",
+        "https://www.bliainara.co.il/assets/product-1788941602821-hk9s6r.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1788941847511-l4vc7h.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tlyvn-shrshrt-mgn-dvyd-mpldt-al-chld-ksvp-mshvbts-zyrkvnym-adyn-vmdhym-vulsby",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-09-09T08:20:13.680Z"
+    },
     {
       "id": "13372a9c-02ad-481f-804f-efad1de9bb55",
       "slug": "tsmyd-nchsh-shtvch-3-tsbaym-adyn-vmyvchd-mpldt-al-chld-ksvp-mshvlbym-btsypvy-rvz-gvld-vzhb-tshvb-amyd-3yxlrc",

@@ -197,6 +197,8 @@ Description: חנות התכשיטים האונליין שמציעה לך עיצ
 ## מוצרים מובילים
 
 
+טוען...
+
 
 צפה בכל המוצרים →
 
@@ -212,6 +214,8 @@ Description: חנות התכשיטים האונליין שמציעה לך עיצ
 
 ## קנו לפי קטגוריה
 
+
+טוען מוצרים...
 
 
 
@@ -2278,6 +2282,141 @@ Description: המוצרים שלנו - בלי עין הרע
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+טוען מוצרים...
 
 
 
@@ -5105,6 +5244,8 @@ Description: מוצרים - בלי עין הרע
 
 
 
+טוען מוצרים...
+
 
 
 
@@ -6602,6 +6743,17 @@ Description: בלי עין הרע - תודה שפנית אלינו
 ---
 
 ## Product Catalog
+
+### תליון שרשרת מגן דויד מפלדת אל חלד כסוף משובץ זירקונים עדין ומדהים
+URL: https://www.bliainara.co.il/product/tlyvn-shrshrt-mgn-dvyd-mpldt-al-chld-ksvp-mshvbts-zyrkvnym-adyn-vmdhym-vulsby
+Price: 159.00 ILS (sale, was 199.00 ILS)
+Availability: In stock
+SKU: 3123799185010-15033silv
+Brand: בלי עין הרע
+
+לוק יוקרתי ליום יום וגם לארועים
+
+---
 
 ### צמיד נחש שטוח 3 צבעים  עדין ומיוחד מפלדת אל חלד כסוף משולבים בציפוי רוז גולד וזהב צהוב עמיד
 URL: https://www.bliainara.co.il/product/tsmyd-nchsh-shtvch-3-tsbaym-adyn-vmyvchd-mpldt-al-chld-ksvp-mshvlbym-btsypvy-rvz-gvld-vzhb-tshvb-amyd-3yxlrc
