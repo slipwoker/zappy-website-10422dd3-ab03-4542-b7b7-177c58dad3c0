@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-09-09T10:34:56.952Z",
+  "generated_at": "2026-09-09T10:58:27.951Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 46,
+  "count": 47,
   "products": [
+    {
+      "id": "d65027fb-81eb-4568-b4cd-f2adc0d6f777",
+      "slug": "tsmyd-mavr-lgbr-shchvr-babvdt-yd-bavrk-k-22sm-fa9nki",
+      "name": "צמיד מעור לגבר שחור בעבודת יד באורך כ-22ס\"מ",
+      "name_translations": {
+        "en": "Handmade Black Leather Bracelet for Men, approx. 22cm",
+        "he": "צמיד מעור לגבר שחור בעבודת יד באורך כ-22ס\"מ"
+      },
+      "description": "<p>צמיד מעור שחור לגבר בעבודת יד</p>",
+      "short_description": "צמיד מעור לגבר שחור בעבודת יד באורך כ-22ס\"מ",
+      "sku": "3111892070010-02011black",
+      "brand": "בלי עין הרע",
+      "price": 35,
+      "base_price": 45,
+      "sale_price": 35,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1788951230527-n5xot.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1788951296942-q64dqt.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tsmyd-mavr-lgbr-shchvr-babvdt-yd-bavrk-k-22sm-fa9nki",
+      "categories": [
+        "בלי עין הרע לגברים"
+      ],
+      "updated_at": "2026-09-09T10:57:53.148Z"
+    },
     {
       "id": "7762f37d-1f67-4897-96eb-d2aa8e4d63cd",
       "slug": "tsmyd-avr-klva-mshvlb-shchvr-vchvm-lgbr-bavrk-18sm-dniul0",

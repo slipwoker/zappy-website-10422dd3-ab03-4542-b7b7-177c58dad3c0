@@ -76,7 +76,17 @@ Information about WCAG compliance and accessibility features.
 
 ## Products
 
-**Total active products: 46**
+**Total active products: 47**
+
+### צמיד מעור לגבר שחור בעבודת יד באורך כ-22ס"מ
+https://www.bliainara.co.il/product/tsmyd-mavr-lgbr-shchvr-babvdt-yd-bavrk-k-22sm-fa9nki
+- Price: 35.00 ILS (sale, was 45.00 ILS)
+- Availability: In stock
+- Category: בלי עין הרע לגברים
+- SKU: 3111892070010-02011black
+- Brand: בלי עין הרע
+- Description: צמיד מעור לגבר שחור בעבודת יד באורך כ-22ס"מ
+- Image: https://www.bliainara.co.il/assets/product-1788951230527-n5xot.webp
 
 ### צמיד עור קלוע משולב שחור וחום לגבר באורך 18ס"מ
 https://www.bliainara.co.il/product/tsmyd-avr-klva-mshvlb-shchvr-vchvm-lgbr-bavrk-18sm-dniul0
