@@ -76,7 +76,17 @@ Information about WCAG compliance and accessibility features.
 
 ## Products
 
-**Total active products: 45**
+**Total active products: 46**
+
+### צמיד עור קלוע משולב שחור וחום לגבר באורך 18ס"מ
+https://www.bliainara.co.il/product/tsmyd-avr-klva-mshvlb-shchvr-vchvm-lgbr-bavrk-18sm-0alpuz
+- Price: 38.98 ILS (sale, was 59.00 ILS)
+- Availability: In stock
+- Category: בלי עין הרע לגברים
+- SKU: 3119339905010-02025blac+bru
+- Brand: בלי עין הרע
+- Description: צמיד עור קלוע משולב שחור וחום אורך כ-18ס"מ בעבודת יד
+- Image: https://www.bliainara.co.il/assets/product-1788949447032-o0gn6.webp
 
 ### טבעת יוקרתית פתוחה ומתכווננת מפלדת אל חלד בציפוי כסף עמיד
 https://www.bliainara.co.il/product/tbat-yvkrtyt-ptvchh-vmtkvvnnt-mpldt-al-chld-btsypvy-ksp-amyd-dor1ui
