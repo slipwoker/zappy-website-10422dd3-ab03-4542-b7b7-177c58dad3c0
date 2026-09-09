@@ -1,13 +1,13 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-09-09T10:32:56.359Z",
+  "generated_at": "2026-09-09T10:34:56.952Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 46,
   "products": [
     {
       "id": "7762f37d-1f67-4897-96eb-d2aa8e4d63cd",
-      "slug": "tsmyd-avr-klva-mshvlb-shchvr-vchvm-lgbr-bavrk-18sm-0alpuz",
+      "slug": "tsmyd-avr-klva-mshvlb-shchvr-vchvm-lgbr-bavrk-18sm-dniul0",
       "name": "צמיד עור קלוע משולב שחור וחום לגבר באורך 18ס\"מ",
       "name_translations": {
         "en": "Braided Leather Bracelet in Black and Brown for Men, 18cm Length",
@@ -27,11 +27,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/tsmyd-avr-klva-mshvlb-shchvr-vchvm-lgbr-bavrk-18sm-0alpuz",
+      "url": "https://www.bliainara.co.il/product/tsmyd-avr-klva-mshvlb-shchvr-vchvm-lgbr-bavrk-18sm-dniul0",
       "categories": [
         "בלי עין הרע לגברים"
       ],
-      "updated_at": "2026-09-09T10:32:20.394Z"
+      "updated_at": "2026-09-09T10:34:23.831Z"
     },
     {
       "id": "02d57628-df95-4eea-866c-9b9abc5a284c",
