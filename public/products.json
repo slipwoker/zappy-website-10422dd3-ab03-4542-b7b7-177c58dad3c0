@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-10-02T14:07:59.825Z",
+  "generated_at": "2026-10-02T14:20:45.571Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 49,
+  "count": 50,
   "products": [
+    {
+      "id": "5b6e4120-2c23-44d2-91fc-d535e8fbe372",
+      "slug": "shrshrt-tlyvn-prsh-adyn-mpldt-al-chld-btsypvy-zhb-aykvty-mshvbts-zyrkvnym-dmvy-yhlvmym-aqt1o6",
+      "name": "שרשרת תליון פרסה עדין מפלדת אל חלד בציפוי זהב איכותי משובץ זירקונים דמוי יהלומים",
+      "name_translations": {
+        "en": "Delicate Horseshoe Pendant Necklace in Gold-Plated Stainless Steel with Diamond-Like Zirconia Stones",
+        "he": "שרשרת תליון פרסה עדין מפלדת אל חלד בציפוי זהב איכותי משובץ זירקונים דמוי יהלומים"
+      },
+      "description": "<p>לאוהבות לוק הזהב ליום יום ולארועים</p>",
+      "short_description": "תליון שרשרת פרסה מהמם מפלדת אל חלד בציפוי זהב איכותי משובץ זירקונים דמוי יהלומים\nאורך שרשרת 40+5ס\"מ, גובה תליון 1ס\"מ, רוחב תליון 0.95ס\"מ",
+      "sku": "3154099345010-07060gold",
+      "brand": "בלי עין הרע",
+      "price": 119,
+      "base_price": 159,
+      "sale_price": 119,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1790950632882-t7cy2d.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1790950778528-8o8ez.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-prsh-adyn-mpldt-al-chld-btsypvy-zhb-aykvty-mshvbts-zyrkvnym-dmvy-yhlvmym-aqt1o6",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-10-02T14:20:09.286Z"
+    },
     {
       "id": "ab731f17-4ea9-496d-8aed-dbe8e9ef323a",
       "slug": "shrshrt-tlyvn-adyn-prsh-mpldt-al-chld-mshvbts-zyrkvnym-dmvy-yhlvmym-mvcjsb",
