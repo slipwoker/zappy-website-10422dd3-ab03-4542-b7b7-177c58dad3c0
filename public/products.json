@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-10-02T16:53:41.915Z",
+  "generated_at": "2026-10-03T08:13:37.194Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 50,
+  "count": 51,
   "products": [
+    {
+      "id": "29f2f438-0ecf-4fb4-ba35-365299dbdb4e",
+      "slug": "tsmyd-chmsh-mrshym-mavtr-mpldt-al-chld-mtsvph-zhb-amyd-bavrk165sm-tkjeln",
+      "name": "צמיד חמסה מרשים מעותר מפלדת אל חלד מצופה זהב עמיד באורך16+5ס\"מ",
+      "name_translations": {
+        "en": "Impressive Ornate Hamsa Bracelet in Gold-Plated Stainless Steel, Length 16+5cm",
+        "he": "צמיד חמסה מרשים מעותר מפלדת אל חלד מצופה זהב עמיד באורך16+5ס\"מ"
+      },
+      "description": "<p>צמיד חמסה מהמם ליום יום ולארועים</p>",
+      "short_description": "צמיד חמסה גדול מרשים מעותר מפלדת אל חלד מצופה זהב עמיד\nגודל החמסה גובה2.97ס\"מ, רוחב 1.6ס\"מ",
+      "sku": "2923042155010-07055gold",
+      "brand": "בלי עין הרע",
+      "price": 105,
+      "base_price": 159,
+      "sale_price": 105,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1791014714287-8enjyl.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1791015034441-gikqpf.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tsmyd-chmsh-mrshym-mavtr-mpldt-al-chld-mtsvph-zhb-amyd-bavrk165sm-tkjeln",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-10-03T08:12:56.895Z"
+    },
     {
       "id": "5b6e4120-2c23-44d2-91fc-d535e8fbe372",
       "slug": "shrshrt-tlyvn-prsh-adyn-mpldt-al-chld-btsypvy-zhb-aykvty-mshvbts-zyrkvnym-dmvy-yhlvmym-aqt1o6",
