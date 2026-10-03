@@ -76,7 +76,17 @@ Information about WCAG compliance and accessibility features.
 
 ## Products
 
-**Total active products: 52**
+**Total active products: 53**
+
+### שרשרת תליון חמסה בשיבוץ עין כחולה מפלדת אל חלד בציפוי זהב עמיד
+https://www.bliainara.co.il/product/shrshrt-tlyvn-chmsh-bshybvts-ayn-kchvlh-mpldt-al-chld-btsypvy-zhb-amyd-x3e2yr
+- Price: 119.00 ILS (sale, was 159.00 ILS)
+- Availability: In stock
+- Category: בלי עין הרע לנשים
+- SKU: 2991448305010-08070gold
+- Brand: בלי עין הרע
+- Description: אורך השרשרת 45+5ס"מ, גודל תליון חמסה גובה2.6ס"מ, רוחב2ס"מ
+- Image: https://www.bliainara.co.il/assets/product-1791034333270-8ekzbg.webp
 
 ### שרשרת תליון חמסה בשיבוץ עין כחולה מפלדת אל חלד כסופה
 https://www.bliainara.co.il/product/shrshrt-tlyvn-chmsh-bshybvts-ayn-kchvlh-mpldt-al-chld-ksvph-eyugsq
