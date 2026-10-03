@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-10-03T18:19:33.056Z",
+  "generated_at": "2026-10-03T18:33:46.208Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 58,
+  "count": 59,
   "products": [
+    {
+      "id": "1dfd400a-81bb-4862-bee5-ed2f3206d932",
+      "slug": "shrshrt-tlyvn-agvl-ayn-kchvlh-gdvlh-mpldt-al-chld-btsypvy-zhb-amyd-vbshybvts-zyrkvnym-msbyb-q7u3m1",
+      "name": "שרשרת תליון עגול עין כחולה גדולה מפלדת אל חלד בציפוי זהב עמיד ובשיבוץ זירקונים מסביב",
+      "name_translations": {
+        "en": "Large Blue Evil Eye Round Pendant Necklace in Gold-Plated Stainless Steel with Zircon Stones",
+        "he": "שרשרת תליון עגול עין כחולה גדולה מפלדת אל חלד בציפוי זהב עמיד ובשיבוץ זירקונים מסביב"
+      },
+      "description": "<p>לאוהבות הלוק המוזהב היוקרתי ונגד עין הרע</p>",
+      "short_description": "אורך שרשרת 45+5ס\"מ, גובה תליון 2.1ס\"מ, רוחב 1.8ס\"מ",
+      "sku": "2991448305010-06080gold",
+      "brand": "בלי עין הרע",
+      "price": 119,
+      "base_price": 159,
+      "sale_price": 119,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1791052192264-t1emeb.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1791052263993-5tsh6d.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-agvl-ayn-kchvlh-gdvlh-mpldt-al-chld-btsypvy-zhb-amyd-vbshybvts-zyrkvnym-msbyb-q7u3m1",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-10-03T18:33:14.462Z"
+    },
     {
       "id": "94ef3082-f1cb-4492-b7b4-802dac38d252",
       "slug": "shrshrt-tlyvn-agvl-ayn-kchvlh-gdvlh-mpldt-al-chld-vbshybvts-zyrkvnym-msbyb-dhpz5d",
