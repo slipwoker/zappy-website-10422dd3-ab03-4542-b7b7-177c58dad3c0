@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-10-03T14:51:11.588Z",
+  "generated_at": "2026-10-03T15:03:07.965Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 56,
+  "count": 57,
   "products": [
+    {
+      "id": "27c6aa9e-a1ba-409f-a1cc-225a308fec02",
+      "slug": "shrshrt-tlyvn-mgn-dvyd-adyn-baytsvb-avmnvty-mpldt-al-chld-vtsypvy-zhb-amyd-ax79zg",
+      "name": "שרשרת תליון מגן דויד עדין בעיצוב אומנותי מפלדת אל חלד וציפוי זהב עמיד",
+      "name_translations": {
+        "en": "Delicate Star of David Pendant Necklace in Artistic Design, Stainless Steel with Durable Gold Plating",
+        "he": "שרשרת תליון מגן דויד עדין בעיצוב אומנותי מפלדת אל חלד וציפוי זהב עמיד"
+      },
+      "description": "<p>לאוהבות הלוק המוזהב היוקרתי ליום יום ולארועים</p>",
+      "short_description": "אורך שרשרת 44+5ס\"מ, גובה תליון מגן דוד 1.8ס\"מ, רוחב 1.5ס\"מ",
+      "sku": "2991448305010-gold",
+      "brand": "בלי עין הרע",
+      "price": 119,
+      "base_price": 159,
+      "sale_price": 119,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1791039462408-u6g2u.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1791039663871-2o7298.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-adyn-baytsvb-avmnvty-mpldt-al-chld-vtsypvy-zhb-amyd-ax79zg",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-10-03T15:02:39.887Z"
+    },
     {
       "id": "aa4a9a08-ccc5-4d5c-aacd-e818d97a2934",
       "slug": "shrshrt-tlyvn-mgn-dvyd-adyn-baytsvb-avmnvty-mpldt-al-chld-ksvph-avrk-shrshrt-445sm-ueleoc",

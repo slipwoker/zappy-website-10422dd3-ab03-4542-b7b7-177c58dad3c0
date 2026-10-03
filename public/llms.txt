@@ -76,7 +76,17 @@ Information about WCAG compliance and accessibility features.
 
 ## Products
 
-**Total active products: 56**
+**Total active products: 57**
+
+### שרשרת תליון מגן דויד עדין בעיצוב אומנותי מפלדת אל חלד וציפוי זהב עמיד
+https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-adyn-baytsvb-avmnvty-mpldt-al-chld-vtsypvy-zhb-amyd-ax79zg
+- Price: 119.00 ILS (sale, was 159.00 ILS)
+- Availability: In stock
+- Category: בלי עין הרע לנשים
+- SKU: 2991448305010-gold
+- Brand: בלי עין הרע
+- Description: אורך שרשרת 44+5ס"מ, גובה תליון מגן דוד 1.8ס"מ, רוחב 1.5ס"מ
+- Image: https://www.bliainara.co.il/assets/product-1791039462408-u6g2u.webp
 
 ### שרשרת תליון מגן דויד עדין בעיצוב אומנותי מפלדת אל חלד כסופה, אורך שרשרת 44+5סמ
 https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-adyn-baytsvb-avmnvty-mpldt-al-chld-ksvph-avrk-shrshrt-445sm-ueleoc
