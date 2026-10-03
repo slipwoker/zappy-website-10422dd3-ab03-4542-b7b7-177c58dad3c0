@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-10-03T14:06:16.241Z",
+  "generated_at": "2026-10-03T14:18:46.624Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 54,
+  "count": 55,
   "products": [
+    {
+      "id": "ba81865b-d583-4c9b-98b3-1c5124b8cf7f",
+      "slug": "shrshrt-tlyvn-chmsh-mshvbts-ayn-kchvlh-vzyrkvnym-mpldt-al-chld-btsypvy-zhb-amyd-m0utd3",
+      "name": "שרשרת תליון חמסה משובץ עין כחולה וזירקונים מפלדת אל חלד בציפוי זהב עמיד",
+      "name_translations": {
+        "en": "Hamsa Pendant Necklace with Blue Eye and Zirconia Inlay in Gold-Plated Stainless Steel",
+        "he": "שרשרת תליון חמסה משובץ עין כחולה וזירקונים מפלדת אל חלד בציפוי זהב עמיד"
+      },
+      "description": "<p>לאוהבות לוק הזהב היוקרתי ונגד עין הרע, ליום יום ולארועים</p>",
+      "short_description": "שרשרת תליון חמסה משובץ עין כחולה וזירקונים מפלדת אל חלד ובציפוי זהב עמיד, אורך שרשרת 45+5ס\"מ, תליון חמסה גובה 2.3ס\"מ, רוחב 1.7ס\"מ, עובי 2מ\"מ",
+      "sku": "2991448305010-06080gold",
+      "brand": "בלי עין הרע",
+      "price": 119,
+      "base_price": 159,
+      "sale_price": 119,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1791036992682-6fciua.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1791037048491-4qgkpc.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-chmsh-mshvbts-ayn-kchvlh-vzyrkvnym-mpldt-al-chld-btsypvy-zhb-amyd-m0utd3",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-10-03T14:18:09.071Z"
+    },
     {
       "id": "5e50d180-8d52-4c0d-8e28-b6e461fb9ac4",
       "slug": "shrshrt-tlyvn-chmsh-mshvbts-ayn-kchvlh-vmshvbts-zykvnym-mpldt-al-chld-ksvph-vfawrl",
