@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-10-04T17:45:45.744Z",
+  "generated_at": "2026-10-04T18:09:06.741Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 59,
+  "count": 60,
   "products": [
+    {
+      "id": "a98fa00e-20f4-4924-9fd6-6c7416b58799",
+      "slug": "shrshrt-tlyvn-prch-lbbvt-dv-mymdy-adyn-mshvbts-zyrkvnym-vabny-zyrkvnmpldt-al-chld-xtlvpr",
+      "name": "שרשרת תליון פרח לבבות דו מימדי עדין משובץ זירקונים ואבני זירקון,מפלדת אל חלד",
+      "name_translations": {
+        "en": "Delicate 2D Flower Hearts Pendant Necklace with Zircon Stones, Stainless Steel",
+        "he": "שרשרת תליון פרח לבבות דו מימדי עדין משובץ זירקונים ואבני זירקון,מפלדת אל חלד"
+      },
+      "description": "<p>ללוק יוקרתי ליום יום ולארועים</p>",
+      "short_description": "אורך שרשרת כ-45+5ס\"מ, גובה תליון 1.9ס\"מ, רוחב תליון 1.5ס\"מ",
+      "sku": "3052598580010-07053silv",
+      "brand": "בלי עין הרע",
+      "price": 119,
+      "base_price": 149,
+      "sale_price": 119,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1791137018586-qu5ucr.webp",
+        "https://www.bliainara.co.il/assets/product-ai-fit-1791137224020-ea8tns.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/shrshrt-tlyvn-prch-lbbvt-dv-mymdy-adyn-mshvbts-zyrkvnym-vabny-zyrkvnmpldt-al-chld-xtlvpr",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-10-04T18:08:40.377Z"
+    },
     {
       "id": "023cc9c6-c3b6-4e3e-95ac-25be022579cd",
       "slug": "shrshrt-tlyvn-mgn-dvyd-adyn-mpldt-al-chld-bshylvb-shybvts-zyrkvnym-vabn-zyrkvn-pnymyt-mrchpt-vmstvbbt-apd0ri",
