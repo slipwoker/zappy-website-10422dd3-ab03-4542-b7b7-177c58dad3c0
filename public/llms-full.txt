@@ -197,6 +197,8 @@ Description: חנות התכשיטים האונליין שמציעה לך עיצ
 ## מוצרים מובילים
 
 
+טוען...
+
 
 צפה בכל המוצרים →
 
@@ -212,6 +214,8 @@ Description: חנות התכשיטים האונליין שמציעה לך עיצ
 
 ## קנו לפי קטגוריה
 
+
+טוען מוצרים...
 
 
 
@@ -2278,6 +2282,141 @@ Description: המוצרים שלנו - בלי עין הרע
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+טוען מוצרים...
 
 
 
@@ -5105,6 +5244,8 @@ Description: מוצרים - בלי עין הרע
 
 
 
+טוען מוצרים...
+
 
 
 
@@ -6602,6 +6743,17 @@ Description: בלי עין הרע - תודה שפנית אלינו
 ---
 
 ## Product Catalog
+
+### שרשרת תליון מגן דויד עדין מפלדת אל חלד בשילוב שיבוץ זירקונים ואבן זירקון פנימית מרחפת
+URL: https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-adyn-mpldt-al-chld-bshylvb-shybvts-zyrkvnym-vabn-zyrkvn-pnymyt-mrchpt-6oldh1
+Price: 139.00 ILS (sale, was 199.00 ILS)
+Availability: In stock
+SKU: 305259850010-07053silv
+Brand: בלי עין הרע
+
+שרשרת תליון מהמם ליום יום ולארועים
+
+---
 
 ### שרשרת תליון עגול עין כחולה גדולה מפלדת אל חלד בציפוי זהב עמיד ובשיבוץ זירקונים מסביב
 URL: https://www.bliainara.co.il/product/shrshrt-tlyvn-agvl-ayn-kchvlh-gdvlh-mpldt-al-chld-btsypvy-zhb-amyd-vbshybvts-zyrkvnym-msbyb-q7u3m1
