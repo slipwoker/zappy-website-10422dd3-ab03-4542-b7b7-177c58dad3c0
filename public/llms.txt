@@ -76,10 +76,10 @@ Information about WCAG compliance and accessibility features.
 
 ## Products
 
-**Total active products: 60**
+**Total active products: 59**
 
-### שרשרת תליון מגן דויד עדין מפלדת אל חלד בשילוב שיבוץ זירקונים ואבן זירקון פנימית מרחפת
-https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-adyn-mpldt-al-chld-bshylvb-shybvts-zyrkvnym-vabn-zyrkvn-pnymyt-mrchpt-6oldh1
+### שרשרת תליון מגן דויד עדין מפלדת אל חלד בשילוב שיבוץ זירקונים ואבן זירקון פנימית מרחפת ומסתובבת
+https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-adyn-mpldt-al-chld-bshylvb-shybvts-zyrkvnym-vabn-zyrkvn-pnymyt-mrchpt-vmstvbbt-apd0ri
 - Price: 139.00 ILS (sale, was 199.00 ILS)
 - Availability: In stock
 - Category: בלי עין הרע לנשים
@@ -307,16 +307,6 @@ https://www.bliainara.co.il/product/tlyvn-bn-pvrt-lhgnh-brkh-vsgvlh-ngd-ayn-hra-
 - Brand: בלי עין הרע
 - Description: אורך השרשרת כ-60 ס"מ, גודל התליון: רוחב 2.5 ס"מ, גובה 2.8 ס"מ
 - Image: https://www.bliainara.co.il/assets/product-1788848090589-5cm7iq.webp
-
-### שרשרת תליון מגן דויד קטן משולב זירקונים, כסוף עדין מטיטניום בשילוב זירקון פנימי מרחף ומסתובב
-https://www.bliainara.co.il/product/shrshrt-tlyvn-mgn-dvyd-ktn-mshvlb-zyrkvnym-ksvp-adyn-mtytnyvm-bshylvb-zyrkvn-pnymy-mrchp-vmstvbb-civq8e
-- Price: 105.00 ILS (sale, was 149.00 ILS)
-- Availability: In stock
-- Category: בלי עין הרע לנשים
-- SKU: 3052598580010-07053silv
-- Brand: בלי עין הרע
-- Description: שרשרת תליון מהמם, מנצנץ, עדין ומיוחד,ליום יום ולארועים
-- Image: https://www.bliainara.co.il/assets/product-1787500131910-n2a03g.webp
 
 ### צמיד עדין חבל מוזהב משולב חרוזים עם עין אדומה בציפוי זהב איכותי
 https://www.bliainara.co.il/product/tsmyd-adyn-chbl-mvzhb-mshvlb-chrvzym-am-ayn-advmh-btsypvy-zhb-aykvty-dnpvsr
