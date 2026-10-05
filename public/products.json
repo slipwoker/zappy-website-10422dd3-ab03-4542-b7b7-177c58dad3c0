@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-10-05T07:19:58.429Z",
+  "generated_at": "2026-10-05T11:02:20.648Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 63,
+  "count": 64,
   "products": [
+    {
+      "id": "aafa40ae-7ad0-4e06-92d6-b145685e2d6f",
+      "slug": "tsmyd-yvkrty-vmhmm-mtkvvnn-kl-mshkl-mpldt-al-chld-2lo8vf",
+      "name": "צמיד יוקרתי ומהמם, מתכוונן קל משקל מפלדת אל חלד",
+      "name_translations": {
+        "en": "Luxurious and stunning bracelet, lightweight adjustable stainless steel",
+        "he": "צמיד יוקרתי ומהמם, מתכוונן קל משקל מפלדת אל חלד"
+      },
+      "description": "",
+      "short_description": "צמיד יוקרתי בסטייל מיוחד ליום יום ולארועים",
+      "sku": "3052598580010-07053silv",
+      "brand": "בלי עין הרע",
+      "price": 119,
+      "base_price": 159,
+      "sale_price": 119,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1791197752720-imv07n.webp",
+        "https://www.bliainara.co.il/assets/product-1791197803374-h3xh97.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tsmyd-yvkrty-vmhmm-mtkvvnn-kl-mshkl-mpldt-al-chld-2lo8vf",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-10-05T11:01:40.623Z"
+    },
     {
       "id": "11e3b18e-0466-47ff-8ca6-9483d1cb3719",
       "slug": "shrshrt-kpvlh-tsvvar-vmchshvp-y-bshybvts-3-abny-zyrkvn-mpldt-al-chld-ksvph-szsqiv",
