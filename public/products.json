@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-10-05T14:21:56.168Z",
+  "generated_at": "2026-10-05T14:44:05.613Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 66,
+  "count": 67,
   "products": [
+    {
+      "id": "7b91b790-dfda-4207-b000-db3c37ba3ac9",
+      "slug": "agylym-mpldt-al-chld-mshvbtsym-bayn-kchvlh-ngd-ayn-hra-svgry-prpr-mhyrym-pkjo5y",
+      "name": "עגילים מפלדת אל חלד משובצים בעין כחולה נגד עין הרע, סוגרי פרפר מהירים",
+      "name_translations": {
+        "en": "Stainless Steel Earrings Set with Blue Evil Eye, Butterfly Clasp",
+        "he": "עגילים מפלדת אל חלד משובצים בעין כחולה נגד עין הרע, סוגרי פרפר מהירים"
+      },
+      "description": "",
+      "short_description": "קוטר עגיל כ-1ס\"מ",
+      "sku": "3008885225010-04082silv",
+      "brand": "בלי עין הרע",
+      "price": 119,
+      "base_price": 159,
+      "sale_price": 119,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1791210881260-7m99q9.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1791211112264-c8hebj.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/agylym-mpldt-al-chld-mshvbtsym-bayn-kchvlh-ngd-ayn-hra-svgry-prpr-mhyrym-pkjo5y",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-10-05T14:43:27.644Z"
+    },
     {
       "id": "15fe7dba-f03c-4121-9533-9c22234fca31",
       "slug": "shrshrt-nchsh-am-tlyvn-adyn-mshvbts-ayn-kchvlh-mzkvkyt-ngd-ayn-hra-mpldt-al-chld-a6etmk",
