@@ -1,10 +1,37 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-10-05T16:04:43.274Z",
+  "generated_at": "2026-10-05T16:20:39.508Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 70,
+  "count": 71,
   "products": [
+    {
+      "id": "9ef38e32-fdc3-49f1-8ff1-13b8a1a50d65",
+      "slug": "tsmyd-pnynym-babvdt-yd-lbnvt-vtbayvt-mmym-mtvkym-algntyt-mad-avrk-176-smshrshrt-sgyrh-pldt-al-chld-iuhdgc",
+      "name": "צמיד פנינים בעבודת יד לבנות וטבעיות ממים מתוקים, אלגנטית מאד, אורך 17+6 ס\"מ,שרשרת סגירה פלדת אל חלד",
+      "name_translations": {
+        "en": "Handmade Pearl Bracelet for Girls, White and Natural Freshwater Pearls, Very Elegant, Length 17+6 cm, Stainless Steel Clasp Chain",
+        "he": "צמיד פנינים בעבודת יד לבנות וטבעיות ממים מתוקים, אלגנטית מאד, אורך 17+6 ס\"מ,שרשרת סגירה פלדת אל חלד"
+      },
+      "description": "<p>הפנינים לא סימטריות ולא חלקות, טבעיות</p>",
+      "short_description": "לאוהבות הלוק הטבעי והאלגנטי בעבודת יד",
+      "sku": "3050815860010-15087",
+      "brand": "בלי עין הרע",
+      "price": 149,
+      "base_price": 179,
+      "sale_price": 149,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1791217048313-t65o6i.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/tsmyd-pnynym-babvdt-yd-lbnvt-vtbayvt-mmym-mtvkym-algntyt-mad-avrk-176-smshrshrt-sgyrh-pldt-al-chld-iuhdgc",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-10-05T16:20:37.496Z"
+    },
     {
       "id": "c7a8d046-2755-44cf-9e9c-596f9969303e",
       "slug": "shrshrt-pnynym-babvdt-yd-lbnvt-tbayvt-mmym-mtvkym-algntyt-avrk-386sm-shrshrt-sgyrh-pldt-al-chld-7wkqdl",
