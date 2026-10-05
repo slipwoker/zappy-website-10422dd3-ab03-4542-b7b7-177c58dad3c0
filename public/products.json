@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-10-05T06:42:06.935Z",
+  "generated_at": "2026-10-05T07:03:07.558Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 61,
+  "count": 62,
   "products": [
+    {
+      "id": "bea9cbb1-7877-4e84-87d3-d5a295473f9d",
+      "slug": "shrshrt-kpvlh-tsvvar-vmchshvp-y-bshybvts-3-abny-zyrkvn-mpldt-al-chld-btsypvy-zhb-amyd-ymbzx4",
+      "name": "שרשרת כפולה צוואר ומחשוף Y בשיבוץ 3 אבני זירקון מפלדת אל חלד בציפוי זהב עמיד",
+      "name_translations": {
+        "en": "Double Y-Chain Necklace and Décolleté with 3 Zircon Stones in Gold-Plated Stainless Steel",
+        "he": "שרשרת כפולה צוואר ומחשוף Y בשיבוץ 3 אבני זירקון מפלדת אל חלד בציפוי זהב עמיד"
+      },
+      "description": "",
+      "short_description": "לאוהבות הלוק המוזהב היוקרתי והמנצנץ",
+      "sku": "3052598580010-07053gold",
+      "brand": "בלי עין הרע",
+      "price": 119,
+      "base_price": 149,
+      "sale_price": 119,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1791183370979-aw0mny.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1791183638068-ddojuo.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/shrshrt-kpvlh-tsvvar-vmchshvp-y-bshybvts-3-abny-zyrkvn-mpldt-al-chld-btsypvy-zhb-amyd-ymbzx4",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-10-05T07:02:32.297Z"
+    },
     {
       "id": "ff077878-9501-4192-8abe-ae3a367b61ea",
       "slug": "shrshrt-kpvlh-tsvvar-vmchshvp-y-bshybvts-3-abny-zyrkvn-mpldt-al-chld-vbtsypvy-zhb-vrvd-myvchd-vamyd-49ah6f",
