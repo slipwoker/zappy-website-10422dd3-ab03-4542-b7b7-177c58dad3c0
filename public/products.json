@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-10-05T14:45:44.665Z",
+  "generated_at": "2026-10-05T15:05:28.876Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 67,
+  "count": 68,
   "products": [
+    {
+      "id": "06420cea-0e74-4ae4-8088-11d1be6ef03a",
+      "slug": "shrshrt-nchsh-am-tlyvn-adyn-mshvbts-ayn-kchvlh-mzkvkyt-ngd-ayn-hra-mpldt-al-chld-btsypvy-zhb-amyd-3s23gq",
+      "name": "שרשרת נחש עם תליון עדין משובץ עין כחולה מזכוכית נגד עין הרע מפלדת אל חלד בציפוי זהב עמיד",
+      "name_translations": {
+        "en": "Snake chain necklace with a delicate pendant set with a blue glass evil eye, stainless steel with durable gold plating",
+        "he": "שרשרת נחש עם תליון עדין משובץ עין כחולה מזכוכית נגד עין הרע מפלדת אל חלד בציפוי זהב עמיד"
+      },
+      "description": "<p>לאוהבות הלוק המוזהב היוקרתי</p>",
+      "short_description": "אורך שרשרת נחש כ-45+5ס\"מ, קוטר תליון כ-1ס\"מ",
+      "sku": "3008885225010-04082gold",
+      "brand": "בלי עין הרע",
+      "price": 119,
+      "base_price": 159,
+      "sale_price": 119,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1791212081951-4o9w2n.webp",
+        "https://www.bliainara.co.il/assets/product-enhanced-1791212190151-fk126c.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/shrshrt-nchsh-am-tlyvn-adyn-mshvbts-ayn-kchvlh-mzkvkyt-ngd-ayn-hra-mpldt-al-chld-btsypvy-zhb-amyd-3s23gq",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-10-05T15:04:51.665Z"
+    },
     {
       "id": "7b91b790-dfda-4207-b000-db3c37ba3ac9",
       "slug": "agylym-mpldt-al-chld-mshvbtsym-bayn-kchvlh-ngd-ayn-hra-svgry-prpr-mhyrym-8hovqj",
