@@ -76,7 +76,17 @@ Information about WCAG compliance and accessibility features.
 
 ## Products
 
-**Total active products: 64**
+**Total active products: 65**
+
+### צמיד יוקרתי ומהמם, פתוח מתכוונן קל משקל מפלדת אל חלד בציפוי זהב עמיד
+https://www.bliainara.co.il/product/tsmyd-yvkrty-vmhmm-ptvch-mtkvvnn-kl-mshkl-mpldt-al-chld-btsypvy-zhb-amyd-du1xjs
+- Price: 139.00 ILS (sale, was 189.00 ILS)
+- Availability: In stock
+- Category: בלי עין הרע לנשים
+- SKU: 3052598580010-07053gold
+- Brand: בלי עין הרע
+- Description: צמיד מהמם לאוהבות הלוק המוזהב היוקרתי
+- Image: https://www.bliainara.co.il/assets/product-1791198536227-zgzj8o.webp
 
 ### צמיד יוקרתי ומהמם, מתכוונן קל משקל מפלדת אל חלד
 https://www.bliainara.co.il/product/tsmyd-yvkrty-vmhmm-mtkvvnn-kl-mshkl-mpldt-al-chld-fv7fts
