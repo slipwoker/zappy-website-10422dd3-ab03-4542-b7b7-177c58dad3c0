@@ -1,17 +1,17 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-10-04T18:32:47.640Z",
+  "generated_at": "2026-10-05T06:42:06.935Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 61,
   "products": [
     {
       "id": "ff077878-9501-4192-8abe-ae3a367b61ea",
-      "slug": "shrshrt-kpvlh-tsvvar-vmchshvp-bshybvts-3-abny-zyrkvn-mpldt-al-chld-vbtsypvy-zhb-vrvd-myvchd-vamyd-da2j8b",
-      "name": "שרשרת כפולה צוואר ומחשוף בשיבוץ 3 אבני זירקון מפלדת אל חלד ובציפוי זהב ורוד מיוחד ועמיד",
+      "slug": "shrshrt-kpvlh-tsvvar-vmchshvp-y-bshybvts-3-abny-zyrkvn-mpldt-al-chld-vbtsypvy-zhb-vrvd-myvchd-vamyd-49ah6f",
+      "name": "שרשרת כפולה צוואר ומחשוף Y בשיבוץ 3 אבני זירקון מפלדת אל חלד ובציפוי זהב ורוד מיוחד ועמיד",
       "name_translations": {
-        "en": "Double chain necklace and décolleté with 3 zircon stone settings, made of stainless steel with a special and durable rose gold plating",
-        "he": "שרשרת כפולה צוואר ומחשוף בשיבוץ 3 אבני זירקון מפלדת אל חלד ובציפוי זהב ורוד מיוחד ועמיד"
+        "en": "Double Layer Neck and Décolleté Y Necklace with 3 Zircon Stones in Stainless Steel with Special and Durable Rose Gold Plating",
+        "he": "שרשרת כפולה צוואר ומחשוף Y בשיבוץ 3 אבני זירקון מפלדת אל חלד ובציפוי זהב ורוד מיוחד ועמיד"
       },
       "description": "<p>לאוהבות לוק הרוז גולד</p>",
       "short_description": "לאוהבות אלגנט ליום יום ולארועים",
@@ -27,11 +27,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/shrshrt-kpvlh-tsvvar-vmchshvp-bshybvts-3-abny-zyrkvn-mpldt-al-chld-vbtsypvy-zhb-vrvd-myvchd-vamyd-da2j8b",
+      "url": "https://www.bliainara.co.il/product/shrshrt-kpvlh-tsvvar-vmchshvp-y-bshybvts-3-abny-zyrkvn-mpldt-al-chld-vbtsypvy-zhb-vrvd-myvchd-vamyd-49ah6f",
       "categories": [
         "בלי עין הרע לנשים"
       ],
-      "updated_at": "2026-10-04T18:30:00.579Z"
+      "updated_at": "2026-10-05T06:41:31.914Z"
     },
     {
       "id": "a98fa00e-20f4-4924-9fd6-6c7416b58799",
