@@ -1,6 +1,6 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-10-05T11:12:20.469Z",
+  "generated_at": "2026-10-05T11:13:45.319Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
   "count": 65,
@@ -35,18 +35,18 @@
     },
     {
       "id": "aafa40ae-7ad0-4e06-92d6-b145685e2d6f",
-      "slug": "tsmyd-yvkrty-vmhmm-mtkvvnn-kl-mshkl-mpldt-al-chld-fv7fts",
-      "name": "צמיד יוקרתי ומהמם, מתכוונן קל משקל מפלדת אל חלד",
+      "slug": "tsmyd-yvkrty-vmhmm-ptvch-mtkvvnn-kl-mshkl-mpldt-al-chld-xwx7oi",
+      "name": "צמיד יוקרתי ומהמם, פתוח מתכוונן קל משקל מפלדת אל חלד",
       "name_translations": {
-        "en": "Luxurious and stunning bracelet, lightweight adjustable stainless steel",
-        "he": "צמיד יוקרתי ומהמם, מתכוונן קל משקל מפלדת אל חלד"
+        "en": "Luxurious and stunning bracelet, open adjustable lightweight stainless steel",
+        "he": "צמיד יוקרתי ומהמם, פתוח מתכוונן קל משקל מפלדת אל חלד"
       },
       "description": "",
       "short_description": "צמיד יוקרתי בסטייל מיוחד ליום יום ולארועים",
       "sku": "3052598580010-07053silv",
       "brand": "בלי עין הרע",
       "price": 129,
-      "base_price": 169,
+      "base_price": 179,
       "sale_price": 129,
       "currency": "ILS",
       "images": [
@@ -55,11 +55,11 @@
       ],
       "in_stock": true,
       "stock_status": "in_stock",
-      "url": "https://www.bliainara.co.il/product/tsmyd-yvkrty-vmhmm-mtkvvnn-kl-mshkl-mpldt-al-chld-fv7fts",
+      "url": "https://www.bliainara.co.il/product/tsmyd-yvkrty-vmhmm-ptvch-mtkvvnn-kl-mshkl-mpldt-al-chld-xwx7oi",
       "categories": [
         "בלי עין הרע לנשים"
       ],
-      "updated_at": "2026-10-05T11:03:53.629Z"
+      "updated_at": "2026-10-05T11:13:10.337Z"
     },
     {
       "id": "11e3b18e-0466-47ff-8ca6-9483d1cb3719",
