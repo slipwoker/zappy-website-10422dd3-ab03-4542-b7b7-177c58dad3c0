@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-10-05T15:19:49.210Z",
+  "generated_at": "2026-10-05T16:04:33.702Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 69,
+  "count": 70,
   "products": [
+    {
+      "id": "c7a8d046-2755-44cf-9e9c-596f9969303e",
+      "slug": "shrshrt-pnynym-babvdt-yd-lbnvt-tbayvt-mmym-mtvkym-algntyt-avrk-386sm-shrshrt-sgyrh-pldt-al-chld-7wkqdl",
+      "name": "שרשרת פנינים בעבודת יד ,לבנות טבעיות ממים מתוקים אלגנטית, אורך 38+6ס\"מ, שרשרת סגירה פלדת אל חלד",
+      "name_translations": {
+        "en": "Handmade Pearl Necklace, Natural Freshwater White Pearls, Elegant, Length 38+6cm, Stainless Steel Clasp",
+        "he": "שרשרת פנינים בעבודת יד ,לבנות טבעיות ממים מתוקים אלגנטית, אורך 38+6ס\"מ, שרשרת סגירה פלדת אל חלד"
+      },
+      "description": "<p>לאוהבות הלוק הטבעי האלגנטי בעבודת יד</p>",
+      "short_description": "שרשרת פנינים לבנות טבעיות לא סימטריות ולא חלקות בגודל 6-7מ\"מ כמו בטבע, בעבודת יד",
+      "sku": "3050815860010-15087",
+      "brand": "בלי עין הרע",
+      "price": 169,
+      "base_price": 199,
+      "sale_price": 169,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1791216086919-p8vqle.webp",
+        "https://www.bliainara.co.il/assets/product-1791216117114-he3wgp.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/shrshrt-pnynym-babvdt-yd-lbnvt-tbayvt-mmym-mtvkym-algntyt-avrk-386sm-shrshrt-sgyrh-pldt-al-chld-7wkqdl",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-10-05T16:04:09.130Z"
+    },
     {
       "id": "65f26e55-67be-4ecf-9e58-cc693b8f20d1",
       "slug": "agylym-mpldt-al-chld-mshvbtsym-bayn-kchvlh-ngd-ayn-hra-btsypvy-zhb-amyd-am-svgry-prpr-mhyrym-pyz0wm",
