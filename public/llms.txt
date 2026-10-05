@@ -76,7 +76,17 @@ Information about WCAG compliance and accessibility features.
 
 ## Products
 
-**Total active products: 62**
+**Total active products: 63**
+
+### שרשרת כפולה צוואר ומחשוף Y בשיבוץ 3 אבני זירקון מפלדת אל חלד כסופה
+https://www.bliainara.co.il/product/shrshrt-kpvlh-tsvvar-vmchshvp-y-bshybvts-3-abny-zyrkvn-mpldt-al-chld-ksvph-szsqiv
+- Price: 109.00 ILS (sale, was 149.00 ILS)
+- Availability: In stock
+- Category: בלי עין הרע לנשים
+- SKU: 3052598580010-07053silv
+- Brand: בלי עין הרע
+- Description: לאוהבות הלוק האלגנטי היוקרתי
+- Image: https://www.bliainara.co.il/assets/product-1791184198964-vfngie.webp
 
 ### שרשרת כפולה צוואר ומחשוף Y בשיבוץ 3 אבני זירקון מפלדת אל חלד בציפוי זהב עמיד
 https://www.bliainara.co.il/product/shrshrt-kpvlh-tsvvar-vmchshvp-y-bshybvts-3-abny-zyrkvn-mpldt-al-chld-btsypvy-zhb-amyd-ymbzx4
