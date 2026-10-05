@@ -1,10 +1,38 @@
 {
   "@context": "https://schema.org",
-  "generated_at": "2026-10-05T15:07:24.507Z",
+  "generated_at": "2026-10-05T15:18:29.528Z",
   "base_url": "https://www.bliainara.co.il",
   "currency": "ILS",
-  "count": 68,
+  "count": 69,
   "products": [
+    {
+      "id": "65f26e55-67be-4ecf-9e58-cc693b8f20d1",
+      "slug": "agylym-mpldt-al-chld-mshvbtsym-bayn-kchvlh-ngd-ayn-hra-btsypvy-zhb-amyd-am-svgry-prpr-mhyrym-yqpmjc",
+      "name": "עגילים מפלדת אל חלד משובצים בעין כחולה נגד עין הרע בציפוי זהב עמיד עם סוגרי פרפר מהירים",
+      "name_translations": {
+        "en": "Stainless Steel Earrings Studded with a Blue Evil Eye in Durable Gold Plating with Quick Butterfly Clasps",
+        "he": "עגילים מפלדת אל חלד משובצים בעין כחולה נגד עין הרע בציפוי זהב עמיד עם סוגרי פרפר מהירים"
+      },
+      "description": "<p>לאוהבות הלוק המוזהב היוקרתי</p>",
+      "short_description": "קוטר עגיל כ-1ס\"מ",
+      "sku": "3008885225010-04082gold",
+      "brand": "בלי עין הרע",
+      "price": 129,
+      "base_price": 169,
+      "sale_price": 129,
+      "currency": "ILS",
+      "images": [
+        "https://www.bliainara.co.il/assets/product-1791213408257-xhznu.webp",
+        "https://www.bliainara.co.il/assets/product-1791213440237-71vh5.webp"
+      ],
+      "in_stock": true,
+      "stock_status": "in_stock",
+      "url": "https://www.bliainara.co.il/product/agylym-mpldt-al-chld-mshvbtsym-bayn-kchvlh-ngd-ayn-hra-btsypvy-zhb-amyd-am-svgry-prpr-mhyrym-yqpmjc",
+      "categories": [
+        "בלי עין הרע לנשים"
+      ],
+      "updated_at": "2026-10-05T15:17:54.675Z"
+    },
     {
       "id": "06420cea-0e74-4ae4-8088-11d1be6ef03a",
       "slug": "shrshrt-nchsh-am-tlyvn-adyn-mshvbts-ayn-kchvlh-mzkvkyt-ngd-ayn-hra-mpldt-al-chld-btsypvy-zhb-amyd-inwk6z",
